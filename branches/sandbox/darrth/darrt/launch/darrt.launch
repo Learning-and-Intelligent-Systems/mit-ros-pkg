@@ -1,0 +1,48 @@
+<launch>
+	<arg name="stereo" default="false"/>
+	<arg name="kinect_frame_prefix" default="/head_mount_kinect" />  
+	<arg name="use_map" default="false"/>
+	<arg name="map_suffix" default="simulation"/>
+
+        <!-- DARRT Action -->
+	<node pkg="darrt_actions" type="darrt_action" name="darrt_planning" output="screen"/>
+	
+	<!-- Everything below is for interactive manipulation and execution-->
+
+	<!--Load the various parameters-->
+	<rosparam command="load" ns="darrt_planning" file="$(find darrt)/config/darrt_planning.yaml"/>
+	<rosparam command="load" ns="darrt_planning" file="$(find sbpl_full_body_planner)/config/pr2_body.yaml"/>
+        <param if="$(arg stereo)" name="head_pointing_frame" value="/narrow_stereo_optical_frame"/>
+        <group unless="$(arg stereo)">
+            <param name="head_pointing_frame" value="$(arg kinect_frame_prefix)_rgb_optical_frame"/>
+        </group>
+
+        <!-- load a teleop that can be run at the same time as move_base -->
+        <include file="$(find pr2_navigation_teleop)/teleop.xml" />
+
+        <!-- service for transforming using a supplied robot state rather than TF -->
+        <node pkg="state_transformer" name="state_transformer" type="state_transformer"/>
+
+
+	<!--Interactive manipulation-->
+	<include file="$(find darrt)/launch/pr2_interactive_manipulation_robot.launch">
+	    <arg name="stereo" value="$(arg stereo)"/>
+	    <arg name="kinect_frame_prefix" value="$(arg kinect_frame_prefix)"/>
+	    <arg name="flatten_table" value="true"/>
+	    <arg name="nav_3d" value="$(arg use_map)"/>
+	    <arg name="use_map" value="$(arg use_map)"/>
+	</include>
+
+	<!--Maps and map servers-->
+	<include if="$(arg use_map)" file="$(find darrt)/launch/maps.launch">
+	    <arg name="map_suffix" value="$(arg map_suffix)"/>
+	</include>
+	
+	<!--3D nav-->
+	<include if="$(arg use_map)" file="$(find darrt)/launch/nav.launch">
+	    <arg name="map_suffix" value="$(arg map_suffix)"/>
+        </include>
+
+
+</launch>
+

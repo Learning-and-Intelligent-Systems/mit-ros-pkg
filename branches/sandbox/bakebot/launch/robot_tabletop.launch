@@ -1,0 +1,5 @@
+<launch>
+  <!-- start up empty world -->
+  <include file="$(find rgbd_assembler)/launch/rgbd_assembler.launch"/> 
+  <include file="$(find pr2_tabletop_manipulation_launch)/launch/pr2_tabletop_manipulation.launch"/>
+</launch>

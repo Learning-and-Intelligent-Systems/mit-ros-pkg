@@ -1,0 +1,9 @@
+<launch>
+	
+	<!-- opendoors -->
+	<include file="$(find open_cupboard_launch)/launch/opencupboard.launch" />
+
+	<!-- open_cupboard_action -->
+	<node name="open_cupboard_action" pkg="opendoors_executive" type="open_cupboard.py" output="screen" />
+
+</launch>

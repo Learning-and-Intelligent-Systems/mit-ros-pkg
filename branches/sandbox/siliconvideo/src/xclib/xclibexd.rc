@@ -1,0 +1,62 @@
+/*
+ *
+ *	xclibexd.rc	External	06-Jan-2011
+ *
+ *	Copyright (C)  2010  EPIX, Inc.  All rights reserved.
+ *
+ *	Example program resource for the XCLIB 'C' Library with
+ *	   SILICON VIDEO(R) 2112,  2112C
+ *	   SILICON VIDEO(R) 1310,  1310C
+ *	   SILICON VIDEO(R) 1281M, 1281C
+ *	   SILICON VIDEO(R) 9M001, 9M001C
+ *	   SILICON VIDEO(R) 9T001C
+ *	   SILICON VIDEO(R) 642M, 642C
+ *	   SILICON VIDEO(R) 643M, 643C
+ *	   SILICON VIDEO(R) 5M10, 5C10
+ *	   SILICON VIDEO(R) 9C10
+ *	cameras.
+ *
+ *
+ */
+
+#include <windows.h>
+#include <winver.h>
+#include "xclibex2.h"
+
+
+
+SILICONVIDEODIALOG DIALOG DISCARDABLE  33, 56, 250, 270
+    STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU /* | WS_THICKFRAME*/
+    BEGIN
+	PUSHBUTTON	"Snap",     IDSNAP,	     190, 10, 55,12,
+	PUSHBUTTON	"Live",     IDLIVE,	     190, 24, 55,12,
+	PUSHBUTTON	"UnLive",   IDUNLIVE,	     190, 38, 55,12,
+	PUSHBUTTON	"White Balance", IDWHITEBAL, 190, 52, 55,12,
+	PUSHBUTTON	"Save",     IDSAVE,	     190, 66, 55,12,
+
+	LTEXT		"Exposure", -1, 	     190, 86, 55, 8,
+	CHECKBOX	"AEC",	    IDAECCHECK,      225, 86, 55, 8,
+	SCROLLBAR		    IDEXPSCROLL,     190, 96, 55, 8,
+	LTEXT		"Gain",    -1,		     190,106, 55, 8,
+	CHECKBOX	"AGC",	    IDAGCCHECK,      225,106, 55, 8,
+	SCROLLBAR		    IDGAINSCROLL,    190,116, 55, 8,
+	LTEXT		"Offset",  -1,		     190,126, 55, 8,
+	SCROLLBAR		    IDOFFSETSCROLL,  190,136, 55, 8,
+      //LTEXT		"Gain2",  -1,		     190,126, 55, 8,
+      //SCROLLBAR		    IDGAIN2SCROLL,   190,136, 55, 8,
+	LTEXT		"Pixel Clock",	-1,	     190,146, 55, 8,
+	SCROLLBAR		    IDCLKSCROLL,     190,156, 55, 8,
+	LTEXT		"Frame Rate",  -1,	     190,166, 55, 8,
+	SCROLLBAR		    IDFPSSCROLL,     190,176, 55, 8,
+	LTEXT		"AOI",	    -1, 	     190,186, 55, 8,
+	LISTBOX 		    IDLISTAOI,	     190,196, 55, 10, WS_VSCROLL | WS_TABSTOP
+	LTEXT		"Subsample",  -1,	     190,206, 55, 8,
+	LISTBOX 		    IDLISTDECIMATE,  190,216, 55, 10, WS_VSCROLL | WS_TABSTOP
+	LTEXT		"Scan Direction",  -1,	     190,226, 55, 8,
+	LISTBOX 		    IDLISTSCAN,      190,236, 55, 10, WS_VSCROLL | WS_TABSTOP
+	LTEXT		"Video Mode",  -1,	     190,246, 55, 8,
+	LISTBOX 		    IDVIDEOMODE,     190,256, 55, 10, WS_VSCROLL | WS_TABSTOP
+	LTEXT		"",	    IDIMAGE,	     1,1,180,180
+	LTEXT		"",	    IDSTATUS1,	     1,245,180,8,
+	LTEXT		"",	    IDSTATUS2,	     1,255,180,8,
+    END

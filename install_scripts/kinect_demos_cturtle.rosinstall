@@ -1,0 +1,34 @@
+- git:
+    local-name: ni
+    uri: https://github.com/ros-pkg-git/ni.git
+    version: master
+- svn:
+    uri: https://code.ros.org/svn/ros/stacks/ros_experimental/trunk
+    local-name: ros_experimental
+- svn:
+    uri: https://code.ros.org/svn/wg-ros-pkg/branches/trunk_cturtle/
+    local-name: trunk_cturtle
+- svn:
+    uri: https://code.ros.org/svn/ros-pkg/stacks/perception_pcl_addons/tags/perception_pcl_addons-0.3.0/
+    local-name: perception_pcl_addons
+- svn:
+    uri: https://code.ros.org/svn/ros-pkg/stacks/perception_pcl/tags/perception_pcl-0.8.0/
+    local-name: perception_pcl
+- svn:
+    uri: https://code.ros.org/svn/ros-pkg/stacks/point_cloud_perception/trunk
+    local-name: point_cloud_perception
+- svn:
+    uri: https://svn.csail.mit.edu/mit-ros-pkg/tags/cturtle
+    local-name: mit-ros-pkg
+- svn:
+    uri: https://svn.csail.mit.edu/mit-ros-pkg/branches/sandbox
+    local-name: mit-ros-pkg-experimental
+- hg:
+    uri: https://ros-geometry.googlecode.com/hg/ 
+    local-name: ros-geometry
+- hg:
+    uri: https://ros-geometry-experimental.googlecode.com/hg 
+    local-name: geometry_experimental
+- svn:
+    uri: https://code.ros.org/svn/wg-ros-pkg/stacks/motion_planning_common/tags/cturtle/
+    local-name: motion_planning_common

@@ -1,0 +1,16 @@
+<launch>
+
+	<node pkg="furniture" name="table_analyzer" type="table_analyzer" respawn="true" output="screen">
+	        <!-- All angle parameters are in radians -->
+		<param name="z_min" value="-0.7" />	
+		<param name="z_max" value="-0.4" />
+		<param name="k_knn" value="20" />
+		<param name="plane_distance_tolerance" value="0.03" />
+		<param name="plane_angle_tolerance" value="0.087" />
+		<param name="plane_min_size" value="150" />
+		<param name="cluster_min_size" value="150" />
+		<param name="cluster_distance_tolerance" value="0.14" />
+		<param name="normals_angle_tolerance" value="0.25" /> 
+	</node> 
+
+</launch>

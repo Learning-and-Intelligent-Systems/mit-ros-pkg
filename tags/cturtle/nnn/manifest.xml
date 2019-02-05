@@ -1,0 +1,22 @@
+<package>
+  <description brief="nnn">
+   Naive Nearest Niegbors
+    This library provides a niave way of doing nearest niebor search, by simply searching through all the points to find which points are within boxes areound the point in question.
+    This library was created as a benchmark against which ANN and FLANN should be compared (at least for radius search)
+
+  </description>
+  <author>Garratt</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/nnn</url>
+  <depend package="pcl"/>
+
+
+  <export>
+    <cpp cflags=" -I${prefix}/include "  lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib " />
+  </export>
+
+
+</package>
+
+

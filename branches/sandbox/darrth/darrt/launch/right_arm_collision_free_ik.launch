@@ -1,0 +1,17 @@
+<launch>
+   <arg name="use_map"/>
+   <arg name="ft_joint"/>   
+
+   <include file="$(find pr2_machine)/$(env ROBOT).machine" />	
+   <include file="$(find darrt)/launch/pr2_planning_environment.launch">
+       <arg name="use_map" value="$(arg use_map)"/>
+       <arg name="ft_joint" value="$(arg ft_joint)"/>
+   </include>
+
+   <node machine="c2" pkg="pr2_arm_kinematics_constraint_aware" type="pr2_arm_kinematics_constraint_aware" name="pr2_right_arm_kinematics" output="screen">    
+      <!-- IK parameters -->
+      <param name="tip_name" value="r_wrist_roll_link" />     
+      <param name="root_name" value="torso_lift_link" />  
+      <param name="group" type="string" value="right_arm" />
+   </node>
+</launch>

@@ -1,0 +1,3 @@
+libsfmt:
+  ubuntu: libsfml-dev libsfml-audio1.5
+

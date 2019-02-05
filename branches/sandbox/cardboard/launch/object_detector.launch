@@ -1,0 +1,9 @@
+<launch>
+
+  <node pkg="cardboard" name="object_detector" type="object_detector" respawn="true" output="screen">
+    <remap from="pointcloud" to="/scan_points" />
+    <remap from="pointcloud2" to="/narrow_stereo_textured/points2" />
+    <param name="objects_folder" value="$(find cardboard)/data" />
+  </node> 
+
+</launch>

@@ -1,0 +1,4 @@
+libcan.a - library file for janz can card
+libmitop.a - libraray file for janz can card
+libntcan.a - library file for esd-electronics can card
+libntcan.so.3 - library file for esd-electronics can card

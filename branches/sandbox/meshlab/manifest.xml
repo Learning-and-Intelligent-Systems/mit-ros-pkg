@@ -1,0 +1,17 @@
+<package>
+  <description brief="meshlab">
+
+     meshlab
+
+  </description>
+  <author>Samuel I Davies32-G56432482476175473450</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/meshlab</url>
+  <depend package="roscpp"/>
+  <export>
+    <cpp cflags="-I${prefix}/src "  lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib " />
+  </export>
+</package>
+
+

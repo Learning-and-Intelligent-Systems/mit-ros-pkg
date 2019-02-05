@@ -1,0 +1,34 @@
+/**
+\mainpage
+\htmlinclude manifest.html
+
+
+The \b piano package uses finger positions to play a five note piano.
+
+
+
+<!-- 
+Provide an overview of your package.
+-->
+
+
+\section codeapi Code API
+The Pianist takes in a \ref body_msgs::Hands message.
+  It first calibrates the position in Pianist::doneInitializing, establishing a baseline.  
+  Once a baseline is established, small deviations in the z position of the fingers (toward the sensor)
+   trigger notes to be played.
+
+
+<!--
+Provide links to specific auto-generated API documentation within your
+package that is of particular interest to a reader. Doxygen will
+document pretty much every part of your code, so do your best here to
+point the reader to the actual API.
+
+If your codebase is fairly large or has different sets of APIs, you
+should use the doxygen 'group' tag to keep these APIs together. For
+example, the roscpp documentation has 'libros' group.
+-->
+
+
+*/

@@ -1,0 +1,61 @@
+/**
+\mainpage
+\htmlinclude manifest.html
+
+\b hand_interaction is a package to interact with human hands.  
+The programs in this package extract hands from a full point cloud, and segment the fingers of those hands.
+
+<!-- 
+Provide an overview of your package.
+-->
+@section usage Common Usage
+.  
+
+There are three programs in hand_interaction:  analyzehands, detectskelhands, and detecthands
+
+@subsection analyzehands analyzehands
+analyzehands takes body_msgs::Hands messages and fills in information
+ * - [body_msgs/Hand]:
+ *   - time stamp ......................................................from detecthands
+ *   - int32 seq .........................................................from detecthands
+ *   - int32 thumb ...................................................<b>from analyzehands</b>
+ *   - bool left ...........................................................<b>from analyzehands</b>
+ *   - geometry_msgs/Point arm ............................from detecthands
+ *   - geometry_msgs/Transform palm ................<b>from analyzehands</b>
+ *   - geometry_msgs/Vector3 translation ...........<b>from analyzehands</b>
+ *   - geometry_msgs/Quaternion rotation ...........<b>from analyzehands</b>
+ *   - geometry_msgs/Point[] fingers ....................<b>from analyzehands</b>
+ *   - sensor_msgs/PointCloud2 handcloud ..........from detecthands
+ *   - string state ....................................................<b>from analyzehands</b>
+ *   .
+ * .
+ analyzehands processes the HandMessages through two classes: Finger, which is mostly an organizational tool,
+ and HandProcessor, which does several functions, all called by the HandProcessor::Process function:
+ * - HandProcessor::radiusFilter segments the hand cloud into
+     fingers (HandProcessor::digits) and the palm (HandProcessor::palm)
+ * - HandProcessor::segFingers runs a cluster segmentation to differentiate the fingers from each other
+ * - HandProcessor::IdentifyFingers locates the thumb, and then orders the fingers
+ 
+
+@subsection detectskelhands detectskelhands
+The HandDetector class takes a skeletal message and finds the point cloud closest to it.  
+This uses two functions: \ref getHands, which matches the skeleton joint to the point cloud,
+ and \ref getHandCloud, which iteratively searches in the point cloud to find the end of the hand away from the arm.
+
+
+
+\section codeapi Code API
+
+<!--
+Provide links to specific auto-generated API documentation within your
+package that is of particular interest to a reader. Doxygen will
+document pretty much every part of your code, so do your best here to
+point the reader to the actual API.
+
+If your codebase is fairly large or has different sets of APIs, you
+should use the doxygen 'group' tag to keep these APIs together. For
+example, the roscpp documentation has 'libros' group.
+-->
+
+
+*/

@@ -1,0 +1,102 @@
+#!/bin/sh
+
+#echo "WORK INPROGRESS" && exit 0
+AUTHLOOP=/afs/csail.mit.edu/@sys/local/bin/authloop
+KRB5CCNAME=/tmp/krb5cc_$$.longjob
+OUTFILE=/tmp/$USER.job.$$
+RENEW="-r 8d"
+AUTHOUT=/tmp/$USER.auth.$$
+help()
+{
+
+cat <<EOF
+$0 [options]:
+
+obtains and renews Kerberos tickets and AFS tokens for long running
+interactive session the current limit on renewal is 8 days.
+
+NOTICE: if your account was created prior to May 1, 2004 contact 
+help@csail.mit.edu to make sure you are able to obtain renewable 
+Kerberos tickets.
+
+Options:
+
+-h|--help                    this help
+-a|--auth-out <file>         output file for authentication loop
+                             (default /tmp/$USER.auth.\$\$)
+-c|--cache <krb5 cache file> cache file to use 
+                             (default /tmp/krb5cc_\$\$.longjob)
+-k|--keytab <keytab>         use <keytab> for authentication 
+                             (default none uses password)
+-r|--renew <time spec>       renew for <time spec> 
+                             (default and max 8d)
+
+
+EOF
+
+}
+
+parse_opts ()
+{
+    while true ; do
+        case "$1" in
+
+	    '') 
+		break
+		;;
+	    -h | --help) 
+		help
+		exit 0 
+		;;
+	    -a | --auth-out)
+		export AUTHOUT=$2
+		shift 2
+		;;
+	    -k | --keytab) 
+		export KEYTAB="-k -t $2"
+		shift 2 
+		;;
+	    -o | --out-file) 
+		export OUTFILE=$2 
+		shift 2 
+		;;
+	    -r | --renew)
+		export RENEW="-r $2"
+		shift 2
+		;;
+	    -c | --cache)
+		export KRB5CCNAME=$2
+		shift 2
+		;;
+	    *) 
+		export COMMAND="$COMMAND $1"
+		shift
+		;;
+
+        esac
+    done
+}
+
+run_command()
+{
+    echo "Output redirected to $OUTFILE"
+    echo "PWD:      " $PWD >> $OUTFILE
+    echo "Command:  " $COMMAND >> $OUTFILE
+    echo >> $OUTFILE
+    nohup $COMMAND >> $OUTFILE 2>&1 &
+}
+
+
+parse_opts $@
+
+# no option for this one
+#if [ -z "$COMMAND" ]; then
+#    help
+#    echo "ERROR NO COMMAND GIVEN!"
+#    exit 1
+#fi
+
+kinit $RENEW
+aklog
+nohup $AUTHLOOP >> $AUTHOUT &
+#run_command

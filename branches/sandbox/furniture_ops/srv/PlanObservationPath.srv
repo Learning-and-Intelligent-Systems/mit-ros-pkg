@@ -1,0 +1,8 @@
+#cloud of points with normals that we want to plan around
+sensor_msgs/PointCloud2 object_cloud
+float32 radius
+float32 angle
+---
+#path around the object, arcing to keep a distance of radius from the object
+geometry_msgs/PoseArray path
+

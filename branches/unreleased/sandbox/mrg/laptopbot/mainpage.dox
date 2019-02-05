@@ -1,0 +1,33 @@
+/**
+\mainpage
+\htmlinclude manifest.html
+
+\b laptopbot is some code and scripts to create a simulated ROS robot which operates the 2D Nav stack and AMCL. It includes some code to create a simulated robot's odometry messages, laser scans and the transforms between them
+
+
+The 'robot' odometry drives the robot around in a circle while the scans from a kind of spiral. The robot's 2D Pose Estimate can be given using RViz and a goal set using "2D Nav Goal".
+
+To Launch:
+roslaunch laptopbot_configuration.launch
+roslaunch move_base.launch 
+rosrun rviz rviz 
+<!-- 
+Provide an overview of your package.
+-->
+
+
+\section codeapi Code API
+
+<!--
+Provide links to specific auto-generated API documentation within your
+package that is of particular interest to a reader. Doxygen will
+document pretty much every part of your code, so do your best here to
+point the reader to the actual API.
+
+If your codebase is fairly large or has different sets of APIs, you
+should use the doxygen 'group' tag to keep these APIs together. For
+example, the roscpp documentation has 'libros' group.
+-->
+
+
+*/

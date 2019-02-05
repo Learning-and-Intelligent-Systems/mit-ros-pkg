@@ -1,0 +1,18 @@
+<package>
+  <description brief="parallel_tools">
+
+     parallel_tools
+
+  </description>
+  <author>garratt</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/parallel_tools</url>
+  <depend package="roscpp"/>
+ <export>
+    <cpp cflags=" -I${prefix}/include"  lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib " />
+  </export>
+
+</package>
+
+

@@ -1,0 +1,7 @@
+<launch>
+
+  <node pkg="chaos" name="object_detector" type="object_detector" respawn="true" output="screen">
+    <remap from="pointcloud2" to="/narrow_stereo_textured/points2" />
+  </node> 
+
+</launch>

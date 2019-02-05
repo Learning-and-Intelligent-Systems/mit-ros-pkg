@@ -1,0 +1,26 @@
+<launch>
+	
+	<include file="$(find furniture)/launch/snapshotter.launch"/>
+	
+	<node pkg="furniture" name="multiplanar_tracker" type="multiplanar_tracker" respawn="true" output="screen">
+
+		<remap from="/points" to="tilt_laser_cloud" />
+    		<param name="sensor_frame" type="string" value="/laser_tilt_link" />
+
+		<!--remap from="/points2" to="/camera/rgb/points" /-->
+		<!--param name="sensor_frame" type="string" value="/openni_rgb_optical_frame" /-->
+
+		<!--remap from="/points" to="narrow_stereo/points"/-->
+		<!--param name="sensor_frame" type="string" value="/narrow_stereo_optical_frame"/-->
+
+		<param name="normMultiplier" type="double" value="0.15"/>
+		<param name="inclMultiplier" type="double" value="0.05"/>
+
+		<param name="downsample" type="double" value="0.05" />
+		<param name="epsilon" type="double" value="0.25" />
+		<param name="distTolerance" type="double" value="0.25" />
+		<param name="k_knn" type="int" value="10" />
+
+	</node>
+
+</launch>

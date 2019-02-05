@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find bakebot)/launch/sim_local_gazebo_no_table.launch"/>
+    <include file="$(find bakebot)/launch/sim_local_gazebo_only_table.launch"/>
+</launch>

@@ -1,0 +1,4 @@
+sensor_msgs/PointCloud2 cloud
+---
+sensor_msgs/PointCloud2[] clouds
+geometry_msgs/Pose[] cloud_centers

@@ -1,0 +1,47 @@
+#format: safe-angles, high joint extreme, low joint extreme, safe-angles, etc.
+#first number is the joint being calibrated, then 7 joint angles
+#last line starts with 'e' and contains the last set of safe angles to return to
+
+0 0 0 0 0 0 0 0
+
+0 2.68 0 0 0 0 0 0
+ 
+0 -2.68 0 0 0 0 0 0
+
+1 0 0 0 0 0 0 0
+
+1 -2.5 1.99 0 -.7 0 0 0
+
+1 0 -1.99 0 1.5 0 0 0
+
+2 0 0 0 0 0 0 0
+
+2 0 0 2.86 0 0 0 0
+
+2 0 0 -2.86 0 0 0 0
+
+3 0 0 0 0 0 0 0
+
+3 0 0 0 3.13 0 -.5 0
+
+3 0 0 0 -.9 0 0.5 0
+
+4 0 0 0 0 0 0 0
+
+4 0 0 0 0 1.26 0 0
+
+4 0 0 0 0 -4.79 0 0
+
+5 0 0 0 0 0 0 0
+
+5 0 0 0 0 0 1.57 0
+
+5 0 0 0 0 0 -1.62 0
+
+6 0 0 0 0 0 0 0
+
+6 0 0 0 0 0 0 3.03
+
+6 0 0 0 0 0 0 -3.03
+
+e 0 0 0 0 0 0 0

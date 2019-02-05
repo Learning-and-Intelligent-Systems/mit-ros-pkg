@@ -1,0 +1,22 @@
+<package>
+  <description brief="pcl_tests">
+
+     pcl_tests
+
+  </description>
+  <author>Garratt</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/pcl_tests</url>
+  <depend package="pcl"/>
+  <depend package="nnn"/>
+  <depend package="pcl_tools"/>
+  <depend package="geometry_msgs"/>
+  <depend package="rosbag"/>
+  <depend package="sensor_msgs"/>
+  <depend package="tf"/>
+  <depend package="roscpp"/>
+
+</package>
+
+

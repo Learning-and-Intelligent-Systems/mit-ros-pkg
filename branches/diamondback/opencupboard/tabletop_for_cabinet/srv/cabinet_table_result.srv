@@ -1,0 +1,7 @@
+# request is a table and the clusters on the table
+tabletop_object_detector/TabletopDetectionResult detection
+---
+# returns a pose of the handle
+geometry_msgs/PoseStamped pose
+# the bounding box of the handle
+object_manipulation_msgs/ClusterBoundingBox box

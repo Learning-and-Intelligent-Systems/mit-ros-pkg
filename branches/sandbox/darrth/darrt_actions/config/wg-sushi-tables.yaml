@@ -1,0 +1,53 @@
+wg-sushi-tables:
+  serving_table:
+    upper_left:
+      x: -1.74
+      y: 1.24
+      z: 0.74
+    lower_left:
+      x: -1.7
+      y: 0.46
+      z: 0.74
+    upper_right:
+      x: -0.525
+      y: 1.18
+      z: 0.74
+    lower_right:
+      x: -0.55
+      y: 0.41
+      z: 0.74
+  dirty_table:
+    upper_left:
+      x: 2.32
+      y: -0.98
+      z: 0.98
+    lower_left:
+      x: 2.27
+      y: -0.18
+      z: 0.98
+    upper_right:
+      x: 1.26
+      y: -1.02
+      z: 0.98
+    lower_right:
+      x: 1.22
+      y: -0.18
+      z: 0.98
+
+  little_table:
+    upper_left:
+      x: 1.45
+      y: 1.45
+      z: 0.73
+    lower_left:
+      x: 0.55
+      y: 1.45
+      z: 0.73
+    upper_right:
+      x: 1.45
+      y: 0.55
+      z: 0.73
+    lower_right:
+      x: 0.55
+      y: 0.55
+      z: 0.73

@@ -1,0 +1,10 @@
+<launch>
+
+  <!-- tabletop perception -->
+  <include file="$(find tabletop_object_detector)/launch/tabletop_node.launch"/>
+  <param name="/tabletop_node/use_database" value="false"/>
+  <param name="/tabletop_node/model_set" value="REDUCED_MODEL_SET" />
+  <param name="/tabletop_node/get_model_list_srv" value="/objects_database_node/get_model_list" />	
+  <param name="/tabletop_node/get_model_mesh_srv" value="/objects_database_node/get_model_mesh" />	
+
+</launch>

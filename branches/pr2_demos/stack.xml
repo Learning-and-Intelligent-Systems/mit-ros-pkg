@@ -1,0 +1,18 @@
+<stack>
+  <description brief="pr2_demos">pr2_demos</description>
+  <author>Maintained by Jenny Barry</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/pr2_demos</url>
+  <depend stack="arm_navigation" /> <!-- arm_navigation_msgs -->
+  <depend stack="common_msgs" /> <!-- actionlib_msgs, trajectory_msgs, geometry_msgs, visualization_msgs -->
+  <depend stack="ee_cart_imped" /> <!-- ee_cart_imped_action -->
+  <depend stack="kinematics" /> <!-- kinematics_msgs -->
+  <depend stack="object_manipulation" /> <!-- object_manipulator -->
+  <depend stack="pr2_common" /> <!-- pr2_msgs -->
+  <depend stack="pr2_controllers" /> <!-- pr2_controllers_msgs -->
+  <depend stack="pr2_tabletop_manipulation_apps" /> <!-- pr2_pick_and_place_demos -->
+  <depend stack="ros" />
+  <depend stack="ros_comm" /> <!-- std_msgs, rospy -->
+
+</stack>

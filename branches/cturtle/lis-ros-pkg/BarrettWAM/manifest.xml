@@ -1,0 +1,8 @@
+<package>
+<description>Barrett low-level controllers (stock btclient)</description>
+<author>Barrett corp.</author>
+<license>BSD.</license>
+<export>
+  <cpp cflags="-I${prefix}/btclient/include" lflags="-L${prefix}/btclient/lib -lbtsystem -lbtwam"/>
+</export>
+</package>

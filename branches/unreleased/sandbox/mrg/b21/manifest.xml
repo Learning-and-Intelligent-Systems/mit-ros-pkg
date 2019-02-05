@@ -1,0 +1,19 @@
+<package>
+  <description brief="b21">
+
+     b21
+
+  </description>
+  <author>ruser</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/b21</url>
+  <depend package="rflex"/>
+  <depend package="roslib"/>
+  <depend package="roscpp"/>
+  <depend package="std_msgs"/>
+  <depend package="rospy"/>
+
+</package>
+
+

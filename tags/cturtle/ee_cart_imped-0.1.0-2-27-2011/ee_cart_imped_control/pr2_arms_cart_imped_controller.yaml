@@ -1,0 +1,41 @@
+r_arm_cart_imped_controller:
+  type: ee_cart_imped_control/EECartImpedControlPlugin
+  root_name: torso_lift_link
+  tip_name: r_gripper_tool_frame
+  r_arm_cart_imped_action_node:
+    constraints:
+      goal:
+        time: 0.0
+        position:
+          x: 0.2
+          y: 0.2
+          z: 0.2
+        orientation:
+          x: 0.2
+          y: 0.2
+          z: 0.2
+          w: 0.2
+        effort: 0.002
+      trajectory:
+        effort: -1.0
+
+l_arm_cart_imped_controller:
+  type: ee_cart_imped_control/EECartImpedControlPlugin
+  root_name: torso_lift_link
+  tip_name: l_gripper_tool_frame
+  l_arm_cart_imped_action_node:
+    constraints:
+      goal:
+        time: 0.0
+        position:
+          x: 0.2
+          y: 0.2
+          z: 0.2
+        orientation:
+          x: 0.2
+          y: 0.2
+          z: 0.2
+          w: 0.2
+        effort: 0.002
+      trajectory:
+        effort: -1.0

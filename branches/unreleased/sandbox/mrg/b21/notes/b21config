@@ -1,0 +1,11 @@
+
+cmd {
+    exec = "bot-sick -i -b 500000 -z 75 -d /dev/ttyUSB.FTEKRTR0 -r 100";
+    host = "b21";
+    nickname = "sick front";
+}
+cmd {
+    exec = "bot-sick -i -b 500000 -z 75 -d/dev/ttyUSB.FTCY3BKK -r 100";
+    host = "b21";
+    nickname = "sick back";
+}

@@ -1,0 +1,16 @@
+<package>
+  <description brief="basic_opening">
+
+     basic_opening
+
+  </description>
+  <author>Anne E Holladay</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/basic_opening</url>
+
+  <depend package="pr2_utils" />
+
+</package>
+
+

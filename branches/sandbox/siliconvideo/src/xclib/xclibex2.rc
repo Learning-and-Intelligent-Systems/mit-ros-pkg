@@ -1,0 +1,51 @@
+/*
+ *
+ *	xclibex2.rc	External	07-Jul-2008
+ *
+ *	Copyright (C)  1998-2008  EPIX, Inc.  All rights reserved.
+ *
+ *	Example program for XCOBJ/XCLIB C Library: resource.
+ *
+ *
+ */
+
+#include <windows.h>
+#include <winver.h>
+#include "xclibex2.h"
+
+
+PIXCISVXDIALOG DIALOG DISCARDABLE  33, 56, 258, 240
+    STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU /* | WS_THICKFRAME*/
+    BEGIN
+	PUSHBUTTON	"Snap",     IDSNAP,	     190, 10,50,12,
+	PUSHBUTTON	"Live",     IDLIVE,	     190, 24,50,12,
+	PUSHBUTTON	"UnLive",   IDUNLIVE,	     190, 38,50,12,
+	PUSHBUTTON	"Save",     IDSAVE,	     190, 52,50,12,
+
+	LTEXT		"Contrast", -1, 	     190, 72, 50, 8,
+	SCROLLBAR		   IDGAINSCROLL,     190, 82, 50, 8,
+	LTEXT		"Brightness",  -1,	     190, 92, 50, 8,
+	SCROLLBAR		   IDOFFSETSCROLL,   190, 102, 50, 8,
+	RADIOBUTTON	"S-Video", IDSVIDEO,	     190, 114, 50, 8,
+	RADIOBUTTON	"BNC 1",   IDBNC1,	     190, 124, 50, 8,
+	RADIOBUTTON	"BNC 2",   IDBNC2,	     190, 134, 50, 8,
+	LTEXT		"",	   IDIMAGE,	     1,1,180,180
+	LTEXT		"",	   IDSTATUS1,	     1,185,180,8,
+	LTEXT		"",	   IDSTATUS2,	     1,195,180,8,
+	LTEXT		"",	   IDSTATUS3,	     1,205,180,8,
+	LTEXT		"",	   IDSTATUS4,	     1,215,180,8,
+	LTEXT		"",	   IDSTATUS5,	     1,225,180,8,
+    END
+
+PIXCIDIALOG DIALOG DISCARDABLE	33, 56, 258, 210
+    STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU /* | WS_THICKFRAME*/
+    BEGIN
+	PUSHBUTTON	"Snap",     IDSNAP,	     190, 10,50,12,
+	PUSHBUTTON	"Live",     IDLIVE,	     190, 24,50,12,
+	PUSHBUTTON	"UnLive",   IDUNLIVE,	     190, 38,50,12,
+	PUSHBUTTON	"Save",     IDSAVE,	     190, 52,50,12,
+
+	LTEXT		"",	    IDIMAGE,	     1,1,180,180
+	LTEXT		"",	    IDSTATUS1,	     1,185,180,8,
+	LTEXT		"",	    IDSTATUS2,	     1,195,180,8,
+    END

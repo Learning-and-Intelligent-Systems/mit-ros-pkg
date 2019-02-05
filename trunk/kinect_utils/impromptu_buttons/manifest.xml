@@ -1,0 +1,23 @@
+<package>
+  <description brief="impromptu_buttons allows the user to create and interact with buttons ">
+
+     The  impromptu_buttons package lets the user create buttons by drawing them on a white piece of paper. 
+	   The buttons can then be pressed to create noises.
+
+
+  </description>
+  <author>garratt</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/impromptu_buttons</url>
+  <depend package="pcl"/>
+  <depend package="pcl_ros"/>
+  <depend package="sensor_msgs"/>
+  <depend package="geometry_msgs"/>
+  <depend package="pcl_tools"/>
+  <depend package="nnn"/>
+  <depend package="roscpp"/>
+  <rosdep name="libsfmt"/>
+</package>
+
+

@@ -1,0 +1,13 @@
+#goal definition
+bool open_cupboard
+---
+#result definition
+bool success
+---
+#feedback
+int32 SETUP=0
+int32 DETECTING=1
+int32 GRASPING=2
+int32 OPENING=3
+
+int32 current_state 

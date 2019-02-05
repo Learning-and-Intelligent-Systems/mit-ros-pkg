@@ -1,0 +1,15 @@
+<package>
+  <description brief="demo_tools">
+
+     demo_tools
+
+  </description>
+  <author>Jenny Barry</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/demo_tools</url>
+  <depend package="rospy"/>
+
+</package>
+
+

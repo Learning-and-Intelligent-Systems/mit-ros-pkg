@@ -1,0 +1,8 @@
+A (modified) ROS wrapper around fovis
+
+  svn co https://svn.csail.mit.edu/fovis/trunk/libfovis libfovis
+
+
+
+originally hordurj
+branched by mfallon aug 2011

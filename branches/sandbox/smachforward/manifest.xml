@@ -1,0 +1,15 @@
+<package>
+  <description brief="smachforward">
+
+     smachforward
+
+  </description>
+  <author>Mario A Bollini</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/smachforward</url>
+  <depend package="smach"/>
+
+</package>
+
+

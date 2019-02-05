@@ -1,0 +1,3 @@
+bool continuous #True=on, False=off
+---
+bool previous_value #if continuous tracking was previously on or off

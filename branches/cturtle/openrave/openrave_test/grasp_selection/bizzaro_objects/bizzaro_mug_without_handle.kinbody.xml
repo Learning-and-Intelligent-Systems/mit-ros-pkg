@@ -1,0 +1,48 @@
+<kinbody name="bizzaro-mug">
+	<body type="dynamic">
+		<mass type="mimicgeom">
+			<density> 2000 </density>
+		</mass>
+		<geom type="box">
+			<diffusecolor> 0 0 1 </diffusecolor>
+			<extents> .003 .037 .05 </extents>
+			<translation> .037 .003 .05 </translation>
+		</geom>
+		<geom type="box">
+			<diffusecolor> 0 0 1 </diffusecolor>
+			<extents> .037 .003 .05 </extents>
+			<translation> -.003 .037 .05 </translation>
+		</geom>
+		<geom type="box">
+			<diffusecolor> 0 0 1 </diffusecolor>
+			<extents> .003 .037 .05 </extents>
+			<translation> -.037 -.003 .05 </translation>
+		</geom>
+		<geom type="box">
+			<diffusecolor>0 0 1</diffusecolor>
+			<extents> .037 .003 .05 </extents>
+			<translation> .003 -.037 .05 </translation>
+		</geom>
+		<!--geom type="box">
+			<diffusecolor>0 1 0</diffusecolor>
+			<extents> .005 .015 .003 </extents>
+			<translation> 0 .055 .023 </translation>
+		</geom>
+		<geom type="box">
+			<diffusecolor>0 1 0</diffusecolor>
+			<extents> .005 .015 .003 </extents>
+			<translation> 0 .055 .077 </translation>
+		</geom>
+		<geom type="box">
+			<diffusecolor>0 1 0</diffusecolor>
+			<extents> .005 .003 .03 </extents>
+			<translation> 0 .073 .05 </translation>
+		</geom-->
+		<geom type="box">
+			<diffusecolor> 0 0 1 </diffusecolor>
+			<extents> .034 .034 .003 </extents>
+			<translation> 0 0 .003 </translation>
+		</geom>
+</body>
+</kinbody>
+			

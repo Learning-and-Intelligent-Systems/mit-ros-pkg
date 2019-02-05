@@ -1,0 +1,17 @@
+#!/bin/bash
+
+xterm -geometry 80x3+0+67 -vb -sl 1000 -sb -rightbar -hold -e "rosrun bookbot driver" &
+#xterm -geometry 80x3+0+134 -vb -sl 1000 -sb -rightbar -hold -e "rosrun point_cloud_converter point_cloud_converter" &
+xterm -geometry 80x3+0+201 -vb -sl 1000 -sb -rightbar -hold -e "rosrun bookbot transformer" &
+xterm -geometry 80x3+0+268 -vb -sl 1000 -sb -rightbar -hold -e "rosrun bookbot tableFilter" &
+xterm -geometry 80x3+0+335 -vb -sl 1000 -sb -rightbar -hold -e "rosrun bookbot bookFinder" &
+#xterm -geometry 80x3+0+335 -vb -sl 1000 -sb -rightbar -hold -e "gdb bin/bookFinder" &
+#xterm -geometry 80x3+0+402 -vb -sl 1000 -sb -rightbar -e &
+#xterm -geometry 80x3+0+469 -vb -sl 1000 -sb -rightbar &
+#xterm -geometry 80x3+0+536 -vb -sl 1000 -sb -rightbar &
+#xterm -geometry 80x3+0+603 -vb -sl 1000 -sb -rightbar &
+
+
+sleep 10000000000000
+
+killall xterm

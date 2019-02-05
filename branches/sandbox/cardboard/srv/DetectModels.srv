@@ -1,0 +1,6 @@
+Header header
+time timeout
+geometry_msgs/Polygon[] surface_polygons
+string[] models
+---
+SceneHypothesis scene

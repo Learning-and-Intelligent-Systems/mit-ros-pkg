@@ -1,0 +1,32 @@
+<launch>
+  <arg name="use_right_arm" default="true" />
+  <arg name="use_left_arm" default="true" />
+
+  <arg if="$(arg use_right_arm)"      name="right_arm_text" value="right" />
+  <arg unless="$(arg use_right_arm)"  name="right_arm_text" value="" />
+  <arg if="$(arg use_left_arm)"       name="left_arm_text" value="left" />
+  <arg unless="$(arg use_left_arm)"   name="left_arm_text" value="" />
+  <arg name="arm_config" value="$(arg right_arm_text)_$(arg left_arm_text)" />
+  <arg name="use_map" />
+  <arg name="ft_joint"/>
+  
+  <include file="$(find pr2_machine)/$(env ROBOT).machine" />  
+ 
+  <!-- send additional description parameters -->
+  <include file="$(find darrt)/launch/pr2_planning_environment.launch">
+      <arg name="use_map" value="$(arg use_map)"/>
+      <arg name="ft_joint" value="$(arg ft_joint)"/>
+  </include>
+
+  <node machine="c2" pkg="ompl_ros_interface" type="ompl_ros" name="ompl_planning" output="screen">    
+    <!-- if we are moving the base, it is best to maintain the map in a fixed frame since identified objects that are being published
+	 are not necessarily updated -->
+    <!--    <param name="planner_frame_id" type="string" value="odom_combined" /> -->
+
+    <!-- planner configs -->
+    <param name="default_planner_config" type="string" value="SBLkConfig1"/>
+    <rosparam command="load" file="$(find pr2_arm_navigation_planning)/config/$(arg arm_config)_arm_groups.yaml" />
+    <rosparam command="load" file="$(find pr2_arm_navigation_planning)/config/ompl_planning.yaml" />
+  </node>
+
+</launch>

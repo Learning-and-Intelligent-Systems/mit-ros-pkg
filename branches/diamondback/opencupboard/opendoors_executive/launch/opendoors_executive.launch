@@ -1,0 +1,21 @@
+<launch>
+	<!-- for the toaster -->
+<!--	<rosparam file="$(find opendoors_executive)/toaster.yaml" command="load" />	
+-->
+	<!-- for the cabinet-->
+<!--	<rosparam file="$(find opendoors_executive)/cabinet.yaml" command="load" />	
+-->
+
+	<!-- for the cabinet flipped upside down -->
+	<rosparam file="$(find opendoors_executive)/cabinet_flipped.yaml" command="load" />
+
+	<!-- tabletop manipulation -->
+	<include file="$(find pr2_tabletop_manipulation_launch)/launch/pr2_tabletop_manipulation.launch" />
+
+	<!-- ee_cart_imped -->
+	<include file="$(find ee_cart_imped_action)/launch/ee_cart_spawn.launch" />
+
+	<!-- open toaster -->
+	<include file="$(find opendoors_executive)/launch/open_toaster.launch" />
+
+</launch>

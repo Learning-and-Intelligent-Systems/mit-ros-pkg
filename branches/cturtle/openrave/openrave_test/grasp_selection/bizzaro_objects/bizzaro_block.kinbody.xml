@@ -1,0 +1,12 @@
+<kinbody name="bizzaro_block">
+	<body type="dynamic">
+		<mass type="mimicgeom">
+			<density> 2000 </density>
+		</mass>
+		<geom type="box">
+			<diffusecolor> 0 1 0 </diffusecolor>
+			<extents> .03 .18 .03 </extents>
+			<translation> 0 0 0 </translation>
+		</geom>
+	</body>
+</kinbody>

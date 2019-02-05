@@ -1,0 +1,4 @@
+float64 theta
+bool clockwise
+---
+bool success

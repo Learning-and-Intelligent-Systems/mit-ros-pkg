@@ -1,0 +1,6 @@
+<launch>
+	<!--right arm-->
+	<include file="$(find ee_cart_imped_action)/launch/r_arm_cart_imped_action.launch"/>
+	<!--left arm-->
+	<include file="$(find ee_cart_imped_action)/launch/l_arm_cart_imped_action.launch"/>
+</launch>

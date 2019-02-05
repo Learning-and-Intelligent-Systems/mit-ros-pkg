@@ -1,0 +1,21 @@
+int8 right_arm
+int8 const_ee_orientation
+float64 x_pos
+float64 y_pos
+float64 z_pos
+float64 x_orien
+float64 y_orien
+float64 z_orien
+float64 w_orien
+int8 num_planning_attempts
+float64 planning_duration
+float64 constraint_region_char_dim
+float64 goal_absolute_roll_tolerance
+float64 goal_absolute_pitch_tolerance
+float64 goal_absolute_yaw_tolerance
+float64 weight
+float64 path_absolute_roll_tolerance
+float64 path_absolute_pitch_tolerance
+float64 path_absolute_yaw_tolerance
+---
+int8 status

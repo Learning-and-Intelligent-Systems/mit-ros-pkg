@@ -1,0 +1,14 @@
+<package>
+  <description brief="reactive_grasp_test">
+
+     grasp_test
+
+  </description>
+  <author>Huan Liu85775392488577539248</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/grasp_test</url>
+
+</package>
+
+

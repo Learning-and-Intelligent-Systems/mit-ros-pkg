@@ -1,0 +1,16 @@
+<package>
+  <description brief="stereo_throttle">
+
+     stereo_throttle
+
+  </description>
+  <author>Hordur Johannsson</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/stereo_throttle</url>
+  <depend package="roscpp"/>
+  <depend package="sensor_msgs"/>
+  <depend package="message_filters"/>
+</package>
+
+

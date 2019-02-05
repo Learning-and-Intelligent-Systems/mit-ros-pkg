@@ -1,0 +1,17 @@
+
+<launch> 
+   <arg name="use_map"/>
+   <arg name="ft_joint"/>
+
+   <group if="$(arg ft_joint)">
+      <rosparam if="$(arg use_map)" command="load" ns="robot_description_planning" file="$(find darrt)/config/pr2_global_robot_planning_description.yaml" />
+      <rosparam unless="$(arg use_map)" command="load" ns="robot_description_planning" file="$(find darrt)/config/pr2_local_robot_planning_description.yaml" />
+   </group>
+
+   <group unless="$(arg ft_joint)">
+      <rosparam if="$(arg use_map)" command="load" ns="robot_description_planning" file="$(find darrt)/config/pr2_global_planning_description.yaml" />
+      <rosparam unless="$(arg use_map)" command="load" ns="robot_description_planning" file="$(find darrt)/config/pr2_local_planning_description.yaml" />
+   </group>
+
+
+</launch>

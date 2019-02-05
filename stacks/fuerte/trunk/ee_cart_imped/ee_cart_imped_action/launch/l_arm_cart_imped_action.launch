@@ -1,0 +1,8 @@
+<launch>
+	<!--start the controller-->
+	<include file="$(find ee_cart_imped_control)/launch/l_arm_cart_imped_controller.launch"/>
+	<!--start the action server-->
+	<group ns="l_arm_cart_imped_controller">
+	       <node pkg="ee_cart_imped_action" name="l_arm_cart_imped_action_node" type="ee_cart_imped_action" output="screen"/>
+	</group>
+</launch>

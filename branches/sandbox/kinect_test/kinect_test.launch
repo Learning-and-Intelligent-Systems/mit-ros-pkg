@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find kinect_test)/openni_node.launch"/>
+  <include file="$(find pr2_teleop)/teleop_joystick.launch"/>
+  <include file="$(find pr2_arm_navigation_kinematics)/launch/pr2_ik_rarm_node.launch"/>
+  <node name="dashboard" pkg="pr2_dashboard" type="pr2_dashboard"/>
+</launch>

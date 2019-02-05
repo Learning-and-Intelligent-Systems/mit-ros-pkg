@@ -1,0 +1,17 @@
+<package>
+<description>ROS wrapper for Barrett low-level controllers (which are contained in BarrettWAM) and inverse kinematics library</description>
+<author>Kaijen Hsiao (kaijenhsiao@gmail.com)</author>
+<license>BSD</license>
+<depend package="roscpp" />
+<depend package="rospy" />
+<depend package="std_srvs" />
+<depend package="std_msgs" />
+<depend package="BarrettWAM" />
+<export>
+	<cpp cflags="-I${prefix}/WAMinterfacelib -I${prefix}/wamik" lflags="-L${prefix}/WAMinterfacelib/lib -L${prefix}/WAMinversekinematics/ -lwamif -lwamik"/>
+	<python path="${prefix}/WAMinterfacelib/socketwamif"/>
+	<python path="${prefix}/ROS"/>
+	<python path="${prefix}/src"/>
+	<python path="${prefix}/WAMinversekinematics/SOlib"/>
+</export>
+</package>

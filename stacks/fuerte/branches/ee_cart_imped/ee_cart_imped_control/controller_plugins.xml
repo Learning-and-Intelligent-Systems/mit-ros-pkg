@@ -1,0 +1,5 @@
+<library path="lib/libee_cart_imped_control">
+    <class name="ee_cart_imped_control/EECartImpedControlPlugin"
+           type="ee_cart_imped_control_ns::EECartImpedControlClass"
+           base_class_type="pr2_controller_interface::Controller" />
+</library>

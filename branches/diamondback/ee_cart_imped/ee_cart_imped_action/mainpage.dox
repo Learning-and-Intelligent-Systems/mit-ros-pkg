@@ -1,0 +1,27 @@
+/**
+\mainpage
+\htmlinclude manifest.html
+
+This is the action interface to the <a href=http://www.ros.org/wiki/ee_cart_imped_control>ee_cart_imped_control</a> package.  The controller executes trajectories for force/impedance control of a chain of joints.  The action monitors the controller and aborts goals if they are not reachable or deviate too far from user-specified constraints.  Therefore, interaction with the controller should always be done through the action.  For a wrapper around the simple action client in Python, see the Python API.
+
+
+\section codeapi Code API
+
+Classes:
+- \b EECartImpedExecuter : the executer class that talks to the action server and the controller
+- \b EECartImpedArm : a wrapper for an action client that simplifies specifying, starting, and stopping trajectories
+
+
+<!--
+Provide links to specific auto-generated API documentation within your
+package that is of particular interest to a reader. Doxygen will
+document pretty much every part of your code, so do your best here to
+point the reader to the actual API.
+
+If your codebase is fairly large or has different sets of APIs, you
+should use the doxygen 'group' tag to keep these APIs together. For
+example, the roscpp documentation has 'libros' group.
+-->
+
+
+*/

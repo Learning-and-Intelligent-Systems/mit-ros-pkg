@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find openni_launch)/launch/openni.launch">
+    <arg name="rgb_camera_info_url" value="file:///$find(mrg_openni_launch)/config/rgb.yaml" />
+    <arg name="depth_camera_info_url" value="file:///$find(mrg_openni_launch)/config/depth.yaml" />
+  </include>
+</launch>

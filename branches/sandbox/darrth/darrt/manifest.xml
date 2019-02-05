@@ -1,0 +1,36 @@
+<package>
+  <description brief="darrt">
+
+     darrt
+
+  </description>
+  <author>Jenny Barry</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/darrt</url>
+  <depend package="roscpp"/>
+  <depend package="geometry_msgs"/>
+  <depend package="arm_navigation_msgs"/>
+  <depend package="pr2_controllers_msgs"/>
+  <depend package="kinematics_base"/>
+  <depend package="kinematics_msgs"/>
+  <depend package="planning_environment"/>
+  <depend package="visualization_msgs"/>
+  <depend package="object_manipulation_msgs"/>
+  <depend package="darrt_msgs"/>
+  <depend package="rrt_connect"/>
+  <!--Used for approximate collision checking to speed up collision checks-->
+  <depend package="pr2_collision_checker"/>
+  <!--Used for hacked execution-->
+  <depend package="base_trajectory_action"/>
+
+
+  <rosdep name="ompl"/>
+
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -ldarrt_lib"/>
+  </export>
+
+</package>
+
+

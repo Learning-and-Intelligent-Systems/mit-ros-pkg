@@ -1,0 +1,8 @@
+# Define the goal
+geometry_msgs/PoseArray path
+---
+# Define the result
+geometry_msgs/Pose current_position
+---
+# Define a feedback message
+uint32 path_points_moved

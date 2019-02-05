@@ -1,0 +1,8 @@
+This directory contians code that is either being retired or awaiting integration
+into the main library. 
+
+Retired code is here so it doesn't muck up the other directories but we might need
+some of the code here later so we don't want to just throw it away.
+
+Experimental code is stuff we are trying out and may want to integrate but not 
+just yet.

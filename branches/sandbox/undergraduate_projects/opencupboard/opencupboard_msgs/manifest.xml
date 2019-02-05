@@ -1,0 +1,20 @@
+<package>
+  <description brief="opencupboard_msgs">
+
+     opencupboard_msgs
+
+  </description>
+  <author>Annie Holladay</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/opencupboard_msgs</url>
+
+  <depend package="tabletop_object_detector" />
+  <depend package="geometry_msgs" />
+  <depend package="object_manipulation_msgs" />  
+  <depend package="actionlib" />  
+  <depend package="actionlib_msgs" />
+
+</package>
+
+

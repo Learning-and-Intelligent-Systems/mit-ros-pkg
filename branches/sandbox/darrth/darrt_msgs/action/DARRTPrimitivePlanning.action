@@ -1,0 +1,21 @@
+darrt_msgs/DARRTState from_state
+
+darrt_msgs/DARRTState to_state
+
+string[] groups
+
+bool check_usefulness_only
+
+---
+
+#this must be at least two points
+#(start and end) but can be only two points
+#the start and end do not need to and usually
+#won't correspond with from and to
+#they do not need to be collision free - the planner
+#will check that
+darrt_msgs/DARRTState[] path
+
+bool useful
+
+---

@@ -1,0 +1,10 @@
+Header header
+geometry_msgs/Pose pose
+geometry_msgs/Wrench wrench_or_stiffness
+bool isForceX
+bool isForceY
+bool isForceZ
+bool isTorqueX
+bool isTorqueY
+bool isTorqueZ
+duration time_from_start

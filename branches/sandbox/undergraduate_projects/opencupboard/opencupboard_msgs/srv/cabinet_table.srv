@@ -1,0 +1,5 @@
+# request is message with table
+tabletop_object_detector/Table table
+---
+# response is message with table result
+tabletop_object_detector/TabletopDetectionResult detection

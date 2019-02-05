@@ -1,0 +1,5 @@
+#We can find first ingredients using an ordered list
+#TODO: Do we want this to be read as Pour->Mix or just Mix?
+mix(pan)
+scrape(pan)
+bake(pan, 20)

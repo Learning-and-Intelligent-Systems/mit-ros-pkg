@@ -1,0 +1,2477 @@
+'
+'       xclibexd.txt    External        23-Feb-2011
+'
+'       Copyright (C) 2011 EPIX, Inc. All rights reserved.
+'
+'       Example program for XCLIB DLL with Visual Basic .NET and
+'	    SILICON VIDEO(R) 1281M, 1281C
+'	    SILICON VIDEO(R) 1310,  1310C
+'	    SILICON VIDEO(R) 2112,  2112C
+'	    SILICON VIDEO(R) 5C10,  5M10
+'	    SILICON VIDEO(R) 642M,  642C
+'	    SILICON VIDEO(R) 643M,  643C
+'	    SILICON VIDEO(R) 9C10
+'	    SILICON VIDEO(R) 9M001, 9M001C
+'	    SILICON VIDEO(R) 9T001C
+'       SILICON VIDEO(R) WGA-M, WGA-C
+'       cameras. Example assumes Windows 95/98/ME/NT/2000/XP/Vista/7.
+'
+'
+'''''''''
+'
+' INSTRUCTIONS FOR INSTALLATION/USAGE:
+'
+' 1. Start a new Visual Basic .NET project in Visual Studio .NET.
+'
+' 2. Right-click on Form1 and select View Code.
+'
+' 3. Replace the default code by copying and pasting the entire text from this file over it.
+'
+' 4. This code assumes XCLIB is installed to c:\xclib. 
+'    Modify the path in the function declarations if needed.
+'    If using XCLIB-Lite search and replace "XCLIBWNT.DLL" with "XCLYBWNT.DLL"
+'    to correct the function declarations.
+'
+' 5. If not using PXIPL, comment out the PXIPL sections of code.
+'
+' 6. Change the camera string in the Form1_Load subroutine to match your SILICON VIDEO(R) camera.
+'
+' 7. Press F5 to Run sample code. 
+'
+' 8. Visual Studio 2008/2010 places generated code in Form1.Designer.vb, this will generate 
+'    error messages about duplicate declarations due to the generated code included in 
+'    this example. Please delete all code in the Form1.Designer.vb file that should 
+'    pop up and try running the sample code again.
+'
+'
+' EXTENDING THE EXAMPLE:
+'
+' 1. Add the VB.NET declarations for XCLIB to the project, namely file
+'    XCLIBWNT_VBNET.TXT for Windows NT/2000/XP/Vista/7.
+'
+'    If the optional PXIPL library is being used, add the VB.NET declarations
+'    for PXIPL to the project, namely file PXIPLWNT_VBNET.TXT
+'    for Windows NT/2000/XP/Vista/7.
+'
+' 3. Replace the declaration section of this example with the declarations
+'    from XCLIBWNT_VBNET.TXT and XIPLWNT_VBNET.TXT (if used).
+'
+' 4. Add controls and code as needed to call XCLIB or PXIPL functions of interest.
+'
+'
+'''''''''
+#Region " Imports Section "
+Imports System
+Imports System.IO
+Imports System.Windows.Forms
+Imports System.Drawing
+Imports System.Runtime.InteropServices
+Imports System.Drawing.Printing
+#End Region
+
+Public Class Form1
+    Inherits System.Windows.Forms.Form
+
+#Region " Windows Form Designer generated code "
+
+    Public Sub New()
+        MyBase.New()
+
+        'This call is required by the Windows Form Designer.
+        InitializeComponent()
+
+        'Add any initialization after the InitializeComponent() call
+
+    End Sub
+
+    'Form overrides dispose to clean up the component list.
+    Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
+        If disposing Then
+            If Not (components Is Nothing) Then
+                components.Dispose()
+            End If
+        End If
+        MyBase.Dispose(disposing)
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Snap_Button As System.Windows.Forms.Button
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents PXIPL_Neg As System.Windows.Forms.Button
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents WhiteBalance As System.Windows.Forms.Button
+    Friend WithEvents GainNumericUpDown As System.Windows.Forms.NumericUpDown
+    Friend WithEvents GainLabel As System.Windows.Forms.Label
+    Friend WithEvents OffsetNumericUpDown As System.Windows.Forms.NumericUpDown
+    Friend WithEvents FrameRateNumericUpDown As System.Windows.Forms.NumericUpDown
+    Friend WithEvents ClockNumericUpDown As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents ExposureNumericUpDown As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Save As System.Windows.Forms.Button
+    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Snap_Button = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.PXIPL_Neg = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Save = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.WhiteBalance = New System.Windows.Forms.Button()
+        Me.GainNumericUpDown = New System.Windows.Forms.NumericUpDown()
+        Me.GainLabel = New System.Windows.Forms.Label()
+        Me.OffsetNumericUpDown = New System.Windows.Forms.NumericUpDown()
+        Me.FrameRateNumericUpDown = New System.Windows.Forms.NumericUpDown()
+        Me.ClockNumericUpDown = New System.Windows.Forms.NumericUpDown()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.ExposureNumericUpDown = New System.Windows.Forms.NumericUpDown()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Live_CheckBox = New System.Windows.Forms.CheckBox()
+        Me.Software_AxC_CheckBox = New System.Windows.Forms.CheckBox()
+        Me.AGC_CheckBox = New System.Windows.Forms.CheckBox()
+        Me.AEC_CheckBox = New System.Windows.Forms.CheckBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GainNumericUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OffsetNumericUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FrameRateNumericUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClockNumericUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ExposureNumericUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(400, 300)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'Snap_Button
+        '
+        Me.Snap_Button.Location = New System.Drawing.Point(417, 164)
+        Me.Snap_Button.Name = "Snap_Button"
+        Me.Snap_Button.Size = New System.Drawing.Size(72, 32)
+        Me.Snap_Button.TabIndex = 1
+        Me.Snap_Button.Text = "Snap"
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 200
+        '
+        'PXIPL_Neg
+        '
+        Me.PXIPL_Neg.Location = New System.Drawing.Point(400, 268)
+        Me.PXIPL_Neg.Name = "PXIPL_Neg"
+        Me.PXIPL_Neg.Size = New System.Drawing.Size(144, 32)
+        Me.PXIPL_Neg.TabIndex = 3
+        Me.PXIPL_Neg.Text = "PXIPL Compliment"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Location = New System.Drawing.Point(411, 27)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(262, 77)
+        Me.PictureBox2.TabIndex = 4
+        Me.PictureBox2.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.Location = New System.Drawing.Point(408, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(200, 24)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Line Intensity Plot:"
+        '
+        'Save
+        '
+        Me.Save.Location = New System.Drawing.Point(586, 164)
+        Me.Save.Name = "Save"
+        Me.Save.Size = New System.Drawing.Size(64, 32)
+        Me.Save.TabIndex = 6
+        Me.Save.Text = "Save"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(12, 326)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(344, 109)
+        Me.TextBox1.TabIndex = 7
+        '
+        'WhiteBalance
+        '
+        Me.WhiteBalance.Location = New System.Drawing.Point(544, 268)
+        Me.WhiteBalance.Name = "WhiteBalance"
+        Me.WhiteBalance.Size = New System.Drawing.Size(129, 32)
+        Me.WhiteBalance.TabIndex = 8
+        Me.WhiteBalance.Text = "White Balance"
+        Me.WhiteBalance.UseVisualStyleBackColor = True
+        '
+        'GainNumericUpDown
+        '
+        Me.GainNumericUpDown.Location = New System.Drawing.Point(544, 311)
+        Me.GainNumericUpDown.Name = "GainNumericUpDown"
+        Me.GainNumericUpDown.Size = New System.Drawing.Size(106, 20)
+        Me.GainNumericUpDown.TabIndex = 10
+        '
+        'GainLabel
+        '
+        Me.GainLabel.AutoSize = True
+        Me.GainLabel.Location = New System.Drawing.Point(508, 318)
+        Me.GainLabel.Name = "GainLabel"
+        Me.GainLabel.Size = New System.Drawing.Size(29, 13)
+        Me.GainLabel.TabIndex = 12
+        Me.GainLabel.Text = "Gain"
+        '
+        'OffsetNumericUpDown
+        '
+        Me.OffsetNumericUpDown.Location = New System.Drawing.Point(544, 337)
+        Me.OffsetNumericUpDown.Name = "OffsetNumericUpDown"
+        Me.OffsetNumericUpDown.Size = New System.Drawing.Size(106, 20)
+        Me.OffsetNumericUpDown.TabIndex = 16
+        '
+        'FrameRateNumericUpDown
+        '
+        Me.FrameRateNumericUpDown.Location = New System.Drawing.Point(544, 415)
+        Me.FrameRateNumericUpDown.Name = "FrameRateNumericUpDown"
+        Me.FrameRateNumericUpDown.Size = New System.Drawing.Size(106, 20)
+        Me.FrameRateNumericUpDown.TabIndex = 17
+        '
+        'ClockNumericUpDown
+        '
+        Me.ClockNumericUpDown.Location = New System.Drawing.Point(544, 363)
+        Me.ClockNumericUpDown.Name = "ClockNumericUpDown"
+        Me.ClockNumericUpDown.Size = New System.Drawing.Size(106, 20)
+        Me.ClockNumericUpDown.TabIndex = 18
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(437, 344)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(100, 13)
+        Me.Label2.TabIndex = 19
+        Me.Label2.Text = "Offset (Black Level)"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(468, 422)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(69, 13)
+        Me.Label3.TabIndex = 20
+        Me.Label3.Text = "Frame Period"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(503, 370)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(34, 13)
+        Me.Label4.TabIndex = 21
+        Me.Label4.Text = "Clock"
+        '
+        'ExposureNumericUpDown
+        '
+        Me.ExposureNumericUpDown.Location = New System.Drawing.Point(544, 389)
+        Me.ExposureNumericUpDown.Name = "ExposureNumericUpDown"
+        Me.ExposureNumericUpDown.Size = New System.Drawing.Size(106, 20)
+        Me.ExposureNumericUpDown.TabIndex = 22
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(486, 396)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(51, 13)
+        Me.Label5.TabIndex = 23
+        Me.Label5.Text = "Exposure"
+        '
+        'Live_CheckBox
+        '
+        Me.Live_CheckBox.Appearance = System.Windows.Forms.Appearance.Button
+        Me.Live_CheckBox.AutoCheck = False
+        Me.Live_CheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Live_CheckBox.Location = New System.Drawing.Point(489, 164)
+        Me.Live_CheckBox.Name = "Live_CheckBox"
+        Me.Live_CheckBox.Size = New System.Drawing.Size(72, 32)
+        Me.Live_CheckBox.TabIndex = 24
+        Me.Live_CheckBox.Text = "Live"
+        Me.Live_CheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Live_CheckBox.UseVisualStyleBackColor = True
+        '
+        'Software_AxC_CheckBox
+        '
+        Me.Software_AxC_CheckBox.Appearance = System.Windows.Forms.Appearance.Button
+        Me.Software_AxC_CheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Software_AxC_CheckBox.Location = New System.Drawing.Point(400, 227)
+        Me.Software_AxC_CheckBox.Name = "Software_AxC_CheckBox"
+        Me.Software_AxC_CheckBox.Size = New System.Drawing.Size(89, 32)
+        Me.Software_AxC_CheckBox.TabIndex = 25
+        Me.Software_AxC_CheckBox.Text = "Software AGC"
+        Me.Software_AxC_CheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Software_AxC_CheckBox.UseVisualStyleBackColor = True
+        '
+        'AGC_CheckBox
+        '
+        Me.AGC_CheckBox.Appearance = System.Windows.Forms.Appearance.Button
+        Me.AGC_CheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.AGC_CheckBox.Location = New System.Drawing.Point(489, 227)
+        Me.AGC_CheckBox.Name = "AGC_CheckBox"
+        Me.AGC_CheckBox.Size = New System.Drawing.Size(89, 32)
+        Me.AGC_CheckBox.TabIndex = 26
+        Me.AGC_CheckBox.Text = "Hardware AGC"
+        Me.AGC_CheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.AGC_CheckBox.UseVisualStyleBackColor = True
+        '
+        'AEC_CheckBox
+        '
+        Me.AEC_CheckBox.Appearance = System.Windows.Forms.Appearance.Button
+        Me.AEC_CheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.AEC_CheckBox.Location = New System.Drawing.Point(578, 227)
+        Me.AEC_CheckBox.Name = "AEC_CheckBox"
+        Me.AEC_CheckBox.Size = New System.Drawing.Size(95, 32)
+        Me.AEC_CheckBox.TabIndex = 27
+        Me.AEC_CheckBox.Text = "Hardware AEC"
+        Me.AEC_CheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.AEC_CheckBox.UseVisualStyleBackColor = True
+        '
+        'Form1
+        '
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.ClientSize = New System.Drawing.Size(685, 473)
+        Me.Controls.Add(Me.AEC_CheckBox)
+        Me.Controls.Add(Me.AGC_CheckBox)
+        Me.Controls.Add(Me.Software_AxC_CheckBox)
+        Me.Controls.Add(Me.Live_CheckBox)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.ExposureNumericUpDown)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.ClockNumericUpDown)
+        Me.Controls.Add(Me.FrameRateNumericUpDown)
+        Me.Controls.Add(Me.OffsetNumericUpDown)
+        Me.Controls.Add(Me.GainLabel)
+        Me.Controls.Add(Me.GainNumericUpDown)
+        Me.Controls.Add(Me.WhiteBalance)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Save)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PXIPL_Neg)
+        Me.Controls.Add(Me.Snap_Button)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Name = "Form1"
+        Me.Text = "Form1"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GainNumericUpDown, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OffsetNumericUpDown, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FrameRateNumericUpDown, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClockNumericUpDown, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ExposureNumericUpDown, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+
+#End Region
+
+#Region " XCLIB Function Declartations "
+    '                                                          
+    '   XCLIBWNT_VBNET.TXT  External     19-Oct-2010    
+    '   Copyright (C)  2006-2010   EPIX, Inc.  All rights reserved.
+    '                                                          
+    '   XCLIB Declarations for VB.NET x86 (32 bit)             
+    '                                                          
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_PIXCIopen(char*driverparms,char*formatname,char*formatfile);
+    ' The `driverparms' parameter has been declared expecting a double quoted String to be passed
+    ' The `formatname' parameter has been declared expecting a double quoted String to be passed
+    ' The `formatfile' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_PIXCIOPEN Lib "XCLIBWNT.DLL" Alias "pxd_PIXCIopen" _
+    (ByVal c_driverparms As String, ByVal c_formatname As String, ByVal c_formatfile As String) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_PIXCIclose();
+    Private Declare Function PXD_PIXCICLOSE Lib "XCLIBWNT.DLL" Alias "pxd_PIXCIclose" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_mesgFault(int unitmap);
+    Private Declare Function PXD_MESGFAULT Lib "XCLIBWNT.DLL" Alias "pxd_mesgFault" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,char*)pxd_mesgErrorCode(int err);
+    Private Declare Function PXD_MESGERRORCODE Lib "XCLIBWNT.DLL" Alias "pxd_mesgErrorCode" _
+    (ByVal c_err As Integer) As String
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_mesgFaultText(int unitmap,char buf[],size_t bufsize);
+    ' The `buf' parameter has been declared expecting a dimensioned Byte array to be passed
+    Private Declare Function PXD_MESGFAULTTEXT Lib "XCLIBWNT.DLL" Alias "pxd_mesgFaultText" _
+    (ByVal c_unitmap As Integer, ByRef c_buf As Byte, ByVal c_bufsize As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_mesgFaultText(int unitmap,char*buf,size_t bufsize);
+    ' Duplicate declaration
+
+    ' _cDcl(__declspec(dllexport),__stdcall,pxdstate_s*)pxe_XCLIBinstantiate(void);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,void)pxe_XCLIBuninstantiate(pxdstate_s*);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_PIXCIopen(pxdstate_s*,char*driverparms,char*formatname,char*formatfile);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_PIXCIclose(pxdstate_s*);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_mesgFault(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_mesgFaultText(pxdstate_s*,int unitmap,char buf[],size_t bufsize);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_mesgFaultText(pxdstate_s*,int unitmap,char*buf,size_t bufsize);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_infoModel(int unitmap);
+    Private Declare Function PXD_INFOMODEL Lib "XCLIBWNT.DLL" Alias "pxd_infoModel" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_infoSubmodel(int unitmap);
+    Private Declare Function PXD_INFOSUBMODEL Lib "XCLIBWNT.DLL" Alias "pxd_infoSubmodel" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_infoUnits();
+    Private Declare Function PXD_INFOUNITS Lib "XCLIBWNT.DLL" Alias "pxd_infoUnits" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,char*)pxd_infoDriverId();
+    Private Declare Function PXD_INFODRIVERID Lib "XCLIBWNT.DLL" Alias "pxd_infoDriverId" _
+    () As String
+
+    ' _cDcl(__declspec(dllexport),__stdcall,char*)pxd_infoLibraryId();
+    Private Declare Function PXD_INFOLIBRARYID Lib "XCLIBWNT.DLL" Alias "pxd_infoLibraryId" _
+    () As String
+
+    ' _cDcl(__declspec(dllexport),__stdcall,ulong)pxd_infoMemsize(int unitmap);
+    Private Declare Function PXD_INFOMEMSIZE Lib "XCLIBWNT.DLL" Alias "pxd_infoMemsize" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_infoModel(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_infoSubmodel(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_infoUnits(pxdstate_s*);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,char*)pxe_infoDriverId(pxdstate_s*);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,char*)pxe_infoLibraryId(pxdstate_s*);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,ulong)pxe_infoMemsize(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageXdim();
+    Private Declare Function PXD_IMAGEXDIM Lib "XCLIBWNT.DLL" Alias "pxd_imageXdim" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageYdim();
+    Private Declare Function PXD_IMAGEYDIM Lib "XCLIBWNT.DLL" Alias "pxd_imageYdim" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageCdim();
+    Private Declare Function PXD_IMAGECDIM Lib "XCLIBWNT.DLL" Alias "pxd_imageCdim" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageBdim();
+    Private Declare Function PXD_IMAGEBDIM Lib "XCLIBWNT.DLL" Alias "pxd_imageBdim" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageZdim();
+    Private Declare Function PXD_IMAGEZDIM Lib "XCLIBWNT.DLL" Alias "pxd_imageZdim" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageIdim();
+    Private Declare Function PXD_IMAGEIDIM Lib "XCLIBWNT.DLL" Alias "pxd_imageIdim" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_imageAspectRatio();
+    Private Declare Function PXD_IMAGEASPECTRATIO Lib "XCLIBWNT.DLL" Alias "pxd_imageAspectRatio" _
+    () As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageXdims(int unitmap);
+    Private Declare Function PXD_IMAGEXDIMS Lib "XCLIBWNT.DLL" Alias "pxd_imageXdims" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageYdims(int unitmap);
+    Private Declare Function PXD_IMAGEYDIMS Lib "XCLIBWNT.DLL" Alias "pxd_imageYdims" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageCdims(int unitmap);
+    Private Declare Function PXD_IMAGECDIMS Lib "XCLIBWNT.DLL" Alias "pxd_imageCdims" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageBdims(int unitmap);
+    Private Declare Function PXD_IMAGEBDIMS Lib "XCLIBWNT.DLL" Alias "pxd_imageBdims" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageZdims(int unitmap);
+    Private Declare Function PXD_IMAGEZDIMS Lib "XCLIBWNT.DLL" Alias "pxd_imageZdims" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_imageIdims(int unitmap);
+    Private Declare Function PXD_IMAGEIDIMS Lib "XCLIBWNT.DLL" Alias "pxd_imageIdims" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_imageAspectRatios(int unitmap);
+    Private Declare Function PXD_IMAGEASPECTRATIOS Lib "XCLIBWNT.DLL" Alias "pxd_imageAspectRatios" _
+    (ByVal c_unitmap As Integer) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageXdim(pxdstate_s*);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageYdim(pxdstate_s*);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageCdim(pxdstate_s*);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageBdim(pxdstate_s*);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageZdim(pxdstate_s*);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageIdim(pxdstate_s*);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_imageAspectRatio(pxdstate_s*);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageXdims(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageYdims(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageCdims(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageBdims(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageZdims(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_imageIdims(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_imageAspectRatios(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_readuchar(int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,uchar*membuf,size_t cnt,char*colorspace);
+    ' The `membuf' parameter has been declared expecting a dimensioned Byte array to be passed
+    ' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_READUCHAR Lib "XCLIBWNT.DLL" Alias "pxd_readuchar" _
+    (ByVal c_unitmap As Integer, ByVal c_framebuf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByRef c_membuf As Byte, ByVal c_cnt As Integer, ByVal c_colorspace As String) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_writeuchar(int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,uchar*membuf,size_t cnt,char*colorspace);
+    ' The `membuf' parameter has been declared expecting a dimensioned Byte array to be passed
+    ' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_WRITEUCHAR Lib "XCLIBWNT.DLL" Alias "pxd_writeuchar" _
+    (ByVal c_unitmap As Integer, ByVal c_framebuf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByRef c_membuf As Byte, ByVal c_cnt As Integer, ByVal c_colorspace As String) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_readushort(int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,ushort*membuf,size_t cnt,char*colorspace);
+    ' The `membuf' parameter has been declared expecting a dimensioned Short array to be passed
+    ' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_READUSHORT Lib "XCLIBWNT.DLL" Alias "pxd_readushort" _
+    (ByVal c_unitmap As Integer, ByVal c_framebuf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByRef c_membuf As Short, ByVal c_cnt As Integer, ByVal c_colorspace As String) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_writeushort(int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,ushort*membuf,size_t cnt,char*colorspace);
+    ' The `membuf' parameter has been declared expecting a dimensioned Short array to be passed
+    ' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_WRITEUSHORT Lib "XCLIBWNT.DLL" Alias "pxd_writeushort" _
+    (ByVal c_unitmap As Integer, ByVal c_framebuf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByRef c_membuf As Short, ByVal c_cnt As Integer, ByVal c_colorspace As String) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,pximage_s*)pxd_defineImage(int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,char*colorspace);
+    ' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_DEFINEIMAGE Lib "XCLIBWNT.DLL" Alias "pxd_defineImage" _
+    (ByVal c_unitmap As Integer, ByVal c_framebuf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByVal c_colorspace As String) As IntPtr
+
+    ' _cDcl(__declspec(dllexport),__stdcall,pximage3_s*)pxd_defineImage3(int unitmap,pxbuffer_t startbuf,pxbuffer_t endbuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,char*colorspace);
+    ' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_DEFINEIMAGE3 Lib "XCLIBWNT.DLL" Alias "pxd_defineImage3" _
+    (ByVal c_unitmap As Integer, ByVal c_startbuf As Integer, ByVal c_endbuf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByVal c_colorspace As String) As IntPtr
+
+    ' _cDcl(__declspec(dllexport),__stdcall,pximage_s*)pxd_definePximage(int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,char*colorspace);
+    ' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_DEFINEPXIMAGE Lib "XCLIBWNT.DLL" Alias "pxd_definePximage" _
+    (ByVal c_unitmap As Integer, ByVal c_framebuf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByVal c_colorspace As String) As IntPtr
+
+    ' _cDcl(__declspec(dllexport),__stdcall,pximage3_s*)pxd_definePximage3(int unitmap,pxbuffer_t startbuf,pxbuffer_t endbuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,char*colorspace);
+    ' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_DEFINEPXIMAGE3 Lib "XCLIBWNT.DLL" Alias "pxd_definePximage3" _
+    (ByVal c_unitmap As Integer, ByVal c_startbuf As Integer, ByVal c_endbuf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByVal c_colorspace As String) As IntPtr
+
+    ' _cDcl(__declspec(dllexport),__stdcall,void)pxd_definePximageFree(pximage_s*);
+    Private Declare Sub PXD_DEFINEPXIMAGEFREE Lib "XCLIBWNT.DLL" Alias "pxd_definePximageFree" _
+    (ByVal c_noname1 As IntPtr)
+
+    ' _cDcl(__declspec(dllexport),__stdcall,void)pxd_definePximage3Free(pximage3_s*);
+    Private Declare Sub PXD_DEFINEPXIMAGE3FREE Lib "XCLIBWNT.DLL" Alias "pxd_definePximage3Free" _
+    (ByVal c_noname1 As IntPtr)
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_readuchar(pxdstate_s*,int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,uchar*membuf,size_t cnt,char*colorspace);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_writeuchar(pxdstate_s*,int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,uchar*membuf,size_t cnt,char*colorspace);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_readushort(pxdstate_s*,int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,ushort*membuf,size_t cnt,char*colorspace);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_writeushort(pxdstate_s*,int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,ushort*membuf,size_t cnt,char*colorspace);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,pximage_s*)pxe_defineImage(pxdstate_s*,int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,char*colorspace);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,pximage3_s*)pxe_defineImage3(pxdstate_s*,int unitmap,pxbuffer_t startbuf,pxbuffer_t endbuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,char*colorspace);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,pximage_s*)pxe_definePximage(pxdstate_s*,int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,char*colorspace);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,pximage3_s*)pxe_definePximage3(pxdstate_s*,int unitmap,pxbuffer_t startbuf,pxbuffer_t endbuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,char*colorspace);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,void)pxe_definePximageFree(pxdstate_s*,pximage_s*);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,void)pxe_definePximage3Free(pxdstate_s*,pximage3_s*);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_doSnap(int unitmap,pxbuffer_t buffer,ulong timeout);
+    Private Declare Function PXD_DOSNAP Lib "XCLIBWNT.DLL" Alias "pxd_doSnap" _
+    (ByVal c_unitmap As Integer, ByVal c_buffer As Integer, ByVal c_timeout As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goSnap(int unitmap,pxbuffer_t buffer);
+    Private Declare Function PXD_GOSNAP Lib "XCLIBWNT.DLL" Alias "pxd_goSnap" _
+    (ByVal c_unitmap As Integer, ByVal c_buffer As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goSnapPair(int unitmap,pxbuffer_t buffer1,pxbuffer_t buffer2);
+    Private Declare Function PXD_GOSNAPPAIR Lib "XCLIBWNT.DLL" Alias "pxd_goSnapPair" _
+    (ByVal c_unitmap As Integer, ByVal c_buffer1 As Integer, ByVal c_buffer2 As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goLive(int unitmap,pxbuffer_t buffer);
+    Private Declare Function PXD_GOLIVE Lib "XCLIBWNT.DLL" Alias "pxd_goLive" _
+    (ByVal c_unitmap As Integer, ByVal c_buffer As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goUnLive(int unitmap);
+    Private Declare Function PXD_GOUNLIVE Lib "XCLIBWNT.DLL" Alias "pxd_goUnLive" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goAbortLive(int unitmap);
+    Private Declare Function PXD_GOABORTLIVE Lib "XCLIBWNT.DLL" Alias "pxd_goAbortLive" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goLivePair(int unitmap,pxbuffer_t buffer1,pxbuffer_t buffer2);
+    Private Declare Function PXD_GOLIVEPAIR Lib "XCLIBWNT.DLL" Alias "pxd_goLivePair" _
+    (ByVal c_unitmap As Integer, ByVal c_buffer1 As Integer, ByVal c_buffer2 As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goLiveSeq(int unitmap,pxbuffer_t startbuf,pxbuffer_t endbuf,pxbuffer_t incbuf,pxbuffer_t numbuf,int period);
+    Private Declare Function PXD_GOLIVESEQ Lib "XCLIBWNT.DLL" Alias "pxd_goLiveSeq" _
+    (ByVal c_unitmap As Integer, ByVal c_startbuf As Integer, ByVal c_endbuf As Integer, ByVal c_incbuf As Integer, ByVal c_numbuf As Integer, ByVal c_period As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goLiveTrig(int unitmap,pxbuffer_t buffer,uint gpin10mask,uint gpout20value,uint gpout20mask,uint gpout20when,uint gpin30wait,uint gpin30mask,uint gpout40value,uint gpout40mask,uint option50,
+    'uint field50,uint gpout50value,uint gpout50mask,uint delay60,uint gpout60value,uint gpout60mask,uint delay70,uint field70,uint capture70,uint gpin80mask,uint gpout80value,uint gpout80mask);
+    Private Declare Function PXD_GOLIVETRIG Lib "XCLIBWNT.DLL" Alias "pxd_goLiveTrig" _
+    (ByVal c_unitmap As Integer, ByVal c_buffer As Integer, ByVal c_gpin10mask As Integer, ByVal c_gpout20value As Integer, ByVal c_gpout20mask As Integer, ByVal c_gpout20when As Integer, _
+     ByVal c_gpin30wait As Integer, ByVal c_gpin30mask As Integer, ByVal c_gpout40value As Integer, ByVal c_gpout40mask As Integer, _
+     ByVal c_option50 As Integer, ByVal c_field50 As Integer, ByVal c_gpout50value As Integer, ByVal c_gpout50mask As Integer, ByVal c_delay60 As Integer, ByVal c_gpout60value As Integer, ByVal c_gpout60mask As Integer, _
+     ByVal c_delay70 As Integer, ByVal c_field70 As Integer, ByVal c_capture70 As Integer, ByVal c_gpin80mask As Integer, ByVal c_gpout80value As Integer, ByVal c_gpout80mask As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goLiveSeqTrig(int unitmap,pxbuffer_t startbuf,pxbuffer_t endbuf,pxbuffer_t incbuf,pxbuffer_t numbuf,int period,
+    'uint rsvd1,uint rsvd2,uint trig20wait,uint trig20slct,pxvbtime_t trig20delay,uint rsvd3,uint rsvd4,uint rsvd5,uint rsvd6,pxvbtime_t rsvd7,uint rsvd8,uint rsvd9,uint trig40wait,uint trig40slct,pxvbtime_t trig40delay,uint rsvd10,uint rsvd11,uint rsvd12,uint rsvd13,uint rsvd14,uint rsvd15);
+    Private Declare Function PXD_GOLIVESEQTRIG Lib "XCLIBWNT.DLL" Alias "pxd_goLiveSeqTrig" _
+    (ByVal c_unitmap As Integer, ByVal c_startbuf As Integer, ByVal c_endbuf As Integer, ByVal c_incbuf As Integer, ByVal c_numbuf As Integer, ByVal c_period As Integer, ByVal c_rsvd1 As Integer, ByVal c_rsvd2 As Integer, ByVal c_trig20wait As Integer, _
+     ByVal c_trig20slct As Integer, ByVal c_trig20delay As Integer, ByVal c_rsvd3 As Integer, ByVal c_rsvd4 As Integer, ByVal c_rsvd5 As Integer, ByVal c_rsvd6 As Integer, ByVal c_rsvd7 As Integer, ByVal c_rsvd8 As Integer, ByVal c_rsvd9 As Integer, _
+     ByVal c_trig40wait As Integer, ByVal c_trig40slct As Integer, ByVal c_trig40delay As Integer, ByVal c_rsvd10 As Integer, ByVal c_rsvd11 As Integer, ByVal c_rsvd12 As Integer, ByVal c_rsvd13 As Integer, ByVal c_rsvd14 As Integer, _
+     ByVal c_rsvd15 As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_goneLive(int unitmap,int rsvd);
+    Private Declare Function PXD_GONELIVE Lib "XCLIBWNT.DLL" Alias "pxd_goneLive" _
+    (ByVal c_unitmap As Integer, ByVal c_rsvd As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_videoFieldsPerFrame(void);
+    Private Declare Function PXD_VIDEOFIELDSPERFRAME Lib "XCLIBWNT.DLL" Alias "pxd_videoFieldsPerFrame" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_videoFieldsPerFrames(int unitmap);
+    Private Declare Function PXD_VIDEOFIELDSPERFRAMES Lib "XCLIBWNT.DLL" Alias "pxd_videoFieldsPerFrames" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,pxvbtime_t)pxd_videoFieldCount(int unitmap);
+    Private Declare Function PXD_VIDEOFIELDCOUNT Lib "XCLIBWNT.DLL" Alias "pxd_videoFieldCount" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,pxbuffer_t)pxd_capturedBuffer(int unitmap);
+    Private Declare Function PXD_CAPTUREDBUFFER Lib "XCLIBWNT.DLL" Alias "pxd_capturedBuffer" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,uint32)pxd_capturedSysTicks(int unitmap);
+    Private Declare Function PXD_CAPTUREDSYSTICKS Lib "XCLIBWNT.DLL" Alias "pxd_capturedSysTicks" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,pxvbtime_t)pxd_capturedFieldCount(int unitmap);
+    Private Declare Function PXD_CAPTUREDFIELDCOUNT Lib "XCLIBWNT.DLL" Alias "pxd_capturedFieldCount" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,pxvbtime_t)pxd_buffersFieldCount(int unitmap,pxbuffer_t buffer);
+    Private Declare Function PXD_BUFFERSFIELDCOUNT Lib "XCLIBWNT.DLL" Alias "pxd_buffersFieldCount" _
+    (ByVal c_unitmap As Integer, ByVal c_buffer As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,uint32)pxd_buffersSysTicks(int unitmap,pxbuffer_t buffer);
+    Private Declare Function PXD_BUFFERSSYSTICKS Lib "XCLIBWNT.DLL" Alias "pxd_buffersSysTicks" _
+    (ByVal c_unitmap As Integer, ByVal c_buffer As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_buffersSysTicks2(int unitmap,pxbuffer_t buffer,uint32 ticks[2]);
+    ' The `ticks' parameter has been declared expecting a dimensioned Integer array w. 2 elements to be passed
+    Private Declare Function PXD_BUFFERSSYSTICKS2 Lib "XCLIBWNT.DLL" Alias "pxd_buffersSysTicks2" _
+    (ByVal c_unitmap As Integer, ByVal c_buffer As Integer, ByRef c_ticks As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_buffersGPIn(int unitmap,pxbuffer_t buffer);
+    Private Declare Function PXD_BUFFERSGPIN Lib "XCLIBWNT.DLL" Alias "pxd_buffersGPIn" _
+    (ByVal c_unitmap As Integer, ByVal c_buffer As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_doSnap(pxdstate_s*,int unitmap,pxbuffer_t buffer,ulong timeout);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goSnap(pxdstate_s*,int unitmap,pxbuffer_t buffer);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goSnapPair(pxdstate_s*,int unitmap,pxbuffer_t buffer1,pxbuffer_t buffer2);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goLive(pxdstate_s*,int unitmap,pxbuffer_t buffer);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goUnLive(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goAbortLive(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goLivePair(pxdstate_s*,int unitmap,pxbuffer_t buffer1,pxbuffer_t buffer2);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goLiveSeq(pxdstate_s*,int unitmap,pxbuffer_t startbuf,pxbuffer_t endbuf,pxbuffer_t incbuf,pxbuffer_t numbuf,int period);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goLiveTrig(pxdstate_s*,int unitmap,pxbuffer_t buffer,uint gpin10mask,uint gpout20value,uint gpout20mask,uint gpout20when,uint gpin30wait,uint gpin30mask,uint gpout40value,uint gpout40mask,
+    'uint option50,uint field50,uint gpout50value,uint gpout50mask,uint delay60,uint gpout60value,uint gpout60mask,uint delay70,uint field70,uint capture70,uint gpin80mask,uint gpout80value,uint gpout80mask);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goLiveSeqTrig(pxdstate_s*,int unitmap,pxbuffer_t startbuf,pxbuffer_t endbuf,pxbuffer_t incbuf,pxbuffer_t numbuf,int period,uint rsvd1,uint rsvd2,uint trig20wait,uint trig20slct,
+    'pxvbtime_t trig20delay,uint rsvd3,uint rsvd4,uint rsvd5,uint rsvd6,pxvbtime_t rsvd7,uint rsvd8,uint rsvd9,uint trig40wait,uint trig40slct,pxvbtime_t trig40delay,uint rsvd10,uint rsvd11,uint rsvd12,uint rsvd13,uint rsvd14,uint rsvd15);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_goneLive(pxdstate_s*,int unitmap,int rsvd);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_videoFieldsPerFrame(pxdstate_s*);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_videoFieldsPerFrames(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,pxvbtime_t)pxe_videoFieldCount(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,pxbuffer_t)pxe_capturedBuffer(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,uint32)pxe_capturedSysTicks(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,pxvbtime_t)pxe_capturedFieldCount(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,pxvbtime_t)pxe_buffersFieldCount(pxdstate_s*,int unitmap,pxbuffer_t buffer);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,uint32)pxe_buffersSysTicks(pxdstate_s*,int unitmap,pxbuffer_t buffer);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_buffersSysTicks2(pxdstate_s*,int unitmap,pxbuffer_t buffer,uint32 ticks[2]);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_buffersGPIn(pxdstate_s*,int unitmap,pxbuffer_t buffer);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setVidMux(int unitmap,int inmux);
+    Private Declare Function PXD_SETVIDMUX Lib "XCLIBWNT.DLL" Alias "pxd_setVidMux" _
+    (ByVal c_unitmap As Integer, ByVal c_inmux As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_getVidMux(int unitmap);
+    Private Declare Function PXD_GETVIDMUX Lib "XCLIBWNT.DLL" Alias "pxd_getVidMux" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setContrastBrightness(int unitmap,double contrast,double brightness);
+    Private Declare Function PXD_SETCONTRASTBRIGHTNESS Lib "XCLIBWNT.DLL" Alias "pxd_setContrastBrightness" _
+    (ByVal c_unitmap As Integer, ByVal c_contrast As Double, ByVal c_brightness As Double) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setHueSaturation(int unitmap,double hue,double Ugain,double Vgain);
+    Private Declare Function PXD_SETHUESATURATION Lib "XCLIBWNT.DLL" Alias "pxd_setHueSaturation" _
+    (ByVal c_unitmap As Integer, ByVal c_hue As Double, ByVal c_Ugain As Double, ByVal c_Vgain As Double) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_getContrast(int unitmap);
+    Private Declare Function PXD_GETCONTRAST Lib "XCLIBWNT.DLL" Alias "pxd_getContrast" _
+    (ByVal c_unitmap As Integer) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_getBrightness(int unitmap);
+    Private Declare Function PXD_GETBRIGHTNESS Lib "XCLIBWNT.DLL" Alias "pxd_getBrightness" _
+    (ByVal c_unitmap As Integer) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_getHue(int unitmap);
+    Private Declare Function PXD_GETHUE Lib "XCLIBWNT.DLL" Alias "pxd_getHue" _
+    (ByVal c_unitmap As Integer) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_getUGain(int unitmap);
+    Private Declare Function PXD_GETUGAIN Lib "XCLIBWNT.DLL" Alias "pxd_getUGain" _
+    (ByVal c_unitmap As Integer) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_getVGain(int unitmap);
+    Private Declare Function PXD_GETVGAIN Lib "XCLIBWNT.DLL" Alias "pxd_getVGain" _
+    (ByVal c_unitmap As Integer) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setVidMux(pxdstate_s*,int unitmap,int inmux);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_getVidMux(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setContrastBrightness(pxdstate_s*,int unitmap,double contrast,double brightness);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setHueSaturation(pxdstate_s*,int unitmap,double hue,double Ugain,double Vgain);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_getContrast(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_getBrightness(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_getHue(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_getUGain(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_getVGain(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setExsyncPrin(int unitmap,uint exsync,uint prin);
+    Private Declare Function PXD_SETEXSYNCPRIN Lib "XCLIBWNT.DLL" Alias "pxd_setExsyncPrin" _
+    (ByVal c_unitmap As Integer, ByVal c_exsync As Integer, ByVal c_prin As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,uint)pxd_getExsync(int unitmap);
+    Private Declare Function PXD_GETEXSYNC Lib "XCLIBWNT.DLL" Alias "pxd_getExsync" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,uint)pxd_getPrin(int unitmap);
+    Private Declare Function PXD_GETPRIN Lib "XCLIBWNT.DLL" Alias "pxd_getPrin" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setExsyncPrincMode(int unitmap,uint exsyncbits,uint princbits);
+    Private Declare Function PXD_SETEXSYNCPRINCMODE Lib "XCLIBWNT.DLL" Alias "pxd_setExsyncPrincMode" _
+    (ByVal c_unitmap As Integer, ByVal c_exsyncbits As Integer, ByVal c_princbits As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,uint)pxd_getExsyncMode(int unitmap);
+    Private Declare Function PXD_GETEXSYNCMODE Lib "XCLIBWNT.DLL" Alias "pxd_getExsyncMode" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,uint)pxd_getPrincMode(int unitmap);
+    Private Declare Function PXD_GETPRINCMODE Lib "XCLIBWNT.DLL" Alias "pxd_getPrincMode" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setExsyncPrin(pxdstate_s*,int unitmap,uint exsync,uint prin);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,uint)pxe_getExsync(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,uint)pxe_getPrin(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setExsyncPrincMode(pxdstate_s*,int unitmap,uint exsyncbits,uint princbits);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,uint)pxe_getExsyncMode(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,uint)pxe_getPrincMode(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_getGPIn(int unitmap,int data);
+    Private Declare Function PXD_GETGPIN Lib "XCLIBWNT.DLL" Alias "pxd_getGPIn" _
+    (ByVal c_unitmap As Integer, ByVal c_data As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setGPIn(int unitmap,int data);
+    Private Declare Function PXD_SETGPIN Lib "XCLIBWNT.DLL" Alias "pxd_setGPIn" _
+    (ByVal c_unitmap As Integer, ByVal c_data As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setGPOut(int unitmap,int data);
+    Private Declare Function PXD_SETGPOUT Lib "XCLIBWNT.DLL" Alias "pxd_setGPOut" _
+    (ByVal c_unitmap As Integer, ByVal c_data As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_getGPOut(int unitmap,int data);
+    Private Declare Function PXD_GETGPOUT Lib "XCLIBWNT.DLL" Alias "pxd_getGPOut" _
+    (ByVal c_unitmap As Integer, ByVal c_data As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_getGPTrigger(int unitmap,int which);
+    Private Declare Function PXD_GETGPTRIGGER Lib "XCLIBWNT.DLL" Alias "pxd_getGPTrigger" _
+    (ByVal c_unitmap As Integer, ByVal c_which As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setCameraLinkCCOut(int unitmap,int data);
+    Private Declare Function PXD_SETCAMERALINKCCOUT Lib "XCLIBWNT.DLL" Alias "pxd_setCameraLinkCCOut" _
+    (ByVal c_unitmap As Integer, ByVal c_data As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_getCameraLinkCCOut(int unitmap,int data);
+    Private Declare Function PXD_GETCAMERALINKCCOUT Lib "XCLIBWNT.DLL" Alias "pxd_getCameraLinkCCOut" _
+    (ByVal c_unitmap As Integer, ByVal c_data As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_getGPIn(pxdstate_s*,int unitmap,int data);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setGPIn(pxdstate_s*,int unitmap,int data);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setGPOut(pxdstate_s*,int unitmap,int data);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_getGPOut(pxdstate_s*,int unitmap,int data);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_getGPTrigger(pxdstate_s*,int unitmap,int which);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setCameraLinkCCOut(pxdstate_s*,int unitmap,int data);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_getCameraLinkCCOut(pxdstate_s*,int unitmap,int data);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,HGLOBAL)pxd_renderDIBCreate(int unitmap,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int mode,int options);
+    Private Declare Function PXD_RENDERDIBCREATE Lib "XCLIBWNT.DLL" Alias "pxd_renderDIBCreate" _
+    (ByVal c_unitmap As Integer, ByVal c_buf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByVal c_mode As Integer, ByVal c_options As Integer) As IntPtr
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_renderDIBFree(HGLOBAL hDIB);
+    ' The `hDIB' parameter has been declared expecting a Windows gloabl handle to be passed
+    Private Declare Function PXD_RENDERDIBFREE Lib "XCLIBWNT.DLL" Alias "pxd_renderDIBFree" _
+    (ByVal c_hDIB As IntPtr) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_renderStretchDIBits(int unitmap,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int options,HDC hDC,uint nX,uint nY,uint nWidth,uint nHeight,int winoptions);
+    ' The `hDC' parameter has been declared expecting a Windows handle to a device context (hDC) to be passed
+    Private Declare Function PXD_RENDERSTRETCHDIBITS Lib "XCLIBWNT.DLL" Alias "pxd_renderStretchDIBits" _
+    (ByVal c_unitmap As Integer, ByVal c_buf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByVal c_options As Integer, ByVal c_hDC As IntPtr, _
+     ByVal c_nX As Integer, ByVal c_nY As Integer, ByVal c_nWidth As Integer, ByVal c_nHeight As Integer, ByVal c_winoptions As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,HGLOBAL)pxe_renderDIBCreate(pxdstate_s*,int unitmap,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int mode,int options);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_renderDIBFree(pxdstate_s*,HGLOBAL hDIB);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_renderStretchDIBits(pxdstate_s*,int unitmap,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int options,HDC hDC,uint nX,uint nY,uint nWidth,uint nHeight,int winoptions);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_saveBmp(int unitmap,char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int savemode,int options);
+    ' The `pathname' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_SAVEBMP Lib "XCLIBWNT.DLL" Alias "pxd_saveBmp" _
+    (ByVal c_unitmap As Integer, ByVal c_pathname As String, ByVal c_buf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByVal c_savemode As Integer, ByVal c_options As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_loadBmp(int unitmap,char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int loadmode,int options);
+    ' The `pathname' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_LOADBMP Lib "XCLIBWNT.DLL" Alias "pxd_loadBmp" _
+    (ByVal c_unitmap As Integer, ByVal c_pathname As String, ByVal c_buf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByVal c_loadmode As Integer, ByVal c_options As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_saveTga(int unitmap,char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int savemode,int options);
+    ' The `pathname' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_SAVETGA Lib "XCLIBWNT.DLL" Alias "pxd_saveTga" _
+    (ByVal c_unitmap As Integer, ByVal c_pathname As String, ByVal c_buf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByVal c_savemode As Integer, ByVal c_options As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_savePcx(int unitmap,char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int savemode,int options);
+    ' The `pathname' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_SAVEPCX Lib "XCLIBWNT.DLL" Alias "pxd_savePcx" _
+    (ByVal c_unitmap As Integer, ByVal c_pathname As String, ByVal c_buf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByVal c_savemode As Integer, ByVal c_options As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_saveTiff(int unitmap,char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int savemode,int options);
+    ' The `pathname' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_SAVETIFF Lib "XCLIBWNT.DLL" Alias "pxd_saveTiff" _
+    (ByVal c_unitmap As Integer, ByVal c_pathname As String, ByVal c_buf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByVal c_savemode As Integer, ByVal c_options As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_loadTiff(int unitmap,char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int loadmode,int options);
+    ' The `pathname' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_LOADTIFF Lib "XCLIBWNT.DLL" Alias "pxd_loadTiff" _
+    (ByVal c_unitmap As Integer, ByVal c_pathname As String, ByVal c_buf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByVal c_loadmode As Integer, ByVal c_options As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_saveRawBuffers(int unitmap,char*pathname,pxbuffer_t startbuf,pxbuffer_t endbuf,void*filehandle,pxbuffer_t fileoffset,uint32 alignment,int options);
+    ' The `pathname' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_SAVERAWBUFFERS Lib "XCLIBWNT.DLL" Alias "pxd_saveRawBuffers" _
+    (ByVal c_unitmap As Integer, ByVal c_pathname As String, ByVal c_startbuf As Integer, ByVal c_endbuf As Integer, ByRef c_filehandle As IntPtr, ByVal c_fileoffset As Integer, ByVal c_alignment As Integer, ByVal c_options As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_loadRawBuffers(int unitmap,char*pathname,pxbuffer_t startbuf,pxbuffer_t endbuf,void*filehandle,pxbuffer_t fileoffset,uint32 alignment,int options);
+    ' The `pathname' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_LOADRAWBUFFERS Lib "XCLIBWNT.DLL" Alias "pxd_loadRawBuffers" _
+    (ByVal c_unitmap As Integer, ByVal c_pathname As String, ByVal c_startbuf As Integer, ByVal c_endbuf As Integer, ByRef c_filehandle As IntPtr, ByVal c_fileoffset As Integer, ByVal c_alignment As Integer, ByVal c_options As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_saveBmp(pxdstate_s*,int unitmap,char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int savemode,int options);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_loadBmp(pxdstate_s*,int unitmap,char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int loadmode,int options);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_saveTga(pxdstate_s*,int unitmap,char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int savemode,int options);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_savePcx(pxdstate_s*,int unitmap,char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int savemode,int options);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_saveTiff(pxdstate_s*,int unitmap,char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int savemode,int options);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_loadTiff(pxdstate_s*,int unitmap,char*pathname,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int loadmode,int options);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_saveRawBuffers(pxdstate_s*,int unitmap,char*pathname,pxbuffer_t startbuf,pxbuffer_t endbuf,void*filehandle,pxbuffer_t fileoffset,uint32 alignment,int options);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_loadRawBuffers(pxdstate_s*,int unitmap,char*pathname,pxbuffer_t startbuf,pxbuffer_t endbuf,void*filehandle,pxbuffer_t fileoffset,uint32 alignment,int options);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_renderDirectVideoUnLive(int unitmap,HWND hWnd);
+    ' The `hWnd' parameter has been declared expecting a Windows handle to a window (hWnd) to be passed
+    Private Declare Function PXD_RENDERDIRECTVIDEOUNLIVE Lib "XCLIBWNT.DLL" Alias "pxd_renderDirectVideoUnLive" _
+    (ByVal c_unitmap As Integer, ByVal c_hWnd As IntPtr) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_renderDirectVideoLive(int unitmap,HWND hWnd,uint nX,uint nY,uint nWidth,uint nHeight,COLORREF ClrKey1,COLORREF ClrKey2);
+    ' The `hWnd' parameter has been declared expecting a Windows handle to a window (hWnd) to be passed
+    Private Declare Function PXD_RENDERDIRECTVIDEOLIVE Lib "XCLIBWNT.DLL" Alias "pxd_renderDirectVideoLive" _
+    (ByVal c_unitmap As Integer, ByVal c_hWnd As IntPtr, ByVal c_nX As Integer, ByVal c_nY As Integer, ByVal c_nWidth As Integer, ByVal c_nHeight As Integer, ByVal c_ClrKey1 As Integer, ByVal c_ClrKey2 As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_renderDirectVideoDone(int unitmap,HWND hWnd);
+    ' The `hWnd' parameter has been declared expecting a Windows handle to a window (hWnd) to be passed
+    Private Declare Function PXD_RENDERDIRECTVIDEODONE Lib "XCLIBWNT.DLL" Alias "pxd_renderDirectVideoDone" _
+    (ByVal c_unitmap As Integer, ByVal c_hWnd As IntPtr) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_renderDirectVideoInit(int unitmap,HWND hWnd);
+    ' The `hWnd' parameter has been declared expecting a Windows handle to a window (hWnd) to be passed
+    Private Declare Function PXD_RENDERDIRECTVIDEOINIT Lib "XCLIBWNT.DLL" Alias "pxd_renderDirectVideoInit" _
+    (ByVal c_unitmap As Integer, ByVal c_hWnd As IntPtr) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_renderDirectVideoUnLive(pxdstate_s*,int unitmap,HWND hWnd);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_renderDirectVideoLive(pxdstate_s*,int unitmap,HWND hWnd,uint nX,uint nY,uint nWidth,uint nHeight,COLORREF ClrKey1,COLORREF ClrKey2);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_renderDirectVideoDone(pxdstate_s*,int unitmap,HWND hWnd);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_renderDirectVideoInit(pxdstate_s*,int unitmap,HWND hWnd);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxd_eventFieldCreate(int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxd_eventFieldCreate2(int unitmap,int type);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,void)pxd_eventFieldClose(int unitmap,HANDLE hEvent);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxd_eventCapturedFieldCreate(int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxd_eventCapturedFieldCreate2(int unitmap,int type);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,void)pxd_eventCapturedFieldClose(int unitmap,HANDLE hEvent);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxd_eventGPTriggerCreate(int unitmap,int which,int rsvd);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxd_eventGPTriggerCreate2(int unitmap,int which,int rsvd,int type);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,void)pxd_eventGPTriggerClose(int unitmap,int which,int rsvd,HANDLE hEvent);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxd_eventFaultCreate(int unitmap,int rsvd);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxd_eventFaultCreate2(int unitmap,int rsvd,int type);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,void)pxd_eventFaultClose(int unitmap,int rsvd,HANDLE hEvent);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxe_eventFieldCreate(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxe_eventFieldCreate2(pxdstate_s*,int unitmap,int type);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,void)pxe_eventFieldClose(pxdstate_s*,int unitmap,HANDLE hEvent);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxe_eventCapturedFieldCreate(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxe_eventCapturedFieldCreate2(pxdstate_s*,int unitmap,int type);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,void)pxe_eventCapturedFieldClose(pxdstate_s*,int unitmap,HANDLE hEvent);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxe_eventGPTriggerCreate(pxdstate_s*,int unitmap,int which,int rsvd);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxe_eventGPTriggerCreate2(pxdstate_s*,int unitmap,int which,int rsvd,int type);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,void)pxe_eventGPTriggerClose(pxdstate_s*,int unitmap,int which,int rsvd,HANDLE hEvent);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxe_eventFaultCreate(pxdstate_s*,int unitmap,int rsvd);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,HANDLE)pxe_eventFaultCreate2(pxdstate_s*,int unitmap,int rsvd,int type);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,void)pxe_eventFaultClose(pxdstate_s*,int unitmap,int rsvd,HANDLE hEvent);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setImageDarkBalance(int unitmap,uint referenceRGB[3],uint targetRGB[3],double gamma);
+    ' The `referenceRGB' parameter has been declared expecting a dimensioned Integer array to be passed
+    ' The `targetRGB' parameter has been declared expecting a dimensioned Integer array w. 3 elements to be passed
+    Private Declare Function PXD_SETIMAGEDARKBALANCE Lib "XCLIBWNT.DLL" Alias "pxd_setImageDarkBalance" _
+    (ByVal c_unitmap As Integer, ByRef c_referenceRGB As Integer, ByRef c_targetRGB As Integer, ByVal c_gamma As Double) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_setImageBrightBalance(int unitmap,uint referenceRGB[3],uint targetRGB[3],double gamma);
+    ' The `referenceRGB' parameter has been declared expecting a dimensioned Integer array to be passed
+    ' The `targetRGB' parameter has been declared expecting a dimensioned Integer array w. 3 elements to be passed
+    Private Declare Function PXD_SETIMAGEBRIGHTBALANCE Lib "XCLIBWNT.DLL" Alias "pxd_setImageBrightBalance" _
+    (ByVal c_unitmap As Integer, ByRef c_referenceRGB As Integer, ByRef c_targetRGB As Integer, ByVal c_gamma As Double) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setImageDarkBalance(pxdstate_s*,int unitmap,uint referenceRGB[3],uint targetRGB[3],double gamma);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_setImageBrightBalance(pxdstate_s*,int unitmap,uint referenceRGB[3],uint targetRGB[3],double gamma);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_serialConfigure(int unitmap,int rsvd0,double baud,int bits,int parity,int stopbits,int rsvd1,int rsvd2,int rsvd3);
+    Private Declare Function PXD_SERIALCONFIGURE Lib "XCLIBWNT.DLL" Alias "pxd_serialConfigure" _
+    (ByVal c_unitmap As Integer, ByVal c_rsvd0 As Integer, ByVal c_baud As Double, ByVal c_bits As Integer, ByVal c_parity As Integer, ByVal c_stopbits As Integer, _
+     ByVal c_rsvd1 As Integer, ByVal c_rsvd2 As Integer, ByVal c_rsvd3 As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_serialRead(int unitmap,int rsvd0,uchar*buf,int cnt);
+    ' The `buf' parameter has been declared expecting a dimensioned Byte array to be passed
+    Private Declare Function PXD_SERIALREAD Lib "XCLIBWNT.DLL" Alias "pxd_serialRead" _
+    (ByVal c_unitmap As Integer, ByVal c_rsvd0 As Integer, ByRef c_buf As Byte, ByVal c_cnt As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_serialWrite(int unitmap,int rsvd0,uchar*buf,int cnt);
+    ' The `buf' parameter has been declared expecting a dimensioned Byte array to be passed
+    Private Declare Function PXD_SERIALWRITE Lib "XCLIBWNT.DLL" Alias "pxd_serialWrite" _
+    (ByVal c_unitmap As Integer, ByVal c_rsvd0 As Integer, ByRef c_buf As Byte, ByVal c_cnt As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_serialRead(int unitmap,int rsvd0,char buf[],int cnt);
+    ' Duplicate declaration
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_serialWrite(int unitmap,int rsvd0,char buf[],int cnt);
+    ' Duplicate declaration
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_serialConfigure(pxdstate_s*,int unitmap,int rsvd0,double baud,int bits,int parity,int stopbits,int rsvd1,int rsvd2,int rsvd3);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_serialRead(pxdstate_s*,int unitmap,int rsvd0,uchar*buf,int cnt);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_serialWrite(pxdstate_s*,int unitmap,int rsvd0,uchar*buf,int cnt);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_serialRead(pxdstate_s*,int unitmap,int rsvd0,char buf[],int cnt);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_serialWrite(pxdstate_s*,int unitmap,int rsvd0,char buf[],int cnt);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__cdecl,sint32)clSerialInit();
+    Private Declare Function CLSERIALINIT Lib "XCLIBWNT.DLL" Alias "clSerialInit" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__cdecl,void)clSerialClose();
+    Private Declare Sub CLSERIALCLOSE Lib "XCLIBWNT.DLL" Alias "clSerialClose" _
+    ()
+
+    ' _cDcl(__declspec(dllexport),__cdecl,sint32)clSerialRead();
+    Private Declare Function CLSERIALREAD Lib "XCLIBWNT.DLL" Alias "clSerialRead" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__cdecl,sint32)clSerialWrite();
+    Private Declare Function CLSERIALWRITE Lib "XCLIBWNT.DLL" Alias "clSerialWrite" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__cdecl,sint32)clGetNumBytesAvail();
+    Private Declare Function CLGETNUMBYTESAVAIL Lib "XCLIBWNT.DLL" Alias "clGetNumBytesAvail" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__cdecl,sint32)clFlushPort();
+    Private Declare Function CLFLUSHPORT Lib "XCLIBWNT.DLL" Alias "clFlushPort" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__cdecl,sint32)clGetErrorText();
+    Private Declare Function CLGETERRORTEXT Lib "XCLIBWNT.DLL" Alias "clGetErrorText" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__cdecl,sint32)clGetNumSerialPorts();
+    Private Declare Function CLGETNUMSERIALPORTS Lib "XCLIBWNT.DLL" Alias "clGetNumSerialPorts" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__cdecl,sint32)clGetSerialPortIdentifier();
+    Private Declare Function CLGETSERIALPORTIDENTIFIER Lib "XCLIBWNT.DLL" Alias "clGetSerialPortIdentifier" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__cdecl,sint32)clGetManufacturerInfo();
+    Private Declare Function CLGETMANUFACTURERINFO Lib "XCLIBWNT.DLL" Alias "clGetManufacturerInfo" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__cdecl,sint32)clGetSupportedBaudRates();
+    Private Declare Function CLGETSUPPORTEDBAUDRATES Lib "XCLIBWNT.DLL" Alias "clGetSupportedBaudRates" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__cdecl,sint32)clSetBaudRate();
+    Private Declare Function CLSETBAUDRATE Lib "XCLIBWNT.DLL" Alias "clSetBaudRate" _
+    () As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_setAxC(int unitmap,int rsvd,int agcA,int agcB,int rsvd2,int rsvd3,int aec,int rsvd4,int rsvd5,int rsvd6,int rsvd7);
+    Private Declare Function PXD_SILICONVIDEO_SETAXC Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_setAxC" _
+    (ByVal c_unitmap As Integer, ByVal c_rsvd As Integer, ByVal c_agcA As Integer, ByVal c_agcB As Integer, ByVal c_rsvd2 As Integer, ByVal c_rsvd3 As Integer, ByVal c_aec As Integer, ByVal c_rsvd4 As Integer, ByVal c_rsvd5 As Integer, ByVal c_rsvd6 As Integer, ByVal c_rsvd7 As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_setExposureGainOffset(int unitmap,int rsvd,double exposure,double gainA,double offsetA,double gainB,double offsetB);
+    Private Declare Function PXD_SILICONVIDEO_SETEXPOSUREGAINOFFSET Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_setExposureGainOffset" _
+    (ByVal c_unitmap As Integer, ByVal c_rsvd As Integer, ByVal c_exposure As Double, ByVal c_gainA As Double, ByVal c_offsetA As Double, ByVal c_gainB As Double, ByVal c_offsetB As Double) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_setExposureColorGainOffsets(int unitmap,int rsvd,double exposure,double gainsA[4],double gainsB[4],double offsetsA[4],double offsetsB[4]);
+    ' The `gainsA' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+    ' The `gainsB' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+    ' The `offsetsA' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+    ' The `offsetsB' parameter has been declared expecting a dimensioned Double array w. 4 elements to be passed
+    Private Declare Function PXD_SILICONVIDEO_SETEXPOSURECOLORGAINOFFSETS Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_setExposureColorGainOffsets" _
+    (ByVal c_unitmap As Integer, ByVal c_rsvd As Integer, ByVal c_exposure As Double, ByRef c_gainsA As Double, ByRef c_gainsB As Double, ByRef c_offsetsA As Double, ByRef c_offsetsB As Double) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_setExposure(int unitmap,int rsvd,double exposure);
+    Private Declare Function PXD_SILICONVIDEO_SETEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_setExposure" _
+    (ByVal c_unitmap As Integer, ByVal c_rsvd As Integer, ByVal c_exposure As Double) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_setVideoAndTriggerMode(int unitmap,int rsvd,int videomode,int controlledmode,int controlledtrigger,int rsvd1,int rsvd2,int rsvd3,int rsvd4);
+    Private Declare Function PXD_SILICONVIDEO_SETVIDEOANDTRIGGERMODE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_setVideoAndTriggerMode" _
+    (ByVal c_unitmap As Integer, ByVal c_rsvd As Integer, ByVal c_videomode As Integer, ByVal c_controlledmode As Integer, ByVal c_controlledtrigger As Integer, ByVal c_rsvd1 As Integer, ByVal c_rsvd2 As Integer, _
+     ByVal c_rsvd3 As Integer, ByVal c_rsvd4 As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_setResolutionAndTiming(int unitmap,int rsvd1,int subsample,int aoileft,int aoitop,int aoiwidth,int aoiheight,int scandirection,int bitdepth,
+    'int rsvd3,int rsvd4,double pixelClkFreq,double framePeriod,double rsvd5,double rsvd6,double rsvd7);
+    Private Declare Function PXD_SILICONVIDEO_SETRESOLUTIONANDTIMING Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_setResolutionAndTiming" _
+    (ByVal c_unitmap As Integer, ByVal c_rsvd1 As Integer, ByVal c_subsample As Integer, ByVal c_aoileft As Integer, ByVal c_aoitop As Integer, ByVal c_aoiwidth As Integer, ByVal c_aoiheight As Integer, _
+     ByVal c_scandirection As Integer, ByVal c_bitdepth As Integer, ByVal c_rsvd3 As Integer, ByVal c_rsvd4 As Integer, ByVal c_pixelClkFreq As Double, ByVal c_framePeriod As Double, _
+     ByVal c_rsvd5 As Double, ByVal c_rsvd6 As Double, ByVal c_rsvd7 As Double) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_setCtrlRates(int unitmap,int rsvd,double rsvd1,double framerate,double rsvd2,double rsvd3,double rsvd4);
+    Private Declare Function PXD_SILICONVIDEO_SETCTRLRATES Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_setCtrlRates" _
+    (ByVal c_unitmap As Integer, ByVal c_rsvd As Integer, ByVal c_rsvd1 As Double, ByVal c_framerate As Double, ByVal c_rsvd2 As Double, ByVal c_rsvd3 As Double, ByVal c_rsvd4 As Double) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getExposure(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getExposure" _
+    (ByVal c_unitmap As Integer) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getAoiTop(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETAOITOP Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getAoiTop" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getAoiLeft(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETAOILEFT Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getAoiLeft" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getAoiWidth(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETAOIWIDTH Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getAoiWidth" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getAoiHeight(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETAOIHEIGHT Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getAoiHeight" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getPixelClock(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETPIXELCLOCK Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getPixelClock" _
+    (ByVal c_unitmap As Integer) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getFramePeriod(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETFRAMEPERIOD Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getFramePeriod" _
+    (ByVal c_unitmap As Integer) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getSubsample(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETSUBSAMPLE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getSubsample" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getScanDirection(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETSCANDIRECTION Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getScanDirection" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getVideoMode(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETVIDEOMODE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getVideoMode" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getCtrlFrameRate(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETCTRLFRAMERATE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getCtrlFrameRate" _
+    (ByVal c_unitmap As Integer) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getCtrlVideoMode(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETCTRLVIDEOMODE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getCtrlVideoMode" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getCtrlTriggerMode(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETCTRLTRIGGERMODE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getCtrlTriggerMode" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getGainA(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETGAINA Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getGainA" _
+    (ByVal c_unitmap As Integer) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getGainB(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETGAINB Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getGainB" _
+    (ByVal c_unitmap As Integer) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getGainsA(int unitmap,double gainsA[4]);
+    ' The `gainsA' parameter has been declared expecting a dimensioned Double array to be passed
+    Private Declare Function PXD_SILICONVIDEO_GETGAINSA Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getGainsA" _
+    (ByVal c_unitmap As Integer, ByRef c_gainsA As Double) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getGainsB(int unitmap,double gainsB[4]);
+    ' The `gainsB' parameter has been declared expecting a dimensioned Double array to be passed
+    Private Declare Function PXD_SILICONVIDEO_GETGAINSB Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getGainsB" _
+    (ByVal c_unitmap As Integer, ByRef c_gainsB As Double) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getOffsetsA(int unitmap,double offsetsA[4]);
+    ' The `offsetsA' parameter has been declared expecting a dimensioned Double array to be passed
+    Private Declare Function PXD_SILICONVIDEO_GETOFFSETSA Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getOffsetsA" _
+    (ByVal c_unitmap As Integer, ByRef c_offsetsA As Double) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getOffsetsB(int unitmap,double offsetsB[4]);
+    ' The `offsetsB' parameter has been declared expecting a dimensioned Double array to be passed
+    Private Declare Function PXD_SILICONVIDEO_GETOFFSETSB Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getOffsetsB" _
+    (ByVal c_unitmap As Integer, ByRef c_offsetsB As Double) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getOffsetA(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETOFFSETA Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getOffsetA" _
+    (ByVal c_unitmap As Integer) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getOffsetB(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETOFFSETB Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getOffsetB" _
+    (ByVal c_unitmap As Integer) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getMinMaxExposure(int unitmap,double exposure);
+    Private Declare Function PXD_SILICONVIDEO_GETMINMAXEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxExposure" _
+    (ByVal c_unitmap As Integer, ByVal c_exposure As Double) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getMinMaxFramePeriod(int unitmap,double framePeriod);
+    Private Declare Function PXD_SILICONVIDEO_GETMINMAXFRAMEPERIOD Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxFramePeriod" _
+    (ByVal c_unitmap As Integer, ByVal c_framePeriod As Double) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getMinMaxCtrlFrameRate(int unitmap,double frameRate);
+    Private Declare Function PXD_SILICONVIDEO_GETMINMAXCTRLFRAMERATE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxCtrlFrameRate" _
+    (ByVal c_unitmap As Integer, ByVal c_frameRate As Double) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getMinMaxPixelClock(int unitmap,double pixelClkFreq);
+    Private Declare Function PXD_SILICONVIDEO_GETMINMAXPIXELCLOCK Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxPixelClock" _
+    (ByVal c_unitmap As Integer, ByVal c_pixelClkFreq As Double) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getMinMaxGainA(int unitmap,double gain);
+    Private Declare Function PXD_SILICONVIDEO_GETMINMAXGAINA Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxGainA" _
+    (ByVal c_unitmap As Integer, ByVal c_gain As Double) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getMinMaxGainB(int unitmap,double gain);
+    Private Declare Function PXD_SILICONVIDEO_GETMINMAXGAINB Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxGainB" _
+    (ByVal c_unitmap As Integer, ByVal c_gain As Double) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getMinMaxOffsetA(int unitmap,double offset);
+    Private Declare Function PXD_SILICONVIDEO_GETMINMAXOFFSETA Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxOffsetA" _
+    (ByVal c_unitmap As Integer, ByVal c_offset As Double) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getMinMaxOffsetB(int unitmap,double offset);
+    Private Declare Function PXD_SILICONVIDEO_GETMINMAXOFFSETB Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxOffsetB" _
+    (ByVal c_unitmap As Integer, ByVal c_offset As Double) As Double
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getMinMaxAoiWidth(int unitmap,int width);
+    Private Declare Function PXD_SILICONVIDEO_GETMINMAXAOIWIDTH Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxAoiWidth" _
+    (ByVal c_unitmap As Integer, ByVal c_width As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getMinMaxAoiHeight(int unitmap,int height);
+    Private Declare Function PXD_SILICONVIDEO_GETMINMAXAOIHEIGHT Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxAoiHeight" _
+    (ByVal c_unitmap As Integer, ByVal c_height As Integer) As Integer
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getAgcA(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETAGCA Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getAgcA" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getAgcB(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETAGCB Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getAgcB" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getAec(int unitmap);
+    Private Declare Function PXD_SILICONVIDEO_GETAEC Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getAec" _
+    (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getMinMaxAgcA(int unitmap,int agc);
+    Private Declare Function PXD_SILICONVIDEO_GETMINMAXAGCA Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxAgcA" _
+    (ByVal c_unitmap As Integer, ByVal c_agc As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getMinMaxAgcB(int unitmap,int agc);
+    Private Declare Function PXD_SILICONVIDEO_GETMINMAXAGCB Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxAgcB" _
+    (ByVal c_unitmap As Integer, ByVal c_agc As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_getMinMaxAec(int unitmap,int aec);
+    Private Declare Function PXD_SILICONVIDEO_GETMINMAXAEC Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getMinMaxAec" _
+    (ByVal c_unitmap As Integer, ByVal c_aec As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_setExposureGainOffset(pxdstate_s*,int unitmap,int rsvd,double exposure,double gainA,double offsetA,double gainB,double offsetB);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_setExposureColorGainOffsets(pxdstate_s*,int unitmap,int rsvd,double exposure,double gainsA[4],double gainsB[4],double offsetsA[4],double offsetsB[4]);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_setExposure(pxdstate_s*,int unitmap,int rsvd,double exposure);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_setVideoAndTriggerMode(pxdstate_s*,int unitmap,int rsvd,int videomode,int controlledmode,int controlledtrigger,int rsdv1,int rsvd2,int rsvd3,int rsvd4);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_setResolutionAndTiming(pxdstate_s*,int unitmap,int rsvd1,int subsample,int aoileft,int aoitop,int aoiwidth,int aoiheight,int scandirection,int bitdepth,
+    'int rsvd3,int rsvd4,double pixelClkFreq,double framePeriod,double rsvd5,double rsvd6,double rsvd7);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_setCtrlRates(pxdstate_s*,int unitmap,int rsvd,double rsvd1,double framerate,double rsvd2,double rsvd3,double rsvd4);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getExposure(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getAoiTop(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getAoiLeft(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getAoiWidth(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getAoiHeight(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getPixelClock(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getFramePeriod(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getSubsample(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getScanDirection(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getVideoMode(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getCtrlFrameRate(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getCtrlVideoMode(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getCtrlTriggerMode(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getGainA(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getGainB(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getGainsA(pxdstate_s*,int unitmap,double gainsA[4]);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getGainsB(pxdstate_s*,int unitmap,double gainsB[4]);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getOffsetsA(pxdstate_s*,int unitmap,double offsetsA[4]);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getOffsetsB(pxdstate_s*,int unitmap,double offsetsB[4]);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getOffsetA(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getOffsetB(pxdstate_s*,int unitmap);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getMinMaxExposure(pxdstate_s*,int unitmap,double exposure);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getMinMaxFramePeriod(pxdstate_s*,int unitmap,double framePeriod);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getMinMaxCtrlFrameRate(pxdstate_s*,int unitmap,double frameRate);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getMinMaxPixelClock(pxdstate_s*,int unitmap,double pixelClkFreq);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getMinMaxGainA(pxdstate_s*,int unitmap,double gain);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getMinMaxGainB(pxdstate_s*,int unitmap,double gain);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getMinMaxOffsetA(pxdstate_s*,int unitmap,double offset);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,double)pxe_SILICONVIDEO_getMinMaxOffsetB(pxdstate_s*,int unitmap,double offset);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getMinMaxAoiWidth(pxdstate_s*,int unitmap,int width);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_SILICONVIDEO_getMinMaxAoiHeight(pxdstate_s*,int unitmap,int height);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,xclibs_s*)pxd_xclibEscape(int rsvd1,int rsvd2,int rsvd3);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxd_xclibEscaped(int rsvd1,int rsvd2,int rsvd3);
+    Private Declare Function PXD_XCLIBESCAPED Lib "XCLIBWNT.DLL" Alias "pxd_xclibEscaped" _
+    (ByVal c_rsvd1 As Integer, ByVal c_rsvd2 As Integer, ByVal c_rsvd3 As Integer) As Integer
+
+    ' _cDcl(__declspec(dllexport),__stdcall,xclibs_s*)pxe_xclibEscape(pxdstate_s*,int rsvd1,int rsvd2,int rsvd3);
+    ' Uses advanced or unrecognized C constructs
+
+    ' _cDcl(__declspec(dllexport),__stdcall,int)pxe_xclibEscaped(pxdstate_s*,int rsvd1,int rsvd2,int rsvd3);
+    ' Uses advanced or unrecognized C constructs
+
+
+    '  Helpful constants:
+    Const ascii_b = 98  ' an asc("b")
+    Const ascii_e = 101 ' an asc("e")
+    Const ascii_n = 110 ' an asc("n")
+    Const ascii_o = 111 ' an asc("o")
+    Const ascii_p = 112 ' an asc("p")
+    Const ascii_s = 115 ' an asc("s")
+    Const ascii_r = 114 ' an asc("r")
+    Const ascii_v = 118 ' an asc("v")
+    Const ascii_w = 119 ' an asc("w")
+    Const ascii_z = 122 ' an asc("z")
+    Const ascii_capB = 66  ' an asc("B")
+    Const ascii_capG = 71  ' an asc("G")
+    Const ascii_capR = 82  ' an asc("R")
+    Const PXFNXT = &H1 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXFODD = &H2 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXFEVN = &H4 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXFNOW = &H8 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXSDIGI = &H10 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXSDISP = &H20 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXSIMOP = &H40 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXSBLCK = &H80 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXSNVOT = &H81 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXAWAIT = &H0 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXASYNC = &H1000 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXABORT = &H2000 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXAALL = &H3000 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXIBXTC = &H80 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXPIXBLT = &H0 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXPIXBATN = &H1 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXPIXBRT = &H2 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXPIXBWT = &H3 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXPIXBXT = &H4 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXODONE = &H1 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXOPRUN = &H0 ' (for SVOBJ/4MOBJ/XCOBJ, not XCLIB)
+    Const PXREAD = &H0
+    Const PXRITE = &H1
+    Const PXDATUCHAR = &H1
+    Const PXDATUSHORT = &H2
+    Const PXDATUINT = &H4
+    Const PXDATULONG = &H8
+    Const PXDATFLOAT = &H10
+    Const PXDATDOUBLE = &H20
+    Const PXDATMSB = &H100
+    Const PXDATLSB = &H200
+    Const PXDATDIRTY = &H400
+    Const PXDATENDIAN = &H800
+    Const PXRXSCAN = &H0
+    Const PXRYSCAN = &H2
+    Const PXRZSCAN = &H4
+    Const PXRXYZSCAN = &H6
+    Const PXIWRAP = &H40
+    Const PXIASYNC = &H800
+    Const PXIMAYMOD = &H1000
+    Const PXIXYVALID = &H2000
+    Const PXHINTNONE = &H0
+    Const PXHINTFRAME = &H10
+    Const PXHINTGREY = &H1
+    Const PXHINTGRAY = &H1
+    Const PXHINTINDEX = &H11
+    Const PXHINTBAYER = &H21
+    Const PXHINTCOMPLEX = &H2
+    Const PXHINTCBYCRY = &H12
+    Const PXHINTYCBYCR = &H22
+    Const PXHINTBGR = &H3
+    Const PXHINTYCRCB = &H13
+    Const PXHINTBSH = &H23
+    Const PXHINTRGB = &H43
+    Const PXHINTBGRX = &H4
+    Const PXHINTYCRCBX = &H14
+    Const PXHINTRGBX = &H24
+    Const PXHINTCMY = &H63
+    Const PXHINTCMYK = &H44
+    Const PXHINTPIXIES = &HF
+    Const PXHINTUSER = &H7000
+    Const PXHINTUSERN = &HFFF
+    Const PXUNITUNKNOWN = &H0
+    Const PXUNITRATIO = &H72
+    Const PXUNITINCH = &HBC
+    Const PXUNITFOOT = &HB8
+    Const PXUNITMETER = &H6D
+    Const PXUNITMILLIMETER = &HB7
+    Const PXUNITCENTIMETER = &HAB
+    Const PXUNITSECOND = &H83
+    Const PXIP8BLOB_CONNECT4 = &H0
+    Const PXIP8BLOB_NOCLEAR = &H2
+    Const PXIP8BLOB_PERIMITER = &H4
+    Const PXIP8BLOB_IGNOREEDGE = &H8
+    Const PXIP8BLOB_CONVEX = &H100
+    Const PXIP8BLOB_NOHOLE = &H200
+    Const CLR_INVALID = &HFFFFFFFF
+
+    '' _cDcl(__declspec(dllexport),__stdcall,int)pxd_SILICONVIDEO_setExposure(int unitmap,int rsvd,double exposure);
+    'Private Declare Function PXD_SILICONVIDEO_SETEXPOSURE Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_setExposure" _
+    '(ByVal c_unitmap As Integer, ByVal c_rsvd As Integer, ByVal c_exposure As Double) As Integer
+
+    '' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getOffsetA(int unitmap);
+    'Private Declare Function PXD_SILICONVIDEO_GETOFFSETA Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getOffsetA" _
+    '(ByVal c_unitmap As Integer) As Double
+
+    '' _cDcl(__declspec(dllexport),__stdcall,double)pxd_SILICONVIDEO_getOffsetB(int unitmap);
+    'Private Declare Function PXD_SILICONVIDEO_GETOFFSETB Lib "XCLIBWNT.DLL" Alias "pxd_SILICONVIDEO_getOffsetB" _
+    '(ByVal c_unitmap As Integer) As Double
+    
+    '
+    '''''''SILICON VIDEO FUNCTIONS
+
+    ''''''' PXIPL ''''''
+    '
+    ' This declaration should be commented out if the PXIPL library
+    ' is not being used.
+    '
+    ' _cDcl(_dllpxipl,_cfunfcc,int)pxip8_pixneg(pxabortfunc_t**,pximage_s*sip,pximage_s*dip);
+    ' The `noname1' parameter has been declared expecting a 0 to be passed
+    ' The `sip' parameter has been declared expecting the return value of PXD_DEFIMAGE/PXD_DEFINEIMAGE to be passed
+    ' The `dip' parameter has been declared expecting the return value of PXD_DEFIMAGE/PXD_DEFINEIMAGE to be passed
+    Private Declare Function PXIP8_PIXNEG Lib "c:\xclib\pxiplwnt.dll" Alias "_pxip8_pixneg@12" _
+    (ByVal c_noname1 As Integer, ByVal c_sip As Integer, ByVal c_dip As Integer) As Integer
+    '
+    ''''''' PXIPL ''''''
+#End Region
+
+
+    '''''''''
+    '
+    ' Declarations that must be must be included in the declarations section.
+    ' The SetStretchBltMode is a Windows function, for
+    ' which VB .NET doesn't have a direct equivalent.
+    '
+    '''''''''
+
+    Private Declare Function SetStretchBltMode Lib "gdi32.dll" (ByVal hDC As IntPtr, ByVal mode As Integer) As Integer
+    Const STRETCH_DELETESCANS As Integer = 3 'Constant used in calling SetStrechBltMode
+
+    Const R As Integer = 82
+    Const G As Integer = 71
+    Const B As Integer = 66
+    Const RxorG As Integer = 21
+    Const BxorG As Integer = 5
+    Const Max As Double = 9.0E+99
+    Const Min As Double = -9.0E+99
+
+    Class Pixci
+        Public format As String = "default"
+        Public formatfile As String
+
+        Public maxWidth As Double
+        Public maxHeight As Double
+        Public minGain As Double
+        Public maxGain As Double
+        Public minGainB As Double
+        Public maxGainB As Double
+        Public minClock As Double
+        Public maxClock As Double
+        Public minOffset As Double
+        Public maxOffset As Double
+        Public minExposure As Double
+        Public maxExposure As Double
+        Public loFPS As Double
+        Public hiFPS As Double
+
+        Public is_live As Boolean = False
+        Public do_SoftwareAxC As Boolean = False
+        Public is_color As Boolean = False
+    End Class
+
+    Dim PixciCamera As New Pixci()
+
+    Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        '/*
+        '*  INSTRUCTIONS:
+        '*
+        '*  1.1) Set 'define' options below according to the intended camera
+        '*	and video format.
+        '*
+        '*	For PIXCI(R) D2X imaging boards with SV2112, SV2112C, SV1310,
+        '*	SV1310C, SV1281M, SV1281C. For PIXCI(R) SI, SI1, SI2, or SI4 imaging boards with
+        '*	SV9M001, SV9M001C, SV9T001C, SV642M, SV642C, SV5C10, SV5M10, SV9C10, SV643M, or SV643C.
+        '*	use "default" to select the default format for the camera for which
+        '*	the PIXCI(R) imaging board is intended. For non default formats,
+        '*	use XCAP to save the video set-up to a file, and set FORMATFILE
+        '*	to the saved file's path name.
+        '*
+        '*	Alternately, this could be modified to use getenv("PIXCI"),
+        '*	GetPrivateProfileString(...), RegQueryValueEx(...), or any
+        '*	other convention chosen by the programmer to allow run time
+        '*	selection of the video format and resolution.
+        '*
+        '*/
+
+        PixciCamera.format = "default"    ' as per board's intended camera
+        PixciCamera.formatfile = "xcvidset.fmt" ' using format file saved by XCAP
+
+        ' MsgBox("OPENING PIXCI(R) IMAGING BOARD")
+        TextBox1.AppendText("OPENING PIXCI(R) IMAGING BOARD" & vbCrLf)
+
+        Call PXD_PIXCICLOSE() ' in case this example was run before and aborted
+        ' before completion, the XCLIB may not have been
+        ' closed, and the open would fail
+
+        Dim err As Integer = PXD_PIXCIOPEN("", PixciCamera.format, "") ' Open with default settings
+        ' Dim err As Integer = PXD_PIXCIOPEN("", "", PixciBoard1.formatfile) ' Open with settings from a format file
+
+        If err < 0 Then
+            TextBox1.AppendText("THE OPEN FAILED" & vbCrLf)
+            Call PXD_MESGFAULT(1)
+            Me.Close()
+            Exit Sub
+        End If
+
+        ' Setup GUI values and controls
+        GainNumericUpDown.DecimalPlaces = 5
+        GainNumericUpDown.Maximum = 9999
+        GainNumericUpDown.Minimum = -9999
+        OffsetNumericUpDown.DecimalPlaces = 5
+        OffsetNumericUpDown.Maximum = 9999
+        OffsetNumericUpDown.Minimum = -9999
+        ClockNumericUpDown.DecimalPlaces = 5
+        ClockNumericUpDown.Maximum = 9999
+        ClockNumericUpDown.Minimum = -9999
+        ExposureNumericUpDown.DecimalPlaces = 5
+        ExposureNumericUpDown.Maximum = 9999
+        ExposureNumericUpDown.Minimum = -9999
+        FrameRateNumericUpDown.DecimalPlaces = 5
+        FrameRateNumericUpDown.Maximum = 9999
+        FrameRateNumericUpDown.Minimum = -9999
+
+        PixciCamera.maxWidth = PXD_IMAGEXDIM
+        PixciCamera.maxHeight = PXD_IMAGEYDIM
+        
+        TextBox1.AppendText("Camera Resolution is " & PixciCamera.maxWidth.ToString & " x " & PixciCamera.maxHeight.ToString & vbCrLf)
+        If PXD_IMAGECDIM.Equals(3) Then
+            PixciCamera.is_color = True
+            TextBox1.AppendText("Color Camera" & vbCrLf)
+        End If
+
+        If PXD_SILICONVIDEO_GETMINMAXAGCA(1, 99999).Equals(0) Then
+            AGC_CheckBox.Enabled = False
+        Else
+            AGC_CheckBox.Checked = True
+        End If
+
+        If PXD_SILICONVIDEO_GETMINMAXAEC(1, 99999).Equals(0) Then
+            AEC_CheckBox.Enabled = False
+        Else
+            AEC_CheckBox.Checked = True
+        End If
+
+        AddHandler Timer1.Tick, AddressOf OnTimerEvent
+
+        Call UpdateControlValues()
+
+    End Sub
+
+    Public Function UpdateControlValues() As Boolean
+
+        GainNumericUpDown.Text = CDec(PXD_SILICONVIDEO_GETGAINA(1))
+        ExposureNumericUpDown.Text = CDec(PXD_SILICONVIDEO_GETEXPOSURE(1))
+        FrameRateNumericUpDown.Text = CDec(1000.0 / PXD_SILICONVIDEO_GETFRAMEPERIOD(1))
+        ClockNumericUpDown.Text = CDec(PXD_SILICONVIDEO_GETPIXELCLOCK(1))
+        OffsetNumericUpDown.Text = CDec(PXD_SILICONVIDEO_GETOFFSETA(1))
+
+        Return True
+
+    End Function
+
+    Public Function DoSoftwareAxC() As Boolean
+        Static Dim lasttickcount As Long = 0
+        Static Dim lastcapturedfieldcount As Long = 0
+        Dim tickcount As Long
+        Dim capturedfieldcount As Long
+        Dim i As Integer
+        Dim err As Integer = 0
+
+        '
+        ' How often should be attempt to adjust?
+        ' Don't waste time adjusting too often,
+        ' or if nothing new has been captured.
+        ' We choose every .25 seconds and two fields.
+        '
+        tickcount = Now.Ticks
+        capturedfieldcount = PXD_CAPTUREDFIELDCOUNT(1)
+        If (tickcount - lasttickcount) < 250 _
+        Or (capturedfieldcount - lastcapturedfieldcount) < 2 Then
+            Return True
+        End If
+        lasttickcount = tickcount
+        lastcapturedfieldcount = capturedfieldcount
+
+        '
+        ' Obtain some metric of image brightness.
+        ' This could be mean or max of the whole image,
+        ' or of an AOI, done with a PXIPL function such as pxip8_masscenter(),
+        ' or pxip8_histab, or done with pxd_readushort or pxd_readuchar.
+        ' We choose to get the max of a thin sample through the vertical
+        ' and horizontal w/out PXIPL.
+        '
+        Dim metric As Double = 0
+        Dim pixel As Byte
+        Dim Xdim As Integer = PXD_IMAGEXDIM
+        Dim Ydim As Integer = PXD_IMAGEYDIM
+
+        For i = 0 To Ydim - 1
+            err = PXD_READUCHAR(1, 1, Xdim / 2, i, 1 + Xdim / 2, i + 1, pixel, 1, "Grey") ' Read line into buffer
+            ' mean?
+            ' metric += ((double)pixel/(ydim+xdim)) * (100/255.0);	 // scaled to 100% max
+            ' max?
+            metric = Math.Max(metric, pixel * (100 / 255.0))
+        Next
+
+        For i = 0 To Xdim - 1
+            err = PXD_READUCHAR(1, 1, i, Ydim / 2, i + 1, 1 + Ydim / 2, pixel, 1, "Grey") ' Read line into buffer
+            ' mean?
+            ' metric += ((double)pixel/(ydim+xdim)) * (100/255.0);	 // scaled to 100% max
+            ' max?
+            metric = Math.Max(metric, pixel * (100 / 255.0))
+        Next
+        If err < 0 Then
+            TextBox1.AppendText("PXD_READUCHAR ERROR" & PXD_MESGERRORCODE(err) & vbCrLf)
+        End If
+
+        '
+        ' Compare metric to desired target.
+        ' We choose 75% of max.
+        '
+        Dim delta As Double = metric - 75.0
+        '
+        ' If we are close, don't adjust
+        ' so as to avoid gain/exposure fluctuations for
+        ' very small changes. We choose 10% hysteresis.
+        '
+        If Math.Abs(delta) < 10.0 Then
+            Return True
+        End If
+        '
+        ' Choose whether to implement AGC by modifying
+        ' gain or exposure. In general, given a choice,
+        ' it is better to adjust exposure, as increasing gain
+        ' increases noise. In some applications, it may be beneficial
+        ' to do both. Here we choose to adjust exposure.
+        '
+        ' Get current gain and exposure values.
+        '
+        Dim exposure As Double
+
+        exposure = PXD_SILICONVIDEO_GETEXPOSURE(1)
+
+        '
+        ' Compute new exposure value.
+        '
+        If delta < 0 Then
+            exposure *= 1.1
+        Else
+            exposure *= 0.9
+        End If
+        If Math.Abs(delta) >= 20.0 Then
+            If delta < 0 Then
+                exposure *= 1.1
+            Else
+                exposure *= 0.9
+            End If
+        End If
+        '
+        ' Set. Don't worry if the exposure value is out of bounds.
+        ' It will be corrected.
+        '
+        err = PXD_SILICONVIDEO_SETEXPOSURECOLORGAINOFFSETS(1, 0, exposure, 0, 0, 0, 0)
+        If err < 0 Then
+            TextBox1.AppendText("setExposure ERROR" & PXD_MESGERRORCODE(err) & vbCrLf)
+        End If
+
+        ' Update GUI controls so we can see the effect.
+        Call UpdateControlValues()
+
+        Return True
+
+    End Function
+
+    Public Sub OnTimerEvent(ByVal [source] As Object, ByVal e As EventArgs)
+
+        If PixciCamera.do_SoftwareAxC Then
+            Call DoSoftwareAxC()
+        End If
+        If PixciCamera.is_live Then
+            PictureBox1.Invalidate() ' causes PictureBox1 to redraw
+        End If
+
+    End Sub
+
+    Private Sub PictureBox1_Paint(ByVal sender As Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles PictureBox1.Paint
+
+        Dim Draw As Graphics = e.Graphics ' Create a local version of the graphics object for the PictureBox.
+        Dim hDC As IntPtr = Draw.GetHdc() ' Get a handle to PictureBox1
+
+        ' set resize mode to STRETCH_DELETESCANS
+        Call SetStretchBltMode(hDC, STRETCH_DELETESCANS)
+
+        ' Draw image buffer scaled to the size of PictureBox1
+        Call PXD_RENDERSTRETCHDIBITS(1, 1, 0, 0, -1, -1, 0, hDC, 0, 0, PictureBox1.Width, PictureBox1.Height, 0)
+        Draw.ReleaseHdc(hDC) ' Release PictureBox1 handle
+
+        PictureBox2.Invalidate() ' causes PictureBox2 to redraw
+
+        Static Dim screenUpdate As Double = 0
+        Static Dim frameRate As Double = 0
+        Static Dim screenRate As Double = 0
+        Static Dim lasttickcount As Long = Now.Ticks
+        Static Dim lastcapturedfieldcount As Long = 0
+        Dim capturedfieldcount As Long
+        Dim tickcount As Long = Now.Ticks
+
+        capturedfieldcount = PXD_CAPTUREDFIELDCOUNT(1)
+
+        If screenUpdate.Equals(50) Then
+            frameRate = 1000.0 * 10000 * (capturedfieldcount - lastcapturedfieldcount) / (tickcount - lasttickcount)
+            screenRate = 1000.0 * 10000 * (screenUpdate) / (tickcount - lasttickcount)
+            TextBox1.AppendText("Ticks: " & (tickcount - lasttickcount).ToString & vbCrLf)
+            TextBox1.AppendText("Field Count: " & capturedfieldcount.ToString & vbCrLf)
+            TextBox1.AppendText("Frame Rate: " & frameRate.ToString & vbCrLf)
+            TextBox1.AppendText("Screen Rate: " & screenRate.ToString & vbCrLf)
+            screenUpdate = 0
+            lasttickcount = tickcount
+            lastcapturedfieldcount = capturedfieldcount
+        End If
+        screenUpdate = screenUpdate + 1
+
+    End Sub
+
+    Private Sub PictureBox2_Paint(ByVal sender As Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles PictureBox2.Paint
+
+        Dim Plot As Graphics = e.Graphics
+
+        Dim PlotPen As New Pen(Color.Red)
+
+        Dim Xdim As Integer = PXD_IMAGEXDIM
+        Dim Ydim As Integer = PXD_IMAGEYDIM
+        Dim Xscale As Decimal = PictureBox2.Width / Xdim
+        Dim Yscale As Decimal = PictureBox2.Height / Ydim
+
+        Dim buffer() As Byte
+        ReDim buffer(0 To Xdim * 3)
+
+
+        Dim LineY As Integer = Ydim / 4 ' Specify line at one quarter of image height to plot
+
+        Call PXD_READUCHAR(1, 1, 0, LineY, Xdim, LineY + 1, buffer(0), Xdim * 3, "RGB") ' Read line into buffer
+
+        Dim x As Integer
+        Dim PlotColor As Integer
+
+        For PlotColor = 0 To 2
+
+            Dim Element As Integer = PlotColor
+
+            If PlotColor = 0 Then
+                PlotPen.Color = Color.Red
+            ElseIf PlotColor = 1 Then
+                PlotPen.Color = Color.Green
+            Else
+                PlotPen.Color = Color.Blue
+            End If
+
+            For x = 0 To Xdim - 3
+                Plot.DrawLine(PlotPen, x * Xscale, PictureBox2.Height - (buffer(Element) * Yscale), _
+                    (x + 3) * Xscale, PictureBox2.Height - (buffer(Element + 3) * Yscale))
+                Element = Element + 3
+            Next
+        Next
+
+    End Sub
+
+    Friend WithEvents Software_AxC_CheckBox As System.Windows.Forms.CheckBox
+    Private Sub Software_AxC_CheckBox_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Software_AxC_CheckBox.CheckedChanged
+
+        PixciCamera.do_SoftwareAxC = Software_AxC_CheckBox.Checked ' Toggle Software AGC Status
+        
+        If PixciCamera.do_SoftwareAxC Then
+            AGC_CheckBox.Checked = False
+            AEC_CheckBox.Checked = False
+            GainNumericUpDown.Enabled = False
+            ExposureNumericUpDown.Enabled = False
+            TextBox1.AppendText("Software Auto Gain & Exposure Control is ON" & vbCrLf)
+        Else
+            GainNumericUpDown.Enabled = True
+            ExposureNumericUpDown.Enabled = True
+            TextBox1.AppendText("Software Auto Gain & Exposure Control is OFF" & vbCrLf)
+        End If
+
+    End Sub
+
+    Friend WithEvents AGC_CheckBox As System.Windows.Forms.CheckBox
+    Private Sub AGC_CheckBox_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AGC_CheckBox.CheckedChanged
+
+        Dim err As Integer = 0
+
+        If AGC_CheckBox.Checked Then
+            err = PXD_SILICONVIDEO_SETAXC(1, 0, 3, -1, -1, -1, -1, -1, -1, -1, -1)
+            If err < 0 Then
+                TextBox1.AppendText("PXD_SILICONVIDEO_SETAXC" & PXD_MESGERRORCODE(err) & vbCrLf)
+            Else
+                Software_AxC_CheckBox.Checked = False ' Turn off Software AxC
+                TextBox1.AppendText("Hardware Auto Gain Control is ON" & vbCrLf)
+            End If
+        Else
+            err = PXD_SILICONVIDEO_SETAXC(1, 0, 0, -1, -1, -1, -1, -1, -1, -1, -1)
+            If err < 0 Then
+                TextBox1.AppendText("PXD_SILICONVIDEO_SETAXC" & PXD_MESGERRORCODE(err) & vbCrLf)
+            Else
+                TextBox1.AppendText("Hardware Auto Gain Control is OFF" & vbCrLf)
+            End If
+        End If
+    End Sub
+
+    Friend WithEvents AEC_CheckBox As System.Windows.Forms.CheckBox
+    Private Sub AEC_CheckBox_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AEC_CheckBox.CheckedChanged
+
+        Dim err As Integer = 0
+
+        If AEC_CheckBox.Checked Then
+            err = PXD_SILICONVIDEO_SETAXC(1, 0, -1, -1, -1, -1, 3, -1, -1, -1, -1)
+            If err < 0 Then
+                TextBox1.AppendText("PXD_SILICONVIDEO_SETAXC" & PXD_MESGERRORCODE(err) & vbCrLf)
+            Else
+                Software_AxC_CheckBox.Checked = False ' Turn off Software AxC
+                TextBox1.AppendText("Hardware Auto Exposure Control is ON" & vbCrLf)
+            End If
+        Else
+            err = PXD_SILICONVIDEO_SETAXC(1, 0, -1, -1, -1, -1, 0, -1, -1, -1, -1)
+            If err < 0 Then
+                TextBox1.AppendText("PXD_SILICONVIDEO_SETAXC" & PXD_MESGERRORCODE(err) & vbCrLf)
+            Else
+                TextBox1.AppendText("Hardware Auto Exposure Control is OFF" & vbCrLf)
+            End If
+        End If
+    End Sub
+    Private Sub Snap_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Snap_Button.Click
+
+        If PixciCamera.is_live Then
+            Call PXD_GOUNLIVE(1)
+            PixciCamera.is_live = False
+            Live_CheckBox.Checked = False
+            TextBox1.AppendText("Go UnLive" & vbCrLf)
+        End If
+
+        ' Call PXD_GOSNAP(1, 1)
+        Call PXD_DOSNAP(1, 1, 0)
+
+
+        TextBox1.AppendText("Do Snap" & vbCrLf)
+
+        PictureBox1.Invalidate() ' Redraw PictureBox1
+
+    End Sub
+
+    Friend WithEvents Live_CheckBox As System.Windows.Forms.CheckBox
+    Private Sub Live_CheckBox_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Live_CheckBox.Click
+        PixciCamera.is_live = Not PixciCamera.is_live ' Toggle Live Status
+
+        If PixciCamera.is_live Then
+            Call PXD_GOLIVE(1, 1)
+            Live_CheckBox.Checked = True
+            TextBox1.AppendText("Go Live" & vbCrLf)
+
+        Else
+            Call PXD_GOUNLIVE(1)
+            Live_CheckBox.Checked = False
+            TextBox1.AppendText("Go UnLive" & vbCrLf)
+
+        End If
+    End Sub
+    Private Sub Save_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Save.Click
+
+        If PixciCamera.is_live Then
+            Call PXD_GOUNLIVE(1)
+            PixciCamera.is_live = False
+            Live_CheckBox.Checked = False
+            TextBox1.AppendText("Go UnLive" & vbCrLf)
+        End If
+
+        ' Save a bitmap using .NET
+        Static Dim bm As Bitmap = New Bitmap(PXD_IMAGEXDIM, PXD_IMAGEYDIM, System.Drawing.Imaging.PixelFormat.Format24bppRgb)
+        Dim g As Graphics = Graphics.FromImage(bm)
+        Dim hDC As IntPtr = g.GetHdc()
+        Call SetStretchBltMode(hDC, STRETCH_DELETESCANS)
+        Call PXD_RENDERSTRETCHDIBITS(1, 1, 0, 0, -1, -1, 0, hDC, 0, 0, bm.Width, bm.Height, 0)
+        g.ReleaseHdc(hDC)
+        If File.Exists("dotnet.bmp") Then
+            MsgBox("File dotnet.bmp already exists and will not be overwritten.")
+        Else
+            bm.Save("dotnet.bmp")
+            TextBox1.AppendText("dotnet.bmp saved." & vbCrLf)
+        End If
+
+        ' Save a bitmap using XCLIB
+        If File.Exists("example.bmp") Then
+            MsgBox("File example.bmp already exists and will not be overwritten.")
+        Else
+            Call PXD_SAVEBMP(1, "example.bmp", 1, 0, 0, -1, -1, 0, 0)
+            TextBox1.AppendText("example.bmp saved." & vbCrLf)
+        End If
+
+    End Sub
+
+    Private Sub PXIPL_Neg_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PXIPL_Neg.Click
+
+        If PixciCamera.is_live Then
+            Call PXD_GOUNLIVE(1)
+            PixciCamera.is_live = False
+            Live_CheckBox.Checked = False
+            TextBox1.AppendText("Go UnLive" & vbCrLf)
+
+        End If
+
+        ''''''' PXIPL ''''''
+        '
+        ' Demonstrate use of a PIXPL function by complementing a
+        ' portion of the image, then redisplaying.
+        '
+        ' This section should be commented out if the PXIPL library
+        ' is not being used.
+        '
+        Dim pximage As Integer = PXD_DEFINEIMAGE(1, 1, 0, 0, PXD_IMAGEXDIM / 2, PXD_IMAGEYDIM / 2, "Default")
+        Call PXIP8_PIXNEG(0, pximage, pximage)
+        TextBox1.AppendText("PXIPL Compliment" & vbCrLf)
+
+        '
+        ''''''' PXIPL ''''''
+
+        PictureBox1.Invalidate()  ' Redraw PictureBox1
+
+    End Sub
+
+    Private Sub WhiteBalance_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WhiteBalance.Click
+
+        If PixciCamera.is_color Then
+
+            'unsigned int reference[3] = {0,0,0};
+            'unsigned int target[3]    = {0,0,0};
+            'double  masses[] = {0, 0, 0};
+            'ushort  pixels[9*9];
+            'int     midx, midy, i, err;
+            Dim WBnum As Integer = 9
+            Dim reference() As Integer = {0, 0, 0}
+            Dim target() As Integer = {0, 0, 0}
+            Dim masses() As Integer = {0, 0, 0}
+            Dim midx, midy, i, err As Integer
+            Dim pixels(WBnum * WBnum) As Byte
+            '//
+            '// This follows the white balance application note so explanatory
+            '// comments are minimized.
+            '// Assumes that a white image has already been captured.
+            '//
+
+            PXD_SETIMAGEBRIGHTBALANCE(1, reference(0), target(0), 0.0)
+            midx = CInt(PXD_IMAGEXDIM() / 2)
+            midy = CInt(PXD_IMAGEYDIM() / 2)
+            PXD_READUCHAR(1, 1, CInt(midx - WBnum / 2), CInt(midy - WBnum / 2), CInt(midx + WBnum / 2), CInt(midy + 1 + WBnum / 2), pixels(0), WBnum * WBnum, "RofRGB")
+            For i = 0 To WBnum * WBnum - 1
+                masses(0) += pixels(i)
+            Next
+            PXD_READUCHAR(1, 1, CInt(midx - WBnum / 2), CInt(midy - WBnum / 2), CInt(midx + WBnum / 2), CInt(midy + 1 + WBnum / 2), pixels(0), WBnum * WBnum, "GofRGB")
+            For i = 0 To WBnum * WBnum - 1
+                masses(1) += pixels(i)
+            Next
+            PXD_READUCHAR(1, 1, CInt(midx - WBnum / 2), CInt(midy - WBnum / 2), CInt(midx + WBnum / 2), CInt(midy + 1 + WBnum / 2), pixels(0), WBnum * WBnum, "BofRGB")
+
+            For i = 0 To WBnum * WBnum - 1
+                masses(2) += pixels(i)
+            Next
+            reference(0) = CUInt(masses(0) / (WBnum * WBnum))
+            reference(1) = CUInt(masses(1) / (WBnum * WBnum))
+            reference(2) = CUInt(masses(2) / (WBnum * WBnum))
+
+            target(0) = Math.Max(Math.Max(reference(0), reference(1)), reference(2))
+            target(1) = Math.Max(Math.Max(reference(0), reference(1)), reference(2))
+            target(2) = Math.Max(Math.Max(reference(0), reference(1)), reference(2))
+
+            target(0) = Math.Max(Math.Max(reference(0), reference(1)), reference(2))
+            target(1) = Math.Max(Math.Max(reference(0), reference(1)), reference(2))
+            target(2) = Math.Max(Math.Max(reference(0), reference(1)), reference(2))
+
+            PXD_SETIMAGEBRIGHTBALANCE(1, reference(0), target(0), 1.0)
+
+            If err < 0 Then
+                TextBox1.AppendText("White Balance FAILED" & PXD_MESGERRORCODE(err) & vbCrLf)
+            Else
+                TextBox1.AppendText("White Balanced" & vbCrLf)
+            End If
+        Else
+            TextBox1.AppendText("Not a Color Camera" & vbCrLf)
+        End If
+
+    End Sub
+
+    Private Sub GainNumericUpDown_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles GainNumericUpDown.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            GainNumericUpDown_Click(sender, e)
+        End If
+    End Sub
+    Private Sub GainNumericUpDown_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GainNumericUpDown.Click
+
+        Dim err As Integer = 0
+        Dim gainsA(3) As Double
+        Dim gainsB(3) As Double
+        Dim offsetsA(3) As Double
+        Dim offsetsB(3) As Double
+
+        PixciCamera.minGain = PXD_SILICONVIDEO_GETMINMAXGAINA(1, Min)
+        PixciCamera.maxGain = PXD_SILICONVIDEO_GETMINMAXGAINA(1, Max)
+        PXD_SILICONVIDEO_GETGAINSA(1, gainsA(0))
+        PXD_SILICONVIDEO_GETGAINSB(1, gainsB(0))
+        PXD_SILICONVIDEO_GETOFFSETSA(1, offsetsA(0))
+        PXD_SILICONVIDEO_GETOFFSETSB(1, offsetsB(0))
+
+        Dim gang As Double = Math.Min(gainsA(0), Math.Min(gainsA(1), Math.Min(gainsA(2), gainsA(3))))
+        Dim gain As Double = CDbl(GainNumericUpDown.Value)
+
+        Dim i As Integer = 0
+        For i = 0 To gainsA.GetUpperBound(0)
+            gainsA(i) += gain - gang
+            ' TextBox1.AppendText("Gain " & i & " = " & gainsA(i) & vbCrLf)
+        Next
+        If gang < PixciCamera.minGain Then
+            For i = 0 To gainsA.GetUpperBound(0)
+                gainsA(i) += PixciCamera.minGain - gang
+            Next
+        End If
+        gang = Math.Max(gainsA(0), Math.Max(gainsA(1), Math.Max(gainsA(2), gainsA(3))))
+        If gang > PixciCamera.maxGain Then
+            For i = 0 To gainsA.GetUpperBound(0)
+                gainsA(i) -= gang - PixciCamera.maxGain
+            Next
+        End If
+
+        err = PXD_SILICONVIDEO_SETEXPOSURECOLORGAINOFFSETS(1, 0, _
+              PXD_SILICONVIDEO_GETEXPOSURE(1), _
+              gainsA(0), _
+              gainsB(0), _
+              offsetsA(0), _
+              offsetsB(0))
+        If err < 0 Then
+            TextBox1.AppendText("Set Gain FAILED" & PXD_MESGERRORCODE(err) & vbCrLf)
+        End If
+
+        TextBox1.AppendText("Gain Range is " & PixciCamera.minGain.ToString & " to " & PixciCamera.maxGain.ToString & vbCrLf)
+
+        Call UpdateControlValues()
+
+    End Sub
+
+    Private Sub ExposureNumericUpDown_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles GainNumericUpDown.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            ExposureNumericUpDown_Click(sender, e)
+        End If
+    End Sub
+
+    Private Sub ExposureNumericUpDown_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles ExposureNumericUpDown.Click
+
+        Dim err As Integer = 0
+        PixciCamera.minExposure = PXD_SILICONVIDEO_GETMINMAXEXPOSURE(1, 0.0)
+        PixciCamera.maxExposure = PXD_SILICONVIDEO_GETMINMAXEXPOSURE(1, Max)
+
+        err = PXD_SILICONVIDEO_SETEXPOSURE(1, 0, CDbl(ExposureNumericUpDown.Value))
+        If err < 0 Then
+            TextBox1.AppendText("Set Exposure FAILED" & PXD_MESGERRORCODE(err) & vbCrLf)
+        End If
+
+        TextBox1.AppendText("Exposure Range is " & PixciCamera.minExposure.ToString & " to " & PixciCamera.maxExposure.ToString & vbCrLf)
+
+        Call UpdateControlValues()
+
+    End Sub
+
+    Private Sub FrameRateNumericUpDown_ValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles FrameRateNumericUpDown.ValueChanged
+
+        Dim err As Integer = 0
+        Dim fps As Double = 1000.0 / PXD_SILICONVIDEO_GETFRAMEPERIOD(1)
+        PixciCamera.loFPS = 1000.0 / PXD_SILICONVIDEO_GETMINMAXFRAMEPERIOD(1, Max)
+        PixciCamera.hiFPS = 1000.0 / PXD_SILICONVIDEO_GETMINMAXFRAMEPERIOD(1, 0.0)
+
+        err = PXD_SILICONVIDEO_SETRESOLUTIONANDTIMING(1, 0, _
+              PXD_SILICONVIDEO_GETSUBSAMPLE(1), _
+              PXD_SILICONVIDEO_GETAOILEFT(1), PXD_SILICONVIDEO_GETAOITOP(1), _
+              PXD_SILICONVIDEO_GETAOIWIDTH(1), PXD_SILICONVIDEO_GETAOIHEIGHT(1), _
+              PXD_SILICONVIDEO_GETSCANDIRECTION(1), _
+              PXD_IMAGEBDIM(), 0, 0,
+              PXD_SILICONVIDEO_GETPIXELCLOCK(1), _
+              1000.0 / CDbl(FrameRateNumericUpDown.Value), 0, 0, 0)
+        If err < 0 Then
+            TextBox1.AppendText("Set FPS FAILED" & PXD_MESGERRORCODE(err) & vbCrLf)
+        End If
+
+        TextBox1.AppendText("FPS Range is " & PixciCamera.loFPS.ToString & " to " & PixciCamera.hiFPS.ToString & vbCrLf)
+
+        Call UpdateControlValues()
+
+    End Sub
+
+    Private Sub ClockNumericUpDown_ValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ClockNumericUpDown.ValueChanged
+
+        PixciCamera.minClock = PXD_SILICONVIDEO_GETMINMAXPIXELCLOCK(1, Min)
+        PixciCamera.maxClock = PXD_SILICONVIDEO_GETMINMAXPIXELCLOCK(1, Max)
+        Dim err As Integer = 0
+
+        err = PXD_SILICONVIDEO_SETRESOLUTIONANDTIMING(1, 0, _
+           PXD_SILICONVIDEO_GETSUBSAMPLE(1), _
+           PXD_SILICONVIDEO_GETAOILEFT(1), PXD_SILICONVIDEO_GETAOITOP(1), _
+           PXD_SILICONVIDEO_GETAOIWIDTH(1), PXD_SILICONVIDEO_GETAOIHEIGHT(1), _
+           PXD_SILICONVIDEO_GETSCANDIRECTION(1), _
+           PXD_IMAGEBDIM(), 0, 0, _
+           CDbl(ClockNumericUpDown.Value), _
+           PXD_SILICONVIDEO_GETFRAMEPERIOD(1), 0, 0, 0)
+
+        If err < 0 Then
+            TextBox1.AppendText("Set Clock FAILED" & PXD_MESGERRORCODE(err) & vbCrLf)
+        End If
+
+        TextBox1.AppendText("Clock Range is " & PixciCamera.minClock.ToString & " to " & PixciCamera.maxClock.ToString & vbCrLf)
+
+        Call UpdateControlValues()
+
+    End Sub
+
+    Private Sub OffsetNumericUpDown_ValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles OffsetNumericUpDown.ValueChanged
+
+        Dim err As Integer = 0
+        Dim gainsA(3) As Double
+        Dim gainsB(3) As Double
+        Dim offsetsA(3) As Double
+        Dim offsetsB(3) As Double
+        PixciCamera.minOffset = PXD_SILICONVIDEO_GETMINMAXOFFSETA(1, Min)
+        PixciCamera.maxOffset = PXD_SILICONVIDEO_GETMINMAXOFFSETA(1, Max)
+
+        PXD_SILICONVIDEO_GETGAINSA(1, gainsA(0))
+        PXD_SILICONVIDEO_GETGAINSB(1, gainsB(0))
+        PXD_SILICONVIDEO_GETOFFSETSA(1, offsetsA(0))
+        PXD_SILICONVIDEO_GETOFFSETSB(1, offsetsB(0))
+        Dim gang As Double = Math.Min(offsetsA(0), Math.Min(offsetsA(1), Math.Min(offsetsA(2), offsetsA(3))))
+        Dim gain As Double = CDbl(OffsetNumericUpDown.Value)
+
+        Dim i As Integer = 0
+        For i = 0 To offsetsA.GetUpperBound(0)
+            offsetsA(i) += gain - gang
+            ' TextBox1.AppendText("Offset " & i & " = " & offsetsA(i) & vbCrLf)
+        Next
+
+        gang = Math.Min(offsetsA(0), Math.Min(offsetsA(1), Math.Min(offsetsA(2), offsetsA(3))))
+        If gang < PixciCamera.minOffset Then
+            For i = 0 To offsetsA.GetUpperBound(0)
+                offsetsA(i) += PixciCamera.minOffset - gang
+            Next
+        End If
+
+        gang = Math.Max(offsetsA(0), Math.Max(offsetsA(1), Math.Max(offsetsA(2), offsetsA(3))))
+        If gang > PixciCamera.maxOffset Then
+            For i = 0 To offsetsA.GetUpperBound(0)
+                offsetsA(i) -= gang - PixciCamera.maxOffset
+            Next
+        End If
+
+        err = PXD_SILICONVIDEO_SETEXPOSURECOLORGAINOFFSETS(1, 0, _
+              PXD_SILICONVIDEO_GETEXPOSURE(1), _
+              PXD_SILICONVIDEO_GETGAINA(1), _
+              PXD_SILICONVIDEO_GETGAINB(1), _
+              offsetsA(0), _
+              PXD_SILICONVIDEO_GETOFFSETB(1))
+        If err < 0 Then
+            TextBox1.AppendText("Set Offset FAILED" & PXD_MESGERRORCODE(err) & vbCrLf)
+        End If
+
+        Call UpdateControlValues()
+
+        TextBox1.AppendText("Offset Range is " & PixciCamera.minOffset.ToString & " to " & PixciCamera.maxOffset.ToString & vbCrLf)
+
+    End Sub
+
+    Private Sub Form1_Closed(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Closed
+
+        MsgBox("CLOSING PIXCI(R) IMAGING BOARD")
+        Call PXD_PIXCICLOSE()
+
+    End Sub
+
+End Class

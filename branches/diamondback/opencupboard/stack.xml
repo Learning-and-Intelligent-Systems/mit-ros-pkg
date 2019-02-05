@@ -1,0 +1,19 @@
+<stack>
+  <description brief="opencupboard">Stack for opening a cabinet door.</description>
+  <author>Maintained by Annie Holladay and Ulziibayar Otgonbaatar</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/opencupboard</url>
+  <depend stack="common" /> <!-- actionlib -->
+  <depend stack="common_msgs" /> <!-- geometry_msgs, actionlib_msgs, sensor_msgs -->
+  <depend stack="ee_cart_imped" /> <!-- ee_cart_imped_action -->
+  <depend stack="motion_planning_common" /> <!-- motion_planning_msgs -->
+  <depend stack="object_manipulation" /> <!-- object_manipulation_msgs -->
+  <depend stack="point_cloud_perception" /> <!-- pcl -->
+  <depend stack="pr2_controllers" /> <!-- pr2_controllers_msgs -->
+  <depend stack="pr2_tabletop_manipulation_apps" /> <!-- pr2_pick_and_place_demos -->
+  <depend stack="ros" /> <!-- roscpp -->
+  <depend stack="tabletop_object_perception" /> <!-- tabletop_object_detector -->
+  <depend stack="visualization_common" /> <!-- visualization_msgs -->
+
+</stack>

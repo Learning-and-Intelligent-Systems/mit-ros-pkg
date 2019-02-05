@@ -1,0 +1,22 @@
+<package>
+  <description brief="ee_cart_imped_tutorial">
+
+     ee_cart_imped_tutorial
+
+  </description>
+  <author>Huan Liu</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/ee_cart_imped_tutorial</url>
+  <depend package="actionlib"/>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+
+  <depend package="ee_cart_imped_action"/>
+  <depend package="ee_cart_imped_control"/>
+  <depend package="pr2_controllers_msgs"/>
+  
+
+</package>
+
+

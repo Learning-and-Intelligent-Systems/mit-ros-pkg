@@ -1,0 +1,9 @@
+<launch>
+
+	<include file="$(find furniture)/launch/snapshotter.launch"/>
+
+	<node pkg="furniture" name="table_detector" type="table_detector" respawn="true" output="screen">
+		<remap from="points" to="tilt_laser_cloud" />
+	</node> 
+
+</launch>

@@ -1,0 +1,13 @@
+Example 1 - Reading the joint angles of the WAM (in radians)
+
+This is meant to be the simplest possible program that uses a WAM. All it does is
+initialize the WAM communications, data structures, and start the control loop thread.
+
+To compile & run:
+
+1. # make all
+2. Switch on WAM
+3. Idle WAM (Press SHIFT and IDLE buttons on pendant. The yellow light should come on)
+4. # ./ex1
+
+

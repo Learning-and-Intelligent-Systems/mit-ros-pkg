@@ -1,0 +1,12 @@
+- svn:
+    uri: https://code.ros.org/svn/ros-pkg/stacks/perception_pcl_addons/trunk
+    local-name: perception_pcl_addons
+- svn:
+    uri: https://svn.csail.mit.edu/mit-ros-pkg/trunk
+    local-name: mit-ros-pkg
+- svn:
+    uri: https://svn.csail.mit.edu/mit-ros-pkg/branches/sandbox
+    local-name: mit-ros-pkg-experimental
+- svn:
+    uri: https://code.ros.org/svn/wg-ros-pkg/stacks/motion_planning_common/tags/unstable/
+    local-name: motion_planning_common

@@ -1,0 +1,105 @@
+
+WORLD: -3, RESET TIME: 45, DARRT TRIES: 100, FORWARD: True
+TRIAL 1:
+	Planning time: 128.744842529
+TRIAL 2:
+	Planning time: 31.800201416
+TRIAL 3:
+	Planning time: 364.683929443
+TRIAL 4:
+	Planning time: 71.3487091064
+TRIAL 5:
+	Planning time: 70.308380127
+TRIAL 6:
+	Planning time: 22.8180065155
+TRIAL 7:
+	Planning time: 23.0886058807
+TRIAL 8:
+	Planning time: 80.6808547974
+TRIAL 9:
+	Planning time: 87.5059051514
+TRIAL 10:
+	Planning time: 175.582321167
+TRIAL 11:
+	Planning time: 403.665161133
+TRIAL 12:
+	Planning time: 1320.82250977
+TRIAL 13:
+	Planning time: 158.306747437
+TRIAL 14:
+	Planning time: 181.117507935
+TRIAL 15:
+	Planning time: 359.198974609
+TRIAL 16:
+	Planning time: 76.4973602295
+TRIAL 17:
+	Planning time: 84.7786636353
+TRIAL 18:
+	Planning time: 28.7031822205
+TRIAL 19:
+	Planning time: 59.3860321045
+TRIAL 20:
+	Planning time: 494.49710083
+TRIAL 21:
+	Planning time: 215.654541016
+TRIAL 22:
+	Planning time: 258.949432373
+TRIAL 23:
+	Planning time: 407.551757812
+TRIAL 24:
+	Planning time: 222.112350464
+TRIAL 25:
+	Planning time: 229.083816528
+TRIAL 26:
+	Planning time: 576.704162598
+TRIAL 27:
+	Planning time: 127.814376831
+TRIAL 28:
+	Planning time: 101.957504272
+TRIAL 29:
+	Planning time: 273.080291748
+TRIAL 30:
+	Planning time: 37.8101882935
+TRIAL 31:
+	Planning time: 263.679595947
+TRIAL 32:
+	Planning time: 38.6792106628
+TRIAL 33:
+	Planning time: 23.6524772644
+TRIAL 34:
+	Planning time: 269.11428833
+TRIAL 35:
+	Planning time: 634.646240234
+TRIAL 36:
+	Planning time: 106.406784058
+TRIAL 37:
+	Planning time: 34.6254844666
+TRIAL 38:
+	Planning time: 74.9237518311
+TRIAL 39:
+	Planning time: 181.337982178
+TRIAL 40:
+	Planning time: 15.428355217
+TRIAL 41:
+	Planning time: 219.68522644
+TRIAL 42:
+	Planning time: 165.917495728
+TRIAL 43:
+	Planning time: 159.517623901
+TRIAL 44:
+	Planning time: 88.8485412598
+TRIAL 45:
+	Planning time: 35.3368339539
+TRIAL 46:
+	Planning time: 132.776687622
+TRIAL 47:
+	Planning time: 211.490768433
+TRIAL 48:
+	Planning time: 260.379425049
+TRIAL 49:
+	Planning time: 439.284393311
+TRIAL 50:
+	Planning time: 260.788269043
+TOTALS: TRIALS: 50, AVERAGE TIME: 205.815457058, AVERAGE TOTAL TIME: 0.0 AVERAGE OBJECT TIME: 0.0, AVERAGE SUBGOAL TIMES:
+	TOTAL: 0
+Saving to file hierarchical_results/plateh_99301.374.pck

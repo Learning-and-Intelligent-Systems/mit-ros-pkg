@@ -1,0 +1,38 @@
+<package>
+  <description brief="opencupboard_action">
+
+     opencupboard_action
+
+  </description>
+  <author>Annie Holladay</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/opencupboard_action</url>
+
+  <depend package="roscpp" />
+  <depend package="tabletop_object_detector"/> 
+  <depend package="sensor_msgs" />
+  <depend package="visualization_msgs" />
+  <depend package="pcl" />
+  <depend package="geometry_msgs"  />
+  <depend package="actionlib"/>
+  <depend package="object_manipulation_msgs" />
+
+  <depend package="actionlib"/>
+  <depend package="arm_navigation_msgs" /> 
+  <depend package="ee_cart_imped_action"/>
+  <depend package="pr2_utils" />
+  <depend package="pr2_controllers_msgs"/>
+  <depend package="std_msgs" />
+  <depend package="trajectory_msgs"/>
+  
+  <depend package="opencupboard_msgs" />
+  
+  <export>
+    <rosdoc config="rosdoc.yaml"/>
+  </export>
+
+
+</package>
+
+

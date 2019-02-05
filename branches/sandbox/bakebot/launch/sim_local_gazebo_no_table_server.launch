@@ -1,0 +1,7 @@
+<launch>
+
+  <!-- start up empty world -->
+  <include file="$(find pr2_gazebo)/pr2.launch"/>
+  <include file="$(find bakebot)/launch/robot_tabletop.launch"/>
+
+</launch>

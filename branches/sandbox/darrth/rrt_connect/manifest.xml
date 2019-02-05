@@ -1,0 +1,18 @@
+<package>
+  <description brief="rrt_connect">
+
+     rrt_connect
+
+  </description>
+  <author>Jenny Barry</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/rrt_connect</url>
+
+   <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -lrrt_connect"/>
+  </export>
+
+</package>
+
+

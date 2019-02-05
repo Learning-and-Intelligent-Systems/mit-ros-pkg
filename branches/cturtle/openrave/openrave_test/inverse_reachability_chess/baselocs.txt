@@ -1,0 +1,2252 @@
+[openravepy_int.cpp:2588] viewer qtcoin successfully attached
+[0;33;48m[colladareader.h:903] [0;38;48m[0;33;48mNode: v1.node0
+[0;38;48m[0;33;48m[colladareader.h:916] [0;38;48m[0;33;48mKinematics model node name: base_footprint
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node1/node_joint0_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint0.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint0.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node2/node_joint1_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint1.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint1.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node4/node_joint2_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint2.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint2.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node5/node_joint3_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint3.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint3.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node3/node_joint4_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint4.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint4.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node7/node_joint5_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint5.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint5.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node8/node_joint6_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint6.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint6.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node6/node_joint7_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint7.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint7.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node20/node_joint8_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint8.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint8.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node10/node_joint9_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint9.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint9.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node11/node_joint10_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint10.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint10.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node9/node_joint11_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint11.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint11.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node13/node_joint12_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint12.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint12.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node14/node_joint13_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint13.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint13.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node12/node_joint14_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint14.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint14.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node16/node_joint15_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint15.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint15.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node18/node_joint16_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint16.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint16.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node17/node_joint17_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint17.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint17.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node33/node_joint18_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint18.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint18.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node34/node_joint19_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint19.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint19.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node35/node_joint20_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint20.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint20.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node40/node_joint21_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint21.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint21.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node42/node_joint22_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint22.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint22.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node43/node_joint23_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint23.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint23.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node44/node_joint24_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint24.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint24.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node41/node_joint25_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint25.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint25.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;31;48m[colladareader.h:1003] [0;38;48m[0;31;48mTarget Node /node_joint26_axis0 NOT found!!!
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node48/node_joint27_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint27.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint27.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node49/node_joint28_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint28.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint28.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node50/node_joint29_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint29.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint29.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node51/node_joint30_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint30.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint30.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node47/node_joint31_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint31.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint31.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node52/node_joint32_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint32.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint32.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node53/node_joint33_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint33.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint33.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node54/node_joint34_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint34.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint34.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node37/node_joint35_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint35.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint35.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node36/node_joint36_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint36.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint36.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node39/node_joint37_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint37.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint37.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node38/node_joint38_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint38.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint38.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node45/node_joint39_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint39.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint39.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node46/node_joint40_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint40.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint40.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node56/node_joint41_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint41.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint41.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node55/node_joint42_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint42.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint42.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node21/node_joint43_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint43.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint43.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node22/node_joint44_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint44.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint44.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node23/node_joint45_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint45.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint45.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node24/node_joint46_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint46.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint46.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node25/node_joint47_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint47.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint47.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node26/node_joint48_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint48.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint48.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node61/node_joint49_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint49.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint49.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node63/node_joint50_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint50.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint50.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node64/node_joint51_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint51.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint51.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node65/node_joint52_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint52.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint52.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node62/node_joint53_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint53.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint53.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;31;48m[colladareader.h:1003] [0;38;48m[0;31;48mTarget Node /node_joint54_axis0 NOT found!!!
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node69/node_joint55_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint55.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint55.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node70/node_joint56_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint56.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint56.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node71/node_joint57_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint57.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint57.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node72/node_joint58_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint58.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint58.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node68/node_joint59_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint59.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint59.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node73/node_joint60_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint60.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint60.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node74/node_joint61_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint61.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint61.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node75/node_joint62_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint62.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint62.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node58/node_joint63_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint63.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint63.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node57/node_joint64_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint64.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint64.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node60/node_joint65_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint65.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint65.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node59/node_joint66_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint66.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint66.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node66/node_joint67_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint67.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint67.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node67/node_joint68_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint68.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint68.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node19/node_joint69_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint69.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint69.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node15/node_joint70_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint70.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint70.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node27/node_joint71_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint71.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint71.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node28/node_joint72_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint72.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint72.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node29/node_joint73_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint73.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint73.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node30/node_joint74_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint74.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint74.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node31/node_joint75_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint75.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint75.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1007] [0;38;48m[0;33;48mTarget Node v1.node32/node_joint76_axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:2436] [0;38;48m[0;33;48mKinematics Scene: kscene.inst_k1.joint76.axis0
+[0;38;48m[0;33;48m[colladareader.h:2411] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:2568] [0;38;48m[0;33;48mNumber of instances: 1
+[0;38;48m[0;33;48m[colladareader.h:2575] [0;38;48m[0;33;48mNumber of newparam: 155
+[0;38;48m[0;33;48m[colladareader.h:1019] [0;38;48m[0;33;48mJoint Axis kscene.inst_k1.joint76.axis0 FOUND!!!
+[0;38;48m[0;33;48m[colladareader.h:1026] [0;38;48m[0;33;48mKinematics Scene Element 
+[0;38;48m[0;33;48m[colladareader.h:1223] [0;38;48m[0;33;48mKinBody Name: pr2
+[0;38;48m[colladareader.h:1439] base_footprint: 1 0 0 0 0 0 0 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of base_footprint
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of base_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of base_laser_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of bl_caster_rotation_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of bl_caster_l_wheel_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of bl_caster_r_wheel_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of br_caster_rotation_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of br_caster_l_wheel_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of br_caster_r_wheel_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of fl_caster_rotation_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of fl_caster_l_wheel_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of fl_caster_r_wheel_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of fr_caster_rotation_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of fr_caster_l_wheel_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of fr_caster_r_wheel_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of torso_lift_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of head_pan_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of head_tilt_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of head_plate_frame
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of sensor_mount_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of double_stereo_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of narrow_stereo_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of narrow_stereo_gazebo_l_stereo_camera_frame
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of narrow_stereo_gazebo_r_stereo_camera_frame
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of wide_stereo_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of wide_stereo_gazebo_l_stereo_camera_frame
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of wide_stereo_gazebo_r_stereo_camera_frame
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of high_def_frame
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of high_def_optical_frame
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of imu_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of l_shoulder_pan_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of l_shoulder_lift_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of l_upper_arm_roll_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of l_upper_arm_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of l_elbow_flex_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of l_forearm_roll_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of l_forearm_cam_frame
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of l_forearm_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of l_wrist_flex_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of l_wrist_roll_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of l_gripper_palm_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of l_gripper_l_finger_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of l_gripper_l_finger_tip_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of l_gripper_motor_accelerometer_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of l_gripper_r_finger_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of l_gripper_r_finger_tip_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of l_gripper_tool_frame
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of laser_tilt_mount_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of laser_tilt_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of r_shoulder_pan_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of r_shoulder_lift_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of r_upper_arm_roll_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of r_upper_arm_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of r_elbow_flex_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of r_forearm_roll_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of r_forearm_cam_frame
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of r_forearm_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of r_wrist_flex_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of r_wrist_roll_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of r_gripper_palm_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of r_gripper_l_finger_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of r_gripper_l_finger_tip_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of r_gripper_motor_accelerometer_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of r_gripper_r_finger_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of r_gripper_r_finger_tip_link
+[0;38;48m[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of r_gripper_tool_frame
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 1
+[0;38;48m[colladareader.h:1439] base_link: 1 0 0 0 0 0 0.051 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 2
+[0;38;48m[colladareader.h:1439] base_laser_link: 1 0 0 0 0.275 0 0.303 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint base_laser_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (base_link:base_laser_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 3
+[0;38;48m[colladareader.h:1439] bl_caster_rotation_link: 1 0 0 0 -0.2246 0.2246 0.0792 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 4
+[0;38;48m[colladareader.h:1439] bl_caster_l_wheel_link: 1 0 0 0 -0.2246 0.2736 0.0792 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint bl_caster_l_wheel_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1651] [0;38;48m[0;33;48mThere are NO LIMITS in the joint ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (bl_caster_rotation_link:bl_caster_l_wheel_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 5
+[0;38;48m[colladareader.h:1439] bl_caster_r_wheel_link: 1 0 0 0 -0.2246 0.1756 0.0792 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint bl_caster_r_wheel_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1651] [0;38;48m[0;33;48mThere are NO LIMITS in the joint ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (bl_caster_rotation_link:bl_caster_r_wheel_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint bl_caster_rotation_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1651] [0;38;48m[0;33;48mThere are NO LIMITS in the joint ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (base_link:bl_caster_rotation_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 6
+[0;38;48m[colladareader.h:1439] br_caster_rotation_link: 1 0 0 0 -0.2246 -0.2246 0.0792 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 7
+[0;38;48m[colladareader.h:1439] br_caster_l_wheel_link: 1 0 0 0 -0.2246 -0.1756 0.0792 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint br_caster_l_wheel_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1651] [0;38;48m[0;33;48mThere are NO LIMITS in the joint ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (br_caster_rotation_link:br_caster_l_wheel_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 8
+[0;38;48m[colladareader.h:1439] br_caster_r_wheel_link: 1 0 0 0 -0.2246 -0.2736 0.0792 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint br_caster_r_wheel_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1651] [0;38;48m[0;33;48mThere are NO LIMITS in the joint ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (br_caster_rotation_link:br_caster_r_wheel_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint br_caster_rotation_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1651] [0;38;48m[0;33;48mThere are NO LIMITS in the joint ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (base_link:br_caster_rotation_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 9
+[0;38;48m[colladareader.h:1439] fl_caster_rotation_link: 1 0 0 0 0.2246 0.2246 0.0792 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 10
+[0;38;48m[colladareader.h:1439] fl_caster_l_wheel_link: 1 0 0 0 0.2246 0.2736 0.0792 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint fl_caster_l_wheel_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1651] [0;38;48m[0;33;48mThere are NO LIMITS in the joint ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (fl_caster_rotation_link:fl_caster_l_wheel_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 11
+[0;38;48m[colladareader.h:1439] fl_caster_r_wheel_link: 1 0 0 0 0.2246 0.1756 0.0792 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint fl_caster_r_wheel_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1651] [0;38;48m[0;33;48mThere are NO LIMITS in the joint ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (fl_caster_rotation_link:fl_caster_r_wheel_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint fl_caster_rotation_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1651] [0;38;48m[0;33;48mThere are NO LIMITS in the joint ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (base_link:fl_caster_rotation_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 12
+[0;38;48m[colladareader.h:1439] fr_caster_rotation_link: 1 0 0 0 0.2246 -0.2246 0.0792 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 13
+[0;38;48m[colladareader.h:1439] fr_caster_l_wheel_link: 1 0 0 0 0.2246 -0.1756 0.0792 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint fr_caster_l_wheel_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1651] [0;38;48m[0;33;48mThere are NO LIMITS in the joint ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (fr_caster_rotation_link:fr_caster_l_wheel_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 14
+[0;38;48m[colladareader.h:1439] fr_caster_r_wheel_link: 1 0 0 0 0.2246 -0.2736 0.0792 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint fr_caster_r_wheel_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1651] [0;38;48m[0;33;48mThere are NO LIMITS in the joint ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (fr_caster_rotation_link:fr_caster_r_wheel_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint fr_caster_rotation_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1651] [0;38;48m[0;33;48mThere are NO LIMITS in the joint ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (base_link:fr_caster_rotation_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1523] [0;38;48m[0;33;48mPrismatic joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 15
+[0;38;48m[colladareader.h:1439] torso_lift_link: 1 0 0 0 -0.05 0 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 16
+[0;38;48m[colladareader.h:1439] head_pan_link: 1 0 0 0 -0.06707 0 1.17212 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 17
+[0;38;48m[colladareader.h:1439] head_tilt_link: 1 0 0 0 0.000930004 0 1.17212 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 18
+[0;38;48m[colladareader.h:1439] head_plate_frame: 1 0 0 0 0.02413 0 1.23662 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 19
+[0;38;48m[colladareader.h:1439] sensor_mount_link: 1 0 0 0 0.02413 0 1.23662 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 20
+[0;38;48m[colladareader.h:1439] double_stereo_link: 1 0 0 0 0.02413 0 1.23962 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 21
+[0;38;48m[colladareader.h:1439] narrow_stereo_link: 0.999639 -0.00268887 0.0048239 0.0263039 0.0477541 0.0621592 1.29374 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 22
+[0;38;48m[colladareader.h:1439] narrow_stereo_gazebo_l_stereo_camera_frame: 0.999639 -0.00268887 0.0048239 0.0263039 0.0477541 0.0621592 1.29374 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 23
+[0;38;48m[colladareader.h:1439] narrow_stereo_gazebo_l_stereo_camera_optical_frame: 0.509215 -0.516728 0.487735 -0.4856 0.0477541 0.0621592 1.29374 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of narrow_stereo_gazebo_l_stereo_camera_optical_frame
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint narrow_stereo_gazebo_l_stereo_camera_optical_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (narrow_stereo_gazebo_l_stereo_camera_frame:narrow_stereo_gazebo_l_stereo_camera_optical_frame)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 24
+[0;38;48m[colladareader.h:1439] narrow_stereo_gazebo_r_stereo_camera_frame: 0.999639 -0.00268887 0.0048239 0.0263039 0.0524894 -0.027715 1.2942 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 25
+[0;38;48m[colladareader.h:1439] narrow_stereo_gazebo_r_stereo_camera_optical_frame: 0.509215 -0.516728 0.487735 -0.4856 0.0524894 -0.027715 1.2942 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of narrow_stereo_gazebo_r_stereo_camera_optical_frame
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint narrow_stereo_gazebo_r_stereo_camera_optical_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (narrow_stereo_gazebo_r_stereo_camera_frame:narrow_stereo_gazebo_r_stereo_camera_optical_frame)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint narrow_stereo_gazebo_r_stereo_camera_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (narrow_stereo_gazebo_l_stereo_camera_frame:narrow_stereo_gazebo_r_stereo_camera_frame)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint narrow_stereo_gazebo_l_stereo_camera_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (narrow_stereo_link:narrow_stereo_gazebo_l_stereo_camera_frame)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 26
+[0;38;48m[colladareader.h:1439] narrow_stereo_optical_frame: 0.509215 -0.516728 0.487735 -0.4856 0.0477541 0.0621592 1.29374 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of narrow_stereo_optical_frame
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint narrow_stereo_optical_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (narrow_stereo_link:narrow_stereo_optical_frame)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint narrow_stereo_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (double_stereo_link:narrow_stereo_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 27
+[0;38;48m[colladareader.h:1439] wide_stereo_link: 0.99995 -0.000343483 0.00203598 0.009748 0.0503795 0.0313584 1.2935 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 28
+[0;38;48m[colladareader.h:1439] wide_stereo_gazebo_l_stereo_camera_frame: 0.99995 -0.000343483 0.00203598 0.009748 0.0503795 0.0313584 1.2935 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 29
+[0;38;48m[colladareader.h:1439] wide_stereo_gazebo_l_stereo_camera_optical_frame: 0.503659 -0.506039 0.495947 -0.494255 0.0503795 0.0313584 1.2935 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of wide_stereo_gazebo_l_stereo_camera_optical_frame
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint wide_stereo_gazebo_l_stereo_camera_optical_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (wide_stereo_gazebo_l_stereo_camera_frame:wide_stereo_gazebo_l_stereo_camera_optical_frame)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 30
+[0;38;48m[colladareader.h:1439] wide_stereo_gazebo_r_stereo_camera_frame: 0.99995 -0.000343483 0.00203598 0.009748 0.0521342 -0.0586245 1.29356 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 31
+[0;38;48m[colladareader.h:1439] wide_stereo_gazebo_r_stereo_camera_optical_frame: 0.503659 -0.506039 0.495947 -0.494255 0.0521342 -0.0586245 1.29356 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of wide_stereo_gazebo_r_stereo_camera_optical_frame
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint wide_stereo_gazebo_r_stereo_camera_optical_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (wide_stereo_gazebo_r_stereo_camera_frame:wide_stereo_gazebo_r_stereo_camera_optical_frame)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint wide_stereo_gazebo_r_stereo_camera_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (wide_stereo_gazebo_l_stereo_camera_frame:wide_stereo_gazebo_r_stereo_camera_frame)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint wide_stereo_gazebo_l_stereo_camera_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (wide_stereo_link:wide_stereo_gazebo_l_stereo_camera_frame)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 32
+[0;38;48m[colladareader.h:1439] wide_stereo_optical_frame: 0.503659 -0.506039 0.495947 -0.494255 0.0503795 0.0313584 1.2935 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of wide_stereo_optical_frame
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint wide_stereo_optical_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (wide_stereo_link:wide_stereo_optical_frame)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint wide_stereo_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (double_stereo_link:wide_stereo_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint double_stereo_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (sensor_mount_link:double_stereo_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 33
+[0;38;48m[colladareader.h:1439] high_def_frame: 1 0 0 0 0.02413 -0.109 1.27162 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 34
+[0;38;48m[colladareader.h:1439] high_def_optical_frame: 0.5 -0.5 0.5 -0.5 0.02413 -0.109 1.27162 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint high_def_optical_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (high_def_frame:high_def_optical_frame)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint high_def_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (sensor_mount_link:high_def_frame)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint sensor_mount_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (head_plate_frame:sensor_mount_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint head_plate_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (head_tilt_link:head_plate_frame)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint head_tilt_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (head_pan_link:head_tilt_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint head_pan_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (torso_lift_link:head_pan_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 35
+[0;38;48m[colladareader.h:1439] imu_link: -4.37114e-08 0 1 0 -0.07977 -0.1497 0.954675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint imu_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (torso_lift_link:imu_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 36
+[0;38;48m[colladareader.h:1439] l_shoulder_pan_link: 1 0 0 0 -0.05 0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 37
+[0;38;48m[colladareader.h:1439] l_shoulder_lift_link: 1 0 0 0 0.05 0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 38
+[0;38;48m[colladareader.h:1439] l_upper_arm_roll_link: 1 0 0 0 0.05 0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 39
+[0;38;48m[colladareader.h:1439] l_upper_arm_link: -4.37114e-08 1 0 0 0.05 0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 40
+[0;38;48m[colladareader.h:1439] l_elbow_flex_link: -4.37114e-08 1 0 0 0.45 0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 41
+[0;38;48m[colladareader.h:1439] l_forearm_roll_link: -4.37114e-08 1 0 0 0.45 0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 42
+[0;38;48m[colladareader.h:1439] l_forearm_cam_frame: 0.663889 0.688206 0.208618 -0.20519 0.596899 0.185343 0.751815 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 43
+[0;38;48m[colladareader.h:1439] l_forearm_cam_optical_frame: 0.469143 0.0104448 0.882951 0.0138721 0.596899 0.185343 0.751815 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of l_forearm_cam_optical_frame
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint l_forearm_cam_optical_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (l_forearm_cam_frame:l_forearm_cam_optical_frame)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint l_forearm_cam_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (l_forearm_roll_link:l_forearm_cam_frame)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 44
+[0;38;48m[colladareader.h:1439] l_forearm_link: -4.37114e-08 1 0 0 0.45 0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 45
+[0;38;48m[colladareader.h:1439] l_wrist_flex_link: -4.37114e-08 1 0 0 0.771 0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 46
+[0;38;48m[colladareader.h:1439] l_wrist_roll_link: -4.37114e-08 1 0 0 0.771 0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 47
+[0;38;48m[colladareader.h:1439] l_gripper_palm_link: -4.37114e-08 1 0 0 0.771 0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 48
+[0;38;48m[colladareader.h:1439] l_gripper_l_finger_link: -4.37114e-08 1 0 0 0.84791 0.178 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 49
+[0;38;48m[colladareader.h:1439] l_gripper_l_finger_tip_link: -4.37114e-08 1 0 0 0.93928 0.17305 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint l_gripper_l_finger_tip_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (l_gripper_l_finger_link:l_gripper_l_finger_tip_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint l_gripper_l_finger_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (l_gripper_palm_link:l_gripper_l_finger_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 50
+[0;38;48m[colladareader.h:1439] l_gripper_led_frame: -4.37114e-08 1 0 0 0.8223 0.188 0.766275 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of l_gripper_led_frame
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint l_gripper_led_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (l_gripper_palm_link:l_gripper_led_frame)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 51
+[0;38;48m[colladareader.h:1439] l_gripper_motor_accelerometer_link: -4.37114e-08 1 0 0 0.771 0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint l_gripper_motor_accelerometer_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (l_gripper_palm_link:l_gripper_motor_accelerometer_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 52
+[0;38;48m[colladareader.h:1439] l_gripper_r_finger_link: -4.37114e-08 1 0 0 0.84791 0.198 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 53
+[0;38;48m[colladareader.h:1439] l_gripper_r_finger_tip_link: -4.37114e-08 1 0 0 0.93928 0.20295 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint l_gripper_r_finger_tip_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (l_gripper_r_finger_link:l_gripper_r_finger_tip_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint l_gripper_r_finger_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (l_gripper_palm_link:l_gripper_r_finger_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 54
+[0;38;48m[colladareader.h:1439] l_gripper_tool_frame: -4.37114e-08 1 0 0 0.951 0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint l_gripper_tool_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (l_gripper_palm_link:l_gripper_tool_frame)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint l_gripper_palm_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (l_wrist_roll_link:l_gripper_palm_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint l_wrist_roll_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1651] [0;38;48m[0;33;48mThere are NO LIMITS in the joint ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (l_wrist_flex_link:l_wrist_roll_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint l_wrist_flex_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (l_forearm_link:l_wrist_flex_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint l_forearm_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (l_forearm_roll_link:l_forearm_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint l_forearm_roll_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1651] [0;38;48m[0;33;48mThere are NO LIMITS in the joint ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (l_elbow_flex_link:l_forearm_roll_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint l_elbow_flex_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (l_upper_arm_link:l_elbow_flex_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint l_upper_arm_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (l_upper_arm_roll_link:l_upper_arm_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint l_upper_arm_roll_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (l_shoulder_lift_link:l_upper_arm_roll_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint l_shoulder_lift_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (l_shoulder_pan_link:l_shoulder_lift_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint l_shoulder_pan_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (torso_lift_link:l_shoulder_pan_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 55
+[0;38;48m[colladareader.h:1439] laser_tilt_mount_link: 1 0 0.000963622 0 0.04893 0 1.01767 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 56
+[0;38;48m[colladareader.h:1439] laser_tilt_link: 0.999996 2.56811e-06 0.000963619 0.00266506 0.0490032 0 1.05565 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint laser_tilt_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (laser_tilt_mount_link:laser_tilt_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint laser_tilt_mount_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (torso_lift_link:laser_tilt_mount_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 57
+[0;38;48m[colladareader.h:1439] r_shoulder_pan_link: 1 0 0 0 -0.05 -0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 58
+[0;38;48m[colladareader.h:1439] r_shoulder_lift_link: 1 0 0 0 0.05 -0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 59
+[0;38;48m[colladareader.h:1439] r_upper_arm_roll_link: 1 0 0 0 0.05 -0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 60
+[0;38;48m[colladareader.h:1439] r_upper_arm_link: -4.37114e-08 1 0 0 0.05 -0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 61
+[0;38;48m[colladareader.h:1439] r_elbow_flex_link: -4.37114e-08 1 0 0 0.45 -0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 62
+[0;38;48m[colladareader.h:1439] r_forearm_roll_link: -4.37114e-08 1 0 0 0.45 -0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 63
+[0;38;48m[colladareader.h:1439] r_forearm_cam_frame: -0.692725 0.674636 -0.175218 -0.185193 0.589978 -0.187969 0.750239 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 64
+[0;38;48m[colladareader.h:1439] r_forearm_cam_optical_frame: -0.0140324 0.863886 -0.00405699 0.503475 0.589978 -0.187969 0.750239 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of r_forearm_cam_optical_frame
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint r_forearm_cam_optical_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (r_forearm_cam_frame:r_forearm_cam_optical_frame)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint r_forearm_cam_frame_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (r_forearm_roll_link:r_forearm_cam_frame)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 65
+[0;38;48m[colladareader.h:1439] r_forearm_link: -4.37114e-08 1 0 0 0.45 -0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 66
+[0;38;48m[colladareader.h:1439] r_wrist_flex_link: -4.37114e-08 1 0 0 0.771 -0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 67
+[0;38;48m[colladareader.h:1439] r_wrist_roll_link: -4.37114e-08 1 0 0 0.771 -0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 68
+[0;38;48m[colladareader.h:1439] r_gripper_palm_link: -4.37114e-08 1 0 0 0.771 -0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 69
+[0;38;48m[colladareader.h:1439] r_gripper_l_finger_link: -4.37114e-08 1 0 0 0.84791 -0.198 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 70
+[0;38;48m[colladareader.h:1439] r_gripper_l_finger_tip_link: -4.37114e-08 1 0 0 0.93928 -0.20295 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint r_gripper_l_finger_tip_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (r_gripper_l_finger_link:r_gripper_l_finger_tip_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint r_gripper_l_finger_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (r_gripper_palm_link:r_gripper_l_finger_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 71
+[0;38;48m[colladareader.h:1439] r_gripper_led_frame: -4.37114e-08 1 0 0 0.8223 -0.188 0.766275 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of r_gripper_led_frame
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint r_gripper_led_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (r_gripper_palm_link:r_gripper_led_frame)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 72
+[0;38;48m[colladareader.h:1439] r_gripper_motor_accelerometer_link: -4.37114e-08 1 0 0 0.771 -0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint r_gripper_motor_accelerometer_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (r_gripper_palm_link:r_gripper_motor_accelerometer_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 73
+[0;38;48m[colladareader.h:1439] r_gripper_r_finger_link: -4.37114e-08 1 0 0 0.84791 -0.178 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 74
+[0;38;48m[colladareader.h:1439] r_gripper_r_finger_tip_link: -4.37114e-08 1 0 0 0.93928 -0.17305 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint r_gripper_r_finger_tip_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (r_gripper_r_finger_link:r_gripper_r_finger_tip_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint r_gripper_r_finger_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (r_gripper_palm_link:r_gripper_r_finger_link)!!!
+[0;33;48m[colladareader.h:1506] [0;38;48m[0;33;48mvdomaxes.getCount: 1
+[0;38;48m[0;33;48m[colladareader.h:1519] [0;38;48m[0;33;48mRevolute joint
+[0;38;48m[0;33;48m[colladareader.h:1534] [0;38;48m[0;33;48mNumber of pkinbody->_vecjoints: 75
+[0;38;48m[colladareader.h:1439] r_gripper_tool_frame: -4.37114e-08 1 0 0 0.951 -0.188 0.790675 
+[0;33;48m[colladareader.h:1758] [0;38;48m[0;33;48mExtractGeometry(node,link) of visual
+[0;38;48m[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint r_gripper_tool_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (r_gripper_palm_link:r_gripper_tool_frame)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint r_gripper_palm_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (r_wrist_roll_link:r_gripper_palm_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint r_wrist_roll_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1651] [0;38;48m[0;33;48mThere are NO LIMITS in the joint ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (r_wrist_flex_link:r_wrist_roll_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint r_wrist_flex_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (r_forearm_link:r_wrist_flex_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint r_forearm_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (r_forearm_roll_link:r_forearm_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint r_forearm_roll_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1651] [0;38;48m[0;33;48mThere are NO LIMITS in the joint ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (r_elbow_flex_link:r_forearm_roll_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint r_elbow_flex_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (r_upper_arm_link:r_elbow_flex_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint r_upper_arm_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (r_upper_arm_roll_link:r_upper_arm_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint r_upper_arm_roll_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (r_shoulder_lift_link:r_upper_arm_roll_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint r_shoulder_lift_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (r_shoulder_pan_link:r_shoulder_lift_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint r_shoulder_pan_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (torso_lift_link:r_shoulder_pan_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint torso_lift_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (base_link:torso_lift_link)!!!
+[0;33;48m[colladareader.h:1564] [0;38;48m[0;33;48mJoint assigned 0 
+[0;38;48m[0;31;48m[colladareader.h:1588] [0;38;48m[0;31;48mNot Exists Motion axis info, joint base_footprint_joint
+[m[0;33;48m[colladareader.h:1645] [0;38;48m[0;33;48mDegrees of Freedom: 1
+[0;38;48m[0;33;48m[colladareader.h:1647] [0;38;48m[0;33;48mDOF Number 0...
+[0;38;48m[0;33;48m[colladareader.h:1663] [0;38;48m[0;33;48mThere are LIMITS in the joint ...
+[0;38;48m[0;33;48m[colladareader.h:1667] [0;38;48m[0;33;48mJoint Limits ...
+[0;38;48m[0;33;48m[colladareader.h:1672] [0;38;48m[0;33;48mJoint offset ...
+[0;38;48m[colladareader.h:1699] Applies Transform Offset From Parent Link (base_footprint:base_link)!!!
+[0;33;48m[colladareader.h:1185] [0;38;48m[0;33;48mRobot (null) created ...
+[0;38;48mloading irmodel
+time to load inverse-reachability model: 5.109264s
+grasp transform in global frame
+[[ 0.          0.          1.          0.47499999]
+ [ 0.          1.          0.         -0.36300001]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -8.74227268e-08   6.95971267e-11  -9.99999762e-01   1.26567480e+00]
+ [  9.99999523e-01  -7.96139007e-04  -8.74227553e-08  -3.12850296e-01]
+ [ -7.96317821e-04  -9.99999523e-01   8.01735150e-15   1.94896006e+00]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.47499999]
+ [ 0.          1.          0.         -0.31299999]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  1.59317091e-01   9.87227440e-01  -4.76838125e-07  -7.05360472e-02]
+ [ -9.87227440e-01   1.59317091e-01   2.65525182e-06  -1.52495369e-01]
+ [  2.69730549e-06   4.77197766e-08   1.00000000e+00  -2.38418574e-09]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.47499999]
+ [ 0.          1.          0.         -0.26300001]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  1.32837072e-01   9.91137862e-01  -9.53675681e-07  -1.28050655e-01]
+ [ -9.91137862e-01   1.32837072e-01   2.40237068e-06  -2.67002756e-01]
+ [  2.50776384e-06   6.26098824e-07   1.00000000e+00   5.72204590e-08]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.47499999]
+ [ 0.          1.          0.         -0.213     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  5.98939240e-01   8.00794482e-01  -1.78813912e-06  -7.94142187e-02]
+ [ -8.00794542e-01   5.98939300e-01   1.85446220e-06  -3.69641945e-01]
+ [  2.55602981e-06   3.21221677e-07   9.99999881e-01   5.72204590e-08]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.47499999]
+ [ 0.          1.          0.         -0.163     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -3.93945910e-02  -9.99223709e-01  -3.57630626e-07   9.75936025e-01]
+ [  9.99223828e-01  -3.93945947e-02  -2.27592932e-06  -4.43685576e-01]
+ [  2.26007478e-06  -4.47009512e-07   9.99999881e-01   3.55243683e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.47499999]
+ [ 0.          1.          0.         -0.113     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  3.81622791e-01   9.24318135e-01  -5.96047073e-07  -1.25024647e-01]
+ [ -9.24318135e-01   3.81622791e-01   2.31807689e-06  -1.52575448e-02]
+ [  2.37010522e-06  -3.33694345e-07   1.00000000e+00   1.16825104e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.47499999]
+ [ 0.          1.          0.         -0.063     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  8.49638820e-01   5.27365029e-01  -1.19209324e-06   1.97513402e-02]
+ [ -5.27365029e-01   8.49638820e-01   1.85446197e-06  -1.90968372e-01]
+ [  1.99082683e-06  -9.46954685e-07   1.00000000e+00   1.76429749e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.47499999]
+ [ 0.          1.          0.         -0.013     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  4.83500242e-01   8.75344217e-01  -1.19209815e-07   5.63391745e-02]
+ [ -8.75344217e-01   4.83500242e-01   2.44451735e-06   7.45437108e-02]
+ [  2.19743197e-06  -1.07757569e-06   1.00000000e+00   2.95639038e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.52499998]
+ [ 0.          1.          0.         -0.36300001]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -7.44660795e-02   9.97223675e-01  -1.19209381e-06  -7.36753345e-02]
+ [ -9.97223675e-01  -7.44660795e-02   2.06519599e-06  -4.00981274e-01]
+ [  1.97069130e-06   1.34257039e-06   1.00000000e+00  -1.81198120e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.52499998]
+ [ 0.          1.          0.         -0.31299999]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -6.31656408e-01  -7.75248587e-01  -1.43051352e-06   8.76349896e-01]
+ [  7.75248587e-01  -6.31656408e-01  -1.64372636e-06  -7.14261264e-01]
+ [  3.70704697e-07  -2.14727220e-06   1.00000000e+00   4.14848328e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.52499998]
+ [ 0.          1.          0.         -0.26300001]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  6.66876435e-02   9.97774005e-01  -9.53675453e-07  -4.89746928e-02]
+ [ -9.97774005e-01   6.66876435e-02   2.61310493e-06  -2.24172957e-01]
+ [  2.67088626e-06   7.77289699e-07   1.00000000e+00  -6.19888305e-08]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.52499998]
+ [ 0.          1.          0.         -0.213     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -5.28387189e-01  -8.49003673e-01  -9.53676476e-07   9.49855268e-01]
+ [  8.49003673e-01  -5.28387189e-01  -2.36022333e-06  -5.74578196e-01]
+ [  1.49992900e-06  -2.05678475e-06   1.00000000e+00   2.95639038e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.52499998]
+ [ 0.          1.          0.         -0.163     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -2.65322953e-01   9.64159787e-01   3.57626760e-07   9.43481922e-03]
+ [ -9.64159787e-01  -2.65322953e-01   2.14948932e-06   1.63376078e-01]
+ [  2.16733793e-06   2.25498468e-07   1.00000000e+00   1.16825104e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.52499998]
+ [ 0.          1.          0.         -0.113     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  4.02560860e-01   9.15393054e-01   8.94068933e-07   1.81788832e-01]
+ [ -9.15393174e-01   4.02560920e-01   2.25485610e-06   1.90166332e-01]
+ [  1.70416217e-06  -1.72614193e-06   9.99999881e-01   3.55243683e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.52499998]
+ [ 0.          1.          0.         -0.063     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  1.60568595e-01   9.87024605e-01   8.94067796e-07   9.79601145e-02]
+ [ -9.87024724e-01   1.60568610e-01   2.54988458e-06   2.39547692e-01]
+ [  2.37323957e-06  -1.29190005e-06   9.99999881e-01   3.55243683e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.52499998]
+ [ 0.          1.          0.         -0.013     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -2.93387603e-02   9.99569535e-01  -4.76838409e-07  -6.48068190e-02]
+ [ -9.99569535e-01  -2.93387603e-02   2.23378311e-06   1.11925442e-01]
+ [  2.21883170e-06   5.42168380e-07   1.00000000e+00  -2.38418574e-09]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.57499999]
+ [ 0.          1.          0.         -0.36300001]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  6.56422198e-01   7.54393697e-01  -2.02655792e-06   1.35236740e-01]
+ [ -7.54393697e-01   6.56422198e-01   1.09581936e-06  -5.75468123e-01]
+ [  2.15695673e-06   8.09502467e-07   1.00000000e+00  -1.21593475e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.57499999]
+ [ 0.          1.          0.         -0.31299999]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  8.87755275e-01   4.60315496e-01   1.78812954e-07   7.18221068e-02]
+ [ -4.60315555e-01   8.87755334e-01   2.27592977e-06  -1.04255751e-01]
+ [  8.88902889e-07  -2.10277972e-06   9.99999881e-01   4.14848328e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.57499999]
+ [ 0.          1.          0.         -0.26300001]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  8.66668969e-02  -9.96237397e-01  -2.02655838e-06   8.12705338e-01]
+ [  9.96237397e-01   8.66668969e-02  -1.52782320e-06  -6.68513268e-01]
+ [  1.69771022e-06  -1.88652120e-06   1.00000000e+00   4.74452972e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.57499999]
+ [ 0.          1.          0.         -0.213     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  4.31148291e-01   9.02281106e-01   7.15255510e-07   1.89461142e-01]
+ [ -9.02281106e-01   4.31148291e-01   2.06519485e-06   1.17652923e-01]
+ [  1.55500527e-06  -1.53576707e-06   1.00000000e+00   2.36034393e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.57499999]
+ [ 0.          1.          0.         -0.163     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  4.93396409e-02  -9.98782039e-01  -1.19209449e-06   1.02222422e+00]
+ [  9.98782039e-01   4.93396409e-02  -2.71847193e-06  -4.77786526e-01]
+ [  2.77397839e-06  -1.05651259e-06   1.00000000e+00   2.95639038e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.57499999]
+ [ 0.          1.          0.         -0.113     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  1.55287713e-01   9.87869203e-01  -1.19210554e-07   2.95185447e-02]
+ [ -9.87869322e-01   1.55287728e-01   2.23378288e-06   4.77657989e-02]
+ [  2.22519725e-06  -2.29115884e-07   9.99999881e-01   1.76429749e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.57499999]
+ [ 0.          1.          0.         -0.063     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  2.44220138e-01   9.69719827e-01   5.36441348e-07   2.21123666e-01]
+ [ -9.69719827e-01   2.44220138e-01   2.29700299e-06   1.30280040e-01]
+ [  2.09643940e-06  -1.08117263e-06   1.00000000e+00   2.95639038e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.57499999]
+ [ 0.          1.          0.         -0.013     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -1.71591192e-01   9.85168338e-01  -8.34466960e-07   7.50684738e-03]
+ [ -9.85168338e-01  -1.71591192e-01   2.61310470e-06   4.33758907e-02]
+ [  2.43116119e-06   1.27047440e-06   1.00000000e+00  -1.81198120e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.625     ]
+ [ 0.          1.          0.         -0.36300001]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  4.03843224e-01   9.14828300e-01   7.15254828e-07   1.78178906e-01]
+ [ -9.14828300e-01   4.03843224e-01   2.44451712e-06  -9.70360637e-02]
+ [  1.94746235e-06  -1.64153789e-06   1.00000000e+00   3.55243683e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.625     ]
+ [ 0.          1.          0.         -0.31299999]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  2.19879881e-01   9.75526869e-01  -1.78813934e-06   5.46003580e-02]
+ [ -9.75526989e-01   2.19879910e-01   1.72802106e-06  -4.67066303e-01]
+ [  2.07890685e-06   1.36442077e-06   9.99999881e-01  -6.19888305e-08]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.625     ]
+ [ 0.          1.          0.         -0.26300001]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  9.27790761e-01  -3.73100996e-01  -1.19209716e-07   3.29919457e-02]
+ [  3.73100996e-01   9.27790761e-01   2.44451735e-06  -1.98015831e-01]
+ [ -8.01450483e-07  -2.31247759e-06   1.00000000e+00   1.16825104e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.625     ]
+ [ 0.          1.          0.         -0.213     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -7.50352442e-01  -6.61038518e-01   1.07288281e-06   1.26727068e+00]
+ [  6.61038518e-01  -7.50352442e-01  -2.48666379e-06  -1.11070335e-01]
+ [  2.44882131e-06  -1.15665682e-06   1.00000000e+00   1.76429749e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.625     ]
+ [ 0.          1.          0.         -0.163     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  3.84604156e-01   9.23081696e-01   1.72853436e-06   3.90072137e-01]
+ [ -9.23081696e-01   3.84604156e-01   1.39084568e-06   3.20487246e-01]
+ [  6.19062689e-07  -2.13050384e-06   1.00000000e+00   2.95639038e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.625     ]
+ [ 0.          1.          0.         -0.113     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  5.85348904e-01   8.10781538e-01  -8.34465880e-07   6.00118041e-02]
+ [ -8.10781538e-01   5.85348904e-01   2.10734265e-06  -1.23494767e-01]
+ [  2.19704771e-06  -5.56961822e-07   1.00000000e+00   1.76429749e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.625     ]
+ [ 0.          1.          0.         -0.063     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -3.90766025e-01  -9.20490205e-01  -1.43051295e-06   8.93660635e-01]
+ [  9.20490205e-01  -3.90766025e-01  -1.85446083e-06  -4.51065160e-01]
+ [  1.14801787e-06  -2.04143225e-06   1.00000000e+00   3.55243683e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.625     ]
+ [ 0.          1.          0.         -0.013     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  5.07816792e-01   8.61464918e-01  -4.76838864e-07   6.70574307e-02]
+ [ -8.61465037e-01   5.07816851e-01   2.65525136e-06   4.54257727e-02]
+ [  2.52955192e-06  -9.37602863e-07   9.99999881e-01   3.55243683e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.67500001]
+ [ 0.          1.          0.         -0.36300001]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  7.51748204e-01   6.59450293e-01  -1.19209335e-06   9.20652747e-02]
+ [ -6.59450293e-01   7.51748204e-01   1.81231508e-06  -5.42810991e-01]
+ [  2.09128530e-06  -5.76278410e-07   1.00000000e+00   1.76429749e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.67500001]
+ [ 0.          1.          0.         -0.31299999]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  1.06087074e-01  -9.94356990e-01  -2.02655838e-06   7.97188930e-01]
+ [  9.94356990e-01   1.06087074e-01  -1.38030896e-06  -7.79438287e-01]
+ [  1.58751141e-06  -1.86868908e-06   1.00000000e+00   2.36034393e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.67500001]
+ [ 0.          1.          0.         -0.26300001]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -7.24898636e-01  -6.88855827e-01   1.78812442e-07   1.12203613e+00]
+ [  6.88855827e-01  -7.24898636e-01  -2.52881091e-06  -2.74243826e-01]
+ [  1.87160811e-06  -1.70995452e-06   1.00000000e+00   4.74452972e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.67500001]
+ [ 0.          1.          0.         -0.213     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -2.95297980e-01  -9.55405235e-01  -1.19210668e-07   1.15646762e+00]
+ [  9.55405235e-01  -2.95297980e-01  -2.10734243e-06  -3.84589225e-01]
+ [  1.97816371e-06  -7.36187133e-07   1.00000000e+00   2.95639038e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.67500001]
+ [ 0.          1.          0.         -0.163     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -6.53204203e-01  -7.57181823e-01   5.36439813e-07   1.22862542e+00]
+ [  7.57181823e-01  -6.53204203e-01  -2.36022379e-06  -1.60832505e-01]
+ [  2.13752446e-06  -1.13552392e-06   1.00000000e+00   3.55243683e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.67500001]
+ [ 0.          1.          0.         -0.113     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  7.88052678e-01   6.15607619e-01  -8.34465368e-07   1.37072682e-01]
+ [ -6.15607679e-01   7.88052797e-01   2.44451758e-06  -8.33131187e-02]
+ [  2.16246622e-06  -1.41270584e-06   9.99999881e-01   2.36034393e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.67500001]
+ [ 0.          1.          0.         -0.063     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -6.45593226e-01  -7.63681650e-01  -4.76838920e-07   1.14856276e+00]
+ [  7.63681650e-01  -6.45593226e-01  -2.69739849e-06  -3.00858401e-01]
+ [  1.75211085e-06  -2.10557414e-06   1.00000000e+00   2.36034393e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.67500001]
+ [ 0.          1.          0.         -0.013     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -1.95019066e-01   9.80799377e-01   8.94068705e-07   2.54625857e-01]
+ [ -9.80799377e-01  -1.95019066e-01   2.29700345e-06   2.91519415e-01]
+ [  2.42725991e-06  -4.28943679e-07   1.00000000e+00   1.76429749e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.72500002]
+ [ 0.          1.          0.         -0.36300001]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -4.85803187e-01   8.74068141e-01  -1.19210966e-07   2.49769598e-01]
+ [ -8.74068260e-01  -4.85803246e-01   2.48666402e-06  -1.35259524e-01]
+ [  2.11560177e-06   1.31222646e-06   9.99999881e-01  -1.21593475e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.72500002]
+ [ 0.          1.          0.         -0.31299999]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  4.55437899e-01   8.90267491e-01  -2.02655769e-06   1.16960943e-01]
+ [ -8.90267611e-01   4.55437958e-01   1.72802140e-06  -6.04565382e-01]
+ [  2.46137256e-06   1.01717171e-06   9.99999881e-01  -2.38418574e-09]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.72500002]
+ [ 0.          1.          0.         -0.26300001]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  3.18676114e-01  -9.47863638e-01   3.57625169e-07   1.38923609e+00]
+ [  9.47863638e-01   3.18676114e-01  -2.02304864e-06  -5.40207922e-01]
+ [  1.80360701e-06   9.83679797e-07   1.00000000e+00  -1.21593475e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.72500002]
+ [ 0.          1.          0.         -0.213     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -4.82723832e-01  -8.75772595e-01   1.78811788e-07   1.18290892e+00]
+ [  8.75772595e-01  -4.82723832e-01  -2.40237046e-06  -3.52038518e-01]
+ [  2.19024810e-06  -1.00308114e-06   1.00000000e+00   1.16825104e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.72500002]
+ [ 0.          1.          0.         -0.163     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  4.63570148e-01   8.86060178e-01   3.57627812e-07   2.04494238e-01]
+ [ -8.86060178e-01   4.63570148e-01   1.93875508e-06   1.43582091e-01]
+ [  1.55206783e-06  -1.21562869e-06   1.00000000e+00   2.95639038e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.72500002]
+ [ 0.          1.          0.         -0.113     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  6.29877225e-02  -9.98014271e-01   1.78811959e-07   1.32268167e+00]
+ [  9.98014390e-01   6.29877299e-02  -2.31807667e-06  -2.55348466e-01]
+ [  2.30221053e-06   3.24469227e-07   9.99999881e-01   2.95639038e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.72500002]
+ [ 0.          1.          0.         -0.063     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  3.04097176e-01   9.52641070e-01   5.96040692e-08   2.06408918e-01]
+ [ -9.52641070e-01   3.04097176e-01   2.65525182e-06   1.69819288e-01]
+ [  2.51137612e-06  -8.64236313e-07   1.00000000e+00   5.72204590e-08]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.72500002]
+ [ 0.          1.          0.         -0.013     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  2.87943065e-01   9.57647443e-01  -1.19209489e-07   3.36329669e-01]
+ [ -9.57647562e-01   2.87943095e-01   2.19163621e-06   1.55908670e-01]
+ [  2.13314047e-06  -5.16906027e-07   9.99999881e-01   2.95639038e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.77499998]
+ [ 0.          1.          0.         -0.36300001]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  2.44468257e-01   9.69657302e-01  -1.19209392e-06   1.02102935e-01]
+ [ -9.69657302e-01   2.44468257e-01   2.40237068e-06  -3.73734338e-01]
+ [  2.62090498e-06   5.68618191e-07   1.00000000e+00  -1.21593475e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.77499998]
+ [ 0.          1.          0.         -0.31299999]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  1.97726682e-01  -9.80257332e-01  -1.19210696e-07   1.29117686e+00]
+ [  9.80257332e-01   1.97726682e-01  -2.10734243e-06  -5.42164057e-01]
+ [  2.08930896e-06   2.99822062e-07   1.00000000e+00   1.16825104e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.77499998]
+ [ 0.          1.          0.         -0.26300001]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -5.93964398e-01  -8.04491401e-01  -8.34466221e-07   1.14064083e+00]
+ [  8.04491460e-01  -5.93964458e-01  -1.93875462e-06  -5.41548431e-01]
+ [  1.06406935e-06  -1.82287135e-06   9.99999881e-01   5.34057617e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.77499998]
+ [ 0.          1.          0.         -0.213     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -1.06133774e-01  -9.94351864e-01   1.54971951e-06   1.35941440e+00]
+ [  9.94351864e-01  -1.06133774e-01  -2.02304886e-06  -1.03483371e-01]
+ [  2.17610045e-06   1.32625394e-06   1.00000000e+00  -1.81198120e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.77499998]
+ [ 0.          1.          0.         -0.163     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -4.70721871e-01  -8.82281601e-01   5.36439643e-07   1.28344971e+00]
+ [  8.82281601e-01  -4.70721871e-01  -1.89660830e-06  -2.03800183e-01]
+ [  1.92585753e-06  -4.19482319e-07   1.00000000e+00   1.16825104e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.77499998]
+ [ 0.          1.          0.         -0.113     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -7.11433828e-01  -7.02753305e-01   1.37090422e-06   1.27545840e+00]
+ [  7.02753365e-01  -7.11433887e-01  -2.02304955e-06  -5.07268310e-02]
+ [  2.39701444e-06  -4.75857036e-07   9.99999881e-01   1.16825104e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.77499998]
+ [ 0.          1.          0.         -0.063     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  2.35868514e-01   9.71785069e-01  -1.19210782e-07   2.30642259e-01]
+ [ -9.71785069e-01   2.35868514e-01   2.31807667e-06   8.18413571e-02]
+ [  2.28079011e-06  -4.30915492e-07   1.00000000e+00   1.16825104e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.77499998]
+ [ 0.          1.          0.         -0.013     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  4.10106331e-01   9.12037730e-01   3.57627499e-07   2.76266754e-01]
+ [ -9.12037730e-01   4.10106331e-01   2.40237023e-06   2.25975972e-01]
+ [  2.04438697e-06  -1.31139734e-06   1.00000000e+00   2.95639038e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.82499999]
+ [ 0.          1.          0.         -0.36300001]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -1.72306538e-01  -9.85043406e-01  -1.19209528e-06   1.22954899e+00]
+ [  9.85043406e-01  -1.72306538e-01  -1.93875439e-06  -7.94279128e-01]
+ [  1.70435192e-06  -1.50832329e-06   1.00000000e+00   2.95639038e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.82499999]
+ [ 0.          1.          0.         -0.31299999]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -6.78000152e-02  -9.97698903e-01   5.36440666e-07   1.34978861e+00]
+ [  9.97699022e-01  -6.78000227e-02  -2.36022333e-06  -3.57825361e-01]
+ [  2.39116321e-06   3.75184129e-07   9.99999881e-01   1.76429749e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.82499999]
+ [ 0.          1.          0.         -0.26300001]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -5.96590996e-01  -8.02545488e-01   1.19209108e-06   1.31694180e+00]
+ [  8.02545488e-01  -5.96590996e-01  -1.81231519e-06  -1.48735493e-01]
+ [  2.16565741e-06  -1.24502264e-07   1.00000000e+00   1.76429749e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.82499999]
+ [ 0.          1.          0.         -0.213     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -6.18965983e-01  -7.85417736e-01   5.36437767e-07   1.26174182e+00]
+ [  7.85417795e-01  -6.18966043e-01  -2.40237046e-06  -2.34710902e-01]
+ [  2.21890400e-06  -1.06565517e-06   9.99999881e-01   4.74452972e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.82499999]
+ [ 0.          1.          0.         -0.163     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -4.83108968e-01  -8.75560224e-01   1.72853368e-06   1.34404314e+00]
+ [  8.75560343e-01  -4.83109027e-01  -1.55943349e-06   7.25638717e-02]
+ [  2.20044853e-06   7.60059663e-07   9.99999881e-01   5.72204590e-08]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.82499999]
+ [ 0.          1.          0.         -0.113     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[  6.47217929e-01   7.62304962e-01   7.15255112e-07   4.13699925e-01]
+ [ -7.62304962e-01   6.47217929e-01   2.27592955e-06   1.39791377e-01]
+ [  1.27202611e-06  -2.01826538e-06   1.00000000e+00   4.14848328e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.82499999]
+ [ 0.          1.          0.         -0.063     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -2.09670499e-01  -9.77771878e-01   1.37090535e-06   1.31981766e+00]
+ [  9.77771997e-01  -2.09670514e-01  -1.43299349e-06   2.83866525e-02]
+ [  1.68857957e-06   1.03997752e-06   9.99999881e-01  -6.19888305e-08]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results
+grasp transform in global frame
+[[ 0.          0.          1.          0.82499999]
+ [ 0.          1.          0.         -0.013     ]
+ [-1.          0.          0.          0.75999999]
+ [ 0.          0.          0.          1.        ]]
+base transform in global frame
+[[ -7.46970847e-02   9.97206211e-01   5.36441007e-07   4.34777230e-01]
+ [ -9.97206330e-01  -7.46970922e-02   2.67632458e-06   2.55342733e-01]
+ [  2.70891815e-06  -3.35029370e-07   9.99999881e-01   2.36034393e-07]
+ [  0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00]]
+showing 1 results

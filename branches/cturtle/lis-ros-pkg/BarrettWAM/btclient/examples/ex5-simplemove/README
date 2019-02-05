@@ -1,0 +1,63 @@
+/* ======================================================================== *
+ *  Module ............... Example 5 - Simple WAM Move Program
+ *  File ................. main.c
+ *  Author ............... Traveler Hauptman
+ *                         Brian Zenowich
+ *                         Christopher Dellin
+ *  Creation Date ........ 26 May 2005
+ *  Last Modified Date ... 20 Aug 2008
+ *                                                                          *
+ * ======================================================================== */
+
+Files included:
+  ex5-simplemove/Makefile
+  ex5-simplemove/README
+  ex5-simplemove/main.c
+
+------------------------------------------------------------------------------
+
+To Make & Run:
+
+1) Compile the program:
+   # make
+
+2) Run the program, as root:
+   # ./ex5
+
+The program's output should look similar to below:
+
+------------------------------------------------------------------------------
+
+Welcome to Example 5: a Simple WAM Move Program.
+
+To continue, ensure the following steps have been taken:
+  a) All WAM power and signal cables are securely fastened.
+  b) The WAM is powered on (receiving power).
+  c) All E-STOPs are released.
+  d) The WAM is in Shift+Idle mode.
+  e) The WAM is in its home (folded) position.
+Press [Enter] to continue.
+
+Initializing system buses ... 1 buses found.
+Setting up the CAN bus thread ... done.
+Setting up the WAM control thread ... done.
+Shift+Activate the WAM, and press [Enter] to continue.
+
+Setting gravity compensation to 1.0 g.
+
+Press [Enter] to start a joint space move,
+  with velocity = 0.500000, acceleration = 0.500000.
+  ... done.
+Press [Enter] to disable the joint-space position constraint.
+
+Press [Enter] to start a cartesian space move,
+  with velocity = 0.500000, acceleration = 0.500000.
+  ... done.
+Press [Enter] to disable the Cartesian position constraint.
+
+Place the WAM back into its home position,
+  idle it with Shift+Idle,
+  and press [Enter] to end the program.
+
+Stopping the control thread ... done.
+Closing the system ... done.

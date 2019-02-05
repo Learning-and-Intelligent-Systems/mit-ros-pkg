@@ -1,0 +1,25 @@
+<package>
+  <description brief="vo_fovis">
+     A ROS wrapper around the fovis library.
+  </description>
+  <author>Hordur Johannsson</author>
+  <license>None</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/vo_foviz</url>
+  <depend package="roscpp"/>
+  <depend package="rosconsole"/>
+  <depend package="std_msgs"/>
+  <depend package="nav_msgs"/>
+  <depend package="tf"/>
+  <depend package="message_filters"/>
+  <depend package="image_transport"/>
+  <depend package="image_geometry"/>
+  <depend package="opencv2"/>
+  <depend package="cv_bridge"/>
+  <depend package="map_server"/>
+  <depend package="sensor_msgs"/>
+  <depend package="nav_msgs"/>
+  <depend package="rospy"/>
+  <depend package="eigen"/>
+</package>
+

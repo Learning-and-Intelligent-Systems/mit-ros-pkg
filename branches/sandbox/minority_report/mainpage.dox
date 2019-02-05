@@ -1,0 +1,109 @@
+/**
+\mainpage
+\htmlinclude manifest.html
+
+\b minority_report provides a Minority report like interface.  Using hand positions, the user is able to manipulate photos.
+<!-- 
+Provide an overview of your package.
+-->
+
+
+\section codeapi Code API
+
+The interface to this code is simple - it is a gui interface, so when you launch it, you will see two checkboxes on the left.  clicking both of them will tell the program to
+subscribe to the /hand_in topic, and use hand positions to manipulate images on the screen.
+
+The cool part of this code is that it is taken from GATMO, a system that is set up as a development environment to play with data from a variety of sources.
+
+In particular, this program uses wx widgets along with openGL to allow you to make any visual display for any message type.
+Some pages of interest:
+\li see page \ref demospage for how to add demos.
+\li see page \ref panelspage for how to add panels to control the display.
+\li see page \ref rospage for how to add subscribe to a ros message.
+
+
+/*! \page demospage Adding Demos
+  If you want to add specific programs to your gui interface, the demos inteface allows you to do that.
+  \section setup Setting up your Demo
+  In GATMO land, every demo has a setup, which is called when you first invoke it, a loop, 
+  and a shutdown, which is called when the demo is disabled.
+  
+    \li The init function is of type \ref gatmo_demo_init_func
+    \li The loop function is of type \ref gatmo_demo_init_func
+    \li The shutdown function is of type \ref gatmo_demo_fini_func
+  
+  The init and loop functions return a void pointer, and the loop and fini functions take a void pointer as a parameter, allowing you
+  to pass variables internal to the demo.
+  
+  Once you have defined these functions,  you can instantiate a \ref gatmo_demo_t.  
+  By passing in the functions you defined, as well as a \ref GatmoDisplayInterface and optionally the frequency at which it gets called,
+  the system will:
+  \li add the demo to the demo menu
+  \li register the callbacks to get called when your demo is selected
+  \li attach the demo to a display interface, to show variables and widgets for the demo.
+  
+  Note that you can instantiate your demo anywhere in the code, and it will still work, thanks to the magic of global variables.
+*/
+
+
+
+/*! \page panelspage Adding WxPanels
+  If you want to add a gui panel to display information about messsages, or about your program, you need to create a child class
+  of \ref GatmoDisplayInterface
+  \section setup Setting up your Panel
+  
+  The main thing to do is to create a child class of \ref GatmoDisplayInterface.
+  
+  By inheriting from \ref GatmoDisplayInterface and calling the constructor,
+  the system will:
+  \li add the panel to the sidebar
+  \li register the callbacks:
+   \li \ref GatmoDisplayInterface::InitGui - gets called when the gui initializes
+   \li \ref GatmoDisplayInterface::Draw - gets called when the the window is drawing
+  
+  These functions are significant, because they can only be called in the gui thread. 
+   \ref GatmoDisplayInterface takes care of that detail.
+   
+   \ref GatmoDisplayInterface inherits from a wx panel, so you can add all of your wacky wx code in 
+   OnInit, and it will setup your panel.
+   
+   If you want your program to subscribe to ROS data, you can instantiate a GRosInterface here.
+   
+   
+  Finally, you have to add a call to your class in \ref MyApp::OnInit
+ 
+  \section panelexample An Example
+  An example of a wxpanel added in this way is the \ref MinorityReportDisplay class.
+*/
+
+
+/*! \page rospage Subscribing to a ROS message
+  The GATMO interface is made for various plugins to be able to subscribe to different ros messages on the fly
+  \section setup Setting up the subscription
+  \li Make a callback function that takes a ros message or a gatmo type
+  This is the standard callback function, only it can take any type you want - it doesn't have to be of ROS type.
+  \li Optional - make a conversion function, to convert between ROS and GATMO types
+  \note If you're wondering why go through these extra steps, consider the extra work it takes to change all your code when a message type changes, versus just changing one function that converts the ROS message to your own, unchanging type.
+    GATMO was developed in 2009, when ROS messages were in constant flux.  Although the messages are a bit more stable now, this paradigm holds for any system that GATMO might interface to.
+  
+  \li In a \ref GatmoDisplayInterface, create a new \ref GRosInterface.  You specify the conversion function, the call back, the displayed name and the topic.
+   This creates a checkbox that, when checked, will subscribe to the appropriate topic, and call your callback.  All message types are inferred.
+  
+  You don't have to save the \ref GRosInterface you created.  It will be linked into the system on creation.
+ 
+*/
+
+
+<!--
+Provide links to specific auto-generated API documentation within your
+package that is of particular interest to a reader. Doxygen will
+document pretty much every part of your code, so do your best here to
+point the reader to the actual API.
+
+If your codebase is fairly large or has different sets of APIs, you
+should use the doxygen 'group' tag to keep these APIs together. For
+example, the roscpp documentation has 'libros' group.
+-->
+
+
+*/

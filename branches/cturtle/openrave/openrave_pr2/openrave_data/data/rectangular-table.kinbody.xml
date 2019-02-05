@@ -1,0 +1,27 @@
+<kinbody name="rectangular-table">
+  <body type="dynamic">
+    <mass type="mimicgeom">
+      <density> 7800 </density>
+    </mass>
+    <geom type="box">
+      <diffusecolor>.719 .539 0</diffusecolor>
+      <extents> .605 .3 .01 </extents>
+      <translation> 0 0 .663 </translation>
+    </geom>
+    <geom type="box">
+      <diffusecolor>1 .922 .699</diffusecolor>
+      <extents> .605 .025 .2965 </extents> 
+      <translation> 0 0 .3565 </translation>
+    </geom>
+    <geom type="box"> 
+      <diffusecolor>1 .922 .699</diffusecolor>
+      <extents> .01 .3 .03 </extents>
+      <translation> .595 0 .03 </translation>
+    </geom>
+    <geom type="box"> 
+      <diffusecolor>1 .922 .699</diffusecolor>
+      <extents> .01 .3 .03 </extents>
+      <translation> -.595 0 .03 </translation>
+    </geom>
+  </body>
+</kinbody>

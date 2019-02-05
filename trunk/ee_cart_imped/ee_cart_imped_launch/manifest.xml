@@ -1,0 +1,16 @@
+<package>
+  <description brief="ee_cart_imped_launch">
+
+    Launch files for the ee_cart_imped stack.
+
+  </description>
+  <author>Jenny Barry, Mario Bollini, and Huan Liu</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/ee_cart_imped_launch</url>
+  <depend package="ee_cart_imped_action"/>
+  <depend package="ee_cart_imped_control"/>
+
+</package>
+
+

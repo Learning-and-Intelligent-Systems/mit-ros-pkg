@@ -1,0 +1,4 @@
+bool scan
+---
+bool located  # indicator whether the checkerboard could be found
+geometry_msgs/PoseStamped pose  # the pose of the robot in the world frame

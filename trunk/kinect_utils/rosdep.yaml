@@ -1,0 +1,8 @@
+libsfmt:
+  ubuntu: 
+   9.10:
+     libsfml-dev libsfml-audio1.5
+   10.04:
+     libsfml-dev libsfml-audio1.5
+   10.10:
+     libsfml-dev libsfml-audio1.6

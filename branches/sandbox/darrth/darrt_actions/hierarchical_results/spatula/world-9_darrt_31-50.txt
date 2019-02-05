@@ -1,0 +1,45 @@
+
+WORLD: -9, RESET TIME: 500, DARRT TRIES: 100, FORWARD: True
+TRIAL 1:
+	Planning time: 1257.86108398
+TRIAL 2:
+	Planning time: 9295.03613281
+TRIAL 3:
+	Planning time: 1746.4987793
+TRIAL 4:
+	Planning time: 873.557373047
+TRIAL 5:
+	Planning time: 8796.94628906
+TRIAL 6:
+	Planning time: 2966.55541992
+TRIAL 7:
+	Planning time: 3358.48681641
+TRIAL 8:
+	Planning time: 2333.7355957
+TRIAL 9:
+	Planning time: 1476.01611328
+TRIAL 10:
+	Planning time: 21444.9082031
+TRIAL 11:
+	Planning time: 8942.02050781
+TRIAL 12:
+	Planning time: 2201.55688477
+TRIAL 13:
+	Planning time: 19800.8769531
+TRIAL 14:
+	Planning time: 445.794403076
+TRIAL 15:
+	Planning time: 1793.54980469
+TRIAL 16:
+	Planning time: 977.590148926
+TRIAL 17:
+	Planning time: 8334.00878906
+TRIAL 18:
+	Planning time: 996.155639648
+TRIAL 19:
+	Planning time: 35246.1640625
+TRIAL 20:
+	Planning time: 13858.4414062
+TOTALS: TRIALS: 20, AVERAGE TIME: 7307.28802032, AVERAGE TOTAL TIME: 0.0 AVERAGE OBJECT TIME: 0.0, AVERAGE SUBGOAL TIMES:
+	TOTAL: 0
+Saving to file hierarchical_results/plateh_1576198.613.pck

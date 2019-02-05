@@ -1,0 +1,14 @@
+<package>
+  <description brief="fastwam">
+
+     Fast WAM controllers library
+
+  </description>
+  <author>Jared Glover</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <depend package="roscpp"/>
+
+</package>
+
+

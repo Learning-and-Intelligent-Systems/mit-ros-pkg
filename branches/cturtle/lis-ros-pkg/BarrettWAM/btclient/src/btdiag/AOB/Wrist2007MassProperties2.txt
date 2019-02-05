@@ -1,0 +1,146 @@
+
+
+
+
+
+Mass properties of B3183 ( Assembly Configuration - FramesSuppressed )
+Density = 3581.25055128 kilograms per cubic meter
+Mass = 2.17266212 kilograms
+Center of mass: ( meters )
+	X = 0.00553408
+	Y = 0.00006822
+	Z = 0.11927695
+
+Principal axes of inertia and principal moments of inertia: ( kilograms * square meters )
+Taken at the center of mass.
+	 Ix = (-0.16544540, -0.01450160, 0.98611233)   	Px = 0.00259131
+	 Iy = (-0.07907146, -0.99647788, -0.02792028)   	Py = 0.01058610
+	 Iz = (0.98304401, -0.08259262, 0.16371602)   	Pz = 0.01090445
+Moments of inertia: ( kilograms * square meters )
+Taken at the center of mass and aligned with the output coordinate system.
+	Lxx = 0.01067491	Lxy = 0.00004503	Lxz = -0.00135557
+	Lyx = 0.00004503	Lyy* = 0.01058659	Lyz = -0.00011002
+	Lzx = -0.00135557	Lzy = -0.00011002	Lzz = 0.00282036
+Moments of inertia: ( kilograms * square meters )
+Taken at the output coordinate system.
+	Ixx = 0.04158536	Ixy = 0.00004585	Ixz = 0.00007858
+	Iyx = 0.00004585	Iyy* = 0.04156357	Iyz = -0.00009234
+	Izx = 0.00007858	Izy = -0.00009234	Izz = 0.00288691
+
+*  The information above neglects reflected inertias from the drives.  The numbers below should be added to the appropriate Inertia values above.
+Added inertia from the M4 rotor, aligned with the Y4 axis, is 0.00010410   kg-m^2
+
+
+
+
+Mass properties of B3209 ( Assembly Configuration - FramesSuppressed )
+Density = 2967.12514143 kilograms per cubic meter
+Mass = 0.35655692 kilograms
+Center of mass: ( meters )
+	X = 0.00005483
+	Y = 0.02886286
+	Z = 0.00148493
+
+Principal axes of inertia and principal moments of inertia: ( kilograms * square meters )
+Taken at the center of mass.
+	 Ix = (-0.00043360, 0.99638155, -0.08499184)   	Px = 0.00019296
+	 Iy = (-0.99999573, -0.00018654, 0.00291476)   	Py = 0.00037112
+	 Iz = (0.00288836, 0.08499274, 0.99637738)   	Pz = 0.00038347
+Moments of inertia: ( kilograms * square meters )
+Taken at the center of mass and aligned with the output coordinate system.
+	Lxx = 0.00037112	Lxy = -0.00000008	Lxz = -0.00000003
+	Lyx = -0.00000008	Lyy* = 0.00019434	Lyz = -0.00001613
+	Lzx = -0.00000003	Lzy = -0.00001613	Lzz = 0.00038209
+Moments of inertia: ( kilograms * square meters )
+Taken at the output coordinate system.
+	Ixx = 0.00066894	Ixy = 0.00000048	Ixz = 0.00000000
+	Iyx = 0.00000048	Iyy* = 0.00019513	Iyz = -0.00000085
+	Izx = 0.00000000	Izy = -0.00000085	Izz = 0.00067913
+
+*  The information above neglects reflected inertias from the drives.  The numbers below should be added to the appropriate Inertia values above.
+Added inertia from the M5 rotor, aligned with the Y5 axis, is 0.0016612 kg-m^2
+Added inertia from the M6 rotor, aligned with the Y5 axis, is 0.0016612 kg-m^2 (also)
+Total added inertia from M5 + M6 is 2*0.0016612 kg-m^2
+
+
+
+
+
+
+Mass properties of B3210 ( Assembly Configuration - FramesSuppressed )
+Density = 3283.63110499 kilograms per cubic meter
+Mass = 0.40915886 kilograms
+Center of mass: ( meters )
+	X = -0.00005923
+	Y = -0.01686123
+	Z = 0.02419052
+
+
+Principal axes of inertia and principal moments of inertia: ( kilograms * square meters )
+Taken at the center of mass.
+	 Ix = (0.00065218, 0.98062112, -0.19591272)   	Px = 0.00022961
+	 Iy = (-0.00065540, 0.19591314, 0.98062103)   	Py = 0.00046018
+	 Iz = (0.99999957, -0.00051114, 0.00077047)   	Pz = 0.00054889
+
+Moments of inertia: ( kilograms * square meters )
+Taken at the center of mass and aligned with the output coordinate system.
+	Lxx = 0.00054889	Lxy = 0.00000019	Lxz = -0.00000010
+	Lyx = 0.00000019	Lyy* = 0.00023846	Lyz = -0.00004430
+	Lzx = -0.00000010	Lzy = -0.00004430	Lzz = 0.00045133
+
+Moments of inertia: ( kilograms * square meters )
+Taken at the output coordinate system.
+	Ixx = 0.00090465	Ixy = 0.00000060	Ixz = -0.00000068
+	Iyx = 0.00000060	Iyy* = 0.00047789	Iyz = -0.00021118
+	Izx = -0.00000068	Izy = -0.00021118	Izz = 0.00056765
+
+*  The information above neglects reflected inertias from the drives.  The numbers below should be added to the appropriate Inertia values above.
+Added inertia from the M5 rotor, aligned with the Y6 axis, is 0.0016612 kg-m^2
+Added inertia from the M6 rotor, aligned with the Y6 axis, is 0.0016612 kg-m^2 (also)
+Total added inertia from M5 + M6 is 2*0.0016612 kg-m^2
+
+
+
+
+Mass properties of B3211 ( Assembly Configuration - FramesSuppressed )
+Density = 2971.20328674 kilograms per cubic meter
+Mass = 0.06848446 kilograms
+Center of mass: ( meters )
+	X = 0.00016352
+	Y = 0.00007993
+	Z = 0.05677197
+
+Principal axes of inertia and principal moments of inertia: ( kilograms * square meters )
+Taken at the center of mass.
+	 Ix = (0.40802171, 0.91297222, -0.00010403)   	Px = 0.00003760
+	 Iy = (-0.91297222, 0.40802172, 0.00008763)   	Py = 0.00003810
+	 Iz = (0.00012245, 0.00005922, 0.99999999)   	Pz* = 0.00007399
+
+Moments of inertia: ( kilograms * square meters )
+Taken at the center of mass and aligned with the output coordinate system.
+	Lxx = 0.00003801	Lxy = 0.00000019	Lxz = 0.00000000
+	Lyx = 0.00000019	Lyy = 0.00003768	Lyz = 0.00000000
+	Lzx = 0.00000000	Lzy = 0.00000000	Lzz* = 0.00007399
+
+Moments of inertia: ( kilograms * square meters )
+Taken at the output coordinate system.
+	Ixx = 0.00025874	Ixy = 0.00000019	Ixz = 0.00000063
+	Iyx = 0.00000019	Iyy = 0.00025841	Iyz = 0.00000031
+	Izx = 0.00000063	Izy = 0.00000031	Izz* = 0.00007399
+
+*  The information above neglects reflected inertias from the drives.  The numbers below should be added to the appropriate Inertia values above.
+Added inertia from the M7 rotor, aligned with the Z7 axis, is 0.000461619 kg-m^2
+Added inertia from the M7 double idler gear, aligned with the Z7 axis, is 0.00000532 kg-m^2
+Total added inertia from rotor and double idler gear is their sum.
+
+
+© 2007 Barrett Technology, Inc. CONFIDENTIAL	Printed by William Townsend on 1/26/2007 at 1:52 PM
+
+
+
+C:\Documents and Settings\wt\My Documents\Wrist2007MassProperties.doc	Page 1 of 9
+
+
+
+
+

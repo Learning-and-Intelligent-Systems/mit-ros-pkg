@@ -1,0 +1,36 @@
+<package>
+  <description brief="lis_arm_controller">
+    An arm controller manager based on Kaijen's pr2_gripper_reactive_approach arm controller manager.
+  </description>
+  <author>Huan Liu</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/lis_arm_controller</url>
+  <!--ros stuff -->
+  <depend package="rospy"/>
+  <depend package="tf"/>
+  <!--actions -->
+  <depend package="actionlib"/>
+  <depend package="pr2_gripper_action"/>
+  <depend package="pr2_gripper_fingersensor_action"/>
+  <depend package="joint_trajectory_action"/>
+  <!--srvs -->
+  <depend package="std_srvs"/>
+  <!--msgs -->
+  <depend package="pr2_controllers_msgs"/>
+  <depend package="pr2_mechanism_msgs"/>
+  <depend package="geometry_msgs"/>
+  <depend package="geometric_shapes_msgs"/>
+  <depend package="trajectory_msgs"/>
+  <depend package="object_manipulation_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="motion_planning_msgs"/>
+  <depend package="move_arm_msgs"/>
+  <!--grasping -->
+  <depend package="pr2_mechanism_controllers"/>
+  <depend package="simple_Jtranspose_controller"/>
+  <depend package="interpolated_ik_motion_planner"/>
+  <depend package="object_manipulator"/>
+  <depend package="fingertip_pressure"/>
+  <depend package="slipgrip_controller"/>
+</package>

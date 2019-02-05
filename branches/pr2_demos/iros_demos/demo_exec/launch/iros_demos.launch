@@ -1,0 +1,4 @@
+<launch>
+	<include file="$(find pr2_teleop)/teleop_joystick.launch"/>
+	<include file="$(find demo_exec)/launch/iros_demos_no_teleop.launch"/>
+</launch>

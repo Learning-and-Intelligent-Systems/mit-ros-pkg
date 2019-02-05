@@ -1,0 +1,135 @@
+To record data on pr2:
+
+1. set ROS_MASTER_URI environment variable (so computer can find PR2)
+
+> export ROS_MASTER_URI=http://pr2mm1:11311
+
+1.1 for simulation/playback w/out robot
+
+> export ROS_MASTER_URI=http://localhost:11311
+
+2. log into a pr2 computer:
+
+> ssh yourusername@pr2mm1.csail.mit.edu
+
+3. (on robot) claim robot and kill all other ROS processes
+
+> robot claim
+> robot start
+
+If the joystick buttons aren't flashing, hit the playstation button.
+
+4. (on computer) start dashboard which displays the robot status
+
+> rosrun pr2_dashboard pr2_dashboard &
+
+5. (on robot) launch on robot:
+
+> screen
+or run
+> byobu
+> roslaunch pr2_teleop teleop_joystick.launch &>/dev/null &
+
+( &>/dev/null pipes output to null, so you don't have to open multiple terminals)
+
+6. To tuck arms and tilt laser:
+
+> rosrun pr2_tuckarm tuck_arms.py -r t -l t
+> rosrun pr2_mechanism_controllers send_periodic_cmd_srv.py laser_tilt_controller linear 3 0.6 0.0
+
+7. Make sure head is facing forward, parallel to floor (joystick L&R)
+
+8. (on laptop) run visualization tool:
+
+> rosrun rviz rviz 
+
+9.0 be sure to navigate to directory where you want to save your data ex.
+
+> \tmp
+
+9. a) Throttled data: (if collecting throttled data)
+> rosrun stereo_throttle camera_throttle 1.0 1.0 1.0
+
+b) Record Throttled data:
+
+rosbag record /tf /tilt_scan /wide_stereo_throttled/left/camera_info /wide_stereo_throttled/left/image_raw /wide_stereo_throttled/right/camera_info /wide_stereo_throttled/right/image_raw /teleop/cmd_vel /robot_pose_ekf/odom_combined /cmd_vel /base_scan /base_odometry/odom /base_odometry/odometer /base_odometry/state /initialpose /torso_lift_imu/data /torso_lift_imu/is_calibrated
+
+9. Else, to record regular data:
+
+> rosbag record /tf /tilt_scan /wide_stereo/left/camera_info /wide_stereo
+/left/image_rect /wide_stereo/right/camera_info /wide_stereo/right/image_rect 
+/teleop/cmd_vel /robot_pose_ekf/odom_combined /cmd_vel /base_scan 
+/base_odometry/odom /base_odometry/odometer /base_odometry/state /initialpose 
+/torso_lift_imu/data /torso_lift_imu/is_calibrated
+
+9.1 Record color (hopeful)
+
+> rosbag record /tf /tilt_scan /wide_stereo/left/camera_info /wide_stereo
+/left/image_rect_color /wide_stereo/right/camera_info /wide_stereo/right/image_rect_color 
+/teleop/cmd_vel /robot_pose_ekf/odom_combined /cmd_vel /base_scan 
+/base_odometry/odom /base_odometry/odometer /base_odometry/state /initialpose 
+/torso_lift_imu/data /torso_lift_imu/is_calibrated
+
+9.2 Record image compressed
+
+10. When done recording:
+
+> Ctrl+C
+
+a *.bag file should be created in your desired folder
+
+11. Create *.info file of data:
+
+> rosbag info *.bag > *.info
+
+
+OPENNI
+--------------------------------------------
+To start OpenNI driver run
+> roslaunch launch/openni_node.launch
+
+Need to have a copy of the launch and openni in your home directory.
+
+MISC
+--------------------------------------------
+Polling the Prosilica
+
+  rosrun polled_camera poller 1 camera:=prosilica output:=my_output
+
+Running the navigation stack
+  http://www.ros.org/wiki/pr2_2dnav
+  roslaunch pr2_2dnav pr2_2dnav.launch
+
+Log directory
+-------------
+/removable
+
+----------
+rosbag record /tf /tilt_scan /wide_stereo/left/camera_info /wide_stereo/left/image_rect /wide_stereo/right/camera_info /wide_stereo/right/image_rect /teleop/cmd_vel /robot_pose_ekf/odom_combined /cmd_vel /base_scan /base_odometry/odom /base_odometry/odometer /base_odometry/state /initialpose /torso_lift_imu/data /torso_lift_imu/is_calibrated /hires_camera/image_raw /hires_camera/camera_info
+
+Record raw images
+---------------------
+rosbag record /tf /tilt_scan /wide_stereo/left/camera_info /wide_stereo/left/image_raw /wide_stereo/right/camera_info /wide_stereo/right/image_raw /teleop/cmd_vel /robot_pose_ekf/odom_combined /cmd_vel /base_scan /base_odometry/odom /base_odometry/odometer /base_odometry/state /initialpose /torso_lift_imu/data /torso_lift_imu/is_calibrated /hires_camera/image_raw /hires_camera/camera_info
+
+Record openni
+---------------------
+rosbag record /tf /tilt_scan /camera/rgb/camera_info /camera/rgb/image_raw /camera/depth/camera_info /camera/depth/image_raw  /teleop/cmd_vel /robot_pose_ekf/odom_combined /cmd_vel /base_scan /base_odometry/odom /base_odometry/odometer /base_odometry/state /initialpose /torso_lift_imu/data /torso_lift_imu/is_calibrated /hires_camera/image_raw /hires_camera/camera_info 
+
+Record raw stereo and openni
+---------------------
+rosbag record -b 8000 /tf /tilt_scan /camera/rgb/camera_info /camera/rgb/image_raw /camera/depth/camera_info /camera/depth/image_raw  /teleop/cmd_vel /robot_pose_ekf/odom_combined /cmd_vel /base_scan /base_odometry/odom /base_odometry/odometer /base_odometry/state /initialpose /torso_lift_imu/data /torso_lift_imu/is_calibrated /hires_camera/image_raw /hires_camera/camera_info /wide_stereo/left/camera_info /wide_stereo/left/image_raw /wide_stereo/right/camera_info /wide_stereo/right/image_raw
+
+
+Copying data
+------------------
+rsync -av --progress pr2mm1.csail.mit.edu:/removable/hordurj/bagfile.bag .
+
+PR2 Wiki
+------------------
+http://projects.csail.mit.edu/pr2/wiki/index.php?title=Main_Page
+http://projects.csail.mit.edu/pr2/calendar.html
+
+Mount nfs
+------------------
+sudo mount zim.csail.mit.edu:/export/marine ~/marine_data
+

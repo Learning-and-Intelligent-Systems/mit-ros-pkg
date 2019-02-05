@@ -1,0 +1,18 @@
+<package>
+  <description brief="base_trajectory_action">
+
+     base_trajectory_action
+
+  </description>
+  <author>Jenny Barry</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/base_trajectory_action</url>
+  <depend package="geometry_msgs"/>
+  <depend package="arm_navigation_msgs"/>
+  <depend package="actionlib"/>
+  <depend package="tf"/>
+
+</package>
+
+

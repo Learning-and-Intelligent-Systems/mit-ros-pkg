@@ -1,0 +1,53 @@
+
+"CHAOS" -- Composable Hypothesizers for the Awareness of Objects in Scenes
+
+
+TODO
+----
+ - make Hypothesizer classes
+     --> ObjectHypothesizer
+     --> ObjectPoseHypothesizer
+     --> ObjectIdentityHypothesizer
+     --> RestingSurfacePoseHypothesizer
+     --> OLFPoseHypothesizer
+
+ - use a PoseHypothesizer to abstract away initial pose guessing in fit_object()
+ - replace fit_object() with an ObjectHypothesizer class
+
+
+SOON
+----
+ - add prior state message to object detector node
+ - make object detector node work with multiple tables in view
+ - make SceneAnalyzer class
+ - make ObjectTracker class (and ObjectTrackerHypothesizer class)
+ - add a PointCloudNormalTester using a kd-tree
+ - add bounds to Optimization class
+
+
+DONE
+----
+ + add a RangeImageNormalTester
+ + set range of out-of-cluster points to INFINITY (instead of -INFINITY)
+ + only use valid observations in range_image_fitness()
+ + make range boundary fuzzy
+ + write object detector launch file
+ + add fitness score to ObjectHypothesis message
+ + rename messages to *Hypothesis
+ + add "junk" threshold for classification
+ + increase hidden range cost
+ + use Tester classes in detection.cpp
+ + write Tester classes
+ + cleanup files and headers
+ + dilate range image to decrease penalty at object edges
+ + make alignment scores invariant to number of points
+ + openmp speed optimizations
+ + gradient free stochastic gradient descent
+ + improve gradient descent algorithm with randomization
+ + speed up registration by replacing the KdTree with a DistanceTransform
+ + make a model loader class
+ + move extra functions from detection.cpp into util.cpp and models.cpp
+ + test distance transform class
+ + write a distance transform class
+ + optimize over (x,y,theta)
+ + move range image optimizers to detection.cpp

@@ -1,0 +1,20 @@
+<package>
+  <description brief="ee_cart_imped_demos">
+
+     ee_cart_imped_demos
+
+  </description>
+  <author>Jennifer Lynn Barry32-G585</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/ee_cart_imped_demos</url>
+  <depend package="actionlib"/>
+  <depend package="roscpp"/>
+  <depend package="ee_cart_imped_action"/>
+  <depend package="pr2_controllers_msgs"/>
+  <depend package="wiping_demo"/>
+  <depend package="geometry_msgs"/>
+
+</package>
+
+

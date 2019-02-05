@@ -1,0 +1,162 @@
+## the list of groups for which motion planning can be performed
+groups: 
+#  - pr2_base
+  - right_arm 
+  - left_arm
+  - right_arm_cartesian
+  - left_arm_cartesian
+
+## the planner configurations; each config must have a type, which specifies
+## the planner to be used; other parameters can be specified as well, depending 
+## on the planner
+
+# pr2_base:
+#   planner_type: JointPlanner
+#   planner_configs:
+#     - RRTStarkConfig1
+#   kinematics_solver: simple_pr2_planner/SimplePR2KinematicsPlugin
+#   tip_name: torso_lift_link
+#   root_name: odom_combined
+#   projection_evaluator: joint_state
+
+right_arm:
+  planner_type: JointPlanner
+  planner_configs:
+    - SBLkConfig1 
+    - LBKPIECEkConfig1
+    - RRTStarkConfig1
+    - RRTkConfig1
+  kinematics_solver: pr2_arm_kinematics/PR2ArmKinematicsPlugin
+  redundancy:
+    name: r_upper_arm_roll_joint
+  tip_name: r_wrist_roll_link
+  root_name: torso_lift_link
+  projection_evaluator: joint_state
+
+left_arm: 
+  planner_type: JointPlanner
+  planner_configs:
+     - RRTkConfig1
+     - SBLkConfig1 
+     - LBKPIECEkConfig1
+     - RRTStarkConfig1
+  kinematics_solver: pr2_arm_kinematics/PR2ArmKinematicsPlugin
+  redundancy:
+    name: l_upper_arm_roll_joint
+  tip_name: l_wrist_roll_link
+  root_name: torso_lift_link
+  projection_evaluator: joint_state
+
+right_arm_cartesian:
+  parent_frame: torso_lift_link
+  physical_group: right_arm
+  planner_type: RPYIKTaskSpacePlanner
+  state_spaces:
+    - x
+    - y
+    - z
+    - roll
+    - pitch
+    - yaw
+    - r_upper_arm_roll_joint
+  x:
+    type: Linear
+    min: -2.0
+    max: 2.0
+  y:
+    type: Linear
+    min: -2.0
+    max: 2.0
+  z:
+    type: Linear
+    min: -2.0
+    max: 2.0
+  roll:
+    type: Revolute
+  pitch:
+    type: Revolute
+  yaw:
+    type: Revolute
+  planner_configs:
+    - SBLkConfig1 
+    - LBKPIECEkConfig1
+    - RRTStarkConfig1
+    - RRTkConfig1
+  kinematics_solver: pr2_arm_kinematics/PR2ArmKinematicsPlugin
+  tip_name: r_wrist_roll_link
+  root_name: torso_lift_link
+  projection_evaluator: joint_state
+  longest_valid_segment_fraction: 0.001
+
+left_arm_cartesian:
+  parent_frame: torso_lift_link
+  physical_group: left_arm
+  planner_type: RPYIKTaskSpacePlanner
+  state_spaces:
+    - x
+    - y
+    - z
+    - roll
+    - pitch
+    - yaw
+    - l_upper_arm_roll_joint
+  x:
+    type: Linear
+    min: -2.0
+    max: 2.0
+  y:
+    type: Linear
+    min: -2.0
+    max: 2.0
+  z:
+    type: Linear
+    min: -2.0
+    max: 2.0
+  roll:
+    type: Revolute
+  pitch:
+    type: Revolute
+  yaw:
+    type: Revolute
+  planner_configs:
+     - RRTkConfig1 
+     - SBLkConfig1 
+     - LBKPIECEkConfig1
+     - RRTStarkConfig1
+  kinematics_solver: pr2_arm_kinematics/PR2ArmKinematicsPlugin
+  tip_name: l_wrist_roll_link
+  root_name: torso_lift_link
+  projection_evaluator: joint_state
+  longest_valid_segment_fraction: 0.001
+
+  
+planner_configs:
+  SBLkConfig1:
+    type: kinematic::SBL
+
+  LBKPIECEkConfig1:
+    type: kinematic::LBKPIECE
+    
+  RRTkConfig1:
+    type: kinematic::RRT
+
+  RRTConnectkConfig1:
+    type: kinematic::RRTConnect
+
+  LazyRRTkConfig1:
+    type: kinematic::LazyRRT
+
+  ESTkConfig1:
+    type: kinematic::EST
+
+  KPIECEkConfig1:
+    type: kinematic::KPIECE
+
+  RRTStarkConfig1:
+    type: kinematic::RRTStar
+
+  BKPIECEkConfig1:
+    type: kinematic::BKPIECE
+
+publish_diagnostics: true
+default_planner_config: RRTStarkConfig1

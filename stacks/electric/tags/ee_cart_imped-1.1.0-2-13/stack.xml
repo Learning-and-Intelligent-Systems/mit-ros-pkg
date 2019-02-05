@@ -1,0 +1,17 @@
+<stack>
+  <description brief="ee_cart_imped">Stack for a controller that does force/impedance end effector Cartesian control.</description>
+  <author>Maintained by Jenny Barry, Mario Bollini, and Huan Liu</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/ee_cart_imped</url>
+  <depend stack="common" /> <!-- actionlib -->
+  <depend stack="common_msgs" /> <!-- actionlib_msgs, geometry_msgs -->
+  <depend stack="eigen" /> <!-- eigen -->
+  <depend stack="geometry" /> <!-- tf -->
+  <depend stack="orocos_kinematics_dynamics" /> <!-- kdl -->
+  <depend stack="pluginlib" /> <!-- pluginlib -->
+  <depend stack="pr2_mechanism" /> <!-- pr2_controller_manager, pr2_mechanism_model, realtime_tools, pr2_controller_interface -->
+  <depend stack="ros" /> <!-- roslib -->
+  <depend stack="ros_comm" /> <!-- std_msgs, rospy, roscpp -->
+
+</stack>

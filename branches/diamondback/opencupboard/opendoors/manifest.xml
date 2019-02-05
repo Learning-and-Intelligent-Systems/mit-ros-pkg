@@ -1,0 +1,23 @@
+<package>
+  <description brief="opendoors"> 
+    The opendoors package provides an implementation of an action that, given a pose of the handle of a cupboard in the world, will attempt to reach it with a robot arm. It uses a move_arm package for moving the arm.  
+ </description>
+  <author>Anne E Holladay, Ulziibayar Otgonbaatar</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/opendoors</url>
+  <depend package="actionlib"/>
+  <depend package="motion_planning_msgs" />
+  <depend package="geometry_msgs"/>
+  <depend package="ee_cart_imped_action"/>
+  <depend package="actionlib_msgs"/>	
+  <depend package="pr2_utils" />
+  <depend package="pr2_controllers_msgs"/>
+  <depend package="visualization_msgs"/>
+  <depend package="object_manipulation_msgs"/>
+  <export>
+    <rosdoc config="rosdoc.yaml"/>
+  </export>
+</package>
+
+

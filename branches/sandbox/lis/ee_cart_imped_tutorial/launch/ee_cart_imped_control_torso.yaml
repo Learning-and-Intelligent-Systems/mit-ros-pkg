@@ -1,0 +1,5 @@
+r_arm_cart_imped_controller:
+  type: ee_cart_imped_control/EECartImpedControlPlugin
+  root_name: base_link
+  tip_name: r_gripper_tool_frame
+

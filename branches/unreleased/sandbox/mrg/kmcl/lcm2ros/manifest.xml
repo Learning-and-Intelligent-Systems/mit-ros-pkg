@@ -1,0 +1,18 @@
+<package>
+  <description brief="lcm2ros">
+
+     lcm2ros
+  </description>
+  <author>Maurice Fallon</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/lcm2ros</url>
+  <depend package="roscpp"/>
+  <depend package="sensor_msgs"/>
+  <depend package="message_filters"/>
+  <depend package="tf"/>
+  <depend package="geometry_msgs"/>
+  <depend package="nav_msgs"/>
+</package>
+
+

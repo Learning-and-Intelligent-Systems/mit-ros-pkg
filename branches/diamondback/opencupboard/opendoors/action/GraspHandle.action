@@ -1,0 +1,12 @@
+#goal
+geometry_msgs/PoseStamped pose_stamped
+string arm
+object_manipulation_msgs/ClusterBoundingBox handle_box
+
+---
+
+motion_planning_msgs/ArmNavigationErrorCodes error_code
+
+---
+
+

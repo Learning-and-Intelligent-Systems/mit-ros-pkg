@@ -1,0 +1,6 @@
+<launch>
+  <!--load the cup-->
+  <param name="coffee_cup" textfile="$(find gazebo_worlds)/objects/coffee_cup.model" />
+  <node name="spawn_coffee_cup" pkg="gazebo" type="spawn_model" args="-gazebo -param coffee_cup -x 1.6 -y -0.1 -z 1 -Y 90.0 -model coffee_cup" respawn="false" output="screen" />
+
+</launch>

@@ -1,0 +1,32 @@
+object_manipulation_msgs/PickupGoal pickup_goal
+#places should be for object using origin defined by 
+#pose in collision map
+object_manipulation_msgs/PlaceGoal place_goal
+
+#optional
+bool allow_warp
+float32 planning_time
+float32 goal_bias
+float32 threshold
+int32 tries
+
+#things that shouldn't exist
+int32 debug_level
+bool do_pause
+
+---
+
+string[] primitive_names
+arm_navigation_msgs/RobotTrajectory[] primitive_trajectories
+
+int32 SUCCESS=1
+int32 PLANNING_FAILED=-1
+int32 NO_PICK_TABLE=-2
+int32 OBJECT_DOES_NOT_EXIST=-3
+int32 NO_GRASPS=-4
+int32 ERROR=-5
+int32 NO_PLACE_LOCATIONS=-6
+int32 CONFIGURE_ERROR=-7
+int32 error_code
+
+---

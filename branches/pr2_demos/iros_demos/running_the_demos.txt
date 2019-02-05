@@ -1,0 +1,27 @@
+Initial setup:
+      Angle table so that left side is closer to robot than right side.
+
+During demo:
+      Once the table wiping gets to the point where it has the right
+      hand by the table and is asking you if you want to start the
+      demo, you should scatter bits of cardboard on the table (no more
+      than 65 cm from the robot and only left of its center), put the
+      box in the robot's right hand and a cloth in its left hand.
+
+      If it was unable to move its right arm into position, DO NOT
+      give it a box or scatter bits on the table.
+
+Running demos:
+   Whole demo:	
+      $ roscd demo_exec/scripts
+      $ python run_demos.py
+   Just controller demos:
+      $ roscd controller_demos/src
+      $ python controller_demos.py
+   Just table wiping:
+      $ roscd table_wiping_demo/src/table_wiping_demo
+      $ python wipe_table.py
+
+   Adjusting parameters for table wiping:
+      Where the head looks: 
+      	    In table_wiping_demo/src/table_wiping_demo/head_control.py

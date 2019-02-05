@@ -1,0 +1,16 @@
+int32 playerid
+kinect_tools/SkeletonJoint head
+kinect_tools/SkeletonJoint neck
+kinect_tools/SkeletonJoint right_hand
+kinect_tools/SkeletonJoint left_hand
+kinect_tools/SkeletonJoint right_shoulder
+kinect_tools/SkeletonJoint left_shoulder
+kinect_tools/SkeletonJoint right_elbow
+kinect_tools/SkeletonJoint left_elbow
+kinect_tools/SkeletonJoint torso
+kinect_tools/SkeletonJoint left_hip
+kinect_tools/SkeletonJoint right_hip
+kinect_tools/SkeletonJoint left_knee
+kinect_tools/SkeletonJoint right_knee
+kinect_tools/SkeletonJoint left_foot
+kinect_tools/SkeletonJoint right_foot

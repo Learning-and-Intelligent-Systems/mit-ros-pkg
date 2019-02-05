@@ -1,0 +1,62 @@
+[INFO] [WallTime: 1364156711.133484] [174743.632000] WORLD: -4, RESET TIME: 200, DARRT TRIES: 100, FORWARD: True
+[INFO] [WallTime: 1364156711.134325] [174743.632000] Sending goal to gripper and waiting for result...
+[INFO] [WallTime: 1364156711.139499] [174743.642000] Gripper action returned
+[INFO] [WallTime: 1364156711.141143] [174743.642000] Sending torso goal and waiting for result
+[INFO] [WallTime: 1364156711.209264] [174743.716000] left_arm is already at the side position
+[INFO] [WallTime: 1364156711.210237] [174743.731000] right_arm is already at the side position
+[INFO] [WallTime: 1364156838.563069] [174894.035000] TRIAL 1:
+[INFO] [WallTime: 1364156838.563696] [174894.035000]    Planning time: 89.999961853
+[INFO] [WallTime: 1364156838.564729] [174894.035000] Sending goal to gripper and waiting for result...
+[INFO] [WallTime: 1364156838.573765] [174894.047000] Gripper action returned
+[INFO] [WallTime: 1364156838.574292] [174894.047000] Sending torso goal and waiting for result
+[INFO] [WallTime: 1364156838.639833] [174894.124000] left_arm is already at the side position
+[INFO] [WallTime: 1364156838.641555] [174894.125000] right_arm is already at the side position
+[INFO] [WallTime: 1364157428.425524] [175586.495000] TRIAL 2:
+[INFO] [WallTime: 1364157428.427727] [175586.495000]    Planning time: 473.385284424
+[INFO] [WallTime: 1364157428.428876] [175586.495000] Sending goal to gripper and waiting for result...
+[INFO] [WallTime: 1364157428.438512] [175586.511000] Gripper action returned
+[INFO] [WallTime: 1364157428.438988] [175586.511000] Sending torso goal and waiting for result
+[INFO] [WallTime: 1364157428.504255] [175586.594000] left_arm is already at the side position
+[INFO] [WallTime: 1364157428.505477] [175586.594000] right_arm is already at the side position
+[INFO] [WallTime: 1364158003.175553] [176258.800000] TRIAL 3:
+[INFO] [WallTime: 1364158003.176999] [176258.813000]    Planning time: 452.701416016
+[INFO] [WallTime: 1364158003.179288] [176258.813000] Sending goal to gripper and waiting for result...
+[INFO] [WallTime: 1364158003.189931] [176258.825000] Gripper action returned
+[INFO] [WallTime: 1364158003.193499] [176258.825000] Sending torso goal and waiting for result
+[INFO] [WallTime: 1364158003.266981] [176258.904000] left_arm is already at the side position
+[INFO] [WallTime: 1364158003.270161] [176258.904000] right_arm is already at the side position
+[INFO] [WallTime: 1364158403.967734] [176727.366000] TRIAL 4:
+[INFO] [WallTime: 1364158403.968456] [176727.367000]    Planning time: 318.924255371
+[INFO] [WallTime: 1364158403.969181] [176727.367000] Sending goal to gripper and waiting for result...
+[INFO] [WallTime: 1364158403.977282] [176727.367000] Gripper action returned
+[INFO] [WallTime: 1364158403.977760] [176727.367000] Sending torso goal and waiting for result
+[INFO] [WallTime: 1364158404.079432] [176727.491000] left_arm is already at the side position
+[INFO] [WallTime: 1364158404.080479] [176727.491000] right_arm is already at the side position
+[INFO] [WallTime: 1364159470.343017] [177972.965000] TRIAL 5:
+[INFO] [WallTime: 1364159470.346862] [177973.011000]    Planning time: 857.779968262
+[INFO] [WallTime: 1364159470.348829] [177973.011000] Sending goal to gripper and waiting for result...
+[INFO] [WallTime: 1364159470.357727] [177973.041000] Gripper action returned
+[INFO] [WallTime: 1364159470.358226] [177973.041000] Sending torso goal and waiting for result
+[INFO] [WallTime: 1364159470.426261] [177973.121000] left_arm is already at the side position
+[INFO] [WallTime: 1364159470.426921] [177973.121000] right_arm is already at the side position
+[INFO] [WallTime: 1364160924.965035] [179673.440000] TRIAL 6:
+[INFO] [WallTime: 1364160924.965859] [179673.447000]    Planning time: 1194.76147461
+[INFO] [WallTime: 1364160924.966621] [179673.447000] Sending goal to gripper and waiting for result...
+[INFO] [WallTime: 1364160924.975628] [179673.447000] Gripper action returned
+[INFO] [WallTime: 1364160924.976267] [179673.447000] Sending torso goal and waiting for result
+[INFO] [WallTime: 1364160925.041589] [179673.534000] left_arm is already at the side position
+[INFO] [WallTime: 1364160925.042287] [179673.534000] right_arm is already at the side position
+[INFO] [WallTime: 1364162098.155040] [181045.125000] TRIAL 7:
+[INFO] [WallTime: 1364162098.155537] [181045.125000]    Planning time: 960.006652832
+[INFO] [WallTime: 1364162098.156439] [181045.125000] Sending goal to gripper and waiting for result...
+[INFO] [WallTime: 1364162098.166434] [181045.138000] Gripper action returned
+[INFO] [WallTime: 1364162098.166993] [181045.138000] Sending torso goal and waiting for result
+[INFO] [WallTime: 1364162098.237540] [181045.213000] left_arm is already at the side position
+[INFO] [WallTime: 1364162098.238140] [181045.213000] right_arm is already at the side position
+[INFO] [WallTime: 1364163265.535634] [182408.067000] TRIAL 8:
+[INFO] [WallTime: 1364163265.538257] [182408.068000]    Planning time: 945.131591797
+[INFO] [WallTime: 1364163265.539341] [182408.085000] Sending goal to gripper and waiting for result...
+[INFO] [WallTime: 1364163265.548546] [182408.085000] Gripper action returned
+[INFO] [WallTime: 1364163265.549149] [182408.085000] Sending torso goal and waiting for result
+[INFO] [WallTime: 1364163265.615618] [182408.165000] left_arm is already at the side position
+[INFO] [WallTime: 1364163265.619438] [182408.177000] right_arm is already at the side position

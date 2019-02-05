@@ -1,0 +1,6 @@
+int8 right_arm
+int8 attach
+float64 length
+float64 radius
+---
+int8 status

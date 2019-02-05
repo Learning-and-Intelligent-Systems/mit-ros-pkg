@@ -1,0 +1,25 @@
+<package>
+  <description brief="pressure_practice">
+
+     pressure_practice
+
+  </description>
+  <author>Thomas S Garver</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/pressure_practice</url>
+  <depend package="rospy" />  
+  <depend package="fingertip_pressure"/>
+  <depend package="sound_play"/>
+  <depend package="ee_cart_imped_action" />
+  <depend package="tf"/>
+  <depend package="geometry_msgs"/>
+  <depend package="roscpp"/>
+  <depend package="drive_base"/>
+  <depend package="tabletop_object_detector"/>
+  <export>
+    <rosdoc config="rosdoc.yaml"/>
+  </export>
+</package>
+
+

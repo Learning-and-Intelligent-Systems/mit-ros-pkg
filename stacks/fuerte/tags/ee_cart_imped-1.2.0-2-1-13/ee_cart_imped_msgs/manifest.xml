@@ -1,0 +1,16 @@
+<package>
+  <description brief="ee_cart_imped_msgs">
+
+     Messages for ee_cart_imped stack.
+
+  </description>
+  <author>Jenny Barry, Mario Bollini, and Huan Liu</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/ee_cart_imped_msgs</url>
+  <depend package="geometry_msgs"/>
+  <depend package="actionlib_msgs"/>
+
+</package>
+
+

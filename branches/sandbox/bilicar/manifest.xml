@@ -1,0 +1,16 @@
+<package>
+  <description brief="bilicar">
+
+     bilicar
+
+  </description>
+  <author>garratt</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/bilicar</url>
+  <depend package="rospy"/>
+  <depend package="geometry_msgs"/>
+
+</package>
+
+

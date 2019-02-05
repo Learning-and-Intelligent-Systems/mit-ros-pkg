@@ -1,0 +1,26 @@
+/**
+\mainpage
+\htmlinclude manifest.html
+
+This package contains the messages, services, and actions for the <a href=http://www.ros.org/wiki/opencupboard_action>opencupboard_action</a> package. It contains the GraspHandleAction and its messages to grasp the door handle and the OpenCupboardAction and its messages to execute the detection, grasping, and opening. It contains the table_status service which checks the distance from the robot base to the detected door and returns the distance the base must move to be within the correct range to open the door. It contains the services, cabinet_table and cabinet_table_result, to find the door. 
+
+<!-- 
+Provide an overview of your package.
+-->
+
+
+\section codeapi Code API
+
+<!--
+Provide links to specific auto-generated API documentation within your
+package that is of particular interest to a reader. Doxygen will
+document pretty much every part of your code, so do your best here to
+point the reader to the actual API.
+
+If your codebase is fairly large or has different sets of APIs, you
+should use the doxygen 'group' tag to keep these APIs together. For
+example, the roscpp documentation has 'libros' group.
+-->
+
+
+*/

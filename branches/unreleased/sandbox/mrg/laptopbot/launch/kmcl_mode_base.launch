@@ -1,0 +1,17 @@
+<launch>
+  <master auto="start"/>
+
+  <!-- Run the map server -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find laptopbot)/maps/stata_2nd_floor_kmcl.pgm 0.05"/>
+
+  <!--- Run KMCL LCM2ROS Translator -->
+<!--  <node name="lcm2ros" pkg="lcm2ros" type="lcm2ros" args=""/> -->
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <rosparam file="$(find laptopbot)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find laptopbot)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find laptopbot)/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find laptopbot)/config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find laptopbot)/config/base_local_planner_params.yaml" command="load" />
+  </node>
+</launch>

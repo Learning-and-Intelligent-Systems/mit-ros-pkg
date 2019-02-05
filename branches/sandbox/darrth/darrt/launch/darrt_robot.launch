@@ -1,0 +1,60 @@
+<launch>
+	<arg name="stereo" default="false"/>
+	<arg name="kinect_frame_prefix" default="/head_mount_kinect" />  
+	<arg name="use_nav" default="true"/>
+	<arg name="use_octomap" default="false"/>
+	<arg name="map_suffix" default="g415"/>
+	<arg name="sim" default="false"/>
+	<arg name="ft_joint" default="false"/>
+
+	<!--Load the various parameters-->
+	<rosparam command="load" ns="darrt_planning" file="$(find darrt)/config/darrt_planning.yaml"/>
+	<rosparam command="load" ns="darrt_planning" file="$(find sbpl_full_body_planner)/config/pr2_body.yaml"/>
+
+        <param if="$(arg stereo)" name="head_pointing_frame" value="/narrow_stereo_optical_frame"/>
+        <group unless="$(arg stereo)">
+            <param name="head_pointing_frame" value="$(arg kinect_frame_prefix)_rgb_optical_frame"/>
+        </group>
+
+        <!-- load a teleop that can be run at the same time as move_base -->
+        <include file="$(find pr2_navigation_teleop)/teleop.xml" />
+
+        <!-- service for transforming using a supplied robot state rather than TF -->
+        <node pkg="state_transformer" name="state_transformer" type="state_transformer"/>
+
+	<!--action for following base trajectories that doesn't use move_base-->
+	<node pkg="base_trajectory_action" name="base_trajectory_action" type="base_trajectory_action" output="screen"/>
+
+
+	<!--Interactive manipulation-->
+	<include file="$(find darrt)/launch/pr2_interactive_manipulation_robot.launch">
+	    <arg name="stereo" value="$(arg stereo)"/>
+	    <arg name="kinect_frame_prefix" value="$(arg kinect_frame_prefix)"/>
+	    <arg name="flatten_table" value="true"/>
+	    <arg name="nav_3d" value="true"/>
+	    <arg name="use_nav" value="$(arg use_nav)"/>
+	    <arg name="use_octomap" value="$(arg use_octomap)"/>
+	    <arg name="sim" value="$(arg sim)"/>
+	    <arg name="ft_joint" value="$(arg ft_joint)"/>
+	</include>
+
+	<!--Maps and map servers-->
+	<group if="$(arg use_nav)">
+	    <include file="$(find darrt)/launch/maps.launch">
+	        <arg name="map_suffix" value="$(arg map_suffix)"/>
+	        <arg name="use_octomap" value="$(arg use_octomap)"/>
+	    </include>
+
+	    <!--3D nav-->
+	    <include if="$(arg use_octomap)" file="$(find darrt)/launch/nav.launch">
+	        <arg name="map_suffix" value="$(arg map_suffix)"/>
+            </include>
+        </group>
+	<group unless="$(arg use_octomap)" ns="/move_base">
+	    <param name="planner/left_arm_description_file" value="$(find sbpl_arm_planner)/config/pr2_left_arm.cfg"/>
+            <param name="planner/right_arm_description_file" value="$(find sbpl_arm_planner)/config/pr2_right_arm.cfg"/>
+	    <rosparam file="$(find darrt)/config/pr2_fast_collision_checking.yaml"/>
+       </group>
+
+</launch>
+

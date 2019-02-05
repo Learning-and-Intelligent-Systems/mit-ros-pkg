@@ -1,0 +1,36 @@
+#Dump Cake
+
+/*
+1 20 ounce can crushed pineapple
+1 21 ounce can cherry pie filling
+1 box dry yellow cake mix
+1 cup butter, melted
+1-1/4 cups coconut
+1 cup chopped pecans or sliced almonds
+Preheat oven 350 degrees F. Layer ingredients as listed in a lightly greased 9 x 11 pan. Bake for 1 hour. 
+*/
+
+A = Ingredient('crushed pineapple', '1 20 ounce can')
+B = Ingredient('cherry pie filling', '1 21 ounce can')
+C = Ingredient('dry yellow cake mix', '1 box')
+D = Ingredient('butter, melted', '1 cup')
+E = Ingredient('coconut', '1-1/4 cups')
+F = Ingredient('chopped pecans', '1 cup')
+
+orderedIngList = [A,B,C,D,E,F]
+
+#Preheat oven 350 degrees F.
+oven.preheat(350)
+
+#Layer ingredients as listed in a lightly greased 9 x 11 pan.
+#as listed -> ordered list
+Pan.grease()
+Pour(A, pan)
+Pour(B, pan)
+Pour(C, pan)
+Pour(D, pan)
+Pour(E, pan)
+Pour(F, pan)
+
+#Bake for 1 hour. 
+oven.bake(pan, 60)

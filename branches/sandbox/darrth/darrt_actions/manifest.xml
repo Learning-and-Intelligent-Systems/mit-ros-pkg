@@ -1,0 +1,24 @@
+<package>
+  <description brief="darrt_actions">
+
+     darrt_actions
+
+  </description>
+  <author>Jenny Barry</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/darrt_actions</url>
+
+  <!--sushi_executive, gazebo_msgs and base_trajectory_action are 
+      only necessary for testing-->
+  <depend package="darrt"/>
+  <depend package="darrt_msgs"/>
+  <depend package="gazebo_msgs"/>
+  <depend package="sushi_executive"/>
+  <depend package="base_trajectory_action"/>
+  <!--For grasps-->
+  <depend package="object_manipulation_msgs"/>
+
+</package>
+
+

@@ -1,0 +1,5 @@
+
+door_width: 0.502
+which_arm: "left_arm"
+handle_pos: "right"
+adjust_head: [0.8,0.35,0.65]

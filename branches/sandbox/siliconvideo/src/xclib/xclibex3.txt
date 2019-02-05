@@ -1,0 +1,249 @@
+'
+'       xclibex3.txt    External        13-Nov-2010
+'
+'       Copyright (C) 1996-2010  EPIX, Inc. All rights reserved.
+'
+'       Example program for XCLIB DLL, for use with Visual Basic 4.0/5.0/6.0
+'
+'
+
+'''''''''
+'
+' INSTRUCTIONS FOR INSTALLATION/USAGE:
+'
+'
+' 1. Start a new project in Visual Basic and add this text file,
+'    to the project, namely XCLIBEX3.TXT .
+'
+'    Add the VB declarations for XCLIB to the project, namely file
+'    XCLIBW95_VB.TXT or XCLIBWNT_VB.TXT, for Windows 95/98/ME
+'    or Windows NT/2000/XP/Vista/7, respectively.
+'
+'    If the optional PXIPL library is being used, add the VB declarations
+'    for PXIPL to the project, namely file PXIPLW95_VB.TXT or PXIPLWNT_VB.TXT,
+'    for Windows 95/98/ME or Windows NT/2000/XP/Vista/7, respectively.
+'
+' 2. Create a form with a single command button, named and labelled "RUN".
+'
+' 3. Create the code for this form by copying XCLIBW95_VB.TXT or XCLIBWNT_VB.TXT,
+'    PXIPLW95_VB.TXT or PXIPLWNT_VB.TXT (if used), and XCLIBEL3.TXT
+'    from their respective modules and combining them, placing XCLIBEL3.TXT
+'    at the end.
+'
+' 4. This example has Sleep calls to slow down execution, allowing
+'    each step to be seen. These Sleep calls are, of course, not necessary
+'    in a 'real' program.
+'
+'''''''''
+
+
+
+'''''''''
+'
+' Declarations that must be must be included in the declarations section.
+' The Sleep and GetClientRect are Windows functions, for
+' which VB 4.0 doesn't have a direct equivalent.
+'
+'''''''''
+Private Declare Sub Sleep Lib "kernel32" (ByVal dwMilliseconds As Long)
+Private Declare Sub GetClientRect Lib "user32" (ByVal hWnd As Long, rect As Any)
+Private Declare Sub SetStretchBltMode Lib "gdi32" (ByVal hDc As Long, ByVal mode As Long)
+
+Dim buffer(3 * 4096) As Byte
+Dim rect(4) As Long
+Dim wind(4) As Long
+Dim format  As String
+
+
+'''''''''
+'
+' Code that must be must be included in the code section.
+'
+'''''''''
+
+Private Sub RUN_Click()
+
+'
+' Open the XCLIB for use.
+'
+' First select the video format.
+'
+' For PIXCI(R) SV2, SV3, SV4, SV5, SV5A, SV5B, and SV5L imaging boards
+' common choices are RS-170, NSTC, NTSC/YC, CCIR, PAL, or PAL/YC.
+' (The SV5A and SV5B do not support NTSC/YC or PAL/YC).
+'
+' For PIXCI(R) A, CL1, CL2, CL3SD, D, D24, D32, D2X, D3X, E1, E1DB, E4, E4DB,
+' EB1, EB1POCL, EC1, ECB1, ECB1-34, ECB2, EL1, EL1DB, ELS2, SI, SI1, SI2, and SI4
+' imaging boards, use "default" to select the default format for
+' the camera for which the PIXCI(R) imaging board is intended.
+' For non default formats, use XCAP to save the video set-up to a
+' file, and set FORMAT to the saved file's name.
+' For camera's with RS-232 control, note that the saved
+' video set-up only resets the PIXCI(R) imaging board's
+' settings, but XCLIB does not reset the camera's settings.
+'
+
+			' For PIXCI SV2, SV3, SV4, SV5, SV5A, SV5B, SV5L
+format = "RS-170"	' RS-170 on input 1
+' format = "NTSC"       ' NTSC on input 1
+' format = "NTSC/YC"    ' NTSC S-Video on input 0	(N/A on SV5A,SV5B)
+' format = "CCIR"       ' CCIR on input 1
+' format = "PAL"        ' PAL on input 1
+' format = "PAL/YC"     ' PAL S-Video on input 0	(N/A on SV5A,SV5B)
+
+			' For PIXCI(R) A, CL1, CL2, CL3SD, D, D24, D32,
+			' D2X, D3X, E1, E1DB, E4, E4DB, EB1, EB1POCL,
+			' EC1, ECB1, ECB1-34, ECB2, EL1, EL1DB,
+			' ELS2, SI, SI1, SI2, SI4
+' format = "default"    ' as per board's intended camera
+
+Cls
+Print "         OPENING PIXCI(R) IMAGING BOARD"
+Sleep (1000)
+Call PXD_PIXCICLOSE	' in case this example was run before and aborted
+			' before completion, the XCLIB may not have been
+			' closed, and the open would fail
+
+i = PXD_PIXCIOPEN("", format, "")
+If i < 0 Then
+    Print "         THE OPEN FAILED"
+    Call PXD_MESGFAULT(1)
+    Exit Sub
+End If
+
+'
+' Determine image display size.
+' The image is displayed as large as the window,
+' subject to the aspect ratio being maintained.
+'
+Call GetClientRect (hWnd, rect(0))  ' window size
+xdim = PXD_IMAGEXDIM()		    ' image size
+ydim = PXD_IMAGEYDIM()		    ' image size
+aspect = PXD_IMAGEASPECTRATIO()
+If aspect = 0 Then
+    aspect = 1.0
+End If
+nWidth	= rect(2)+1		    ' width, inclusive->exclusive
+nHeight = rect(3)+1		    ' height, inclusive->exclusive
+nScalex = (nWidth*1.0)/xdim
+nScaley = (nHeight*1.0)/ydim
+If nScaley < nScalex Then
+    nScalex = nScaley
+End If
+nWidth	= xdim * nScalex
+nHeight = ydim * nScalex * aspect
+
+'
+' If StrectDIBits is to be used, some VGA card drivers
+' abhor horizontal dimensions which are not a multiple of 4.
+' This isn't needed for other rendering methods, but doesn't hurt.
+'
+nWidth = 4 * Int(nWidth/4)
+
+'
+' Capture an image, display to a window on the PC,
+' complement an area of interest,
+' provide a plot of a line of pixel data,
+' and repeat process 3 times.
+'
+For n = 0 to 2
+    '
+    ' Capture. This variant of a snap
+    ' function waits for the capture to be complete.
+    '
+    Cls
+    Print "        CAPTURING AN IMAGE TO BUFFER 1"
+    Call PXD_DOSNAP(1, 1, 0)
+
+    '
+    ' Display the captured image buffer, or area of interest
+    ' thereof, to a Windows device context.
+    ' There are two versions, one using PXD_RENDERSTRETCHDIBITS,
+    ' and the other using PXIO8_GDIDISPLAY available only if the
+    ' PXIPL library is being used.
+    '
+    Print "        DISPLAYING CONTENTS OF BUFFER 1 ON WINDOW"
+    Sleep (1000)
+    Cls
+    '
+    Call SetStretchBltMode(hDC, 3)  ' set resize mode to STRETCH_DELETESCANS
+    Call PXD_RENDERSTRETCHDIBITS(1, 1, 0, 0, -1, -1, 0, hDC, 0, 0, nWidth, nHeight, 0)
+    '
+    ' wind(0) = 0
+    ' wind(1) = 0
+    ' wind(2) = nWidth
+    ' wind(3) = nHeight
+    ' Call PXIO8_GDIDISPLAY(0, PXD_DEFINEIMAGE(1,1,0,0,-1,-1,"Display"),0, 0, ascii_n,0,0, hDC,wind(0),0,0)
+    '
+    Sleep (2500)
+
+    '
+    ' Demonstrate use of a PIXPL function by complementing a
+    ' portion of the image, then redisplaying.
+    '
+    ' This section should be commented out if the PXIPL library
+    ' is not being used.
+    '
+    pximage = PXD_DEFINEIMAGE(1, 1, 0, 0, 100, 100, "Default")
+    i = PXIP8_PIXNEG(0, pximage, pximage)
+    Print "            DISPLAYING BUFFER WITH COMPLEMENTED AREA OF INTEREST"
+    Call PXD_RENDERSTRETCHDIBITS(1, 1, 0, 0, -1, -1, 0, hDC, 0, 0, nWidth, nHeight, 0)
+    Sleep (2500)
+
+    '
+    ' Demonstrate access to pixel data.
+    ' Provide a plot of a line of pixel data,
+    '
+    ' First, determine whether the pixel data is mono or color.
+    '
+    cdim = PXD_IMAGECDIM
+    '
+    ' If monochrome video, provide a single plot.
+    '
+    If cdim = 1 Then
+	CALL PXD_READUCHAR(1, 1, 0, 80, nWidth, 81, buffer(0), nWidth, "GREY")
+	Cls
+	TheScaleWidth = nWidth
+	TheScaleHeight = 255
+	Print "             PLOT SHOWS PIXEL DATA FROM LINE 80"
+	For nIndex = 0 To nWidth - 1
+	    Line (nIndex, 255 - buffer(nIndex)) - (nIndex + 1, 255 - buffer(nIndex +1))
+	Next
+	Sleep (2500)
+    '
+    ' If color video, provide a red, green, and blue plots.
+    '
+    Else
+	CALL PXD_READUCHAR(1, 1, 0, 80, nWidth, 81, buffer(0), nWidth*3, "RGB")
+	Cls
+	TheScaleWidth = nWidth
+	TheScaleHeight = 255
+	Print "             PLOTS SHOW RGB PIXEL DATA FROM LINE 80"
+	For c = 0 To 2
+	    element = c
+	    If c = 0 Then r = 255: g = 0: b = 0 Else If c = 1 Then r = 0: g = 255: b = 0 Else r = 0: g = 0: b = 255
+	    For nIndex = 0 To nWidth - 1
+		Line (nIndex, 255 - buffer(element)) - (nIndex + 1, 255 - buffer(element + 3)), RGB(r, g, b)
+		element = element + 3
+	    Next
+	Next
+	Sleep (2500)
+    End If
+Next
+Sleep (2500)
+
+'
+' Save the image in bitmap format.
+'
+i = PXD_SAVEBMP(1, "c:\test.bmp", 1, 0, 0, -1, -1, 0, 0)
+if i >= 0 Then
+    Print "                IMAGE SAVED IN BMP FORMAT"
+End If
+Sleep (1500)
+
+'
+' Done
+'
+Cls
+Call PXD_PIXCICLOSE
+End Sub

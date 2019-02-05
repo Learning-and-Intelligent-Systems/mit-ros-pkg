@@ -1,0 +1,4 @@
+<launch>
+  <node ns="/prosilica_image_getter" pkg="image_proc" type="image_proc" respawn="false" name="prosilica_image_proc"/>
+  <node pkg="colorbook" type="get_image.py" name="image_getter" output="screen"/>
+</launch>

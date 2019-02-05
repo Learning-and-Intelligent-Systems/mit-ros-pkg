@@ -1,0 +1,5 @@
+int16[] vels
+int16[] gains
+---
+uint16[] strainvals
+uint16[] fingerpositions

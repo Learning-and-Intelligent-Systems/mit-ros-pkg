@@ -1,0 +1,10 @@
+<launch>
+  <node pkg="siliconvideo" name="svstereo" type="svstereo">
+    <param name="capture_offset" value="false"/>
+    <param name="data_folder" value="$(find siliconvideo)"/>
+  </node>
+  <node pkg="stereo_image_proc" name="stereo_image_proc" type="stereo_image_proc">
+    <env name="ROS_NAMESPACE" value="/svstereo"/>
+  </node>
+  <node pkg="pingpong" name="find_table" type="find_table" output="screen"/>
+</launch>

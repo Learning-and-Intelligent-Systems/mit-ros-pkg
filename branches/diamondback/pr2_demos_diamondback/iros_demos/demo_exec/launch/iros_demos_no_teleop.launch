@@ -1,0 +1,4 @@
+<launch>
+	<include file="$(find table_wiping_demo)/launch/table_wiping.launch"/>
+	<include file="$(find pr2_utils)/launch/pr2_tabletop_manipulation_left_arm_following.launch"/>
+</launch>

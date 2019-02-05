@@ -1,0 +1,29 @@
+<package>
+  <description brief="furniture_ops">
+
+     furniture_ops
+
+  </description>
+  <author>garratt</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/furniture_ops</url>
+  <depend package="pcl"/>
+  <depend package="pcl_tf"/>
+  <depend package="pcl_ros"/>
+  <depend package="geometry_msgs"/>
+  <depend package="pcl_tools"/>
+  <depend package="mapping_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="laser_assembler"/>
+  <depend package="image_geometry"/>
+  <depend package="posedetection_msgs"/>
+  <depend package="roscpp"/>
+  <export>
+    <cpp cflags="-I${prefix}/srv/cpp -I${prefix}/include -I${prefix}/src "  lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib " />
+    
+  </export>
+
+</package>
+
+

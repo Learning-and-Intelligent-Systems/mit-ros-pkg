@@ -1,0 +1,57 @@
+#Oatmeal Raisin Cookies
+#Need to think about representing ingredients vs containters.
+
+/*
+1 c. raisins
+1 c. sugar
+1 c. shortening
+2 eggs
+2 c. quick oatmeal
+1 tsp. soda
+1/2 c. nuts, optional
+2 c. flour
+
+Cook raisins in one cup water; cool. Cream sugar and shortening. Add eggs, beat well. Add raisin mixture and other ingredients. Drop by spoonfuls on cookie sheet. Bake about 10 minutes in 350 degree oven. Do not over bake.
+*/
+
+
+A = Ingredient('raisins', '1 c.')
+B = Ingredient('sugar', '1 c.')
+C = Ingredient('shortening', '1 c.')
+D = Ingredient('eggs', '2')
+E = Ingredient('Quick oatmeal', '2 c.')
+F = Ingredient('soda', '1 tsp.')
+G = Ingredient('nuts', '1/2 c')
+H = Ingredient('flour', '2 c.')
+
+#Cook raisins in one cup water; cool.
+#This is an unsupported action 
+Cook(A)
+
+#Cream sugar and shortening.
+#TODO: Do we want this to be read as Pour->Mix or just Mix?
+Pour(B, mixing_bowl)
+Pour(C, mixing_bowl)
+Mix(mixing_bowl)
+
+#Add eggs, ...
+Pour(D, mixing_bowl)
+
+#...beat well
+Mix(mixing_bowl)
+
+#Add raisin mixture and other ingredients.
+#How would it know what "raisin mixture" is?
+Pour(A, mixing_bowl)
+# "other ingredients." maybe have an ordered list of usedIngredients?
+Pour(E, mixing_bowl)
+Pour(F, mixing_bowl)
+Pour(G, mixing_bowl)
+Pour(H, mixing_bowl)
+
+#Drop by spoonfuls on cookie sheet
+Scrape(mixing_bowl, pan)
+
+#Bake about 10 minutes in 350 degree oven. 
+oven.preheat(350) #need to specify units?
+oven.bake(pan, 10) #Put the pan in the oven for 10 minutes.

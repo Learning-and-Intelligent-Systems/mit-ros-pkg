@@ -1,0 +1,4 @@
+<launch>
+	<include file="$(find ee_cart_imped_action)/launch/ee_cart_spawn.launch"/>
+	<include file="$(find rgbd_assembler)/launch/rgbd_assembler.launch"/>
+</launch>

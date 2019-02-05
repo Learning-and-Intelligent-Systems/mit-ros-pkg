@@ -1,0 +1,60 @@
+
+1. Recording Data using the PR2
+2. Post Processing of Lidar Data using gmapping
+3. Particle Filtering Localization
+
+=========== 1. Recording Lidar Data on the PR2 ==================
+0. On your laptop, set the ROS_MASTER_URI environment variable (so that your laptop to find the pr2).
+0.1 For running the robot:
+> export ROS_MASTER_URI=http://pr2mm1:11311
+0.2 For simulation or data playback WITHOUT the robot set it to:
+> export ROS_MASTER_URI=http://localhost:11311
+(these variables can be set in your .bashrc file to avoid having to do it again and again)
+
+1. log into one of the pr2 computers:
+> ssh yourusername@pr2mm1.csail.mit.edu
+other computer is pr2mm2.csail.mit.edu but everything is run from pr2mm1
+
+1.1 (on the robot) kill all other ros processes
+> sudo robot start
+- starts all basic processes (eg excludes prosilica)
+
+2. if joystick red buttons not flashing hit playstation button
+
+3. (on your laptop) start the dashboard which displays the robot status:
+> rosrun pr2_dashboard pr2_dashboard
+
+5. (on the robot) launch on robot:
+> roslaunch pr2_2dnav_slam pr2_2dnav.launch 
+5a (on the robot) to record data to a file for later:
+> rosbag record /base_scan /tf /tilt_scan (etc ......)
+
+6. (on the laptop) run the visualization tool:
+> rosrun rviz rviz
+
+7. (on the pr2?) launch the teleoperation
+roslaunch pr2_teleop teleop_joystick.launch
+
+8. spit out an map: (not sure what this is for - I've left it in here for now)
+> rosrun map_server map_saver map:=map
+
+
+
+TIP1: "screen" - used to attaching and detaching to remote terminals:
+> screen          ... activate screen (then hit enter)
+> ctrl+a, then d  ... deteach the screen
+... leave, go home, come back another day. log onto remote machine
+> screen -r       ... reattach to the screen and resume work
+> ctrl+a, escape  ... history mode. scroll up to see output while detached
+
+TIP2: To avoid having to have 6+ terminals you can pipe output to null:
+rosrun pr2_teleop teleop_pr2 &> /dev/null &
+... perhaps best to avoid this initially
+
+
+========================= 2. Post Processing =================
+More to follow, this is a quick start:
+http://www.ros.org/wiki/slam_gmapping/Tutorials/MappingFromLoggedData
+
+============= 3. Particle Filtering Localization ===========
+More to follow

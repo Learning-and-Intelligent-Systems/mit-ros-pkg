@@ -1,0 +1,32 @@
+FAQ
+
+Q.  Do you guys always home the robot when you run the software?  For when we just need approximate positions, I was thinking about just manually moving the arm into some position and loading approximate position values.  Has some way to avoid the homing process (when accuracy is not so important) been worked out?
+A.  Homing the robot is optional, a rough homing from a hand set position would be fine if you don't require anything more accurate.
+//code fragment
+IdleWAM();
+SetWAMpos(&zero);
+PowerWAM();
+//end code fragment
+Where "zero" is of type wam_vector holding the joint positions you want to set the present location of the robot to. See btwam.h to learn about the wam_vector type. See SetWAMpos() in btwam.c to see how to write a routine to set only one joint position if you desire to. Joint positions can only be set when the motor controllers are idling. Presently the safety module will record a high velocity during the position change and trigger a fault. The workaround is to re-enable the safety module.
+
+Q. I saw the forward kinematics matrices in the manual, has there been any code written for this already?  I don't want do duplicate your efforts if so.
+A. No.
+
+
+
+Features needed
+
+*Change the way pucks are matched up to physical locations on the WAM. Use the puck serial numbers rather than their location in the actuators.dat file to establish the order. Have a look-up function in btwam.dat to match WAM position to actuator serial number.
+*Add an awareness of the safety module to the demo-software.
+*Add a software interlock to the safety module so that it will not operate unless an ok from the PC software has been established along with the user pressing the right buttons on the pendant.
+*Forward Kinematics
+*Jacobian
+*Make wam zeroing routine more robust; check to see that the joint you are zeroing exists...
+
+BUGs
+
+The safety module interprets a position set as a high velocity and shuts down the wam.
+
+
+
+

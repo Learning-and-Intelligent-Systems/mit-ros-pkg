@@ -1,0 +1,173 @@
+
+WORLD: 6, RESET TIME: 60, DARRT TRIES: 3, FORWARD: True
+TRIAL 1:
+	Planning time: 251.184432983
+	Object planning time: 1.16414654255
+	Subgoal times:
+		0: 3.27763438225
+		1: 60.0119476318
+		2: 176.078735352
+		TOTAL: 239.368317366
+	Total time: 240.532463908
+TRIAL 2:
+	Planning time: 32.9611778259
+	Object planning time: 3.97537493706
+	Subgoal times:
+		0: 7.79398822784
+		1: 12.4722557068
+		2: 0.694995522499
+		TOTAL: 20.9612394571
+	Total time: 24.9366143942
+TRIAL 3:
+	Planning time: 296.511749268
+	Object planning time: 13.5693082809
+	Subgoal times:
+		0: 17.9028320312
+		1: 64.1538009644
+		2: 182.213363647
+		TOTAL: 264.269996643
+	Total time: 277.839304924
+TRIAL 4:
+	Planning time: 22.7507343292
+	Object planning time: 3.32540917397
+	Subgoal times:
+		0: 1.83025479317
+		1: 2.85920906067
+		2: 4.76015090942
+		TOTAL: 9.44961476326
+	Total time: 12.7750239372
+TRIAL 5:
+	Planning time: 62.1960983276
+	Object planning time: 3.92728567123
+	Subgoal times:
+		0: 43.635684967
+		1: 1.06949746609
+		2: 6.18926906586
+		TOTAL: 50.894451499
+	Total time: 54.8217371702
+TRIAL 6:
+	Planning time: 27.6515617371
+	Object planning time: 0.921591639519
+	Subgoal times:
+		0: 9.34490013123
+		1: 2.2739572525
+		2: 7.6150302887
+		TOTAL: 19.2338876724
+	Total time: 20.1554793119
+TRIAL 7:
+	Planning time: 1887.21362305
+	Object planning time: 31.6316947937
+	Subgoal times:
+		0: 50.8144493103
+		1: 456.55569458
+		2: 1269.10595703
+		TOTAL: 1776.47610092
+	Total time: 1808.10779572
+TRIAL 8:
+	Planning time: 824.222167969
+	Object planning time: 25.7120494843
+	Subgoal times:
+		0: 20.7431964874
+		1: 189.22555542
+		2: 545.167236328
+		TOTAL: 755.135988235
+	Total time: 780.84803772
+TRIAL 9:
+	Planning time: 1684.8503418
+	Object planning time: 37.7356872559
+	Subgoal times:
+		0: 99.0179138184
+		1: 385.50201416
+		2: 1093.09289551
+		TOTAL: 1577.61282349
+	Total time: 1615.34851074
+TRIAL 10:
+	Planning time: 59.5234565735
+	Object planning time: 10.2587585449
+	Subgoal times:
+		0: 33.4359054565
+		1: 6.27969264984
+		2: 1.32413208485
+		TOTAL: 41.0397301912
+	Total time: 51.2984887362
+TRIAL 11:
+	Planning time: 60.8516807556
+	Object planning time: 3.52915453911
+	Subgoal times:
+		0: 22.5807628632
+		1: 22.3515815735
+		2: 2.08790850639
+		TOTAL: 47.020252943
+	Total time: 50.5494074821
+TRIAL 12:
+	Planning time: 65.3163757324
+	Object planning time: 4.43690013885
+	Subgoal times:
+		0: 38.1194190979
+		1: 11.3847141266
+		2: 3.33401107788
+		TOTAL: 52.8381443024
+	Total time: 57.2750444412
+TRIAL 13:
+	Planning time: 62.3786735535
+	Object planning time: 10.4350862503
+	Subgoal times:
+		0: 10.9631996155
+		1: 26.4454345703
+		2: 3.96885871887
+		TOTAL: 41.3774929047
+	Total time: 51.812579155
+TRIAL 14:
+	Planning time: 537.739868164
+	Object planning time: 12.5493450165
+	Subgoal times:
+		0: 11.9344244003
+		1: 122.329200745
+		2: 361.78137207
+		TOTAL: 496.044997215
+	Total time: 508.594342232
+TRIAL 15:
+	Planning time: 222.724945068
+	Object planning time: 10.9040212631
+	Subgoal times:
+		0: 2.20499014854
+		1: 60.0117683411
+		2: 140.997451782
+		TOTAL: 203.214210272
+	Total time: 214.118231535
+TRIAL 16:
+	Planning time: 53.4279899597
+	Object planning time: 10.0631914139
+	Subgoal times:
+		0: 32.42603302
+		1: 3.35990190506
+		TOTAL: 35.7859349251
+	Total time: 45.849126339
+TRIAL 17:
+	Planning time: 27.8788814545
+	Object planning time: 6.69580936432
+	Subgoal times:
+		0: 2.40681362152
+		1: 4.48760128021
+		2: 5.42420291901
+		TOTAL: 12.3186178207
+	Total time: 19.0144271851
+TRIAL 18:
+	Planning time: 124.690704346
+	Object planning time: 1.45825123787
+	Subgoal times:
+		0: 1.1218136549
+		1: 60.0733833313
+		2: 53.9204330444
+		TOTAL: 115.115630031
+	Total time: 116.573881269
+TOTALS: TRIALS: 18, AVERAGE TIME: 350.226359049, AVERAGE TOTAL TIME: 330.580583122 AVERAGE OBJECT TIME: 10.682948086, AVERAGE SUBGOAL TIMES:
+	0: 22.7530120015
+	1: 82.8248450425
+	2: 214.319777992
+	TOTAL: 319.897635036
+Saving to file hierarchical_results/plateh_9366.776.pck
+
+Additional Object Time:
+
+None

@@ -1,0 +1,112 @@
+##REQUIRED INPUT
+
+##The goals
+Goal[] goals
+
+##The primitives DARRT can use.  
+Primitive[] primitives
+
+ObjectType[] objects
+
+##Support surfaces
+string[] support_surfaces
+
+##Parameters that effect the world
+
+#The planning bounds as [x, y, z].
+#If left empty uses the start, goal and support surfaces to pick
+#reasonable values.
+float32[] lower_bounds
+float32[] upper_bounds
+
+##Parameters that change the solver
+
+#True if you want to use object level planning
+bool hierarchical
+
+#False if you want to use bi-directional solvers
+bool forward_planning
+
+#The fraction of the time the planner should sample the goal
+float32 goal_bias
+
+#How close (in m) the object must be to the goal location
+float32 threshold
+
+#The allowed planning time (in seconds) per try.
+float32 object_planning_time
+
+#The allowed planning time (in seconds) per try at the darrt level.
+float32 planning_time
+
+#The allowed number of planning tries
+int32 tries
+
+#The allowed number of planning tries at the darrt level if hierarchical
+int32 darrt_tries
+
+
+##Don't use
+
+bool execute
+arm_navigation_msgs/RobotState robot_state
+
+
+#debugging
+int32 debug_level
+bool do_pause
+bool interactive
+bool visualize
+
+---
+
+##A description of a DARRT plan
+
+
+##The primitives that make up the plan
+
+#The actual plan.  Each trajectory corresponds to a primitive_type.
+#For example, primitive_trajectories[2] is an execution of primitive
+#primitive_names[2]
+string[] primitive_names
+#primitive types provide some information about how
+#to execute the primitive
+#for example, a RigidTransfer primitive might have some
+#arm movement and some base movement
+string[] primitive_types
+arm_navigation_msgs/RobotTrajectory[] primitive_trajectories
+
+darrt_msgs/ObjectTrajectory[] object_trajectories
+
+#The total time (including restarts) the planning took in seconds.
+float32 planning_time
+
+##More information for hierarchical solving
+#The time the object solving took
+float32 object_time
+
+#The time (including restarts) the subgoals took
+float32[] subgoal_time
+
+##The possible error codes
+
+int32 SUCCESS=1
+#Unable to find a path
+int32 PLANNING_FAILED=-1
+#The collision_object_name passed in the pickup_goal is not in the map
+int32 OBJECT_DOES_NOT_EXIST=-2
+#No place locations were specified in the place_goal
+int32 NO_PLACE_LOCATIONS=-3
+#The planner couldn't be configured for some reason
+int32 CONFIGURE_ERROR=-4
+#Unable to find any grasps for the object.
+int32 NO_GRASPS=-5
+#The object was not sitting on the specified table or it didn't exist
+int32 INVALID_PICK_SUPPORT_SURFACE=-6
+#Some other type of error in the input.
+int32 OTHER_ERROR=-7
+
+#The actual error.
+int32 error_code
+
+---

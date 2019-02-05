@@ -1,0 +1,9 @@
+<launch>
+	<node pkg="furniture" name="scene_segmentation" type="scene_segmentation" respawn="true" output="screen">
+		<param name="true_color" value="false" />	
+		<param name="color_threshold" value="100000000" />
+		<param name="normal_threshold" value="15" />
+		<param name="distance_threshold" value="0.1" />
+	</node> 
+
+</launch>

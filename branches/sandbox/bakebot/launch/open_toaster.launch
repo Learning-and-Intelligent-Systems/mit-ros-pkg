@@ -1,0 +1,9 @@
+<launch>
+
+    <!--yaml for the toaster -->
+    <rosparam file="$(find opencupboard_launch)/yaml/toaster.yaml" command="load" />
+
+    <!--should launch everything but tabletop and ee_cart_imped -->
+    <include file="$(find opencupboard_launch)/launch/open_toaster.launch" />
+
+</launch>

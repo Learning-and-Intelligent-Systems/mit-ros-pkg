@@ -1,0 +1,9 @@
+<stack>
+  <description brief="container_opening">container_opening</description>
+  <author>Maintained by Anne E Holladay</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/container_opening</url>
+  <depend stack="ros" />
+
+</stack>

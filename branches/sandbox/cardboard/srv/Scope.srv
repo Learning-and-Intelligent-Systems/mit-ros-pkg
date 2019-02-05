@@ -1,0 +1,7 @@
+string model_name
+SceneHypothesis input_scene
+sensor_msgs/PointCloud2 cloud_bg
+sensor_msgs/PointCloud2 cloud_objects
+string true_pose
+---
+SceneHypothesis object_samples

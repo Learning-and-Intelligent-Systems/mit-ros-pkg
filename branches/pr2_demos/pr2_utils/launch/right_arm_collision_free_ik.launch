@@ -1,0 +1,11 @@
+<launch>
+   <include file="$(find pr2_machine)/$(env ROBOT).machine" />	
+   <include file="$(find pr2_utils)/launch/pr2_planning_environment.launch" />
+
+   <node machine="c2" pkg="pr2_arm_kinematics_constraint_aware" type="pr2_arm_kinematics_constraint_aware" name="pr2_right_arm_kinematics" output="screen">    
+      <!-- IK parameters -->
+      <param name="tip_name" value="r_wrist_roll_link" />     
+      <param name="root_name" value="torso_lift_link" />  
+      <param name="group" type="string" value="right_arm" />
+   </node>
+</launch>

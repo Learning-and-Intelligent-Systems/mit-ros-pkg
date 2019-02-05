@@ -1,0 +1,52 @@
+
+WORLD: 12, RESET TIME: 120, DARRT TRIES: 1, FORWARD: False
+TRIAL 1:
+	Planning time: 88.6312103271
+TRIAL 2:
+	Planning time: 2517.33959961
+TRIAL 3:
+	Planning time: 163.405944824
+TRIAL 4:
+	Planning time: 474.495758057
+TRIAL 5:
+	Planning time: 73.2750244141
+TRIAL 6:
+	Planning time: 672.234008789
+TRIAL 7:
+	Planning time: 452.43661499
+TRIAL 8:
+	Planning time: 118.692764282
+TRIAL 9:
+	Planning time: 292.470703125
+TRIAL 10:
+	Planning time: 355.341247559
+TRIAL 11:
+	Planning time: 898.547790527
+TRIAL 12:
+	Planning time: 712.188415527
+TRIAL 13:
+	Planning time: 30.5129680634
+TRIAL 14:
+	Planning time: 159.556411743
+TRIAL 15:
+	Planning time: 684.759216309
+TRIAL 16:
+	Planning time: 309.439086914
+TRIAL 17:
+	Planning time: 674.218078613
+TRIAL 18:
+	Planning time: 621.816955566
+TRIAL 19:
+	Planning time: 707.116333008
+TRIAL 20:
+	Planning time: 415.956268311
+TRIAL 21:
+	Planning time: 321.609466553
+TRIAL 22:
+	Planning time: 1788.81884766
+TRIAL 23:
+	Planning time: 216.453063965
+TRIAL 24:
+	Planning time: 292.613464355
+TRIAL 25:
+	Planning time: 933.336853027

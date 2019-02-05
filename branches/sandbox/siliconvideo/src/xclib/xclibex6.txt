@@ -1,0 +1,467 @@
+'
+'       xclibex6.txt    External        23-Sep-2010
+'
+'       Copyright (C) 1996-2010  EPIX, Inc. All rights reserved.
+'
+'       Example program for XCLIB DLL, for use with Visual Basic .NET
+'
+'
+
+'''''''''
+'
+' INSTRUCTIONS FOR INSTALLATION/USAGE:
+'
+' 1. Start a new Visual Basic .NET project in Visual Studio .NET.
+'
+' 2. Right-click on Form1 and select View Code.
+'
+' 3. Replace the default code by copying and pasting the entire text from this file over it.
+'
+' 4. If not using the optional PXIPL library, comment out the PXIPL sections of code.
+'
+' 5. Change the format string in the Form1_Load subroutine to match your PIXCI(R) imaging board.
+'
+' 6. Press F5 to Run sample code.
+'
+'
+' EXTENDING THE EXAMPLE:
+'
+' 1. Add the VB.NET declarations for XCLIB to the project, namely file
+'    XCLIBWNT_VBNET.TXT for Windows NT/2000/XP/Vista/7.
+'
+'    If the optional PXIPL library is being used, add the VB.NET declarations
+'    for PXIPL to the project, namely file PXIPLWNT_VBNET.TXT
+'    for Windows NT/2000/XP/Vista/7.
+'
+' 3. Replace the declaration section of this example with the declarations
+'    from XCLIBWNT_VBNET.TXT and XIPLWNT_VBNET.TXT (if used).
+'
+' 4. Add controls and code as needed to call XCLIB or PXIPL functions of interest.
+'
+'
+'''''''''
+
+Imports System
+Imports System.IO
+Imports System.Windows.Forms
+Imports System.Drawing
+Imports System.Runtime.InteropServices
+Imports System.Drawing.Printing
+
+Public Class Form1
+    Inherits System.Windows.Forms.Form
+
+#Region " Windows Form Designer generated code "
+
+    Public Sub New()
+        MyBase.New()
+
+        'This call is required by the Windows Form Designer.
+        InitializeComponent()
+
+        'Add any initialization after the InitializeComponent() call
+
+    End Sub
+
+    'Form overrides dispose to clean up the component list.
+    Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
+        If disposing Then
+            If Not (components Is Nothing) Then
+                components.Dispose()
+            End If
+        End If
+        MyBase.Dispose(disposing)
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Snap_Button As System.Windows.Forms.Button
+    Friend WithEvents Live_Button As System.Windows.Forms.Button
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents PXIPL_Neg As System.Windows.Forms.Button
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Save As System.Windows.Forms.Button
+    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox
+        Me.Snap_Button = New System.Windows.Forms.Button
+        Me.Live_Button = New System.Windows.Forms.Button
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.PXIPL_Neg = New System.Windows.Forms.Button
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Save = New System.Windows.Forms.Button
+        Me.SuspendLayout()
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(400, 300)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'Snap_Button
+        '
+        Me.Snap_Button.Location = New System.Drawing.Point(400, 240)
+        Me.Snap_Button.Name = "Snap_Button"
+        Me.Snap_Button.Size = New System.Drawing.Size(72, 32)
+        Me.Snap_Button.TabIndex = 1
+        Me.Snap_Button.Text = "Snap"
+        '
+        'Live_Button
+        '
+        Me.Live_Button.Location = New System.Drawing.Point(472, 240)
+        Me.Live_Button.Name = "Live_Button"
+        Me.Live_Button.Size = New System.Drawing.Size(72, 32)
+        Me.Live_Button.TabIndex = 2
+        Me.Live_Button.Text = "Live"
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 20
+        '
+        'PXIPL_Neg
+        '
+        Me.PXIPL_Neg.Location = New System.Drawing.Point(400, 272)
+        Me.PXIPL_Neg.Name = "PXIPL_Neg"
+        Me.PXIPL_Neg.Size = New System.Drawing.Size(208, 32)
+        Me.PXIPL_Neg.TabIndex = 3
+        Me.PXIPL_Neg.Text = "PXIPL Compliment"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Location = New System.Drawing.Point(408, 32)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(200, 200)
+        Me.PictureBox2.TabIndex = 4
+        Me.PictureBox2.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.Location = New System.Drawing.Point(408, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(200, 24)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Line Intensity Plot:"
+        '
+        'Save
+        '
+        Me.Save.Location = New System.Drawing.Point(544, 240)
+        Me.Save.Name = "Save"
+        Me.Save.Size = New System.Drawing.Size(64, 32)
+        Me.Save.TabIndex = 6
+        Me.Save.Text = "Save"
+        '
+        'Form1
+        '
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.ClientSize = New System.Drawing.Size(608, 309)
+        Me.Controls.Add(Me.Save)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PXIPL_Neg)
+        Me.Controls.Add(Me.Live_Button)
+        Me.Controls.Add(Me.Snap_Button)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Name = "Form1"
+        Me.Text = "Form1"
+        Me.ResumeLayout(False)
+
+    End Sub
+
+#End Region
+
+    Private Declare Function PXD_PIXCIOPEN Lib "XCLIBWNT.DLL" Alias "pxd_PIXCIopen" _
+    (ByVal c_driverparms As String, ByVal c_formatname As String, ByVal c_formatfile As String) As Integer
+
+    ' _cDcl(_dllpxlib,_cfunfcc,int)pxd_PIXCIclose();
+    Private Declare Function PXD_PIXCICLOSE Lib "XCLIBWNT.DLL" Alias "pxd_PIXCIclose" () As Integer
+
+    ' _cDcl(_dllpxlib,_cfunfcc,int)pxd_mesgFault(int unitmap);
+    Private Declare Function PXD_MESGFAULT Lib "XCLIBWNT.DLL" Alias "pxd_mesgFault" (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(_dllpxlib,_cfunfcc,int)pxd_doSnap(int unitmap,pxbuffer_t buffer,ulong timeout);
+    Private Declare Function PXD_DOSNAP Lib "XCLIBWNT.DLL" Alias "pxd_doSnap" (ByVal c_unitmap As Integer, ByVal c_buffer As Integer, ByVal c_timeout As Integer) As Integer
+
+    ' _cDcl(_dllpxlib,_cfunfcc,int)pxd_goSnap(int unitmap,pxbuffer_t buffer);
+    Private Declare Function PXD_GOSNAP Lib "XCLIBWNT.DLL" Alias "pxd_goSnap" (ByVal c_unitmap As Integer, ByVal c_buffer As Integer) As Integer
+
+    ' _cDcl(_dllpxlib,_cfunfcc,int)pxd_goLive(int unitmap,pxbuffer_t buffer);
+    Private Declare Function PXD_GOLIVE Lib "XCLIBWNT.DLL" Alias "pxd_goLive" (ByVal c_unitmap As Integer, ByVal c_buffer As Integer) As Integer
+
+    ' _cDcl(_dllpxlib,_cfunfcc,int)pxd_goUnLive(int unitmap);
+    Private Declare Function PXD_GOUNLIVE Lib "XCLIBWNT.DLL" Alias "pxd_goUnLive" (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(_dllpxlib,_cfunfcc,int)pxd_imageXdim();
+    Private Declare Function PXD_IMAGEXDIM Lib "XCLIBWNT.DLL" Alias "pxd_imageXdim" () As Integer
+
+    ' _cDcl(_dllpxlib,_cfunfcc,int)pxd_imageYdim();
+    Private Declare Function PXD_IMAGEYDIM Lib "XCLIBWNT.DLL" Alias "pxd_imageYdim" () As Integer
+
+    ' _cDcl(_dllpxlib,_cfunfcc,double)pxd_imageAspectRatio();
+    Private Declare Function PXD_IMAGEASPECTRATIO Lib "XCLIBWNT.DLL" Alias "pxd_imageAspectRatio" () As Double
+
+    ' _cDcl(_dllpxlib,_cfunfcc,pxvbtime_t)pxd_capturedFieldCount(int unitmap);
+    Private Declare Function PXD_CAPTUREDFIELDCOUNT Lib "XCLIBWNT.DLL" Alias "pxd_capturedFieldCount" _
+        (ByVal c_unitmap As Integer) As Integer
+
+    ' _cDcl(_dllpxlib,_cfunfcc,int)pxd_renderStretchDIBits(int unitmap,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int options,HDC hDC,uint nX,uint nY,uint nWidth,uint nHeight,int winoptions);
+    ' The `hDC' parameter has been declared expecting a Windows handle to a device context (hDC) to be passed
+    Private Declare Function PXD_RENDERSTRETCHDIBITS Lib "XCLIBWNT.DLL" Alias "pxd_renderStretchDIBits" _
+	(ByVal c_unitmap As Integer, ByVal c_buf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByVal c_options As Integer, ByVal c_hDC As IntPtr, ByVal c_nX As Integer, _
+	 ByVal c_nY As Integer, ByVal c_nWidth As Integer, ByVal c_nHeight As Integer, ByVal c_winoptions As Integer) As Integer
+
+    ' _cDcl(_dllpxlib,_cfunfcc,int)pxd_saveBmp(int unitmap,char*name,pxbuffer_t buf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,int savemode,int options);
+    ' The `name' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_SAVEBMP Lib "XCLIBWNT.DLL" Alias "pxd_saveBmp" _
+        (ByVal c_unitmap As Integer, ByVal c_name As String, ByVal c_buf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByVal c_savemode As Integer, ByVal c_options As Integer) As Integer
+
+    ' _cDcl(_dllpxlib,_cfunfcc,int)pxd_readuchar(int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,uchar*membuf,int cnt,char*colorspace);
+    ' The `membuf' parameter has been declared expecting a dimensioned array to be passed
+    ' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_READUCHAR Lib "XCLIBWNT.DLL" Alias "pxd_readuchar" _
+        (ByVal c_unitmap As Integer, ByVal c_framebuf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByRef c_membuf As Byte, ByVal c_cnt As Integer, ByVal c_colorspace As String) As Integer
+
+
+
+
+    ' _cDcl(_dllpxlib,_cfunfcc,int)pxd_writeuchar(int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,uchar*membuf,int cnt,char*colorspace);
+    ' The `membuf' parameter has been declared expecting a dimensioned array to be passed
+    ' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_WRITEUCHAR Lib "XCLIBWNT.DLL" Alias "pxd_writeuchar" _
+    (ByVal c_unitmap As Integer, ByVal c_framebuf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByVal c_membuf As Byte, ByVal c_cnt As Integer, ByVal c_colorspace As String) As Integer
+
+    ' _cDcl(_dllpxlib,_cfunfcc,pximage_s*)pxd_defineImage(int unitmap,pxbuffer_t framebuf,pxcoord_t ulx,pxcoord_t uly,pxcoord_t lrx,pxcoord_t lry,char*colorspace);
+    ' The `colorspace' parameter has been declared expecting a double quoted String to be passed
+    Private Declare Function PXD_DEFINEIMAGE Lib "XCLIBWNT.DLL" Alias "pxd_defineImage" _
+    (ByVal c_unitmap As Integer, ByVal c_framebuf As Integer, ByVal c_ulx As Integer, ByVal c_uly As Integer, ByVal c_lrx As Integer, ByVal c_lry As Integer, ByVal c_colorspace As String) As Integer
+
+    ''''''' PXIPL ''''''
+    '
+    ' This declaration should be commented out if the PXIPL library
+    ' is not being used.
+    '
+    ' _cDcl(_dllpxipl,_cfunfcc,int)pxip8_pixneg(pxabortfunc_t**,pximage_s*sip,pximage_s*dip);
+    ' The `noname1' parameter has been declared expecting a 0 to be passed
+    ' The `sip' parameter has been declared expecting the return value of PXD_DEFIMAGE/PXD_DEFINEIMAGE to be passed
+    ' The `dip' parameter has been declared expecting the return value of PXD_DEFIMAGE/PXD_DEFINEIMAGE to be passed
+    Private Declare Function PXIP8_PIXNEG Lib "PXIPLWNT.DLL" Alias "pxip8_pixneg" _
+    (ByVal c_noname1 As Integer, ByVal c_sip As Integer, ByVal c_dip As Integer) As Integer
+    '
+    ''''''' PXIPL ''''''
+
+
+    '''''''''
+    '
+    ' Declarations that must be must be included in the declarations section.
+    ' The SetStretchBltMode is a Windows function, for
+    ' which VB .NET doesn't have a direct equivalent.
+    '
+    '''''''''
+
+    Private Declare Function SetStretchBltMode Lib "gdi32.dll" (ByVal hDC As IntPtr, ByVal mode As Integer) As Integer
+    Const STRETCH_DELETESCANS As Integer = 3 'Constant used in calling SetStrechBltMode
+
+    Dim PIXCI_LIVE As Boolean = False
+
+    Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        Dim format As String
+        '
+        ' Open the XCLIB for use.
+        '
+        ' First select the video format.
+        '
+        ' For PIXCI(R) SV2, SV3, SV4, and SV5 imaging boards
+        ' common choices are RS-170, NSTC, NTSC/YC, CCIR, PAL, or PAL/YC.
+        '
+	' For PIXCI(R) D, A, D24, D32, D2X, D3X, CL1, CL2, E1, E4, EB1, EB1POCL, EC1, ECB1, ECB1\-34, ECB2, EL1, E1DB, E4DB, CL3SD, SI, SI1, SI2, and SI4
+	' imaging boards, use "default" to select the default format for
+	' the camera for which the PIXCI(R) imaging board is intended.
+        ' For non default formats, use XCAP to save the video set-up to a
+        ' file, and set FORMAT to the saved file's name.
+        ' For camera's with RS-232 control, note that the saved
+        ' video set-up only resets the PIXCI(R) imaging board's
+        ' settings, but XCLIB does not reset the camera's settings.
+        '
+        ' format = "RS-170" ' RS-170 on input 1
+        format = "NTSC"       ' NTSC on input 1
+        ' format = "NTSC/YC"    ' NTSC S-Video on input 0
+        ' format = "CCIR"       ' CCIR on input 1
+        ' format = "PAL"        ' PAL on input 1
+        ' format = "PAL/YC"     ' PAL S-Video on input 0
+
+	' For PIXCI D, D24, D32, A, D2X, D3X, CL1, CL2, E1, E4, EB1, EB1POCL, EC1, ECB1, ECB1\-34, ECB2, EL1, E1DB, E4DB, CL3SD, SI, SI1, SI2, SI4
+        ' format = "default"    ' as per board's intended camera
+
+        MsgBox("OPENING PIXCI(R) IMAGING BOARD")
+        Call PXD_PIXCICLOSE() ' in case this example was run before and aborted
+        ' before completion, the XCLIB may not have been
+        ' closed, and the open would fail
+
+        Dim i As Integer = PXD_PIXCIOPEN("", format, "")
+        If i < 0 Then
+            MsgBox("THE OPEN FAILED")
+            Call PXD_MESGFAULT(1)
+            Exit Sub
+        End If
+
+        ' Links the timer to the screen update function
+        AddHandler Timer1.Tick, AddressOf OnTimerEvent
+
+    End Sub
+
+    Public Sub OnTimerEvent(ByVal [source] As Object, ByVal e As EventArgs)
+        Static Dim LastCapturedField As Integer
+
+        ' If we are live and the captured image has changed
+        ' then update the counter and redraw the image window
+        If PIXCI_LIVE And Not LastCapturedField.Equals(PXD_CAPTUREDFIELDCOUNT(1)) Then
+            LastCapturedField = PXD_CAPTUREDFIELDCOUNT(1)
+            PictureBox1.Invalidate() ' causes PictureBox1 to redraw
+        End If
+
+    End Sub
+
+    Private Sub PictureBox1_Paint(ByVal sender As Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles PictureBox1.Paint
+
+        Dim Draw As Graphics = e.Graphics ' Create a local version of the graphics object for the PictureBox.
+        Dim hDC As IntPtr = Draw.GetHdc() ' Get a handle to PictureBox1
+
+        ' set resize mode to STRETCH_DELETESCANS
+        Call SetStretchBltMode(hDC, STRETCH_DELETESCANS)
+
+        ' Draw image buffer scaled to the size of PictureBox1
+        Call PXD_RENDERSTRETCHDIBITS(1, 1, 0, 0, -1, -1, 0, hDC, 0, 0, PictureBox1.Width, PictureBox1.Height, 0)
+
+        Draw.ReleaseHdc(hDC) ' Release PictureBox1 handle
+
+        PictureBox2.Invalidate() ' causes PictureBox2 to redraw
+
+    End Sub
+
+    Private Sub PictureBox2_Paint(ByVal sender As Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles PictureBox2.Paint
+
+        Dim Plot As Graphics = e.Graphics
+
+        Dim PlotPen As New Pen(Color.Red)
+
+        Dim Xdim As Integer = PXD_IMAGEXDIM
+        Dim Ydim As Integer = PXD_IMAGEYDIM
+        Dim Xscale As Decimal = PictureBox2.Width / Xdim
+        Dim Yscale As Decimal = PictureBox2.Height / Ydim
+
+        Dim buffer(Xdim * 3) As Byte
+
+        Dim LineY As Integer = Ydim / 4 ' Specify line at one quarter of image height to plot
+
+        Call PXD_READUCHAR(1, 1, 0, LineY, Xdim, LineY + 1, buffer(0), Xdim * 3, "RGB") ' Read line into buffer
+
+        Dim x As Integer
+        Dim PlotColor As Integer
+
+        For PlotColor = 0 To 2
+
+            Dim Element As Integer = PlotColor
+
+            If PlotColor = 0 Then
+                PlotPen.Color = Color.Red
+            ElseIf PlotColor = 1 Then
+                PlotPen.Color = Color.Green
+            Else
+                PlotPen.Color = Color.Blue
+            End If
+
+            For x = 0 To Xdim - 3
+                Plot.DrawLine(PlotPen, x * Xscale, PictureBox2.Height - (buffer(Element) * Yscale), _
+                    (x + 3) * Xscale, PictureBox2.Height - (buffer(Element + 3) * Yscale))
+                Element = Element + 3
+            Next
+        Next
+
+    End Sub
+
+    Private Sub Snap_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Snap_Button.Click
+
+        If PIXCI_LIVE Then
+            Call PXD_GOUNLIVE(1)
+            PIXCI_LIVE = False
+        End If
+
+        Call PXD_GOSNAP(1, 1)
+
+        PictureBox1.Invalidate() ' Redraw PictureBox1
+
+    End Sub
+
+    Private Sub Live_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Live_Button.Click
+
+        PIXCI_LIVE = Not PIXCI_LIVE ' Toggle Live Status
+
+        If PIXCI_LIVE Then
+            Call PXD_GOLIVE(1, 1)
+        Else
+            Call PXD_GOUNLIVE(1)
+        End If
+
+    End Sub
+
+    Private Sub Save_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Save.Click
+
+        If PIXCI_LIVE Then
+            Call PXD_GOUNLIVE(1)
+            PIXCI_LIVE = False
+        End If
+
+        '
+        ' Save the image in bitmap format, but do not overwrite an existing image.
+        '
+        If File.Exists("example.bmp") Then
+            MsgBox("File example.bmp already exists and will not be overwritten.")
+        Else
+            Call PXD_SAVEBMP(1, "example.bmp", 1, 0, 0, -1, -1, 0, 0)
+        End If
+
+    End Sub
+
+
+    Private Sub PXIPL_Neg_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PXIPL_Neg.Click
+
+        If PIXCI_LIVE Then
+            Call PXD_GOUNLIVE(1)
+            PIXCI_LIVE = False
+        End If
+
+        ''''''' PXIPL ''''''
+        '
+        ' Demonstrate use of a PIXPL function by complementing a
+        ' portion of the image, then redisplaying.
+        '
+        ' This section should be commented out if the PXIPL library
+        ' is not being used.
+        '
+        Dim pximage As Integer = PXD_DEFINEIMAGE(1, 1, 0, 0, PXD_IMAGEXDIM / 2, PXD_IMAGEYDIM / 2, "Default")
+        Call PXIP8_PIXNEG(0, pximage, pximage)
+        '
+        ''''''' PXIPL ''''''
+
+        PictureBox1.Invalidate()  ' Redraw PictureBox1
+
+    End Sub
+
+    Private Sub Form1_Closed(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Closed
+
+        MsgBox("CLOSING PIXCI(R) IMAGING BOARD")
+        Call PXD_PIXCICLOSE()
+
+    End Sub
+
+End Class

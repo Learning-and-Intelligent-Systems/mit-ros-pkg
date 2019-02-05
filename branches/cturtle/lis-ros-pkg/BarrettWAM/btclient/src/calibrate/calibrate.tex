@@ -1,0 +1,432 @@
+% 34567890123456789012345678901234567890123456789012345678901234567890123456 %
+\documentclass[letterpaper,12pt]{article}
+\usepackage[letterpaper,top=1in,bottom=1in,left=1in,right=1in]{geometry}
+\usepackage{relsize}
+
+\newcommand{\R}[2]{{\mbox{R}}^{#1}_{#2}}
+\newcommand{\p}[1]{{}^{#1}\hspace{-.1em}}
+\newcommand{\pp}[2]{{}^{#1}_{#2}\hspace{-.1em}}
+\newcommand{\onevec}[1]
+   {\left[ \begin{array}{c} #1 \end{array} \right] }
+\newcommand{\twovec}[2]
+   {\left[ \begin{array}{c} #1 \\ #2 \end{array} \right] }
+\newcommand{\threevec}[3]
+   {\left[ \begin{array}{c} #1 \\ #2 \\ #3 \end{array} \right] }
+
+\newcommand{\wam}{WAM{\scriptsize \texttrademark}}
+
+\title{Newton-Euler First-Moment Gravity Compensation}
+\author{Christopher Dellin}
+\date{Friday, September 12, 2008}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}
+
+This document briefly describes a method for gravity compensation
+applicable to any rigid-body robotic manipulator in an open kinematic chain
+(i.e. only one connection to ground).  This method is designed to operate
+on the Barrett \wam, an advanced torque-controlled robot.
+
+\vspace{0.1in}
+The method consists of two steps.  First, in the \textbf{calibration} step,
+the robot is made to hold a number of distinct poses, while torque
+measurements at each of the joints are taken.  From these torque measurements,
+a vector $\mu$ is determined for each link $j$, using a
+linear regression.  This vector $\mu_j$, the \emph{cumulative first moment
+of the mass}, has units of $\{\mbox{mass}\cdot\mbox{length}\}$, and
+represents the sum of link $j$'s mass moment and the mass moments of all
+subsequent links.  Expressed in joint coordinates, the vectors $\mu_j$
+are pose-independent.
+
+\vspace{0.1in}
+Once the $\mu$ vectors for the robot's mass configuration are determined,
+it is simple to derive the necessary torques for each joint, starting from
+the last link and recursively moving to the first one.  Thus, in the
+\textbf{compensation} scheme, torques can be provided to each joint to
+gravity-compensate the robot, relative to whatever mass configuration
+was calibrated.
+
+For this step, it is assumed
+that the robot is capable of maintaining a fixed position; for this purpose,
+the \wam uses a set of simple PID controllers in joint-space.
+
+\section{Newton-Euler Formulation}
+
+   \subsection{Conventions}
+  
+      We will use the following conventions in this document,
+      which are based on the Denavit-Hartenberg conventions.
+      
+      The robot is made up of $n$ moving rigid links,
+      numbered $j=1,2,...n$.  Rigidly attached to the end of each link
+      is an origin frame, where the $z$ axis of frame $j$ is the axis
+      of rotation for the joint between link $j$ and link $j+1$.
+      The world frame is labeled frame $0$, and for now, it is assumed
+      that frame $0$ is an inertial frame.
+      
+      \begin{center}
+      \begin{tabular}{lcl}
+         \hline
+         $m_j$            &=& the mass of link $j$ \\
+         $r_{mj}$         &=& the location of the joint's point of rotation \\
+         $r_{cj}$         &=& the location of the center of mass \\
+         $g^j$       &=& the gravity vector in frame $j$ \\
+         $f_j$            &=& the force from link $j-1$ to link $j$ \\
+         $f_{j+1}$        &=& the force from link $j$ to link $j+1$ \\
+         $\vec\tau_j$     &=& the torque from link $j-1$ to link $j$ \\
+         $\vec\tau_{j+1}$ &=& the torque from link $j$ to link $j+1$ \\
+         $a_{cj}$         &=& the COM acceleration in frame $j$ \\
+         $\alpha_j$       &=& the COM ang acceleration in frame $j$ \\
+         $\omega_j$       &=& the COM ang velocity in frame $j$ \\
+         $F^j$       &=& an arbitrary external force in frame $j$ \\
+         $T^j$       &=& an arbitrary external torque in frame $j$ \\
+         \hline
+      \end{tabular}
+      \end{center}
+    
+    \newpage
+    \subsection{Generic Equations}
+    
+      From Spong, pp 276-277, we have the following equations of motion for a
+      rigid link:
+      \begin{equation}
+         f_j - \R{j}{j+1} f_{j+1} + m_j g^j + F^j
+            = m_j a_{cj}^j
+      \end{equation}
+      \begin{equation}
+         \vec\tau_j - \R{j}{j+1} \vec\tau_{j+1}
+            + f_j \times \left( r_{cj} - r_{mj} \right)
+            - \left( \R{j}{j+1} f_{j+1} \right) \times {r_{cj}}
+            + T^j
+            = I_j \alpha_j + \omega_j \times \left( I_j \omega_j \right)
+      \end{equation}
+   
+   \noindent
+   Note that a number of terms have been adjusted from Spong to fit into
+   the Denavit-Hartenberg conventions.
+   
+   \subsection{The Static Case}
+   
+      Next, we make the assumption that (a) there are no external
+      forces or torques ($F$ and $T$ are zero)
+      and (b) the system is static ($a$, $\alpha$, and $\omega$ are zero).
+      This leaves us with:
+      \begin{equation} \label{eqn:static-f}
+         f_j = - m_j g^j + \R{j}{j+1} f_{j+1}
+      \end{equation}
+      \begin{equation}
+         \vec\tau_j - \R{j}{j+1} \tau_{j+1}
+            = - f_j \times \left( r_{cj} - r_{mj} \right)
+            + \left( \R{j}{j+1} f_{j+1} \right) \times r_{cj}
+      \end{equation}
+      
+      \noindent
+      First, we note that, for the last link $j=n$,
+      both $f_{j+1}$ and $\tau_{j+1}$ are zero.  Thus:
+      \begin{equation}
+         f_n = - m_n g^n
+      \end{equation}
+      
+      \noindent
+      Then, by substitution, we have:
+      \begin{eqnarray}
+         f_{n-1} &=& - m_{n-1} g^{n-1}
+            + \R{n-1}{n} \left( - m_n g^n \right) \\
+                 &=& - m_{n-1} g^{n-1} - m_n g^{n-1} \\
+                 &=& - \left( m_{n-1} + m_n \right) g^{n-1}
+      \end{eqnarray}
+      
+      \noindent
+      Thus, we find an explicit expression for the force $f_j$ on each
+      link:
+      \begin{equation}
+         f_j = - M_j \, g^j
+            \,\,\,\mbox{for}\,\,\,
+            M_j = \sum_{k=j}^n m_k
+      \end{equation}
+      
+      \noindent
+      (of course, this seems obvious in retrospect, but it's nice to derive
+      it explicitly as well ...)
+      
+      Next, we turn to the torque equation.
+      \begin{eqnarray}
+         \vec\tau_j - \R{j}{j+1} \vec\tau_{j+1}
+            &=& - \left( - M_j \, g^j \right)
+               \times \left( r_{cj} - r_{mj} \right)
+            + \left( \R{j}{j+1}
+               \left( - M_{j+1} \, g^{j+1} \right)
+            \right) \times r_{cj} \\
+            &=& g^j
+               \times \left( M_j \left[ r_{cj} - r_{mj} \right] \right)
+            - g^j \times \left( M_{j+1} \, r_{cj} \right) \\
+            &=& g^j \times
+               \left(
+                  M_j \, r_{cj} - M_j \, r_{mj}
+                  - M_{j+1} \, r_{cj}
+               \right) \\
+            &=& g^j \times
+               \left(
+                  m_j \, r_{cj} - M_j \, r_{mj}
+               \right) 
+      \end{eqnarray}
+      
+      \noindent
+      Thus, we arrive at the following static governing equation:
+      \begin{equation}
+         \vec\tau_j - \R{j}{j+1} \vec\tau_{j+1} = g^j \times \mu_j
+            \,\,\,\mbox{for}\,\,\,
+            \mu_j = m_j \, r_{cj} - M_j \, r_{mj}
+      \end{equation}
+      
+      \newpage
+
+\section{Calibration - Coupled Matrix}
+
+   \subsection{Denavit-Hartenberg Representation}
+      %\noindent
+      Next, we take advantage of our Denavit-Hartenberg frame formulation
+      to write each torque:
+      \begin{equation}
+         \vec\tau_j =
+            \R{j}{j-1}
+            \left[
+               \begin{array}{c}
+               a_j \\ b_j \\ \tau_j
+               \end{array}
+            \right]
+         \,\,\,\mbox{and}\,\,\,
+            \left[ \,\vec{a}\, \right]_{\times}
+            = \left[ \begin{array}{ccc}
+               0 & -a_3 & a_2 \\ a_3 & 0 & -a_1 \\ -a_2 & a_1 & 0
+            \end{array} \right]
+      \end{equation}
+      \begin{equation}
+         \R{j}{j-1}
+         \left[
+            \begin{array}{c}
+            a_j \\ b_j \\ \tau_j
+            \end{array}
+         \right]
+         -
+         \left[
+            \begin{array}{c}
+            a_{j+1} \\ b_{j+1} \\ \tau_{j+1}
+            \end{array}
+         \right]
+         = \left[ g^j \right]_{\times} \mu_j
+      \end{equation}
+      
+   \subsection{Matrix Formulation - Single Link $j$}
+      Next, we get things in matrix language so we can design a matrix
+      solution.
+      We make a couple of useful definitions to separate the rotation
+      matrix for multiplication with known and unknown quantities:
+      \begin{equation}
+         L =
+         \left[ \begin{array}{cc}
+            1 & 0 \\ 0 & 1 \\ 0 & 0
+         \end{array} \right]
+         \,\,\,\mbox{and}\,\,\,
+         Z = \threevec{0}{0}{1}
+         \,\,\,\mbox{and}\,\,\,
+         c_j = \twovec{a_j}{b_j}
+      \end{equation}
+      \begin{equation}
+         \R{j}{j-1} L c_j
+         + \R{j}{j-1} Z \tau_j
+         - L c_{j+1}
+         - Z \tau_{j+1}
+         = \left[ g^j \right]_{\times} \onevec{\mu_j}
+      \end{equation}
+      \begin{equation} \label{eqn:single-link}
+         \R{j}{j-1} Z \tau_j - Z \tau_{j+1}
+         = \left[ g^j \right]_{\times} \onevec{\mu_j}
+         - \R{j}{j-1} L c_j
+         + L c_{j+1}
+      \end{equation}
+      \begin{equation}
+         \onevec{ \R{j}{j-1} Z \tau_j - Z \tau_{j+1} }
+         =
+         \left[ \begin{array}{cc}
+            \left[ g^j \right]_{\times}
+            &
+            \left[ \begin{array}{cc}
+               - \R{j}{j-1} L
+               &
+               L
+            \end{array} \right]
+         \end{array} \right]
+         \left[ \begin{array}{c}
+            \mu_j \\
+            c_j \\
+            c_{j+1}
+         \end{array} \right]
+      \end{equation}
+      
+      We see that this is now in the form $\vec{y}$ = GT $\vec{x}$,
+      with $\vec{x}$ the parameter matrix to be determined by regression.
+      Note that the vector $\mu$ is pose-independent, while the
+      torques $a$ and $b$ are different for each pose.
+
+
+   \newpage  
+   \subsection{Matrix Formulation - Coupled Links, Single Pose}
+   
+      We now determine a sample GT matrix for a manipulator with $n=4$
+      links, going through 5 poses A, B, C, D, and E.
+      
+      For pose A, we form the following G matrix:
+      \begin{equation}
+         {}^AG =
+         \left[ \begin{array}{cccc}
+            \left[ \p{A}g^1 \right]_{\times} & 0 & 0 & 0 \\
+            0 & \left[ \p{A}g^2 \right]_{\times} & 0 & 0 \\
+            0 & 0 & \left[ \p{A}g^3 \right]_{\times} & 0 \\
+            0 & 0 & 0 & \left[ \p{A}g^4 \right]_{\times}
+         \end{array} \right]
+      \end{equation}
+      
+      \noindent
+      For pose A, we also form the following T matrix:
+      \begin{equation}
+         {}^AT =
+         \left[ \begin{array}{cccc}
+            - \p{A}\R{1}{0} L &   L &  0 &  0 \\
+             0 &  - \p{A}\R{2}{1} L &  L &  0 \\
+             0 &  0 &  - \p{A}\R{3}{2} L &  L \\
+             0 &  0 &  0 &  - \p{A}\R{4}{3} L
+         \end{array} \right]
+      \end{equation}
+      
+      \noindent
+      ... along with a known torque vector y and
+      unknown torque parameter vector p:
+      \begin{equation}
+         {}^Ay =
+         \left[ \begin{array}{c}
+            \p{A}\R{1}{0} Z \p{A}\tau_1 - Z \p{A}\tau_{2} \\
+            \p{A}\R{2}{1} Z \p{A}\tau_2 - Z \p{A}\tau_{3} \\
+            \p{A}\R{3}{2} Z \p{A}\tau_3 - Z \p{A}\tau_{4} \\
+            \p{A}\R{4}{3} Z \p{A}\tau_4 - 0
+         \end{array} \right]
+         \,\,\,\mbox{for}\,\,\,
+         \p{A}p = \onevec{ \p{A}c_1 \\ \p{A}c_2 \\ \p{A}c_3 \\ \p{A}c_4 }
+      \end{equation}
+      
+      \noindent
+      For pose A, then, we have:
+      \begin{equation}
+         \p{A}y =
+         \left[ \begin{array}{cc}
+            \p{A}G & \p{A}T
+         \end{array} \right]
+         \left[ \begin{array}{c}
+            U \\ \p{A}p
+         \end{array} \right]
+      \end{equation}
+      
+   \subsection{Matrix Formulation - Multiple Poses}
+      
+      However, this parameterization is ambiguous, since the known torque
+      vector $y$ is of length $3n$,
+      while the parameter vector $[ U, p ]^T$
+      is of length $3n+2n=5n$.  This reflects the fact
+      that one pose is insufficient to uniquely determine the
+      parameterization.  However, since the parameters $\mu_j$ are
+      independent of pose, the solution can be found with a sufficient
+      number of poses $k$.
+      
+      For multiple poses, we form the GT matrix as follows:
+      \begin{equation}
+         \left[ \begin{array}{c}
+            \p{A}y \\ \p{B}y \\ \p{C}y \\ \p{D}y \\ \p{E}y
+         \end{array} \right]
+         =
+         \left[ \begin{array}{cccccc}
+            \p{A}G & \p{A}T &   0 &   0 &   0 &   0 \\
+            \p{B}G &   0 & \p{B}T &   0 &   0 &   0 \\
+            \p{C}G &   0 &   0 & \p{C}T &   0 &   0 \\
+            \p{D}G &   0 &   0 &   0 & \p{D}T &   0 \\
+            \p{E}G &   0 &   0 &   0 &   0 & \p{E}T
+         \end{array} \right]
+         \left[ \begin{array}{c}
+            U \\ \p{A}p \\ \p{B}p \\ \p{C}p \\ \p{D}p \\ \p{E}p
+         \end{array} \right]
+      \end{equation}
+      
+      Thus, for $k$ poses, the known torque vector
+      $y$ is of length $\mbox{len}\{y\}=3nk$,
+      while the parameter vector
+      $p$ is of length $\mbox{len}\{p\}=3n+2nk$.
+      Thus, you need at least $k=3$ poses for a complete parameterization,
+      and you can use more poses and a regression analysis to determine
+      the best-fit parameters.
+
+\section{Calibration - Iterative Algorithm}
+
+   While the coupled matrix method described above works in theory,
+   it does not yield very precise solutions under linear regression,
+   especially for the end links.  There may be a way to weight the regression
+   in some way, but attempts so far have been unsuccessful.  Therefore,
+   we take advantage of the directional coupling of the pose matrices
+   $G$ and $T$ and offer a different solution method.
+   
+   \subsection{Matrix Forumulation}
+   
+      We start with the single link, single pose equation
+      (Eqn. \ref{eqn:single-link}), and rewrite:
+      \begin{equation}
+         \R{j}{j-1} Z \tau_j - Z \tau_{j+1}
+         - L c_{j+1}
+         = \left[ g^j \right]_{\times} \onevec{\mu_j}
+         - \R{j}{j-1} L c_j
+      \end{equation}
+      
+      \noindent
+      We then extend this equation across multiple poses, for a single link
+      $j$:
+      \begin{equation}
+         \left[ \begin{array}{c}
+            \p{A}\R{j}{j-1} Z \p{A}\tau_j - Z \p{A}\tau_{j+1} \\
+            \p{B}\R{j}{j-1} Z \p{B}\tau_j - Z \p{B}\tau_{j+1} \\
+            \p{C}\R{j}{j-1} Z \p{C}\tau_j - Z \p{C}\tau_{j+1} \\
+            \vdots \\
+         \end{array} \right]
+         -
+         \left[ \begin{array}{ccccc}
+            0 & L & 0 & 0 & \dots \\
+            0 & 0 & L & 0 & \dots \\
+            0 & 0 & 0 & L & \dots \\
+            \vdots & \vdots & \vdots & \vdots & \ddots
+         \end{array} \right]
+         \left[ \begin{array}{c}
+            \mu_{j+1} \\ \p{A}c_{j+1} \\ \p{B}c_{j+1} \\ \p{C}c_{j+1} \\ \vdots
+         \end{array} \right]
+      \end{equation}
+      \begin{equation}  
+         =
+         \left[ \begin{array}{ccccc}
+            \left[ \p{A}g^j \right]_{\times} &
+               -\p{A}\R{j}{j-1} L & 0 & 0 & \dots \\
+            \left[ \p{B}g^j \right]_{\times} & 0 &
+               -\p{B}\R{j}{j-1} L & 0 & \dots \\
+            \left[ \p{C}g^j \right]_{\times} & 0 &
+               0 & -\p{C}\R{j}{j-1} L & \dots \\
+            \vdots & \vdots & \vdots & \vdots & \ddots
+         \end{array} \right]
+         \left[ \begin{array}{c}
+            \mu_{j} \\ \p{A}c_{j} \\ \p{B}c_{j} \\ \p{C}c_{j} \\ \vdots
+         \end{array} \right]
+      \end{equation}
+      
+      By solving this system for each link (starting at the robot end-point
+      and working down to the base), we arrive at the solution vectors $\mu$,
+      one for each link.
+
+\end{document}

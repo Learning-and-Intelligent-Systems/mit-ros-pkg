@@ -1,0 +1,16 @@
+<package>
+  <description brief="pushing_test">
+
+     pushing_test
+
+  </description>
+  <author>Huan Liu</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/pushing_test</url>
+
+  <depend package="furniture"/>
+  <depend package="openrave_pr2"/>
+</package>
+
+

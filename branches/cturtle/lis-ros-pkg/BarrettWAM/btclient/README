@@ -1,0 +1,63 @@
+              *** Welcome to the WAM control source code! ***
+
+We are continually improving and evolving the WAM source code. Please visit
+http://wiki.barrett.com for information on how to update to the latest version
+available, plus many helpful tips on running your new WAM.
+
+The directory structure looks like this:
+btclient    <-- This directory
+   doc      <-- doxygen-generated source documentation
+   examples <-- Some simple and advanced examples on how to use the library
+      ex1
+      ..
+      ex8
+   include  <-- All the header files related to the WAM control library
+   lib      <-- The compiled library binaries
+   src      <-- Library source code + utilities + full demo (btdiag)
+      btdiag   <-- Full demo application with many features
+      btsystem <-- Control library, not robot-specific
+      btutil   <-- Utility application for testing/debugging
+      btwam    <-- WAM-specific control functions
+      
+                         *** The wam.conf file ***
+The *.conf files define the WAM configuration and parameters for any control
+application. The home position, torque limits, mass parameters, kinematics, and
+PID parameters are all defined in here. Most example programs reference the
+"wam.conf" file in their OpenWAM() function. The wam.conf file is only a 
+symbolic link to one of several standard configuration files like WAM4.conf 
+(4DOF WAM), or WAM7.conf (7DOF WAM). These files were tuned to your specific WAM 
+during final checkout. It is important to keep these files safe (make backups), 
+as we may not be able to replace them in the event of a disk failure or 
+accidental deletion.
+
+Also, if you download a software update, the configuration files in the config/
+directory will be updated with the latest configuration data and features. 
+Your tuned files in btclient/ will not be touched. After an update, you will
+want to compare your tuned configuration file with the newly updated one in the
+config/ directory. You will need to copy any *newly added* parameters to your
+tuned file. You should be cautious about copying any *updated* parameters, as
+those parameters may only apply to the latest WAMs and not to your WAM.
+
+                           *** The Makefiles ***
+You will also notice two files named config.mk and common.mk in this directory.
+
+The config.mk file contains important compiler definitions for your PC setup.
+We support two different realtime operating systems: Linux/RTAI and 
+Linux/Xenomai. We also support two different CANbus communication cards:
+esd-Electronics and PEAK-System. Finally, the Peak card can be on an ISA bus
+(typically PC/104) or a PCI bus (most desktop PCs). The settings in this file
+MUST match your PC setup for the software to compile and run correctly.
+
+The common.mk file sets up all the necessary includes, libraries, and defines
+for the compilation process. This file is referenced by each individual
+application's Makefile, in order to make the Makefiles easier to manage and
+reduce clutter.
+
+                        *** To build the software ***
+To rebuild everything: "sh makeall" in the this directory.
+To build the btsystem library: "make; make install" in src/btsystem
+To build the btwam library: "make; make install" in src/btwam
+To build other apps: "make" in the app directory
+To force a clean build: "make clean; make" (libs also require "make install")
+
+END

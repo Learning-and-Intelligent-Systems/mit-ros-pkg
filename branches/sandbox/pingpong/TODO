@@ -1,0 +1,35 @@
+
+TODO
+----
+- publish ball images
+- extrapolate ball x-position for asynchronous images
+
+
+DONE
+----
++ speed up svstereo with SSE
++ fix svstereo live mode image corruption bugs
++ switch svstereo to live mode
++ write a simple ROS "arm" node
++ write a "brain" node to command the arm given a ball trajectory
++ add forward model to ball tracker
++ separate graphics from eyes.cpp
++ get ball tracker to run at frame rate (120Hz)
++ improve multi-hypothesis ball tracker
++ fit table model to image
++ recalibrate cameras
++ attach a paddle to the arm
++ make stereo camera mount longer
++ make a top plate for the camera mount
++ improve ball position estimates (fit circles/ellipses to images)
++ use depth to determine image circle size
++ speed up image processing
++ once ball tracker is confident enough, switch to single hypothesis tracker
++ use trajectory in table coordinates to minimize false positive ball detections
++ track ball in table coordinates
++ publish camera-table transform
++ detect table (hand label for now)
++ compute table pose
++ multi-hypothesis ball tracker
++ synchronize left/right image processing
++ add depth to ball tracker

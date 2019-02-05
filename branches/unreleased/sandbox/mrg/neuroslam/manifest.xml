@@ -1,0 +1,34 @@
+<package>
+  <description brief="neurslam">
+     neuroslam: Biologically inspired SLAM algorithms.
+  </description>
+  <author>Hordur Johannsson</author>
+  <license>GPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/neuroslam</url>
+  <depend package="roscpp"/>
+	<!-- original dependencies -->
+  <depend package="rosconsole"/>
+  <depend package="std_msgs"/>
+  <depend package="nav_msgs"/>
+  <depend package="tf"/>
+  <depend package="message_filters"/>
+  <depend package="image_transport"/>
+  <depend package="image_geometry"/>
+  <depend package="opencv2"/>
+  <depend package="cv_bridge"/>
+    
+  <!-- added for hordur imapping -->
+	<depend package="laser_geometry"/>
+	<!--	<depend package="laser_pipeline"/>  -->
+  <!-- additional dependencies - may not be necessary -->
+  <depend package="map_server"/>
+  <depend package="sensor_msgs"/>
+  <depend package="nav_msgs"/>
+  <depend package="rospy"/>
+<!--  <depend package="eigen"/> -->
+  <depend package="isam"/>  
+  <depend package="DBow"/>
+	<depend package="slam_tools"/>
+</package>
+

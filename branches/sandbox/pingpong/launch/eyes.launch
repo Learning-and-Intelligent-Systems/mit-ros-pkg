@@ -1,0 +1,11 @@
+<launch>
+
+  <node pkg="siliconvideo" name="svstereo" type="svstereo">
+    <param name="capture_offset" value="false"/>
+    <param name="data_folder" value="$(find siliconvideo)"/>
+  </node>
+  <node pkg="pingpong" name="eyes" type="eyes" output="screen">
+    <param name="data_folder" value="$(find pingpong)/data"/>
+  </node>
+
+</launch>

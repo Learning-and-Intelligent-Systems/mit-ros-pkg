@@ -1,0 +1,15 @@
+#Collision name for the plate in the collision map
+#plate should be a cylinder
+string plate_id
+
+#The name of the surface in the collision map
+string surface_id
+
+---
+
+object_manipulation_msgs/ManipulationResult result
+
+---
+
+#if running DARRTH the current phase
+string phase

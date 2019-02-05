@@ -1,0 +1,8 @@
+<launch>
+
+  <node pkg="pingpong" name="brain" type="brain" output="screen">
+    <param name="data_folder" value="$(find pingpong)/data"/>
+    <param name="use_swing_table" value="false"/>
+  </node> 
+
+</launch>

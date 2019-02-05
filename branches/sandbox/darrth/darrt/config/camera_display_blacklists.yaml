@@ -1,0 +1,4 @@
+
+publish_click_camera_display:
+  render_blacklist:   [Map, Interactive Point Cloud, Octomap Point Cloud, Nav Obstacles]
+  selection_blacklist:  [Map]

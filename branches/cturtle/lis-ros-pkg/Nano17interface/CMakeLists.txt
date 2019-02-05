@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 2.4.6)
+add_custom_target(build_lib
+COMMAND cmake -E chdir ${PROJECT_SOURCE_DIR}/lib make)
+add_custom_target(build_standalone_test ALL
+COMMAND cmake -E chdir ${PROJECT_SOURCE_DIR}/standalone_test make)
+include($ENV{ROS_ROOT}/core/rosbuild/rosbuild.cmake)
+rospack(Nano17interface)
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+gensrv()
+link_directories(../lib)
+include_directories(../include)
+rospack_add_executable(Nano17Server ROS/Nano17Server.cpp)
+rospack_add_executable(Nano17TestClient ROS/Nano17TestClient.cpp)
+target_link_libraries(Nano17Server nano17)
+add_dependencies(Nano17Server build_lib)
+add_dependencies(Nano17TestClient build_lib)

@@ -1,0 +1,47 @@
+#Yellow Cake
+
+/*
+2/3 c. shortening
+1 1/4 c. sugar
+2 1/4 c. flour (self rising)
+1 c. milk
+2 eggs
+1 tsp. vanilla
+Preheat oven to 350 degrees. Grease and flour 2 round pans or a 9 x 13 inch pan. Add all ingredients, mix until smooth. Pour in pans and bake in oven for 30 minutes. One of my favorites.
+*/
+
+A = Ingredient('shortening', '2/3 c.')
+B = Ingredient('sugar', '1 1/4 c.')
+C = Ingredient('flour (self rising)', '2 1/4 c.')
+D = Ingredient('milk', '1 c.')
+E = Ingredient('eggs', '2')
+F = Ingredient('tsp. vanilla', '1 tsp.')
+
+#Preheat oven to 350 degrees.
+oven.preheat(350)
+
+#Grease and flour ... a 9 x 13 inch pan.
+pan.grease()
+
+#Add all ingredients, ...
+#Pour will default to a mixing bowl, so second param is unimportant.
+Pour(A, mixing_bowl)
+Pour(B, mixing_bowl)
+Pour(C, mixing_bowl)
+Pour(D, mixing_bowl)
+Pour(E, mixing_bowl)
+Pour(F, mixing_bowl)
+
+#... mix until smooth
+Mix(mixing_bowl)
+
+#Pour in pans...
+#Same as scrape?
+Pour(mixing_bowl, pan)
+
+#...and bake in oven for 30 minutes.
+#Should we bake the pan by default too?
+oven.bake(pan, 30)
+
+#One of my favorites.
+#Doesn't belong, should we manually remove it?

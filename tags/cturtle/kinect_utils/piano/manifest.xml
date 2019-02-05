@@ -1,0 +1,19 @@
+<package>
+  <description brief="A program to play 'air piano' using the positions of the fingers on one hand">
+
+     The piano package uses finger positions to play a five note piano. 
+   The positions of the five fingers are first calibrated, to establish a baseline.
+	    Then small deviations from those positions cause notes to be played.
+
+  </description>
+  <author>Garratt</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/piano</url>
+  <depend package="body_msgs"/>
+  <depend package="roscpp"/>
+
+  <rosdep name="libsfmt"/>
+</package>
+
+

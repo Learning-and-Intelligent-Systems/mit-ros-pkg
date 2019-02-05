@@ -1,0 +1,17 @@
+<package>
+  <description brief="nidecode">
+
+     nidecode
+
+  </description>
+  <author>garratt</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/nidecode</url>
+  <depend package="roscpp"/>
+  <depend package="pcl"/>
+  <depend package="rospy"/>
+
+</package>
+
+

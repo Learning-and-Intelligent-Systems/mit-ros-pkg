@@ -1,0 +1,150 @@
+README for imapping
+Notes by mfallon oct 2010
+==
+
+0. To launch pr2 navigation stack with gmapping:
+roslaunch pr2_gazebo map_building_demo.launch
+rosrun rviz rviz
+rosrun map_server map_saver map:=map
+(was dynamic_map in tutorial)
+roslaunch pr2_teleop teleop_keyboard.launch
+launch gmapping on its own
+rosrun gmapping slam_gmapping map_building_demo_gmapping_only.launch 
+
+0.1 Version without 
+roslaunch pr2_gazebo map_building_demo_no_gmapping.launch 
+rosrun rviz rviz
+rosrun map_server map_saver map:=map
+(was dynamic_map in tutorial)
+roslaunch pr2_teleop teleop_keyboard.launch
+launch gmapping on its own
+roslaunch gmapping map_building_demo_only_gmapping_inside_gmapping.launch 
+
+
+1. I/O for gmapping:
+Node [/gmapping_node]
+Publications: 
+ * /map_metadata [nav_msgs/MapMetaData]
+ * /map [nav_msgs/OccupancyGrid]      .... to /map_saver, rviz
+ * /tf [tf/tfMessage]          ... to itself, /robot_pose_ekf, /rviz
+ * /gmapping_node/entropy [std_msgs/Float64]
+ * /rosout [roslib/Log]        .... to /rosout
+
+
+Subscriptions: 
+ * /tf [tf/tfMessage]              ... from itself, /robot_pose_ekf, /gazebo, /robot_state_publisher
+ * /reset_time [unknown type]
+ * /base_scan [sensor_msgs/LaserScan]     ... from /gazebo
+ * /clock [roslib/Clock]    ... from /gazebo
+
+Services: 
+ * /gmapping_node/tf_frames
+ * /gmapping_node/set_logger_level
+ * /gmapping_node/get_loggers
+ * /dynamic_map
+Pid: 25236
+Connections:
+ * topic: /rosout    * to: /rosout    * direction: outbound    * transport: TCPROS
+ * topic: /tf    * to: /gmapping_node    * direction: outbound    * transport: INTRAPROCESS
+ * topic: /tf    * to: /robot_pose_ekf    * direction: outbound    * transport: TCPROS
+ * topic: /tf    * to: /head_traj_controller/point_head_action    * direction: outbound    * transport: TCPROS
+ * topic: /tf    * to: /rviz_1286227316337306965    * direction: outbound    * transport: TCPROS
+ * topic: /map    * to: /rviz_1286227316337306965    * direction: outbound    * transport: TCPROS
+ * topic: /map    * to: /map_saver    * direction: outbound    * transport: TCPROS
+ * topic: /clock    * to: http://jleonard-dell2:50855/    * direction: inbound    * transport: TCPROS
+ * topic: /tf    * to: http://jleonard-dell2:56820/    * direction: inbound    * transport: INTRAPROCESS
+ * topic: /tf    * to: http://jleonard-dell2:56628/    * direction: inbound    * transport: TCPROS
+ * topic: /tf    * to: http://jleonard-dell2:37975/    * direction: inbound    * transport: TCPROS
+ * topic: /tf    * to: http://jleonard-dell2:50855/    * direction: inbound    * transport: TCPROS
+ * topic: /base_scan    * to: http://jleonard-dell2:50855/    * direction: inbound    * transport: TCPROS
+
+
+2. Comparison of ros-gmapping to openslam-gmapping
+Equivalent Directories:
+~/gmapping/trunch  (openslam)
+/opt/ros/cturtle/stacks/slam_gmapping/gmapping/build/gmapping_export/ (ros-gmapping)
+- openslam contains svn r40, ros contains svn r39
+
+
+
+3. What rosmake looks like:
+mfallon@jleonard-dell2:~/ros/stacks/slam_gmapping/gmapping$ rosmake 
+[ rosmake ] No package specified.  Building ['gmapping']                        
+[ rosmake ] Packages requested are: ['gmapping']                                
+[ rosmake ] Logging to directory/home/mfallon/.ros/rosmake/rosmake_output-20101005-125329
+[ rosmake ] Expanded args ['gmapping'] to:
+['gmapping']                         
+[ rosmake ] Checking rosdeps compliance for packages gmapping.  This may take a few seconds.
+[rosstack] warning: trailing slash found in ROS_PACKAGE_PATH
+[ rosmake ] rosdep check passed all system dependencies in packages             
+[rosmake-0] Starting >>> roslang [ make ]                                       
+[rosmake-0] Finished <<< roslang ROS_NOBUILD in package roslang
+ No Makefile in package roslang
+[rosmake-1] Starting >>> roslib [ make ]                                        
+[rosmake-1] Finished <<< roslib ROS_NOBUILD in package roslib                   
+[rosmake-3] Starting >>> xmlrpcpp [ make ]                                      
+[rosmake-3] Finished <<< xmlrpcpp ROS_NOBUILD in package xmlrpcpp               
+[rosmake-3] Starting >>> rosconsole [ make ]                                    
+[rosmake-3] Finished <<< rosconsole ROS_NOBUILD in package rosconsole           
+[rosmake-1] Starting >>> std_msgs [ make ]                                      
+[rosmake-1] Finished <<< std_msgs ROS_NOBUILD in package std_msgs               
+[rosmake-1] Starting >>> rosclean [ make ]                                      
+[rosmake-1] Finished <<< rosclean ROS_NOBUILD in package rosclean               
+[rosmake-1] Starting >>> rosgraph [ make ]                                      
+[rosmake-1] Finished <<< rosgraph ROS_NOBUILD in package rosgraph               
+[rosmake-1] Starting >>> rosmaster [ make ]                                     
+[rosmake-1] Finished <<< rosmaster ROS_NOBUILD in package rosmaster             
+[rosmake-2] Starting >>> angles [ make ]                                        
+[rosmake-3] Starting >>> roscpp [ make ]                                        
+[rosmake-3] Finished <<< roscpp ROS_NOBUILD in package roscpp                   
+[rosmake-3] Starting >>> rospy [ make ]                                         
+[rosmake-3] Finished <<< rospy ROS_NOBUILD in package rospy                     
+[rosmake-3] Starting >>> rosout [ make ]                                        
+[rosmake-3] Finished <<< rosout ROS_NOBUILD in package rosout                   
+[rosmake-3] Starting >>> rosnode [ make ]                                       
+[rosmake-3] Finished <<< rosnode ROS_NOBUILD in package rosnode                 
+[rosmake-3] Starting >>> yaml_cpp [ make ]                                      
+[rosmake-1] Starting >>> roslaunch [ make ]                                     
+[rosmake-1] Finished <<< roslaunch ROS_NOBUILD in package roslaunch
+ No Makefile in package roslaunch
+[rosmake-1] Starting >>> rostest [ make ]                                       
+[rosmake-1] Finished <<< rostest ROS_NOBUILD in package rostest                 
+[rosmake-1] Starting >>> topic_tools [ make ]                                   
+[rosmake-1] Finished <<< topic_tools ROS_NOBUILD in package topic_tools         
+[rosmake-1] Starting >>> rosbag [ make ]                                        
+[rosmake-1] Finished <<< rosbag ROS_NOBUILD in package rosbag                   
+[rosmake-1] Starting >>> rosrecord [ make ]                                     
+[rosmake-1] Finished <<< rosrecord ROS_NOBUILD in package rosrecord             
+[rosmake-1] Starting >>> rosbagmigration [ make ]                               
+[rosmake-1] Finished <<< rosbagmigration ROS_NOBUILD in package rosbagmigration
+ No Makefile in package rosbagmigration
+[rosmake-1] Starting >>> geometry_msgs [ make ]                                 
+[rosmake-0] Starting >>> bullet [ make ]                                        
+[rosmake-3] Finished <<< yaml_cpp [PASS] [ 0.02 seconds ]                       
+[rosmake-3] Starting >>> rosmsg [ make ]                                        
+[rosmake-3] Finished <<< rosmsg ROS_NOBUILD in package rosmsg
+ No Makefile in package rosmsg
+[rosmake-3] Starting >>> rosservice [ make ]                                    
+[rosmake-3] Finished <<< rosservice ROS_NOBUILD in package rosservice           
+[rosmake-3] Starting >>> roswtf [ make ]                                        
+[rosmake-3] Finished <<< roswtf ROS_NOBUILD in package roswtf                   
+[rosmake-3] Starting >>> message_filters [ make ]                               
+[rosmake-3] Finished <<< message_filters ROS_NOBUILD in package message_filters 
+[rosmake-2] Finished <<< angles [PASS] [ 0.82 seconds ]                         
+[rosmake-0] Finished <<< bullet [PASS] [ 1.25 seconds ]                         
+[rosmake-1] Finished <<< geometry_msgs [PASS] [ 3.75 seconds ]                  
+[rosmake-1] Starting >>> nav_msgs [ make ]                                      
+[rosmake-2] Starting >>> sensor_msgs [ make ]                                   
+[rosmake-1] Finished <<< nav_msgs [PASS] [ 1.92 seconds ]                       
+[rosmake-1] Starting >>> map_server [ make ]                                    
+[rosmake-2] Finished <<< sensor_msgs [PASS] [ 2.62 seconds ]                    
+[rosmake-2] Starting >>> tf [ make ]                                            
+[rosmake-1] Finished <<< map_server [PASS] [ 1.29 seconds ]                     
+[rosmake-2] Finished <<< tf [PASS] [ 2.40 seconds ]                             
+[rosmake-2] Starting >>> gmapping [ make ]                                      
+[rosmake-2] Finished <<< gmapping [PASS] [ 11.08 seconds ]                      
+[ rosmake ] Results:                                                            
+[ rosmake ] Built 33 packages with 0 failures.                                  
+[ rosmake ] Summary output to directory                                         
+[ rosmake ] /home/mfallon/.ros/rosmake/rosmake_output-20101005-125329
+

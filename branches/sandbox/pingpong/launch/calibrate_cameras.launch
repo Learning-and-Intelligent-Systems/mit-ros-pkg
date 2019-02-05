@@ -1,0 +1,13 @@
+<launch>
+  <node pkg="siliconvideo" name="svstereo" type="svstereo">
+    <param name="capture_offset" value="false"/>
+    <param name="data_folder" value="$(find siliconvideo)"/>
+  </node>
+  <node pkg="camera_calibration" name="cameracalibrator" type="cameracalibrator.py"
+        args="--size 7x6 --square 0.108 --no-service-check" output="screen">
+    <remap from="left" to="/svstereo/left/image_raw"/>
+    <remap from="right" to="/svstereo/right/image_raw"/>
+    <remap from="left_camera" to="/svstereo/left"/>
+    <remap from="right_camera" to="/svstereo/right"/>
+  </node>
+</launch>

@@ -1,0 +1,11 @@
+
+TODO
+----
+
+
+DONE
+----
++ publish camera_info
++ add timestamps to messages
++ publish left/right images with same timestamp
++ try using stereo_image_proc

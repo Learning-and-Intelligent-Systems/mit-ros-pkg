@@ -1,0 +1,21 @@
+<package>
+  <description brief="collision_placing">
+
+     collision_placing
+
+  </description>
+  <author>Anne Holladay</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/collision_placing</url>
+
+  <depend package="rospy" />
+  <depend package="pr2_python" />
+  <depend package="geometry_msgs" />
+  <depend package="sushi_executive" />
+  <depend package="kinematics_msgs" />
+  <depend package="arm_navigation_msgs" />
+
+</package>
+
+

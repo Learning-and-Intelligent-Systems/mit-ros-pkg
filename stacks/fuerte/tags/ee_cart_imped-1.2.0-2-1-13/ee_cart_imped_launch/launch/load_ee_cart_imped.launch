@@ -1,0 +1,14 @@
+<launch>
+    <!--put the controller on the parameter server and start the action without actually starting the controller-->
+    <rosparam file="$(find ee_cart_imped_control)/pr2_arms_cart_imped_controller.yaml" command="load" />
+    <node pkg="pr2_controller_manager" type="spawner" args="--stopped r_arm_cart_imped_controller" name="r_arm_cart_imped_controller_spawner" />
+    <node pkg="pr2_controller_manager" type="spawner" args="--stopped l_arm_cart_imped_controller" name="l_arm_cart_imped_controller_spawner" output="screen"/>
+	<!--start the action server-->
+	<group ns="r_arm_cart_imped_controller">
+	       <node pkg="ee_cart_imped_action" name="r_arm_cart_imped_action_node" type="ee_cart_imped_action"/>
+	</group>
+	<!--start the action server-->
+	<group ns="l_arm_cart_imped_controller">
+	       <node pkg="ee_cart_imped_action" name="l_arm_cart_imped_action_node" type="ee_cart_imped_action" output="screen"/>
+	</group>
+</launch>

@@ -1,0 +1,17 @@
+<package>
+  <description brief="controller_demos">
+
+     controller_demos
+
+  </description>
+  <author>Jenny Barry</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/controller_demos</url>
+  <depend package="pr2_utils"/>
+  <depend package="rospy"/>
+  <depend package="demo_tools"/>
+
+</package>
+
+

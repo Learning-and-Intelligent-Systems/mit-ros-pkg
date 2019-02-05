@@ -1,0 +1,4 @@
+How to run imapping:
+rosrun imapping imapping  __name:=imapping
+and its talker:
+rosrun imapping talker __name:=talker

@@ -1,0 +1,4 @@
+string recipe
+bool debug
+---
+bool status

@@ -1,0 +1,16 @@
+<package>
+  <description brief="wiping_demo">
+
+     wiping_demo
+
+  </description>
+  <author>Jenny Barry</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/wiping_demo</url>
+  <depend package="wiping_control"/>
+  <depend package="wiping_sensing"/>
+
+</package>
+
+

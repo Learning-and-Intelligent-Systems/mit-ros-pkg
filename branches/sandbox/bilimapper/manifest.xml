@@ -1,0 +1,20 @@
+<package>
+  <description brief="bilimapper">
+
+     bilimapper
+
+  </description>
+  <author>Will Grathwohl</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/bilimapper</url>
+  <depend package="pcl_tools"/>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="nav_msgs"/>
+
+  <depend package="octomap_ros"/>
+
+</package>
+
+

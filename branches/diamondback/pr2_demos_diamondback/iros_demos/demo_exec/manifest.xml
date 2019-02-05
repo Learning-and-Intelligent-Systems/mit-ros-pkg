@@ -1,0 +1,18 @@
+<package>
+  <description brief="demo_exec">
+
+     demo_exec
+
+  </description>
+  <author>Jenny Barry</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/demo_exec</url>
+  <depend package="table_wiping_demo"/>
+  <depend package="demo_tools"/>
+  <depend package="rospy"/>
+  <depend package="controller_demos"/>
+
+</package>
+
+

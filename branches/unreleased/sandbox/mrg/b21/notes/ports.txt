@@ -1,0 +1,3 @@
+/dev/ttyUSB.A4001i9M - rFlex interface
+/dev/ttyUSB.FTCY3BKK - SICK front
+/dev/ttyUSB.FTEKRTR0 - SICK back

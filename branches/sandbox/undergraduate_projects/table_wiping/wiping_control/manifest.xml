@@ -1,0 +1,21 @@
+<package>
+  <description brief="wiping_control">
+
+     wiping_control
+
+  </description>
+  <author>Jenny Barry</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/wiping_control</url>
+  <depend package="ee_cart_imped_action"/>
+  <depend package="geometry_msgs"/>
+  <depend package="tf"/>
+  <depend package="rospy"/>
+  <depend package="wiping_utils"/>
+  <depend package="move_arm_msgs"/>
+  <depend package="pr2_pick_and_place_demos"/>
+
+</package>
+
+

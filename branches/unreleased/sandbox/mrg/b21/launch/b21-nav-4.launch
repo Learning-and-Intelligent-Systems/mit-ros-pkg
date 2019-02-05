@@ -1,0 +1,16 @@
+<launch>
+
+  <arg name="map_file" default="$(find b21)/maps/stata_4th_floor.yaml"/>
+
+  <!-- Run the map server -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+  <!--- Run AMCL -->
+  <include file="$(find b21)/config/amcl_b21.launch" />
+
+
+  <!--- Run Move Base and Robot Pose EKF -->
+  <include file="$(find b21)/config/move_base_b21.launch" /> 
+
+
+</launch>

@@ -1,0 +1,12 @@
+This is the 'examples' directory.
+
+Start by reviewing Example 1 (ex1). It documents the basic structure of a WAM
+program. Later examples build on ex1's structure, but their comments serve to
+highlight the particular features being presented instead of repeating the 
+description of the program structure.
+
+NOTE: Example 6 is planned, but not written yet. Do not worry
+about it.
+
+Happy coding!
+

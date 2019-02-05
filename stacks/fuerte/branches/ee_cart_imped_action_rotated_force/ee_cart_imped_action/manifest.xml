@@ -1,0 +1,26 @@
+<package>
+  <description brief="">
+
+     An action server and interface for the ee_cart_imped_control package.  The EECartImped Controller should always be accessed through this action.
+
+  </description>
+  <author>Jenny Barry, Mario Bollini, and Huan Liu</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/ee_cart_imped_action</url>
+  <depend package="actionlib"/>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="roslib"/>
+  <depend package="std_msgs"/>
+  <depend package="actionlib_msgs"/>
+  <depend package="ee_cart_imped_msgs"/>
+  <depend package="tf"/>
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -lee_cart_action_lib"/>
+    <rosdoc config="rosdoc.yaml"/>
+  </export>
+
+</package>
+
+

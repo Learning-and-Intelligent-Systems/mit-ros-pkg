@@ -1,0 +1,17 @@
+<stack>
+  <description brief="table_wiping">table_wiping</description>
+  <author>Maintained by Jennifer Lynn Barry32-G585</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/table_wiping</url>
+  <depend stack="common" /> <!-- actionlib -->
+  <depend stack="common_msgs" /> <!-- actionlib_msgs, geometry_msgs -->
+  <depend stack="ee_cart_imped" /> <!-- ee_cart_imped_action -->
+  <depend stack="geometry" /> <!-- tf -->
+  <depend stack="pr2_ethercat_drivers" /> <!-- fingertip_pressure -->
+  <depend stack="pr2_object_manipulation" /> <!-- pr2_gripper_sensor_action -->
+  <depend stack="ros" /> <!-- rospy, roscpp -->
+  <depend stack="sound_drivers" /> <!-- sound_play -->
+  <depend stack="tabletop_object_perception" /> <!-- tabletop_object_detector -->
+
+</stack>

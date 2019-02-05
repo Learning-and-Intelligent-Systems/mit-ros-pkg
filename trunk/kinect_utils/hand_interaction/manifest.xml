@@ -1,0 +1,23 @@
+<package>
+  <description brief="hand_interaction">
+
+     hand_interaction
+
+  </description>
+  <author>Garratt</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/hand_interaction</url>
+  <depend package="eigen"/>
+  <depend package="tf"/>
+  <depend package="roscpp"/>
+  <depend package="nnn"/>
+  <depend package="nite"/>
+  <depend package="skeletal_tracker"/>
+  <depend package="parallel_tools"/>
+  <depend package="pcl_tools"/>
+  <depend package="body_msgs"/>
+
+</package>
+
+

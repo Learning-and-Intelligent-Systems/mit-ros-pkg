@@ -1,0 +1,3 @@
+Min and Max Y values for reasonably effective wiping
+
+-.25	.51

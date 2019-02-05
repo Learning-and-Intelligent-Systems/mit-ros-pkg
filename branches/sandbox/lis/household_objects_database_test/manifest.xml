@@ -1,0 +1,26 @@
+<package>
+  <description brief="household_objects_database_test">
+
+     household_objects_database_test
+
+  </description>
+  <author>Huan Liu</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/household_objects_database_test</url>
+
+  <depend package="database_interface"/>
+  <depend package="roscpp"/>
+  <depend package="household_objects_database_msgs"/>
+  <depend package="object_manipulation_msgs"/>
+
+  <!-- for the register script -->
+  <depend package="rospy"/>
+  <depend package="rosgraph"/>
+  <depend package="roslib"/>
+  <depend package="rosservice"/>
+
+
+</package>
+
+

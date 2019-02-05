@@ -1,0 +1,25 @@
+<package>
+  <description brief="kinect_tools">
+
+     kinect_tools
+
+  </description>
+  <author>garratt</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/kinect_tools</url>
+  <depend package="pcl"/>
+  <depend package="pcl_tools"/>
+  <depend package="eigen3"/>
+  <depend package="nnn"/>
+<!--  <depend package="object_survey"/> -->
+  <depend package="parallel_tools"/>
+  <depend package="tf"/>
+  <depend package="sensor_msgs"/>
+  <depend package="geometry_msgs"/>
+  <depend package="mapping_msgs"/>
+  <depend package="roscpp"/>
+
+</package>
+
+

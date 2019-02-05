@@ -1,0 +1,18 @@
+<package>
+  <description brief="simple_arm_controller">
+
+     simple_arm_controller
+
+  </description>
+  <author>garratt</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/simple_arm_controller</url>
+  <depend package="actionlib"/>
+  <depend package="pr2_controllers_msgs"/>
+  <depend package="trajectory_msgs"/>
+  <depend package="move_arm_msgs"/>
+
+</package>
+
+

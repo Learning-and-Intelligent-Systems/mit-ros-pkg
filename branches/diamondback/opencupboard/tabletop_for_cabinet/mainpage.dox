@@ -1,0 +1,25 @@
+/**
+\mainpage
+\htmlinclude manifest.html
+
+The tabletop_for_cabinet package detects and publishes a handle on a cabinet door. The type of handle (vertical or horizontal, top or bot, left or right) can be specified as parameters. The pose of the cluster on the cabinet door that is most likely to be the handle is returned as the handle, but alternatives are also returned, in case the first handle was wrong. 
+
+\section codeapi Code API
+
+Classes:
+- \b tabletop_for_cabinet::src::door_processing_server.cpp
+- \b tabletop_for_cabinet::src::object_processing_server.cpp
+
+<!--
+Provide links to specific auto-generated API documentation within your
+package that is of particular interest to a reader. Doxygen will
+document pretty much every part of your code, so do your best here to
+point the reader to the actual API.
+
+If your codebase is fairly large or has different sets of APIs, you
+should use the doxygen 'group' tag to keep these APIs together. For
+example, the roscpp documentation has 'libros' group.
+-->
+
+
+*/

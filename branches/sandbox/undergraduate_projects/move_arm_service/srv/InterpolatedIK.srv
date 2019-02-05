@@ -1,0 +1,9 @@
+geometry_msgs/PoseStamped end_pose
+geometry_msgs/PoseStamped start_pose
+string arm
+motion_planning_msgs/OrderedCollisionOperations ordered_collision_operations
+motion_planning_msgs/AllowedContactSpecification[] allowed_contacts
+
+---
+
+motion_planning_msgs/ArmNavigationErrorCodes error_code

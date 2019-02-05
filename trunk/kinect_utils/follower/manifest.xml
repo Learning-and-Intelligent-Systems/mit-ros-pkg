@@ -1,0 +1,22 @@
+<package>
+  <description brief="follower">
+
+     follower
+
+  </description>
+  <author>Garratt</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/follower</url>
+  <depend package="pcl_tools"/>
+  <depend package="eigen"/>
+  <depend package="tf"/>
+  <depend package="nnn"/>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="nav_msgs"/>
+
+
+</package>
+
+

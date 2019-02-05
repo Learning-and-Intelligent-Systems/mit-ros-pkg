@@ -1,0 +1,19 @@
+<launch>
+  <node name="checkerboard_pose_server" pkg="checkerboard_pose" type="cb_detector.py" output="screen">
+    <remap from="image_stream" to="/wide_stereo/right/image_rect"/>
+    <remap from="camera_info" to="/wide_stereo/right/camera_info"/>
+    <param name="corners_x" value="6"/> <!--6-->
+    <param name="corners_y" value="7"/> <!--7-->
+    <param name="spacing_x" value="0.108"/> <!--0.108-->
+    <param name="spacing_y" value="0.108"/> <!--0.108-->
+    <param name="publish_period" value="0"/>
+  </node>
+  <node name="target_nav" pkg="target_nav" type="loc_server.py" output="screen" ns="target_nav">
+    <param name="corners_x" value="6" type="double"/> <!--6-->
+    <param name="corners_y" value="7" type="double"/> <!--7-->
+    <param name="spacing_x" value="0.108" type="double"/> <!--0.108-->
+    <param name="spacing_y" value="0.108" type="double"/> <!--0.108-->
+  </node>
+
+  <!--<include file="$(find pr2_teleop)/teleop_joystick.launch"/>-->
+</launch>

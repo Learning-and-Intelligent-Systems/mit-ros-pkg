@@ -1,0 +1,33 @@
+<package>
+  <description brief="kinect_joy">
+
+     kinect_joy
+
+  </description>
+  <author>garratt</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/kinect_joy</url>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="roscpp" />
+  <depend package="actionlib" />
+  <depend package="actionlib_msgs" />
+  <depend package="geometry_msgs" />
+  <depend package="sensor_msgs" />
+  <depend package="pr2_msgs" />
+  <depend package="pr2_controllers_msgs" />
+  <depend package="pr2_controller_manager" />
+  <depend package="pr2_mechanism_msgs" />
+  <depend package="kinematics_msgs" />
+  <depend package="urdf" />
+  <depend package="ps3joy" />
+  <depend package="pr2_common_action_msgs" />
+  <depend package="polled_camera" />
+  <depend package="body_msgs" />
+  <depend package="eigen3" />
+	
+
+</package>
+
+

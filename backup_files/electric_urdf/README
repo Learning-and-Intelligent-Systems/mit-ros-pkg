@@ -1,0 +1,3 @@
+robot.xml is the file that is used to launch the robot.
+
+By default, it points to robot_uncalibrated.xml, which is generated from pr2.urdf.xacro.  If you make changes to your robot (e.g. removing arms, adding sensors), or calibrate the robot, the recommended usage is to put that modified file in this directory (e.g. as /etc/ros/urdf/robot_calibrated.xml) and link to it from /etc/ros/robot.xml so that it will be used by the system

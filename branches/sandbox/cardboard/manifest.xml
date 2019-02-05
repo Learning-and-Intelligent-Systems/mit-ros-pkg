@@ -1,0 +1,27 @@
+<package>
+  <description brief="cardboard">
+
+     cardboard
+
+  </description>
+  <author>Jared Glover</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/cardboard</url>
+  <!--depend package="eigen" /-->
+  <depend package="furniture"/>
+  <depend package="geometry_msgs"/>
+  <depend package="pcl"/>
+  <depend package="pcl_ros"/>
+  <!--depend package="pcl_visualization"/-->
+  <depend package="roscpp"/>
+  <depend package="sensor_msgs"/>
+  <depend package="tf"/>
+  <depend package="common_rosdeps" />
+  <depend package="cv_bridge" />
+  <rosdep name="eigen" />
+
+
+</package>
+
+

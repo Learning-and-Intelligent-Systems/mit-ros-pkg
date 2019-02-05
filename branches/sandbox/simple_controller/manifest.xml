@@ -1,0 +1,22 @@
+<package>
+  <description brief="simple_controller">
+
+     simple_controller
+
+  </description>
+  <author>garratt</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/simple_controller</url>
+  <depend package="rospy"/>
+  <depend package="geometry_msgs"/>
+  <depend package="mapping_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="tf"/>
+  <depend package="actionlib"/>
+  <depend package="actionlib_msgs"/>
+  <depend package="pr2_controllers_msgs"/>
+
+</package>
+
+

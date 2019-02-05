@@ -1,0 +1,53 @@
+# Makefile for btclient
+
+# Remove any cached svn credentials
+rm ~/.subversion/auth/svn.simple/*
+
+# Remove the previous libraries
+rm ./lib/libbtwam.a ./lib/libbtsystem.a
+
+cd src/btsystem
+make clean
+
+cd ../btwam
+make clean
+
+cd ../btdiag
+make clean
+make all
+
+cd ../btutil
+make clean
+make
+
+cd ../calibrate
+make clean
+make
+
+# Make each example
+cd ../../examples/ex1-jointposition
+make clean
+make
+
+cd ../ex2-gcomp
+make clean
+make
+
+cd ../ex3-datalogging
+make clean
+make
+
+cd ../ex4-haptics
+make clean
+make
+
+cd ../ex5-simplemove
+make clean
+make
+
+cd ../ex7-serial
+make clean
+make
+
+cd ../../
+

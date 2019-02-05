@@ -1,0 +1,1 @@
+Barrett's normal btdiag program, with a couple added extras (BHand arbitrary command and arm home).  Mostly used for testing Makefiles.  Make sure you change wam.conf to your configuration, and the serial port for your Hand in btdiag.c (e.g., /dev/ttyS0).

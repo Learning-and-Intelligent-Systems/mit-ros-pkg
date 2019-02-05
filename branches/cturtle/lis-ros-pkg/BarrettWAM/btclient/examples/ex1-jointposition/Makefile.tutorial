@@ -1,0 +1,124 @@
+#  This is by far the best introduction to Makefiles I have come across.
+#  I hope this is helpful. -Brian Zenowich, Barrett Technology
+#
+#  Makefile:  A Sample Makefile for Project 1
+#
+#  Authors:  Susan Mitchell, James Kukla
+#  Date: 2/4/2000
+#
+#  General Discussion:
+#  ------------------
+#  	Included is a little bit of makefile instruction for your 
+#  edification. "make" is a command that helps developers automate compiling
+#  projects with multiple files. 
+#
+#
+#  Comments:
+#  --------
+#  	Comments begin at the # and extend to the end of the line.
+#  Comments should not appear within rules (for readability's sake), 
+#  but can be included if necessary.
+#
+#
+#  Filename:
+#  --------
+#	Convention says that your file should be called "Makefile" or
+#  "makefile".  make assumes that the makfile name is one of these as
+#  a default.  If you name your file "makefile" or "Makefile", you can 
+#  use the makefile just by typing "make".  make takes an option argument 
+#  "-f <filename>" where you can explicitly name your makefile.
+#
+#
+#  How "make" Works:
+#  ----------------
+#  	Makefiles are built up of RULES which consist of four (4) distinct
+#  parts:
+#		1.  The TARGET  
+#		2.  The DEPENDENCY LIST
+#		3.  A single TAB character (this is REALLY important)
+#		4.  An ACTION
+#
+#
+#  Rules are in the following form.
+#
+#       <TARGET>: <DEPENDENCY LIST>
+#              <ACTION>
+#       ^^^^^^^---  This is a TAB not SPACES!  
+#
+#  !!!  Doing a cut and paste of this file will almost undoubtedly 
+#  !!!  change it to spaces.  You'll need to go into it and change 
+#  !!!  them back!
+#
+#  The way rules work is as follows.  On the command line you
+#  say "make <TARGET>".  For example, "make Project1" tells the 
+#  make program to find the rule for "Project1" and execute it.
+#
+#	At this point, make follows the following algorithm:
+#
+#		for each dependency in the dependency list
+#			run make with that as the target.
+#			if that generated errors
+#				stop and exit
+#
+#  So when I say "make Project1", make will first go and run
+#  "make Project1.o", "make Inventory.o", "make Cd.o" and "make
+#  Date.o".  Once each of these rules exits successfully, it 
+#  will continue onto the next one in its list.
+#
+#  	In this way, from a single command, make will build your 
+#  entire program.  The way make runs creates a "tree recursive"
+#  structure.  
+#
+#
+#  Structure of the Makefile:
+#  -------------------------
+# 	Makefiles are essentially structureless.  They are a mishmash
+#  of rules that you need to organize for yourself.  The only exception
+#  is that the first rule in the makefile is called the "default"
+#  rule.  If you just type "make" in the directory with this
+#  makefile, it's the same as saying "make Project1" since "Project1"
+#  is the target for the default rule.  
+#
+# -------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------
+#  Default rule to build the final executable (Project1)
+# -------------------------------------------------------------------------
+Project1: Project1.o Inventory.o Cd.o Date.o
+	g++ -ansi -Wall  -o proj1 Project1.o Inventory.o Cd.o Date.o
+
+
+# -------------------------------------------------------------------------
+#  Below are rules to build each object (.o) file.  Note that each object file
+#  has a specific list of files that it "needs" to be there in order 
+#  to be compiled.
+# -------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------
+#  This rule says that Project1.o depends on Project1.c and Project1.h
+#  and explains that to "make" Project1.o you must run "g++ -ansi -Wall -c Project1.c"
+# -------------------------------------------------------------------------
+Project1.o: Project1.c Inventory.h
+	g++ -ansi -Wall  -c Project1.c
+
+# -------------------------------------------------------------------------
+#  This rule says that Inventory.o depends on Inventory.c, Inventory.h 
+#  and Cd.h and is "made" by running "g++ -ansi -Wall -c Inventory.c"
+# -------------------------------------------------------------------------
+Inventory.o: Inventory.c Inventory.h Cd.h
+	g++ -ansi -Wall  -c Inventory.c
+
+# -------------------------------------------------------------------------
+#  This rule says that Cd.o depends on Cd.c, Cd.h, and Date.h
+#  and is "made" by running "g++ -ansi -Wall -c Cd.c"
+# -------------------------------------------------------------------------
+Cd.o: Cd.c Cd.h Date.h
+	g++ -ansi -Wall -c Cd.c
+
+# -------------------------------------------------------------------------
+#  This ruls says that Date.o depends on Date.c and Date.h and is made
+#  by running "	g++ -ansi -Wall -c Date.c"
+# -------------------------------------------------------------------------
+Date.o: Date.c Date.h
+	g++ -ansi -Wall -c Date.c
+

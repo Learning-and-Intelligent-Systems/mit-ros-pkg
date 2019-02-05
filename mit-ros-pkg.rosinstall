@@ -1,0 +1,18 @@
+#- svn:
+#    local-name: mit-ros-pkg-sandbox
+#    uri: https://svn.csail.mit.edu/mit-ros-pkg/branches/sandbox
+- svn:
+    local-name: mit-ros-pkg-pr2-demos
+    uri: https://svn.csail.mit.edu/mit-ros-pkg/branches/pr2_demos
+- svn:
+    local-name: mit-ros-pkg-trunk
+    uri: https://svn.csail.mit.edu/mit-ros-pkg/trunk
+#- svn:
+#    local-name: mit-ros-pkg-cturtle
+#    uri: https://svn.csail.mit.edu/mit-ros-pkg/tags/cturtle
+#- svn:
+#    local-name: mit-ros-pkg-diamondback
+#    uri: https://svn.csail.mit.edu/mit-ros-pkg/tags/diamondback
+#- svn:
+#    local-name: mit-ros-pkg-electric
+#    uri: https://svn.csail.mit.edu/mit-ros-pkg/tags/electric

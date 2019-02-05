@@ -1,0 +1,37 @@
+<package>
+  <description brief="bakebot">
+
+     bakebot
+
+  </description>
+  <author>Mario Bollini</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/bakebot</url>
+  <depend package="pr2_tabletop_manipulation_launch"/>
+  <depend package="pr2_gazebo"/>
+  <depend package="gazebo"/>
+  <depend package="pr2_tuckarm"/>
+  <depend package="robot_state_publisher"/>
+  <depend package="actionlib"/>
+  <depend package="ee_cart_imped_action"/>
+  <depend package="actionlib"/>
+  <depend package="pr2_controllers_msgs"/>
+  <depend package="pr2_common_action_msgs"/>
+  <depend package="pr2_pick_and_place_demos"/>
+  <depend package="pr2_controller_manager"/>
+  <depend package='smach'/>
+  <depend package='smachforward'/>
+  <depend package='opendoors_executive'/>
+  <depend package='rospy'/>
+  <depend package='smach_ros'/>
+  <depend package='sensor_msgs'/>
+  <depend package='opencv2'/>
+  <depend package='cv_bridge'/>
+  <depend package='roscpp'/>
+  <depend package='std_msgs'/>
+  <depend package='image_transport'/>
+  <depend package='sound_play'/>
+</package>
+
+

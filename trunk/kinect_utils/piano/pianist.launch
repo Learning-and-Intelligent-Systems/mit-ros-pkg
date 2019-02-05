@@ -1,0 +1,14 @@
+<launch>
+	
+ <!--	launch kinect sensor -->
+<include file="$(find hand_interaction)/launch/finger_detector.launch"/>
+  
+
+  <!-- run hand detection -->
+  <node pkg="piano" type="pianist" name="pianist"  output="screen"  />
+	
+
+  
+<!--  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find hand_interaction)/fingerdetection.vcg" /> --> 
+  
+</launch>

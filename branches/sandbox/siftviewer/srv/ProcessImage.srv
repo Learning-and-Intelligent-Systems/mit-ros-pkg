@@ -1,0 +1,7 @@
+sensor_msgs/CameraInfo caminfo
+sensor_msgs/Image raw_image
+---
+posedetection_msgs/Feature0D features 
+
+
+

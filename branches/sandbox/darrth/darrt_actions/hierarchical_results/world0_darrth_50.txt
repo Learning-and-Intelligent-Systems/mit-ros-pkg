@@ -1,0 +1,462 @@
+
+WORLD: 0, RESET TIME: 15, DARRT TRIES: 10, FORWARD: True
+TRIAL 1:
+	Planning time: 23.261756897
+	Object planning time: 10.4617099762
+	Subgoal times:
+		0: 0.409445077181
+		1: 1.92118740082
+		2: 2.14730525017
+		TOTAL: 4.47793772817
+	Total time: 14.9396477044
+TRIAL 2:
+	Planning time: 12.2796630859
+	Object planning time: 1.96586155891
+	Subgoal times:
+		0: 0.922706961632
+		1: 0.870105922222
+		2: 1.21386122704
+		TOTAL: 3.00667411089
+	Total time: 4.9725356698
+TRIAL 3:
+	Planning time: 18.3783721924
+	Object planning time: 0.782510340214
+	Subgoal times:
+		0: 0.843990504742
+		1: 3.04064011574
+		2: 5.98822975159
+		TOTAL: 9.87286037207
+	Total time: 10.6553707123
+TRIAL 4:
+	Planning time: 18.6994800568
+	Object planning time: 2.06237792969
+	Subgoal times:
+		0: 0.76418620348
+		1: 2.5961356163
+		2: 3.37369966507
+		TOTAL: 6.73402148485
+	Total time: 8.79639941454
+TRIAL 5:
+	Planning time: 30.3671531677
+	Object planning time: 6.86027050018
+	Subgoal times:
+		0: 0.665921568871
+		1: 7.49407243729
+		2: 5.56088781357
+		TOTAL: 13.7208818197
+	Total time: 20.5811523199
+TRIAL 6:
+	Planning time: 23.7132968903
+	Object planning time: 6.46252155304
+	Subgoal times:
+		0: 0.926013112068
+		1: 4.31256484985
+		2: 4.17368412018
+		TOTAL: 9.4122620821
+	Total time: 15.8747836351
+TRIAL 7:
+	Planning time: 23.2146663666
+	Object planning time: 6.39540910721
+	Subgoal times:
+		0: 0.541640102863
+		1: 6.63752222061
+		2: 2.40093445778
+		TOTAL: 9.58009678125
+	Total time: 15.9755058885
+TRIAL 8:
+	Planning time: 26.7904949188
+	Object planning time: 4.59946393967
+	Subgoal times:
+		0: 0.767847418785
+		1: 8.35803413391
+		2: 3.01627159119
+		TOTAL: 12.1421531439
+	Total time: 16.7416170835
+TRIAL 9:
+	Planning time: 20.2066669464
+	Object planning time: 9.4693441391
+	Subgoal times:
+		0: 0.332367122173
+		1: 0.978637754917
+		2: 2.38154006004
+		TOTAL: 3.69254493713
+	Total time: 13.1618890762
+TRIAL 10:
+	Planning time: 16.8136043549
+	Object planning time: 2.25348091125
+	Subgoal times:
+		0: 0.367299556732
+		1: 2.87450003624
+		2: 3.22526264191
+		TOTAL: 6.46706223488
+	Total time: 8.72054314613
+TRIAL 11:
+	Planning time: 19.0503807068
+	Object planning time: 4.81361627579
+	Subgoal times:
+		0: 0.45408976078
+		1: 3.54002022743
+		2: 2.61622476578
+		TOTAL: 6.61033475399
+	Total time: 11.4239510298
+TRIAL 12:
+	Planning time: 19.6798038483
+	Object planning time: 3.50070619583
+	Subgoal times:
+		0: 0.661064207554
+		1: 2.42681288719
+		2: 3.57205748558
+		TOTAL: 6.65993458033
+	Total time: 10.1606407762
+TRIAL 13:
+	Planning time: 17.9451370239
+	Object planning time: 5.83118677139
+	Subgoal times:
+		0: 0.485886871815
+		1: 1.79979538918
+		2: 3.01999759674
+		TOTAL: 5.30567985773
+	Total time: 11.1368666291
+TRIAL 14:
+	Planning time: 20.5186901093
+	Object planning time: 1.43705296516
+	Subgoal times:
+		0: 0.347542464733
+		1: 1.89640903473
+		2: 9.63378143311
+		TOTAL: 11.8777329326
+	Total time: 13.3147858977
+TRIAL 15:
+	Planning time: 20.3150253296
+	Object planning time: 1.44160926342
+	Subgoal times:
+		0: 1.29770481586
+		1: 5.56422328949
+		2: 2.51936340332
+		TOTAL: 9.38129150867
+	Total time: 10.8229007721
+TRIAL 16:
+	Planning time: 21.4747390747
+	Object planning time: 5.22336339951
+	Subgoal times:
+		0: 0.272884577513
+		1: 1.08256137371
+		2: 7.6896033287
+		TOTAL: 9.04504927993
+	Total time: 14.2684126794
+TRIAL 17:
+	Planning time: 33.1890945435
+	Object planning time: 9.31901264191
+	Subgoal times:
+		0: 0.322554677725
+		1: 8.07875347137
+		2: 5.78185033798
+		TOTAL: 14.1831584871
+	Total time: 23.502171129
+TRIAL 18:
+	Planning time: 21.4213562012
+	Object planning time: 1.3376159668
+	Subgoal times:
+		0: 1.08666884899
+		1: 5.67778921127
+		2: 4.8196015358
+		TOTAL: 11.5840595961
+	Total time: 12.9216755629
+TRIAL 19:
+	Planning time: 19.5340461731
+	Object planning time: 8.45906352997
+	Subgoal times:
+		0: 0.341397076845
+		1: 1.31148672104
+		2: 2.11834573746
+		TOTAL: 3.77122953534
+	Total time: 12.2302930653
+TRIAL 20:
+	Planning time: 19.2013053894
+	Object planning time: 1.74782061577
+	Subgoal times:
+		0: 0.618975818157
+		1: 2.15227532387
+		2: 4.52877140045
+		TOTAL: 7.30002254248
+	Total time: 9.04784315825
+TRIAL 21:
+	Planning time: 34.6948509216
+	Object planning time: 1.80807673931
+	Subgoal times:
+		0: 1.24746012688
+		1: 5.47319316864
+		2: 16.6940097809
+		TOTAL: 23.4146630764
+	Total time: 25.2227398157
+TRIAL 22:
+	Planning time: 16.3251876831
+	Object planning time: 1.07636320591
+	Subgoal times:
+		0: 0.310067802668
+		1: 2.74662804604
+		2: 2.47224736214
+		TOTAL: 5.52894321084
+	Total time: 6.60530641675
+TRIAL 23:
+	Planning time: 28.3746166229
+	Object planning time: 5.92235279083
+	Subgoal times:
+		0: 0.571357131004
+		1: 5.50557565689
+		2: 6.49032640457
+		TOTAL: 12.5672591925
+	Total time: 18.4896119833
+TRIAL 24:
+	Planning time: 44.8149147034
+	Object planning time: 2.69757699966
+	Subgoal times:
+		0: 0.327765375376
+		1: 10.3063220978
+		2: 23.2400588989
+		TOTAL: 33.8741463721
+	Total time: 36.5717233717
+TRIAL 25:
+	Planning time: 19.5425224304
+	Object planning time: 3.20395684242
+	Subgoal times:
+		0: 1.33500277996
+		1: 4.50138282776
+		2: 2.00289058685
+		TOTAL: 7.83927619457
+	Total time: 11.043233037
+TRIAL 26:
+	Planning time: 20.1493244171
+	Object planning time: 3.87255096436
+	Subgoal times:
+		0: 0.917473852634
+		1: 2.8045835495
+		2: 5.1002831459
+		TOTAL: 8.82234054804
+	Total time: 12.6948915124
+TRIAL 27:
+	Planning time: 20.6191596985
+	Object planning time: 4.8713145256
+	Subgoal times:
+		0: 0.501190662384
+		1: 1.94950675964
+		2: 4.51778650284
+		TOTAL: 6.96848392487
+	Total time: 11.8397984505
+TRIAL 28:
+	Planning time: 17.8727340698
+	Object planning time: 7.53334140778
+	Subgoal times:
+		0: 0.282911002636
+		1: 1.92136788368
+		2: 0.870351672173
+		TOTAL: 3.07463055849
+	Total time: 10.6079719663
+TRIAL 29:
+	Planning time: 17.7161216736
+	Object planning time: 5.37905025482
+	Subgoal times:
+		0: 0.391790151596
+		1: 3.21457457542
+		2: 1.55188584328
+		TOTAL: 5.1582505703
+	Total time: 10.5373008251
+TRIAL 30:
+	Planning time: 24.5991859436
+	Object planning time: 10.0548830032
+	Subgoal times:
+		0: 0.183305338025
+		1: 1.11155092716
+		2: 3.6592695713
+		TOTAL: 4.95412583649
+	Total time: 15.0090088397
+TRIAL 31:
+	Planning time: 14.2017908096
+	Object planning time: 1.24979269505
+	Subgoal times:
+		0: 0.578017950058
+		1: 3.19380068779
+		2: 2.1832253933
+		TOTAL: 5.95504403114
+	Total time: 7.20483672619
+TRIAL 32:
+	Planning time: 36.9877548218
+	Object planning time: 6.48835849762
+	Subgoal times:
+		0: 0.41394841671
+		1: 15.0425739288
+		2: 5.66232061386
+		TOTAL: 21.1188429594
+	Total time: 27.607201457
+TRIAL 33:
+	Planning time: 16.8526573181
+	Object planning time: 2.83692073822
+	Subgoal times:
+		0: 0.40849468112
+		1: 3.87993311882
+		2: 2.55744552612
+		TOTAL: 6.84587332606
+	Total time: 9.68279406428
+TRIAL 34:
+	Planning time: 18.0744438171
+	Object planning time: 2.38711094856
+	Subgoal times:
+		0: 0.61387014389
+		1: 1.79723083973
+		2: 6.32118225098
+		TOTAL: 8.7322832346
+	Total time: 11.1193941832
+TRIAL 35:
+	Planning time: 23.2438545227
+	Object planning time: 4.64411306381
+	Subgoal times:
+		0: 0.308765679598
+		1: 8.71306610107
+		2: 2.38206100464
+		TOTAL: 11.4038927853
+	Total time: 16.0480058491
+TRIAL 36:
+	Planning time: 23.5108222961
+	Object planning time: 5.7619395256
+	Subgoal times:
+		0: 0.260230928659
+		1: 7.26903104782
+		2: 3.22233200073
+		TOTAL: 10.7515939772
+	Total time: 16.5135335028
+TRIAL 37:
+	Planning time: 29.1147499084
+	Object planning time: 8.99743556976
+	Subgoal times:
+		0: 1.45280325413
+		1: 3.37766504288
+		2: 7.83557748795
+		TOTAL: 12.666045785
+	Total time: 21.6634813547
+TRIAL 38:
+	Planning time: 22.4785270691
+	Object planning time: 9.24238204956
+	Subgoal times:
+		0: 0.255365341902
+		1: 2.11490368843
+		2: 3.87726092339
+		TOTAL: 6.24752995372
+	Total time: 15.4899120033
+TRIAL 39:
+	Planning time: 20.4174957275
+	Object planning time: 3.35985398293
+	Subgoal times:
+		0: 0.467009216547
+		1: 2.69617581367
+		2: 4.82281923294
+		TOTAL: 7.98600426316
+	Total time: 11.3458582461
+TRIAL 40:
+	Planning time: 20.7972488403
+	Object planning time: 0.941291093826
+	Subgoal times:
+		0: 0.539797842503
+		1: 4.2650809288
+		2: 5.3052854538
+		TOTAL: 10.1101642251
+	Total time: 11.0514553189
+TRIAL 41:
+	Planning time: 20.9335803986
+	Object planning time: 9.41616725922
+	Subgoal times:
+		0: 0.811695098877
+		1: 1.0495672226
+		2: 2.40025782585
+		TOTAL: 4.26152014732
+	Total time: 13.6776874065
+TRIAL 42:
+	Planning time: 17.4254970551
+	Object planning time: 3.5626039505
+	Subgoal times:
+		0: 0.317313760519
+		1: 2.9894220829
+		2: 2.86211299896
+		TOTAL: 6.16884884238
+	Total time: 9.73145279288
+TRIAL 43:
+	Planning time: 17.2208366394
+	Object planning time: 1.19689750671
+	Subgoal times:
+		0: 0.865286827087
+		1: 5.18127775192
+		2: 2.61647510529
+		TOTAL: 8.6630396843
+	Total time: 9.85993719101
+TRIAL 44:
+	Planning time: 23.9487438202
+	Object planning time: 10.4049892426
+	Subgoal times:
+		0: 0.388039410114
+		1: 2.33235001564
+		2: 1.34909296036
+		TOTAL: 4.06948238611
+	Total time: 14.4744716287
+TRIAL 45:
+	Planning time: 22.2889308929
+	Object planning time: 10.0436630249
+	Subgoal times:
+		0: 0.624441325665
+		1: 3.4790430069
+		2: 0.847238600254
+		TOTAL: 4.95072293282
+	Total time: 14.9943859577
+TRIAL 46:
+	Planning time: 19.4817695618
+	Object planning time: 3.54005002975
+	Subgoal times:
+		0: 1.54958593845
+		1: 3.94980359077
+		2: 3.04508543015
+		TOTAL: 8.54447495937
+	Total time: 12.0845249891
+TRIAL 47:
+	Planning time: 20.6726036072
+	Object planning time: 1.09004688263
+	Subgoal times:
+		0: 0.406639426947
+		1: 6.50149297714
+		2: 2.47482895851
+		TOTAL: 9.3829613626
+	Total time: 10.4730082452
+TRIAL 48:
+	Planning time: 19.9988555908
+	Object planning time: 5.74388217926
+	Subgoal times:
+		0: 0.315526455641
+		1: 3.12985301018
+		2: 3.30910563469
+		TOTAL: 6.75448510051
+	Total time: 12.4983672798
+TRIAL 49:
+	Planning time: 23.1916694641
+	Object planning time: 2.46043276787
+	Subgoal times:
+		0: 0.741834402084
+		1: 1.54007804394
+		2: 11.8325557709
+		TOTAL: 14.1144682169
+	Total time: 16.5749009848
+TRIAL 50:
+	Planning time: 30.3095779419
+	Object planning time: 8.11016559601
+	Subgoal times:
+		0: 0.689721226692
+		1: 4.55800199509
+		2: 7.72222042084
+		TOTAL: 12.9699436426
+	Total time: 21.0801092386
+TOTALS: TRIALS: 50, AVERAGE TIME: 22.2382952309, AVERAGE TOTAL TIME: 14.0209177998 AVERAGE OBJECT TIME: 4.84643121839, AVERAGE SUBGOAL TIMES:
+	0: 0.610137965977
+	1: 3.98417127609
+	2: 4.58017733932
+	TOTAL: 9.17448658139
+Saving to file hierarchical_results/plateh_22957.493.pck
+
+Additional object time:
+
+NONE

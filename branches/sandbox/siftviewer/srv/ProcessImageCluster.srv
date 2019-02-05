@@ -1,0 +1,8 @@
+#this service is for processing a bunch of images at once
+sensor_msgs/CameraInfo caminfo
+sensor_msgs/Image[] raw_images
+---
+posedetection_msgs/Feature0D[] features 
+
+
+

@@ -1,0 +1,29 @@
+/**
+\mainpage
+\htmlinclude manifest.html
+
+This controller executes trajectories for force/impedance control of the end effector of a chain of joints.  Each point on the trajectory specifies either a wrench or a stiffness for each Cartesian degree of freedom as well as a Cartesian position and orientation.  For a degree of freedom, if a stiffness is specified, the controller will attempt to reach the position given with that stiffness. If a wrench is specified, the position information is ignored.   The controller linearly interpolates between the position of trajectory points, but not the force/stiffness.
+
+<!-- 
+Provide an overview of your package.
+-->
+
+\section codeapi Code API
+
+Classes:
+- \b ee_cart_imped_control_ns::EECartImpedControlClass : the actual controller class
+
+<!--
+Provide links to specific auto-generated API documentation within your
+package that is of particular interest to a reader. Doxygen will
+document pretty much every part of your code, so do your best here to
+point the reader to the actual API.
+
+If your codebase is fairly large or has different sets of APIs, you
+should use the doxygen 'group' tag to keep these APIs together. For
+example, the roscpp documentation has 'libros' group.
+-->
+
+
+
+*/

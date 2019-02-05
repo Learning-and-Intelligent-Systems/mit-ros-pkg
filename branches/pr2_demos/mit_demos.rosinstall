@@ -1,0 +1,3 @@
+- svn: {local-name: ee_cart_imped, uri: 'https://svn.csail.mit.edu/mit-ros-pkg/trunk/ee_cart_imped'}
+- svn: {local-name: pr2_demos, uri: 'https://svn.csail.mit.edu/mit-ros-pkg/branches/pr2_demos'}
+- svn: {local-name: mit-sandbox, uri: 'https://svn.csail.mit.edu/mit-ros-pkg/branches/sandbox'}

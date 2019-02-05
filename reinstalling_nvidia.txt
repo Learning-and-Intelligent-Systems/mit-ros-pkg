@@ -1,0 +1,18 @@
+Making nvidia drivers work:
+
+Switch to root (sudo bash)
+Turn off X:
+   init 3
+or
+   telinit 3
+or 
+   locate X process and turn it off
+
+Find NVIDIA driver in /root/src (called NVIDIA-Linux...)
+
+sh NVIDIA-Linux...
+
+Accept everything
+EXCEPT DO NOT let NVIDIA configure X for you
+
+reboot

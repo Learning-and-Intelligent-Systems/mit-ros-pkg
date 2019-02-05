@@ -1,0 +1,24 @@
+<package>
+  <description brief="Minority report interface">
+
+     kgui provides a Minority report like interface.  Using hand positions, the user is able to manipulate photos.
+
+  </description>
+  <author>garratt</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/kgui</url>
+  
+  <depend package="body_msgs"/>
+  <depend package="geometry_msgs"/>
+  <depend package="tf"/>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <rosdep name="wxwidgets"/>
+	
+<rosdep name="ImageMagick"/>
+  <rosdep name="xstuff"/>
+  <rosdep name="glut"/>
+</package>
+
+

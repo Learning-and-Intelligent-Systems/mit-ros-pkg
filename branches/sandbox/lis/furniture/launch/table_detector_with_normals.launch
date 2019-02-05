@@ -1,0 +1,19 @@
+<launch>
+
+	<include file="$(find furniture)/launch/snapshotter.launch"/>
+
+	<node pkg="furniture" name="table_detector" type="table_detector_with_normals" respawn="true" output="screen">
+		<remap from="/points" to="tilt_laser_cloud" />
+		<!-- All angle parameters are in radians -->
+		<param name="z_min" value="0.4" />	
+		<param name="z_max" value="1.1" />
+		<param name="k_knn" value="20" />
+		<param name="plane_distance_tolerance" value="0.03" />
+		<param name="plane_angle_tolerance" value="0.087" />
+		<param name="plane_min_size" value="300" />
+		<param name="cluster_min_size" value="300" />
+		<param name="cluster_distance_tolerance" value="0.14" />
+		<param name="normals_angle_tolerance" value="0.25" /> 
+	</node> 
+
+</launch>

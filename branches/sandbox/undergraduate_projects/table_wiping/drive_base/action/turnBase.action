@@ -1,0 +1,9 @@
+#goal definition
+float64 goal_theta
+bool clockwise
+---
+#result definition
+bool success
+---
+#feedback
+float64 turned

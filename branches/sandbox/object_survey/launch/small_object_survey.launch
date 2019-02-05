@@ -1,0 +1,103 @@
+<launch>
+
+	  <!-- set laser tilt rate -->
+  <node pkg="pr2_mechanism_controllers" type="send_periodic_cmd_srv.py" name="laser_tilt_controller_3dnav_params" args="laser_tilt_controller linear 10 .50 .5" />
+  
+  <!-- convert tilt laser scan to pointcloud -->
+  <node pkg="laser_filters" type="scan_to_cloud_filter_chain" output="screen" name="scan_to_cloud_filter_chain_tilt_laser">
+    <remap from="scan" to="tilt_scan"/>
+    <remap from="cloud_filtered" to="tilt_scan_cloud"/>
+    <param name="target_frame" type="string" value="base_link"/>
+    <rosparam command="load" file="$(find object_survey)/config/shadow_filter.yaml" />
+  </node>
+
+  <!-- convert base laser scan to pointcloud -->	
+  <node pkg="laser_filters" type="scan_to_cloud_filter_chain" output="screen" name="scan_to_cloud_filter_chain_base_laser">
+    <remap from="scan" to="base_scan"/>
+    <remap from="cloud_filtered" to="base_scan_cloud"/>
+    <param name="target_frame" type="string" value="base_link"/>
+    <rosparam command="load" file="$(find pr2_arm_navigation_tutorials)/config/shadow_filter.yaml" />
+  </node>
+
+	
+  <!--localizing server - uses checkerboards -->
+	<node name="loc_server" pkg="target_nav" type="fake_loc_server.py" output="screen" />
+
+<!--
+  <node name="checkerboard_pose_server" pkg="checkerboard_pose" type="cb_detector.py" output="screen">
+    <remap from="image_stream" to="/wide_stereo/right/image_rect"/>
+    <remap from="camera_info" to="/wide_stereo/right/camera_info"/>
+    <param name="corners_x" value="6"/> 
+    <param name="corners_y" value="7"/> 
+    <param name="spacing_x" value="0.108"/> 
+    <param name="spacing_y" value="0.108"/> 
+    <param name="publish_period" value="0"/>
+  </node>
+  <node name="target_nav" pkg="target_nav" type="loc_server.py"  ns="target_nav">
+    <param name="corners_x" value="6" type="double"/> 
+    <param name="corners_y" value="7" type="double"/> 
+    <param name="spacing_x" value="0.108" type="double"/> 
+    <param name="spacing_y" value="0.108" type="double"/> 
+  </node>
+  -->	
+  <!-- Point Cloud services: 
+	  *cluster_cloud:   segments pointcloud into clusters (also returns centroids)
+	  *nearest_cluster: segments pointcloud, returns nearest cluster to a point
+	  *combine_clouds:  combines 2 point clouds, returns combined cloud and pose of centroid
+	   -->
+	<node name="cloud_services" pkg="furniture_ops" type="cluster_furniture" output="screen" >
+		<param name="world_frame" value="/world"/>
+    </node>
+	
+  <!--planning services: 
+	  *plan_observation_path:  plan a path around the perimeter of an object
+	  *plan_circle: plans a simple circle
+	-->	  
+	<node name="circle_planner" pkg="furniture_ops" type="circle_planner" output="screen"  >
+		<param name="world_frame" value="/world"/>
+    </node>
+  
+  <!--action server for moving base-->
+  <node name="simple_mover" type="move_action_server" pkg="simple_controller" output="screen">
+    <param name="world_frame" value="/world"/>
+    <param name="position_tolerance" value=".05"/>
+    <param name="angular_tolerance" value=".05"/>
+    <param name="max_speed" value="0.5"/>
+    <param name="max_angular_speed" value="0.3"/>
+  </node>
+	  
+  <!--Point cloud assembler: makes clouds from tilting scan   -->
+  <node name="my_assembler" type="point_cloud_assembler" pkg="laser_assembler"  output="screen">
+    <remap from="cloud" to="/narrow_stereo_textured/points"/>
+    <param name="max_clouds" type="int" value="4000" />
+    <param name="fixed_frame" type="string" value="/world" />
+  </node>
+	
+	
+  <!--prosilia camera -->
+   <node name="prosilica_driver" pkg="prosilica_camera" type="prosilica_node" output="screen">
+    <param name="ip_address" type="str" value="10.68.0.20"/>
+    <param name="trigger_mode" type="str" value="polled"/>
+    <remap from="camera" to="prosilica" />
+    <rosparam command="load" file="$(find prosilica_camera)/cam_settings.yaml" />
+  </node>
+
+  <!--prosilia camera processor -->
+  <group ns="/prosilica/polled_camera">
+  <node pkg="image_proc" type="image_proc" respawn="false" name="prosilica_image_proc" >
+  </node>
+  </group>
+	
+  <!--get sift features-->
+	  
+  <!--object survey node-->
+
+  <node name="surveyer" pkg="object_survey" type="surveyer" output="screen">
+    <param name="world_frame" value="/world"/>
+    <param name="time_per_scan" value="1.0"/>
+    <param name="radians_per_scan" value=".2"/>
+    <param name="path_radius" value=".50"/>
+    <param name="publish_period" value="0"/>
+    <param name="circle_path" value="false"/>
+  </node>
+</launch>

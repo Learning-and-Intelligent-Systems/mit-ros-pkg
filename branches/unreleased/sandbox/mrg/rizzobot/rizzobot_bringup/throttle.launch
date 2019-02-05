@@ -1,0 +1,5 @@
+<launch>
+<node name="$(anon camera_throttle)" pkg="topic_tools" type="throttle" args="messages /camera/rgb/image_mono 1.0 /camera_throttled" />
+<node name="$(anon scan_throttle)" pkg="topic_tools" type="throttle" args="messages /narrow_scan 1.0 /narrow_scan_throttled" />
+</launch>
+

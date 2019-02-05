@@ -1,0 +1,27 @@
+<launch>
+
+	  <!-- set laser tilt rate -->
+  <node pkg="pr2_mechanism_controllers" type="send_periodic_cmd_srv.py" name="laser_tilt_controller_3dnav_params" args="laser_tilt_controller linear 15 1.0 .5" />
+  
+  <!-- convert tilt laser scan to pointcloud -->
+  <node pkg="laser_filters" type="scan_to_cloud_filter_chain" output="screen" name="scan_to_cloud_filter_chain_tilt_laser">
+    <remap from="scan" to="tilt_scan"/>
+    <remap from="cloud_filtered" to="tilt_scan_cloud"/>
+    <param name="target_frame" type="string" value="base_link"/>
+    <rosparam command="load" file="$(find object_survey)/config/shadow_filter.yaml" />
+  </node>
+
+	<node name="cloud_aligner" pkg="furniture_ops" type="align_clouds" output="screen" />
+	
+
+  
+	  
+  <!--Point cloud assembler: makes clouds from tilting scan   -->
+  <node name="my_assembler" type="point_cloud_assembler" pkg="laser_assembler"  output="screen">
+    <remap from="cloud" to="/tilt_scan_cloud"/>
+    <param name="max_clouds" type="int" value="4000" />
+    <param name="fixed_frame" type="string" value="/odom_combined" />
+  </node>
+	
+
+</launch>

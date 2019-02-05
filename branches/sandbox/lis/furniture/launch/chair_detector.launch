@@ -1,0 +1,10 @@
+<launch>
+
+	<node pkg="furniture" name="chair_detector_standalone" type="chair_detector_standalone" respawn="true" output="screen">
+
+		<remap from="/pc1" to="/tilt_laser_cloud" />
+		<remap from="/pc2" to="/camera/rgb/points" />
+		<!-- xxxxxx -->
+	</node>
+
+</launch>

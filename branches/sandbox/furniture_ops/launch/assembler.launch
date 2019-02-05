@@ -1,0 +1,21 @@
+<launch>
+  <node type="point_cloud_assembler" pkg="laser_assembler" name="my_assembler">
+    <remap from="cloud" to="/tilt_scan_shadow_filtered"/>
+    <param name="max_clouds" type="int" value="4000" />
+    <param name="fixed_frame" type="string" value="/odom_combined" />
+  </node>
+  
+  
+  
+  <!--after we assemble a big cloud, convert it into pointcloud2-->
+ <!--  <node type="point_cloud_converter" pkg="point_cloud_converter" name="big_cloud_converter">-->
+ <!--    <remap from="points_in" to="bigcloud"/>-->
+ <!--    <remap from="points2_out" to="bigcloud2"/>-->
+ <!--  </node>-->
+  
+  
+  
+  
+</launch>
+
+

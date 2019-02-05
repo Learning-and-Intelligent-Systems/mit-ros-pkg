@@ -1,0 +1,7 @@
+string event_type
+string event_action
+string result
+string annotation
+time event_time
+---
+int8 status

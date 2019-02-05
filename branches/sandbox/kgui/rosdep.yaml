@@ -1,0 +1,8 @@
+xstuff:
+  ubuntu: libxi-dev libxmu-dev
+
+glut: 
+  ubuntu: libglut3-dev
+  
+ImageMagick: 
+  ubuntu: libmagick++-dev

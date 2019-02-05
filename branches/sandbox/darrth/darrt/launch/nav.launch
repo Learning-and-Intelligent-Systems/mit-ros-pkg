@@ -1,0 +1,41 @@
+<launch>
+  <arg name="map_suffix"/>
+
+  <!-- service that re-publishes AMCL poses so that a recent pose is available whenever -->
+  <node pkg="pr2_python" name="posegossip" type="posegossip.py"/>
+
+
+  <node pkg="topic_tools" type="throttle" name="throttle_joint_states" args="messages joint_states 4.0"/>
+
+  <!-- launch move_base with sbpl_3dnav_planner as a plugin -->
+  <node pkg="move_base" type="move_base" name="move_base" output="screen" >
+    <param name="base_global_planner" value="Sbpl3DNavPlanner"/>
+    <rosparam file="$(find sbpl_full_body_planner)/config/pr2_both_arms_$(arg map_suffix).yaml" command="load"/>
+    <rosparam file="$(find sbpl_full_body_planner)/config/pr2_body.yaml" command="load"/>
+    
+    <param name="planner/motion_primitive_file" value="$(find sbpl_full_body_planner)/config/pr2-32.mprim"/>
+    <param name="planner/base_motion_primitive_file" value="$(find sbpl_full_body_planner)/config/full_body_base.mprim"/>
+    <param name="planner/left_arm_description_file" value="$(find sbpl_arm_planner)/config/pr2_left_arm.cfg"/>
+    <param name="planner/right_arm_description_file" value="$(find sbpl_arm_planner)/config/pr2_right_arm.cfg"/>
+
+    <param name="minimum_working_distance" value="0.3"/>
+    <param name="maximum_working_distance" value="0.7"/>
+    <param name="yaw_steps" value="16"/>
+    <param name="radii_steps" value="10"/>
+   
+    <!-- For SBPL3DNavPlanner -->
+    <remap from="joint_states" to="joint_states_throttle" />
+
+    <remap from="cmd_vel" to="base_controller/command"/>
+    <remap from="collision_map_occ" to="collision_map_out"/>
+    
+    <rosparam file="$(find sbpl_3dnav_planner)/config/sbpl_global_params.yaml" command="load"/>
+    <rosparam file="$(find sbpl_3dnav_planner)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find sbpl_3dnav_planner)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find sbpl_3dnav_planner)/config/local_costmap_params_close.yaml" command="load" />
+    <rosparam file="$(find sbpl_3dnav_planner)/config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find sbpl_3dnav_planner)/config/base_local_planner_trajectory.yaml" command="load" />
+    <rosparam file="$(find sbpl_3dnav_planner)/config/base_local_planner_poses.yaml" command="load" />
+  </node>
+
+</launch>

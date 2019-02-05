@@ -1,0 +1,4 @@
+int32 object_index
+---
+Header header
+geometry_msgs/Pose[] detections

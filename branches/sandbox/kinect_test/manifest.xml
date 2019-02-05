@@ -1,0 +1,19 @@
+<package>
+  <description brief="kinect_test">
+
+     kinect_test
+
+  </description>
+  <author></author>
+  <license></license>
+  <review status="unreviewed" notes=""/>
+  <url></url>
+  <depend package="rospy"/>
+  <depend package="sensor_msgs"/>
+  <depend package="opencv2"/>
+  <depend package="cv_bridge"/>
+  <depend package="rosbag"/>
+  <depend package="tf"/>
+  <depend package="actionlib"/>
+  <depend package="pcl"/>
+</package>

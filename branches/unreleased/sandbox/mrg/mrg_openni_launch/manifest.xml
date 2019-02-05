@@ -1,0 +1,10 @@
+<package>
+  <description brief="mrg_openni_launch">
+     mrg_openni_launch: launch files for the openni driver.
+  </description>
+  <author>Hordur Johannsson</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url></url>
+</package>
+

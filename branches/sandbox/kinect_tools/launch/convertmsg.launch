@@ -1,0 +1,15 @@
+<launch>
+
+	  <!-- play the bag file 
+  <node pkg="rosbag" type="play" name="bagout" args="-r .5 /home/garratt/logs/kinecthome2_2010-11-21-21-20-06.bag" />
+  -->
+  <!-- convert it to the different type of message -->
+  <node pkg="kinect_tools" type="kinectconvert" name="converter"  output="screen"  />
+  
+  <!-- throttle it for easy viewing-->
+  <node pkg="topic_tools" type="throttle" name="throttler" args="messages /kinect/cloud .30 throttledcloud"  output="screen"  />
+  
+  
+  
+  
+</launch>

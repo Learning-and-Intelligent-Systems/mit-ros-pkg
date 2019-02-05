@@ -1,0 +1,6 @@
+int32 object_index
+float32[] polygon_x
+float32[] polygon_y
+---
+Header header
+geometry_msgs/Pose[] detections

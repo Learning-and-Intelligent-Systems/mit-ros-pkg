@@ -1,0 +1,18 @@
+<launch>
+
+<!--  <arg name="map_file" default="$(find b21)/maps/stata_2nd_floor_kmcl.yaml"/>-->
+
+  <!-- Run the map server -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find b21)/maps/stata_2nd_floor_kmcl.pgm 0.05" />
+
+  <!--- Run AMCL -->
+<!--  <include file="$(find b21)/config_kmcl/amcl_b21.launch" /> -->
+
+  <!--- Run KMCL LCM2ROS Translator -->
+<!--  <node name="lcm2ros" pkg="lcm2ros" type="lcm2ros" args=""/>-->
+
+  <!--- Run Move Base and Robot Pose EKF -->
+  <include file="$(find b21)/config_kmcl/move_base_b21.launch" /> 
+
+
+</launch>

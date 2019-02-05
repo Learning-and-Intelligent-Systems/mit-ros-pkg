@@ -1,0 +1,15 @@
+collision_space:
+  reference_frame: map
+  resolution: 0.02
+  collision_map_topic: collision_map_occ    #ignored
+
+  occupancy_grid:
+    origin_x: -10
+    origin_y: -10
+    origin_z: 0.0
+    size_x: 20
+    size_y: 20
+    size_z: 3.0
+
+reference_frame: map
+use_collision_map_from_sensors: false

@@ -1,0 +1,12 @@
+<kinbody name="rectangular-table">
+  <body type="dynamic">
+    <mass type="mimicgeom">
+      <density> 500 </density>
+    </mass>
+    <geom type="box">
+      <diffusecolor>0 0 1</diffusecolor>
+      <extents> .1075 .0975 .0715 </extents>
+      <translation> 0 0 0 </translation>
+    </geom>
+  </body>
+</kinbody>

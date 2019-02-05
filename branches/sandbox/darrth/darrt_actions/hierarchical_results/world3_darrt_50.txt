@@ -1,0 +1,2260 @@
+[INFO] [WallTime: 1347573124.491813] [0.000000] Waiting for collider node reset service
+[INFO] [WallTime: 1347573124.494767] [0.000000] Waiting for get robot state service
+[INFO] [WallTime: 1347573124.506512] [0.000000] Frame map is world frame and base_footprint is robot root frame
+[INFO] [WallTime: 1347573124.507028] [0.000000] Robot state client created.
+[INFO] [WallTime: 1347573124.507552] [0.000000] Waiting for get planning scene service
+[INFO] [WallTime: 1347573124.553409] [9619.669000] World interface initialized
+[INFO] [WallTime: 1347573124.553752] [9619.669000] Waiting for planning scene service
+[INFO] [WallTime: 1347573124.555878] [9619.669000] Waiting for get robot state service
+[INFO] [WallTime: 1347573124.558992] [9619.680000] Waiting for state transformation service
+[INFO] [WallTime: 1347573124.560948] [9619.680000] Ready to transform states!
+[INFO] [WallTime: 1347573126.553374] [9621.347000] Frame map is world frame and base_footprint is robot root frame
+[INFO] [WallTime: 1347573126.553785] [9621.347000] Planning scene interface created
+[INFO] [WallTime: 1347573126.560234] [9621.365000] Initializing ArmMoverWorker for arm: right_arm
+[INFO] [WallTime: 1347573126.561815] [9621.365000] Waiting for collider node reset service
+[INFO] [WallTime: 1347573126.563018] [9621.365000] Initializing ArmMoverWorker for arm: left_arm
+[INFO] [WallTime: 1347573126.564794] [9621.365000] Waiting for collider node reset service
+[INFO] [WallTime: 1347573126.565272] [9621.365000] Initializing ArmMoverWorker for arm: both
+[INFO] [WallTime: 1347573126.566690] [9621.365000] Creating arm planner...
+[INFO] [WallTime: 1347573126.567085] [9621.365000] Waiting for collider node reset service
+[INFO] [WallTime: 1347573126.571624] [9621.365000] Waiting for get robot state service
+[INFO] [WallTime: 1347573126.574136] [9621.365000] Waiting for get robot state service
+[INFO] [WallTime: 1347573126.583987] [9621.380000] Waiting for get robot state service
+[INFO] [WallTime: 1347573126.591297] [9621.393000] Frame map is world frame and base_footprint is robot root frame
+[INFO] [WallTime: 1347573126.591831] [9621.393000] Robot state client created.
+[INFO] [WallTime: 1347573126.592308] [9621.393000] Waiting for get planning scene service
+[INFO] [WallTime: 1347573126.593783] [9621.393000] Frame map is world frame and base_footprint is robot root frame
+[INFO] [WallTime: 1347573126.594279] [9621.393000] Robot state client created.
+[INFO] [WallTime: 1347573126.595949] [9621.393000] Waiting for get planning scene service
+[INFO] [WallTime: 1347573126.604565] [9621.406000] Frame map is world frame and base_footprint is robot root frame
+[INFO] [WallTime: 1347573126.605016] [9621.406000] Robot state client created.
+[INFO] [WallTime: 1347573126.605518] [9621.406000] Waiting for get planning scene service
+[INFO] [WallTime: 1347573126.651103] [9621.444000] Waiting for kinematics solver info service
+[INFO] [WallTime: 1347573126.663439] [9621.444000] Waiting for state validity service.
+[INFO] [WallTime: 1347573126.679879] [9621.455000] Waiting for state transformation service
+[INFO] [WallTime: 1347573126.686412] [9621.474000] Ready to transform states!
+[INFO] [WallTime: 1347573126.686820] [9621.474000] Waiting for move arm planner
+[INFO] [WallTime: 1347573126.699304] [9621.474000] Waiting for interpolated IK planning service
+[INFO] [WallTime: 1347573126.707706] [9621.487000] Waiting for interpolated IK parameter setting service
+[INFO] [WallTime: 1347573126.718971] [9621.496000] Waiting for trajectory filter with constraints service
+[INFO] [WallTime: 1347573126.730316] [9621.496000] Waiting for collision aware IK service
+[INFO] [WallTime: 1347573126.737082] [9621.509000] Waiting for IK service
+[INFO] [WallTime: 1347573126.744680] [9621.509000] Waiting for FK service
+[INFO] [WallTime: 1347573126.746027] [9621.509000] World interface initialized
+[INFO] [WallTime: 1347573126.755658] [9621.523000] World interface initialized
+[INFO] [WallTime: 1347573126.757704] [9621.523000] World interface initialized
+default database grasp planner
+/objects_database_node/database_grasp_planning
+[INFO] [WallTime: 1347573126.759461] [9621.524000] Waiting for database grasp planner
+[INFO] [WallTime: 1347573126.776618] [9621.554000] Arm planner created
+[INFO] [WallTime: 1347573126.777286] [9621.554000] Creating arm planner...
+[INFO] [WallTime: 1347573126.848552] [9621.612000] Waiting for kinematics solver info service
+[INFO] [WallTime: 1347573126.851048] [9621.612000] Waiting for state validity service.
+[INFO] [WallTime: 1347573126.857099] [9621.625000] Waiting for state transformation service
+[INFO] [WallTime: 1347573126.859739] [9621.625000] Ready to transform states!
+[INFO] [WallTime: 1347573126.860086] [9621.625000] Waiting for move arm planner
+[INFO] [WallTime: 1347573126.862520] [9621.625000] Waiting for interpolated IK planning service
+[INFO] [WallTime: 1347573126.865149] [9621.639000] Waiting for interpolated IK parameter setting service
+[INFO] [WallTime: 1347573126.868019] [9621.639000] Waiting for trajectory filter with constraints service
+[INFO] [WallTime: 1347573126.870836] [9621.639000] Waiting for collision aware IK service
+[INFO] [WallTime: 1347573126.874311] [9621.648000] Waiting for IK service
+[INFO] [WallTime: 1347573126.877429] [9621.648000] Waiting for FK service
+default database grasp planner
+/objects_database_node/database_grasp_planning
+[INFO] [WallTime: 1347573126.883011] [9621.656000] Waiting for database grasp planner
+[INFO] [WallTime: 1347573126.886536] [9621.656000] Arm planner created
+[INFO] [WallTime: 1347573126.887446] [9621.656000] Creating arm planner...
+[INFO] [WallTime: 1347573126.912641] [9621.674000] Waiting for kinematics solver info service
+[INFO] [WallTime: 1347573126.915027] [9621.674000] Waiting for state validity service.
+[INFO] [WallTime: 1347573126.920858] [9621.674000] Waiting for state transformation service
+[INFO] [WallTime: 1347573126.925071] [9621.674000] Ready to transform states!
+[INFO] [WallTime: 1347573126.925890] [9621.674000] Waiting for move arm planner
+[INFO] [WallTime: 1347573126.928676] [9621.674000] Waiting for interpolated IK planning service
+[INFO] [WallTime: 1347573126.931303] [9621.675000] Waiting for interpolated IK parameter setting service
+[INFO] [WallTime: 1347573126.934148] [9621.692000] Waiting for trajectory filter with constraints service
+[INFO] [WallTime: 1347573126.936363] [9621.692000] Waiting for collision aware IK service
+[INFO] [WallTime: 1347573126.939247] [9621.692000] Waiting for IK service
+[INFO] [WallTime: 1347573126.942613] [9621.705000] Waiting for FK service
+default database grasp planner
+/objects_database_node/database_grasp_planning
+[INFO] [WallTime: 1347573126.948398] [9621.705000] Waiting for database grasp planner
+[INFO] [WallTime: 1347573126.951484] [9621.705000] Arm planner created
+[INFO] [WallTime: 1347573126.953630] [9621.705000] Creating arm planner...
+[INFO] [WallTime: 1347573126.972364] [9621.716000] Waiting for kinematics solver info service
+[INFO] [WallTime: 1347573126.974469] [9621.716000] Waiting for state validity service.
+[INFO] [WallTime: 1347573126.979596] [9621.716000] Waiting for state transformation service
+[INFO] [WallTime: 1347573126.984853] [9621.716000] Ready to transform states!
+[INFO] [WallTime: 1347573126.985145] [9621.716000] Waiting for move arm planner
+[INFO] [WallTime: 1347573126.987697] [9621.716000] Waiting for interpolated IK planning service
+[INFO] [WallTime: 1347573126.989076] [9621.749000] Creating arm planner...
+[INFO] [WallTime: 1347573126.991055] [9621.749000] Waiting for interpolated IK parameter setting service
+[INFO] [WallTime: 1347573126.996006] [9621.749000] Waiting for trajectory filter with constraints service
+[INFO] [WallTime: 1347573127.000025] [9621.749000] Waiting for collision aware IK service
+[INFO] [WallTime: 1347573127.004332] [9621.765000] Creating arm planner...
+[INFO] [WallTime: 1347573127.008025] [9621.765000] Waiting for IK service
+[INFO] [WallTime: 1347573127.020257] [9621.775000] Waiting for FK service
+default database grasp planner
+/objects_database_node/database_grasp_planning
+[INFO] [WallTime: 1347573127.032910] [9621.788000] Waiting for database grasp planner
+[INFO] [WallTime: 1347573127.042709] [9621.797000] Arm planner created
+[INFO] [WallTime: 1347573127.057619] [9621.809000] Waiting for kinematics solver info service
+[INFO] [WallTime: 1347573127.059288] [9621.809000] Waiting for kinematics solver info service
+[INFO] [WallTime: 1347573127.063681] [9621.809000] Waiting for state validity service.
+[INFO] [WallTime: 1347573127.075329] [9621.820000] Waiting for state validity service.
+[INFO] [WallTime: 1347573127.085070] [9621.830000] Waiting for state transformation service
+[INFO] [WallTime: 1347573127.089981] [9621.830000] Waiting for state transformation service
+[INFO] [WallTime: 1347573127.093120] [9621.841000] Ready to transform states!
+[INFO] [WallTime: 1347573127.093896] [9621.841000] Waiting for move arm planner
+[INFO] [WallTime: 1347573127.096396] [9621.841000] Ready to transform states!
+[INFO] [WallTime: 1347573127.096752] [9621.841000] Waiting for move arm planner
+[INFO] [WallTime: 1347573127.104109] [9621.841000] Waiting for interpolated IK planning service
+[INFO] [WallTime: 1347573127.106765] [9621.854000] Waiting for torso controller action server
+[INFO] [WallTime: 1347573127.107389] [9621.854000] Waiting for interpolated IK planning service
+[INFO] [WallTime: 1347573127.112926] [9621.854000] Waiting for interpolated IK parameter setting service
+[INFO] [WallTime: 1347573127.114791] [9621.854000] Waiting for interpolated IK parameter setting service
+[INFO] [WallTime: 1347573127.116843] [9621.854000] Waiting for trajectory filter with constraints service
+[INFO] [WallTime: 1347573127.119069] [9621.854000] Waiting for trajectory filter with constraints service
+[INFO] [WallTime: 1347573127.121571] [9621.866000] Waiting for collision aware IK service
+[INFO] [WallTime: 1347573127.125504] [9621.866000] Waiting for IK service
+[INFO] [WallTime: 1347573127.126902] [9621.866000] Waiting for collision aware IK service
+[INFO] [WallTime: 1347573127.128612] [9621.866000] Waiting for FK service
+[INFO] [WallTime: 1347573127.130623] [9621.866000] Waiting for IK service
+[INFO] [WallTime: 1347573127.134313] [9621.866000] Waiting for FK service
+default database grasp planner
+/objects_database_node/database_grasp_planning
+[INFO] [WallTime: 1347573127.135870] [9621.866000] Waiting for database grasp planner
+[INFO] [WallTime: 1347573127.139297] [9621.866000] Arm planner created
+default database grasp planner
+/objects_database_node/database_grasp_planning
+[INFO] [WallTime: 1347573127.140514] [9621.866000] Waiting for database grasp planner
+[INFO] [WallTime: 1347573127.143871] [9621.880000] Arm planner created
+[INFO] [WallTime: 1347573127.312120] [9622.045000] Torso control action client ready
+[INFO] [WallTime: 1347573127.338832] [9622.072000] Waiting for action server r_gripper_controller/gripper_action...
+[INFO] [WallTime: 1347573127.555374] [9622.281000] Connected to action server r_gripper_controller/gripper_action
+[INFO] [WallTime: 1347573127.581314] [9622.310000] Waiting for action server l_gripper_controller/gripper_action...
+[INFO] [WallTime: 1347573127.808101] [9622.523000] Connected to action server l_gripper_controller/gripper_action
+[INFO] [WallTime: 1347573130.319645] [9624.828000] Reset collider, did not wait for repopulate
+[INFO] [WallTime: 1347573130.320689] [9624.828000] Sending goal to gripper and waiting for result...
+[INFO] [WallTime: 1347573130.336904] [9624.857000] Gripper action returned
+[INFO] [WallTime: 1347573130.338367] [9624.857000] Sending torso goal and waiting for result
+[INFO] [WallTime: 1347573130.405205] [9624.919000] left_arm is already at the side position
+[INFO] [WallTime: 1347573130.405858] [9624.919000] Moving right arm to up position
+[INFO] [WallTime: 1347573130.410860] [9624.919000] Attempting to use move arm to get to goal
+[INFO] [WallTime: 1347573132.558523] [9626.792000] Move arm failed: MoveArm failed
+[INFO] [WallTime: 1347573132.558963] [9626.792000] Attempting to move directly to goal
+[INFO] [WallTime: 1347573145.550424] [9638.523000] Waiting for DARRT action
+[INFO] [WallTime: 1347573145.777554] [9638.718000] Found DARRT action
+[INFO] [WallTime: 1347573145.779206] [9638.718000] plate pose = 
+position: 
+  x: 3.1
+  y: -3.2
+  z: 0.79
+orientation: 
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  w: 1.0
+[INFO] [WallTime: 1347573145.780233] [9638.718000] grasp pose =
+position: 
+  x: 2.8
+  y: -3.2
+  z: 0.79
+orientation: 
+  x: 0.707
+  y: 0.0
+  z: 0.0
+  w: -0.707
+[INFO] [WallTime: 1347573145.781094] [9638.718000] grasp pose =
+position: 
+  x: 2.80014798718
+  y: -3.19057961809
+  z: 0.79
+orientation: 
+  x: 0.706912779165
+  y: -0.0111050733395
+  z: 0.0111050733395
+  w: -0.706912779165
+[INFO] [WallTime: 1347573145.782552] [9638.718000] grasp pose =
+position: 
+  x: 2.80059180269
+  y: -3.18116853296
+  z: 0.79
+orientation: 
+  x: 0.706651138179
+  y: -0.0222074066682
+  z: 0.0222074066682
+  w: -0.706651138179
+[INFO] [WallTime: 1347573145.786297] [9638.718000] grasp pose =
+position: 
+  x: 2.80133100853
+  y: -3.17177603222
+  z: 0.79
+orientation: 
+  x: 0.706215141598
+  y: -0.0333042606517
+  z: 0.0333042606517
+  w: -0.706215141598
+[INFO] [WallTime: 1347573145.787160] [9638.718000] grasp pose =
+position: 
+  x: 2.8023648752
+  y: -3.16241138512
+  z: 0.79
+orientation: 
+  x: 0.705604896999
+  y: -0.0443928973072
+  z: 0.0443928973072
+  w: -0.705604896999
+[INFO] [WallTime: 1347573145.788086] [9638.718000] grasp pose =
+position: 
+  x: 2.80369238239
+  y: -3.15308383345
+  z: 0.79
+orientation: 
+  x: 0.704820554949
+  y: -0.0554705806796
+  z: 0.0554705806796
+  w: -0.704820554949
+[INFO] [WallTime: 1347573145.789138] [9638.718000] grasp pose =
+position: 
+  x: 2.80531222001
+  y: -3.14380258237
+  z: 0.79
+orientation: 
+  x: 0.703862308974
+  y: -0.0665345775162
+  z: 0.0665345775162
+  w: -0.703862308974
+[INFO] [WallTime: 1347573145.790441] [9638.728000] grasp pose =
+position: 
+  x: 2.80722278948
+  y: -3.13457679136
+  z: 0.79
+orientation: 
+  x: 0.702730395507
+  y: -0.0775821579414
+  z: 0.0775821579414
+  w: -0.702730395507
+[INFO] [WallTime: 1347573145.791955] [9638.728000] grasp pose =
+position: 
+  x: 2.8094222053
+  y: -3.12541556515
+  z: 0.79
+orientation: 
+  x: 0.701425093829
+  y: -0.08861059613
+  z: 0.08861059613
+  w: -0.701425093829
+[INFO] [WallTime: 1347573145.794152] [9638.728000] grasp pose =
+position: 
+  x: 2.8119082969
+  y: -3.11632794478
+  z: 0.79
+orientation: 
+  x: 0.699946726006
+  y: -0.0996171709799
+  z: 0.0996171709799
+  w: -0.699946726006
+[INFO] [WallTime: 1347573145.795778] [9638.728000] grasp pose =
+position: 
+  x: 2.81467861083
+  y: -3.10732289863
+  z: 0.79
+orientation: 
+  x: 0.698295656801
+  y: -0.110599166783
+  z: 0.110599166783
+  w: -0.698295656801
+[INFO] [WallTime: 1347573145.796595] [9638.728000] grasp pose =
+position: 
+  x: 2.81773041311
+  y: -3.09840931358
+  z: 0.79
+orientation: 
+  x: 0.696472293591
+  y: -0.121553873898
+  z: 0.121553873898
+  w: -0.696472293591
+[INFO] [WallTime: 1347573145.797718] [9638.728000] grasp pose =
+position: 
+  x: 2.82106069198
+  y: -3.08959598628
+  z: 0.79
+orientation: 
+  x: 0.694477086265
+  y: -0.132478589412
+  z: 0.132478589412
+  w: -0.694477086265
+[INFO] [WallTime: 1347573145.798918] [9638.737000] grasp pose =
+position: 
+  x: 2.82466616086
+  y: -3.08089161441
+  z: 0.79
+orientation: 
+  x: 0.69231052711
+  y: -0.143370617817
+  z: 0.143370617817
+  w: -0.69231052711
+[INFO] [WallTime: 1347573145.799666] [9638.737000] grasp pose =
+position: 
+  x: 2.82854326159
+  y: -3.07230478813
+  z: 0.79
+orientation: 
+  x: 0.689973150691
+  y: -0.154227271667
+  z: 0.154227271667
+  w: -0.689973150691
+[INFO] [WallTime: 1347573145.800351] [9638.737000] grasp pose =
+position: 
+  x: 2.83268816793
+  y: -3.06384398162
+  z: 0.79
+orientation: 
+  x: 0.687465533721
+  y: -0.165045872246
+  z: 0.165045872246
+  w: -0.687465533721
+[INFO] [WallTime: 1347573145.801463] [9638.737000] grasp pose =
+position: 
+  x: 2.83709678937
+  y: -3.05551754465
+  z: 0.79
+orientation: 
+  x: 0.684788294918
+  y: -0.175823750226
+  z: 0.175823750226
+  w: -0.684788294918
+[INFO] [WallTime: 1347573145.802160] [9638.737000] grasp pose =
+position: 
+  x: 2.84176477513
+  y: -3.04733369443
+  z: 0.79
+orientation: 
+  x: 0.68194209485
+  y: -0.186558246326
+  z: 0.186558246326
+  w: -0.68194209485
+[INFO] [WallTime: 1347573145.803882] [9638.737000] grasp pose =
+position: 
+  x: 2.84668751846
+  y: -3.03930050741
+  z: 0.79
+orientation: 
+  x: 0.678927635774
+  y: -0.19724671197
+  z: 0.19724671197
+  w: -0.678927635774
+[INFO] [WallTime: 1347573145.804702] [9638.737000] grasp pose =
+position: 
+  x: 2.85186016122
+  y: -3.0314259114
+  z: 0.79
+orientation: 
+  x: 0.675745661462
+  y: -0.207886509939
+  z: 0.207886509939
+  w: -0.675745661462
+[INFO] [WallTime: 1347573145.806012] [9638.744000] grasp pose =
+position: 
+  x: 2.85727759863
+  y: -3.02371767766
+  z: 0.79
+orientation: 
+  x: 0.672396957021
+  y: -0.218475015023
+  z: 0.218475015023
+  w: -0.672396957021
+[INFO] [WallTime: 1347573145.806963] [9638.744000] grasp pose =
+position: 
+  x: 2.86293448433
+  y: -3.01618341328
+  z: 0.79
+orientation: 
+  x: 0.668882348691
+  y: -0.229009614666
+  z: 0.229009614666
+  w: -0.668882348691
+[INFO] [WallTime: 1347573145.807865] [9638.744000] grasp pose =
+position: 
+  x: 2.86882523567
+  y: -3.00883055369
+  z: 0.79
+orientation: 
+  x: 0.665202703651
+  y: -0.239487709613
+  z: 0.239487709613
+  w: -0.665202703651
+[INFO] [WallTime: 1347573145.808775] [9638.744000] grasp pose =
+position: 
+  x: 2.87494403917
+  y: -3.00166635526
+  z: 0.79
+orientation: 
+  x: 0.661358929797
+  y: -0.249906714552
+  z: 0.249906714552
+  w: -0.661358929797
+[INFO] [WallTime: 1347573145.809868] [9638.744000] grasp pose =
+position: 
+  x: 2.88128485633
+  y: -2.99469788819
+  z: 0.79
+orientation: 
+  x: 0.657351975523
+  y: -0.260264058748
+  z: 0.260264058748
+  w: -0.657351975523
+[INFO] [WallTime: 1347573145.810645] [9638.744000] grasp pose =
+position: 
+  x: 2.88784142952
+  y: -2.98793202952
+  z: 0.79
+orientation: 
+  x: 0.653182829485
+  y: -0.270557186682
+  z: 0.270557186682
+  w: -0.653182829485
+[INFO] [WallTime: 1347573145.811393] [9638.744000] grasp pose =
+position: 
+  x: 2.89460728819
+  y: -2.98137545633
+  z: 0.79
+orientation: 
+  x: 0.648852520359
+  y: -0.280783558679
+  z: 0.280783558679
+  w: -0.648852520359
+[INFO] [WallTime: 1347573145.812187] [9638.745000] grasp pose =
+position: 
+  x: 2.90157575526
+  y: -2.97503463917
+  z: 0.79
+orientation: 
+  x: 0.644362116581
+  y: -0.290940651534
+  z: 0.290940651534
+  w: -0.644362116581
+[INFO] [WallTime: 1347573145.815372] [9638.751000] grasp pose =
+position: 
+  x: 2.90873995369
+  y: -2.96891583567
+  z: 0.79
+orientation: 
+  x: 0.639712726093
+  y: -0.301025959137
+  z: 0.301025959137
+  w: -0.639712726093
+[INFO] [WallTime: 1347573145.816353] [9638.751000] grasp pose =
+position: 
+  x: 2.91609281328
+  y: -2.96302508433
+  z: 0.79
+orientation: 
+  x: 0.634905496063
+  y: -0.311036993088
+  z: 0.311036993088
+  w: -0.634905496063
+[INFO] [WallTime: 1347573145.817111] [9638.751000] grasp pose =
+position: 
+  x: 2.92362707766
+  y: -2.95736819863
+  z: 0.79
+orientation: 
+  x: 0.629941612601
+  y: -0.320971283316
+  z: 0.320971283316
+  w: -0.629941612601
+[INFO] [WallTime: 1347573145.817889] [9638.751000] grasp pose =
+position: 
+  x: 2.9313353114
+  y: -2.95195076122
+  z: 0.79
+orientation: 
+  x: 0.624822300473
+  y: -0.330826378682
+  z: 0.330826378682
+  w: -0.624822300473
+[INFO] [WallTime: 1347573145.818631] [9638.751000] grasp pose =
+position: 
+  x: 2.93920990741
+  y: -2.94677811846
+  z: 0.79
+orientation: 
+  x: 0.619548822791
+  y: -0.34059984759
+  z: 0.34059984759
+  w: -0.619548822791
+[INFO] [WallTime: 1347573145.819372] [9638.751000] grasp pose =
+position: 
+  x: 2.94724309443
+  y: -2.94185537513
+  z: 0.79
+orientation: 
+  x: 0.614122480708
+  y: -0.350289278582
+  z: 0.350289278582
+  w: -0.614122480708
+[INFO] [WallTime: 1347573145.820078] [9638.751000] grasp pose =
+position: 
+  x: 2.95542694465
+  y: -2.93718738937
+  z: 0.79
+orientation: 
+  x: 0.608544613092
+  y: -0.359892280936
+  z: 0.359892280936
+  w: -0.608544613092
+[INFO] [WallTime: 1347573145.820724] [9638.751000] grasp pose =
+position: 
+  x: 2.96375338162
+  y: -2.93277876793
+  z: 0.79
+orientation: 
+  x: 0.602816596198
+  y: -0.369406485254
+  z: 0.369406485254
+  w: -0.602816596198
+[INFO] [WallTime: 1347573145.821388] [9638.751000] grasp pose =
+position: 
+  x: 2.97221418813
+  y: -2.92863386159
+  z: 0.79
+orientation: 
+  x: 0.59693984333
+  y: -0.37882954405
+  z: 0.37882954405
+  w: -0.59693984333
+[INFO] [WallTime: 1347573145.825718] [9638.751000] grasp pose =
+position: 
+  x: 2.98080101441
+  y: -2.92475676086
+  z: 0.79
+orientation: 
+  x: 0.590915804487
+  y: -0.388159132325
+  z: 0.388159132325
+  w: -0.590915804487
+[INFO] [WallTime: 1347573145.827280] [9638.762000] grasp pose =
+position: 
+  x: 2.98950538628
+  y: -2.92115129198
+  z: 0.79
+orientation: 
+  x: 0.584745966012
+  y: -0.397392948141
+  z: 0.397392948141
+  w: -0.584745966012
+[INFO] [WallTime: 1347573145.828875] [9638.762000] grasp pose =
+position: 
+  x: 2.99831871358
+  y: -2.91782101311
+  z: 0.79
+orientation: 
+  x: 0.578431850219
+  y: -0.406528713195
+  z: 0.406528713195
+  w: -0.578431850219
+[INFO] [WallTime: 1347573145.830513] [9638.762000] grasp pose =
+position: 
+  x: 3.00723229863
+  y: -2.91476921083
+  z: 0.79
+orientation: 
+  x: 0.571975015023
+  y: -0.415564173371
+  z: 0.415564173371
+  w: -0.571975015023
+[INFO] [WallTime: 1347573145.831470] [9638.762000] grasp pose =
+position: 
+  x: 3.01623734478
+  y: -2.9119988969
+  z: 0.79
+orientation: 
+  x: 0.56537705355
+  y: -0.424497099305
+  z: 0.424497099305
+  w: -0.56537705355
+[INFO] [WallTime: 1347573145.832244] [9638.762000] grasp pose =
+position: 
+  x: 3.02532496515
+  y: -2.9095128053
+  z: 0.79
+orientation: 
+  x: 0.55863959375
+  y: -0.433325286933
+  z: 0.433325286933
+  w: -0.55863959375
+[INFO] [WallTime: 1347573145.833409] [9638.762000] grasp pose =
+position: 
+  x: 3.03448619136
+  y: -2.90731338948
+  z: 0.79
+orientation: 
+  x: 0.551764297988
+  y: -0.442046558029
+  z: 0.442046558029
+  w: -0.551764297988
+[INFO] [WallTime: 1347573145.834870] [9638.762000] grasp pose =
+position: 
+  x: 3.04371198237
+  y: -2.90540282001
+  z: 0.79
+orientation: 
+  x: 0.544752862642
+  y: -0.450658760752
+  z: 0.450658760752
+  w: -0.544752862642
+[INFO] [WallTime: 1347573145.835548] [9638.762000] grasp pose =
+position: 
+  x: 3.05299323345
+  y: -2.90378298239
+  z: 0.79
+orientation: 
+  x: 0.537607017679
+  y: -0.459159770169
+  z: 0.459159770169
+  w: -0.537607017679
+[INFO] [WallTime: 1347573145.836582] [9638.762000] grasp pose =
+position: 
+  x: 3.06232078512
+  y: -2.9024554752
+  z: 0.79
+orientation: 
+  x: 0.530328526229
+  y: -0.467547488784
+  z: 0.467547488784
+  w: -0.530328526229
+[INFO] [WallTime: 1347573145.837560] [9638.762000] grasp pose =
+position: 
+  x: 3.07168543222
+  y: -2.90142160853
+  z: 0.79
+orientation: 
+  x: 0.52291918415
+  y: -0.475819847051
+  z: 0.475819847051
+  w: -0.52291918415
+[INFO] [WallTime: 1347573145.839011] [9638.770000] grasp pose =
+position: 
+  x: 3.08107793296
+  y: -2.90068240269
+  z: 0.79
+orientation: 
+  x: 0.515380819587
+  y: -0.483974803892
+  z: 0.483974803892
+  w: -0.515380819587
+[INFO] [WallTime: 1347573145.840316] [9638.770000] grasp pose =
+position: 
+  x: 3.09048901809
+  y: -2.90023858718
+  z: 0.79
+orientation: 
+  x: 0.507715292519
+  y: -0.492010347191
+  z: 0.492010347191
+  w: -0.507715292519
+[INFO] [WallTime: 1347573145.841420] [9638.770000] grasp pose =
+position: 
+  x: 3.0999094
+  y: -2.9000906
+  z: 0.79
+orientation: 
+  x: 0.499924494299
+  y: -0.499924494299
+  z: 0.499924494299
+  w: -0.499924494299
+[INFO] [WallTime: 1347573145.843174] [9638.770000] grasp pose =
+position: 
+  x: 3.10932978191
+  y: -2.90023858718
+  z: 0.79
+orientation: 
+  x: 0.492010347191
+  y: -0.507715292519
+  z: 0.507715292519
+  w: -0.492010347191
+[INFO] [WallTime: 1347573145.844085] [9638.770000] grasp pose =
+position: 
+  x: 3.11874086704
+  y: -2.90068240269
+  z: 0.79
+orientation: 
+  x: 0.483974803892
+  y: -0.515380819587
+  z: 0.515380819587
+  w: -0.483974803892
+[INFO] [WallTime: 1347573145.845147] [9638.778000] grasp pose =
+position: 
+  x: 3.12813336778
+  y: -2.90142160853
+  z: 0.79
+orientation: 
+  x: 0.475819847051
+  y: -0.52291918415
+  z: 0.52291918415
+  w: -0.475819847051
+[INFO] [WallTime: 1347573145.846181] [9638.778000] grasp pose =
+position: 
+  x: 3.13749801488
+  y: -2.9024554752
+  z: 0.79
+orientation: 
+  x: 0.467547488784
+  y: -0.530328526229
+  z: 0.530328526229
+  w: -0.467547488784
+[INFO] [WallTime: 1347573145.847422] [9638.778000] grasp pose =
+position: 
+  x: 3.14682556655
+  y: -2.90378298239
+  z: 0.79
+orientation: 
+  x: 0.459159770169
+  y: -0.537607017679
+  z: 0.537607017679
+  w: -0.459159770169
+[INFO] [WallTime: 1347573145.848641] [9638.778000] grasp pose =
+position: 
+  x: 3.15610681763
+  y: -2.90540282001
+  z: 0.79
+orientation: 
+  x: 0.450658760752
+  y: -0.544752862642
+  z: 0.544752862642
+  w: -0.450658760752
+[INFO] [WallTime: 1347573145.849348] [9638.778000] grasp pose =
+position: 
+  x: 3.16533260864
+  y: -2.90731338948
+  z: 0.79
+orientation: 
+  x: 0.442046558029
+  y: -0.551764297988
+  z: 0.551764297988
+  w: -0.442046558029
+[INFO] [WallTime: 1347573145.850327] [9638.778000] grasp pose =
+position: 
+  x: 3.17449383485
+  y: -2.9095128053
+  z: 0.79
+orientation: 
+  x: 0.433325286933
+  y: -0.55863959375
+  z: 0.55863959375
+  w: -0.433325286933
+[INFO] [WallTime: 1347573145.852019] [9638.778000] grasp pose =
+position: 
+  x: 3.18358145522
+  y: -2.9119988969
+  z: 0.79
+orientation: 
+  x: 0.424497099305
+  y: -0.56537705355
+  z: 0.56537705355
+  w: -0.424497099305
+[INFO] [WallTime: 1347573145.855513] [9638.779000] grasp pose =
+position: 
+  x: 3.19258650137
+  y: -2.91476921083
+  z: 0.79
+orientation: 
+  x: 0.415564173371
+  y: -0.571975015023
+  z: 0.571975015023
+  w: -0.415564173371
+[INFO] [WallTime: 1347573145.858495] [9638.785000] grasp pose =
+position: 
+  x: 3.20150008642
+  y: -2.91782101311
+  z: 0.79
+orientation: 
+  x: 0.406528713195
+  y: -0.578431850219
+  z: 0.578431850219
+  w: -0.406528713195
+[INFO] [WallTime: 1347573145.859331] [9638.785000] grasp pose =
+position: 
+  x: 3.21031341372
+  y: -2.92115129198
+  z: 0.79
+orientation: 
+  x: 0.397392948141
+  y: -0.584745966012
+  z: 0.584745966012
+  w: -0.397392948141
+[INFO] [WallTime: 1347573145.859988] [9638.785000] grasp pose =
+position: 
+  x: 3.21901778559
+  y: -2.92475676086
+  z: 0.79
+orientation: 
+  x: 0.388159132325
+  y: -0.590915804487
+  z: 0.590915804487
+  w: -0.388159132325
+[INFO] [WallTime: 1347573145.860762] [9638.785000] grasp pose =
+position: 
+  x: 3.22760461187
+  y: -2.92863386159
+  z: 0.79
+orientation: 
+  x: 0.37882954405
+  y: -0.59693984333
+  z: 0.59693984333
+  w: -0.37882954405
+[INFO] [WallTime: 1347573145.861687] [9638.785000] grasp pose =
+position: 
+  x: 3.23606541838
+  y: -2.93277876793
+  z: 0.79
+orientation: 
+  x: 0.369406485254
+  y: -0.602816596198
+  z: 0.602816596198
+  w: -0.369406485254
+[INFO] [WallTime: 1347573145.862386] [9638.785000] grasp pose =
+position: 
+  x: 3.24439185535
+  y: -2.93718738937
+  z: 0.79
+orientation: 
+  x: 0.359892280936
+  y: -0.608544613092
+  z: 0.608544613092
+  w: -0.359892280936
+[INFO] [WallTime: 1347573145.863224] [9638.785000] grasp pose =
+position: 
+  x: 3.25257570557
+  y: -2.94185537513
+  z: 0.79
+orientation: 
+  x: 0.350289278582
+  y: -0.614122480708
+  z: 0.614122480708
+  w: -0.350289278582
+[INFO] [WallTime: 1347573145.868266] [9638.785000] grasp pose =
+position: 
+  x: 3.26060889259
+  y: -2.94677811846
+  z: 0.79
+orientation: 
+  x: 0.34059984759
+  y: -0.619548822791
+  z: 0.619548822791
+  w: -0.34059984759
+[INFO] [WallTime: 1347573145.869560] [9638.785000] grasp pose =
+position: 
+  x: 3.2684834886
+  y: -2.95195076122
+  z: 0.79
+orientation: 
+  x: 0.330826378682
+  y: -0.624822300473
+  z: 0.624822300473
+  w: -0.330826378682
+[INFO] [WallTime: 1347573145.870682] [9638.792000] grasp pose =
+position: 
+  x: 3.27619172234
+  y: -2.95736819863
+  z: 0.79
+orientation: 
+  x: 0.320971283316
+  y: -0.629941612601
+  z: 0.629941612601
+  w: -0.320971283316
+[INFO] [WallTime: 1347573145.871700] [9638.798000] grasp pose =
+position: 
+  x: 3.28372598672
+  y: -2.96302508433
+  z: 0.79
+orientation: 
+  x: 0.311036993088
+  y: -0.634905496063
+  z: 0.634905496063
+  w: -0.311036993088
+[INFO] [WallTime: 1347573145.872390] [9638.798000] grasp pose =
+position: 
+  x: 3.29107884631
+  y: -2.96891583567
+  z: 0.79
+orientation: 
+  x: 0.301025959137
+  y: -0.639712726093
+  z: 0.639712726093
+  w: -0.301025959137
+[INFO] [WallTime: 1347573145.873236] [9638.798000] grasp pose =
+position: 
+  x: 3.29824304474
+  y: -2.97503463917
+  z: 0.79
+orientation: 
+  x: 0.290940651534
+  y: -0.644362116581
+  z: 0.644362116581
+  w: -0.290940651534
+[INFO] [WallTime: 1347573145.874038] [9638.798000] grasp pose =
+position: 
+  x: 3.30521151181
+  y: -2.98137545633
+  z: 0.79
+orientation: 
+  x: 0.280783558679
+  y: -0.648852520359
+  z: 0.648852520359
+  w: -0.280783558679
+[INFO] [WallTime: 1347573145.875170] [9638.798000] grasp pose =
+position: 
+  x: 3.31197737048
+  y: -2.98793202952
+  z: 0.79
+orientation: 
+  x: 0.270557186682
+  y: -0.653182829485
+  z: 0.653182829485
+  w: -0.270557186682
+[INFO] [WallTime: 1347573145.875900] [9638.798000] grasp pose =
+position: 
+  x: 3.31853394367
+  y: -2.99469788819
+  z: 0.79
+orientation: 
+  x: 0.260264058748
+  y: -0.657351975523
+  z: 0.657351975523
+  w: -0.260264058748
+[INFO] [WallTime: 1347573145.876713] [9638.798000] grasp pose =
+position: 
+  x: 3.32487476083
+  y: -3.00166635526
+  z: 0.79
+orientation: 
+  x: 0.249906714552
+  y: -0.661358929797
+  z: 0.661358929797
+  w: -0.249906714552
+[INFO] [WallTime: 1347573145.877527] [9638.798000] grasp pose =
+position: 
+  x: 3.33099356433
+  y: -3.00883055369
+  z: 0.79
+orientation: 
+  x: 0.239487709613
+  y: -0.665202703651
+  z: 0.665202703651
+  w: -0.239487709613
+[INFO] [WallTime: 1347573145.879160] [9638.798000] grasp pose =
+position: 
+  x: 3.33688431567
+  y: -3.01618341328
+  z: 0.79
+orientation: 
+  x: 0.229009614666
+  y: -0.668882348691
+  z: 0.668882348691
+  w: -0.229009614666
+[INFO] [WallTime: 1347573145.880164] [9638.798000] grasp pose =
+position: 
+  x: 3.34254120137
+  y: -3.02371767766
+  z: 0.79
+orientation: 
+  x: 0.218475015023
+  y: -0.672396957021
+  z: 0.672396957021
+  w: -0.218475015023
+[INFO] [WallTime: 1347573145.880894] [9638.798000] grasp pose =
+position: 
+  x: 3.34795863878
+  y: -3.0314259114
+  z: 0.79
+orientation: 
+  x: 0.207886509939
+  y: -0.675745661462
+  z: 0.675745661462
+  w: -0.207886509939
+[INFO] [WallTime: 1347573145.881751] [9638.798000] grasp pose =
+position: 
+  x: 3.35313128154
+  y: -3.03930050741
+  z: 0.79
+orientation: 
+  x: 0.19724671197
+  y: -0.678927635774
+  z: 0.678927635774
+  w: -0.19724671197
+[INFO] [WallTime: 1347573145.883170] [9638.798000] grasp pose =
+position: 
+  x: 3.35805402487
+  y: -3.04733369443
+  z: 0.79
+orientation: 
+  x: 0.186558246326
+  y: -0.68194209485
+  z: 0.68194209485
+  w: -0.186558246326
+[INFO] [WallTime: 1347573145.884679] [9638.816000] grasp pose =
+position: 
+  x: 3.36272201063
+  y: -3.05551754465
+  z: 0.79
+orientation: 
+  x: 0.175823750226
+  y: -0.684788294918
+  z: 0.684788294918
+  w: -0.175823750226
+[INFO] [WallTime: 1347573145.886143] [9638.816000] grasp pose =
+position: 
+  x: 3.36713063207
+  y: -3.06384398162
+  z: 0.79
+orientation: 
+  x: 0.165045872246
+  y: -0.687465533721
+  z: 0.687465533721
+  w: -0.165045872246
+[INFO] [WallTime: 1347573145.888019] [9638.816000] grasp pose =
+position: 
+  x: 3.37127553841
+  y: -3.07230478813
+  z: 0.79
+orientation: 
+  x: 0.154227271667
+  y: -0.689973150691
+  z: 0.689973150691
+  w: -0.154227271667
+[INFO] [WallTime: 1347573145.889269] [9638.816000] grasp pose =
+position: 
+  x: 3.37515263914
+  y: -3.08089161441
+  z: 0.79
+orientation: 
+  x: 0.143370617817
+  y: -0.69231052711
+  z: 0.69231052711
+  w: -0.143370617817
+[INFO] [WallTime: 1347573145.890590] [9638.816000] grasp pose =
+position: 
+  x: 3.37875810802
+  y: -3.08959598628
+  z: 0.79
+orientation: 
+  x: 0.132478589412
+  y: -0.694477086265
+  z: 0.694477086265
+  w: -0.132478589412
+[INFO] [WallTime: 1347573145.891871] [9638.816000] grasp pose =
+position: 
+  x: 3.38208838689
+  y: -3.09840931358
+  z: 0.79
+orientation: 
+  x: 0.121553873898
+  y: -0.696472293591
+  z: 0.696472293591
+  w: -0.121553873898
+[INFO] [WallTime: 1347573145.893487] [9638.816000] grasp pose =
+position: 
+  x: 3.38514018917
+  y: -3.10732289863
+  z: 0.79
+orientation: 
+  x: 0.110599166783
+  y: -0.698295656801
+  z: 0.698295656801
+  w: -0.110599166783
+[INFO] [WallTime: 1347573145.894438] [9638.816000] grasp pose =
+position: 
+  x: 3.3879105031
+  y: -3.11632794478
+  z: 0.79
+orientation: 
+  x: 0.0996171709799
+  y: -0.699946726006
+  z: 0.699946726006
+  w: -0.0996171709799
+[INFO] [WallTime: 1347573145.895814] [9638.817000] grasp pose =
+position: 
+  x: 3.3903965947
+  y: -3.12541556515
+  z: 0.79
+orientation: 
+  x: 0.08861059613
+  y: -0.701425093829
+  z: 0.701425093829
+  w: -0.08861059613
+[INFO] [WallTime: 1347573145.897091] [9638.825000] grasp pose =
+position: 
+  x: 3.39259601052
+  y: -3.13457679136
+  z: 0.79
+orientation: 
+  x: 0.0775821579414
+  y: -0.702730395507
+  z: 0.702730395507
+  w: -0.0775821579414
+[INFO] [WallTime: 1347573145.897973] [9638.825000] grasp pose =
+position: 
+  x: 3.39450657999
+  y: -3.14380258237
+  z: 0.79
+orientation: 
+  x: 0.0665345775162
+  y: -0.703862308974
+  z: 0.703862308974
+  w: -0.0665345775162
+[INFO] [WallTime: 1347573145.898994] [9638.825000] grasp pose =
+position: 
+  x: 3.39612641761
+  y: -3.15308383345
+  z: 0.79
+orientation: 
+  x: 0.0554705806796
+  y: -0.704820554949
+  z: 0.704820554949
+  w: -0.0554705806796
+[INFO] [WallTime: 1347573145.899707] [9638.825000] grasp pose =
+position: 
+  x: 3.3974539248
+  y: -3.16241138512
+  z: 0.79
+orientation: 
+  x: 0.0443928973072
+  y: -0.705604896999
+  z: 0.705604896999
+  w: -0.0443928973072
+[INFO] [WallTime: 1347573145.900605] [9638.825000] grasp pose =
+position: 
+  x: 3.39848779147
+  y: -3.17177603222
+  z: 0.79
+orientation: 
+  x: 0.0333042606517
+  y: -0.706215141598
+  z: 0.706215141598
+  w: -0.0333042606517
+[INFO] [WallTime: 1347573145.901515] [9638.825000] grasp pose =
+position: 
+  x: 3.39922699731
+  y: -3.18116853296
+  z: 0.79
+orientation: 
+  x: 0.0222074066682
+  y: -0.706651138179
+  z: 0.706651138179
+  w: -0.0222074066682
+[INFO] [WallTime: 1347573145.902219] [9638.825000] grasp pose =
+position: 
+  x: 3.39967081282
+  y: -3.19057961809
+  z: 0.79
+orientation: 
+  x: 0.0111050733395
+  y: -0.706912779165
+  z: 0.706912779165
+  w: -0.0111050733395
+[INFO] [WallTime: 1347573145.903358] [9638.826000] grasp pose =
+position: 
+  x: 3.3998188
+  y: -3.2
+  z: 0.79
+orientation: 
+  x: -1.13694271332e-16
+  y: -0.707
+  z: 0.707
+  w: 1.13694271332e-16
+[INFO] [WallTime: 1347573145.909154] [9638.836000] grasp pose =
+position: 
+  x: 3.39967081282
+  y: -3.20942038191
+  z: 0.79
+orientation: 
+  x: -0.0111050733395
+  y: -0.706912779165
+  z: 0.706912779165
+  w: 0.0111050733395
+[INFO] [WallTime: 1347573145.910399] [9638.836000] grasp pose =
+position: 
+  x: 3.39922699731
+  y: -3.21883146704
+  z: 0.79
+orientation: 
+  x: -0.0222074066682
+  y: -0.706651138179
+  z: 0.706651138179
+  w: 0.0222074066682
+[INFO] [WallTime: 1347573145.911440] [9638.836000] grasp pose =
+position: 
+  x: 3.39848779147
+  y: -3.22822396778
+  z: 0.79
+orientation: 
+  x: -0.0333042606517
+  y: -0.706215141598
+  z: 0.706215141598
+  w: 0.0333042606517
+[INFO] [WallTime: 1347573145.912177] [9638.836000] grasp pose =
+position: 
+  x: 3.3974539248
+  y: -3.23758861488
+  z: 0.79
+orientation: 
+  x: -0.0443928973072
+  y: -0.705604896999
+  z: 0.705604896999
+  w: 0.0443928973072
+[INFO] [WallTime: 1347573145.913349] [9638.836000] grasp pose =
+position: 
+  x: 3.39612641761
+  y: -3.24691616655
+  z: 0.79
+orientation: 
+  x: -0.0554705806796
+  y: -0.704820554949
+  z: 0.704820554949
+  w: 0.0554705806796
+[INFO] [WallTime: 1347573145.914508] [9638.836000] grasp pose =
+position: 
+  x: 3.39450657999
+  y: -3.25619741763
+  z: 0.79
+orientation: 
+  x: -0.0665345775162
+  y: -0.703862308974
+  z: 0.703862308974
+  w: 0.0665345775162
+[INFO] [WallTime: 1347573145.915898] [9638.836000] grasp pose =
+position: 
+  x: 3.39259601052
+  y: -3.26542320864
+  z: 0.79
+orientation: 
+  x: -0.0775821579414
+  y: -0.702730395507
+  z: 0.702730395507
+  w: 0.0775821579414
+[INFO] [WallTime: 1347573145.916600] [9638.836000] grasp pose =
+position: 
+  x: 3.3903965947
+  y: -3.27458443485
+  z: 0.79
+orientation: 
+  x: -0.08861059613
+  y: -0.701425093829
+  z: 0.701425093829
+  w: 0.08861059613
+[INFO] [WallTime: 1347573145.917305] [9638.836000] grasp pose =
+position: 
+  x: 3.3879105031
+  y: -3.28367205522
+  z: 0.79
+orientation: 
+  x: -0.0996171709799
+  y: -0.699946726006
+  z: 0.699946726006
+  w: 0.0996171709799
+[INFO] [WallTime: 1347573145.918371] [9638.844000] grasp pose =
+position: 
+  x: 3.38514018917
+  y: -3.29267710137
+  z: 0.79
+orientation: 
+  x: -0.110599166783
+  y: -0.698295656801
+  z: 0.698295656801
+  w: 0.110599166783
+[INFO] [WallTime: 1347573145.919479] [9638.850000] grasp pose =
+position: 
+  x: 3.38208838689
+  y: -3.30159068642
+  z: 0.79
+orientation: 
+  x: -0.121553873898
+  y: -0.696472293591
+  z: 0.696472293591
+  w: 0.121553873898
+[INFO] [WallTime: 1347573145.920704] [9638.850000] grasp pose =
+position: 
+  x: 3.37875810802
+  y: -3.31040401372
+  z: 0.79
+orientation: 
+  x: -0.132478589412
+  y: -0.694477086265
+  z: 0.694477086265
+  w: 0.132478589412
+[INFO] [WallTime: 1347573145.921360] [9638.850000] grasp pose =
+position: 
+  x: 3.37515263914
+  y: -3.31910838559
+  z: 0.79
+orientation: 
+  x: -0.143370617817
+  y: -0.69231052711
+  z: 0.69231052711
+  w: 0.143370617817
+[INFO] [WallTime: 1347573145.922379] [9638.850000] grasp pose =
+position: 
+  x: 3.37127553841
+  y: -3.32769521187
+  z: 0.79
+orientation: 
+  x: -0.154227271667
+  y: -0.689973150691
+  z: 0.689973150691
+  w: 0.154227271667
+[INFO] [WallTime: 1347573145.923603] [9638.850000] grasp pose =
+position: 
+  x: 3.36713063207
+  y: -3.33615601838
+  z: 0.79
+orientation: 
+  x: -0.165045872246
+  y: -0.687465533721
+  z: 0.687465533721
+  w: 0.165045872246
+[INFO] [WallTime: 1347573145.925011] [9638.850000] grasp pose =
+position: 
+  x: 3.36272201063
+  y: -3.34448245535
+  z: 0.79
+orientation: 
+  x: -0.175823750226
+  y: -0.684788294918
+  z: 0.684788294918
+  w: 0.175823750226
+[INFO] [WallTime: 1347573145.926151] [9638.850000] grasp pose =
+position: 
+  x: 3.35805402487
+  y: -3.35266630557
+  z: 0.79
+orientation: 
+  x: -0.186558246326
+  y: -0.68194209485
+  z: 0.68194209485
+  w: 0.186558246326
+[INFO] [WallTime: 1347573145.927287] [9638.850000] grasp pose =
+position: 
+  x: 3.35313128154
+  y: -3.36069949259
+  z: 0.79
+orientation: 
+  x: -0.19724671197
+  y: -0.678927635774
+  z: 0.678927635774
+  w: 0.19724671197
+[INFO] [WallTime: 1347573145.928471] [9638.850000] grasp pose =
+position: 
+  x: 3.34795863878
+  y: -3.3685740886
+  z: 0.79
+orientation: 
+  x: -0.207886509939
+  y: -0.675745661462
+  z: 0.675745661462
+  w: 0.207886509939
+[INFO] [WallTime: 1347573145.929593] [9638.850000] grasp pose =
+position: 
+  x: 3.34254120137
+  y: -3.37628232234
+  z: 0.79
+orientation: 
+  x: -0.218475015023
+  y: -0.672396957021
+  z: 0.672396957021
+  w: 0.218475015023
+[INFO] [WallTime: 1347573145.930724] [9638.850000] grasp pose =
+position: 
+  x: 3.33688431567
+  y: -3.38381658672
+  z: 0.79
+orientation: 
+  x: -0.229009614666
+  y: -0.668882348691
+  z: 0.668882348691
+  w: 0.229009614666
+[INFO] [WallTime: 1347573145.931754] [9638.850000] grasp pose =
+position: 
+  x: 3.33099356433
+  y: -3.39116944631
+  z: 0.79
+orientation: 
+  x: -0.239487709613
+  y: -0.665202703651
+  z: 0.665202703651
+  w: 0.239487709613
+[INFO] [WallTime: 1347573145.932709] [9638.850000] grasp pose =
+position: 
+  x: 3.32487476083
+  y: -3.39833364474
+  z: 0.79
+orientation: 
+  x: -0.249906714552
+  y: -0.661358929797
+  z: 0.661358929797
+  w: 0.249906714552
+[INFO] [WallTime: 1347573145.933815] [9638.850000] grasp pose =
+position: 
+  x: 3.31853394367
+  y: -3.40530211181
+  z: 0.79
+orientation: 
+  x: -0.260264058748
+  y: -0.657351975523
+  z: 0.657351975523
+  w: 0.260264058748
+[INFO] [WallTime: 1347573145.941520] [9638.864000] grasp pose =
+position: 
+  x: 3.31197737048
+  y: -3.41206797048
+  z: 0.79
+orientation: 
+  x: -0.270557186682
+  y: -0.653182829485
+  z: 0.653182829485
+  w: 0.270557186682
+[INFO] [WallTime: 1347573145.945928] [9638.864000] grasp pose =
+position: 
+  x: 3.30521151181
+  y: -3.41862454367
+  z: 0.79
+orientation: 
+  x: -0.280783558679
+  y: -0.648852520359
+  z: 0.648852520359
+  w: 0.280783558679
+[INFO] [WallTime: 1347573145.947014] [9638.864000] grasp pose =
+position: 
+  x: 3.29824304474
+  y: -3.42496536083
+  z: 0.79
+orientation: 
+  x: -0.290940651534
+  y: -0.644362116581
+  z: 0.644362116581
+  w: 0.290940651534
+[INFO] [WallTime: 1347573145.948009] [9638.864000] grasp pose =
+position: 
+  x: 3.29107884631
+  y: -3.43108416433
+  z: 0.79
+orientation: 
+  x: -0.301025959137
+  y: -0.639712726093
+  z: 0.639712726093
+  w: 0.301025959137
+[INFO] [WallTime: 1347573145.948967] [9638.864000] grasp pose =
+position: 
+  x: 3.28372598672
+  y: -3.43697491567
+  z: 0.79
+orientation: 
+  x: -0.311036993088
+  y: -0.634905496063
+  z: 0.634905496063
+  w: 0.311036993088
+[INFO] [WallTime: 1347573145.950180] [9638.878000] grasp pose =
+position: 
+  x: 3.27619172234
+  y: -3.44263180137
+  z: 0.79
+orientation: 
+  x: -0.320971283316
+  y: -0.629941612601
+  z: 0.629941612601
+  w: 0.320971283316
+[INFO] [WallTime: 1347573145.951337] [9638.878000] grasp pose =
+position: 
+  x: 3.2684834886
+  y: -3.44804923878
+  z: 0.79
+orientation: 
+  x: -0.330826378682
+  y: -0.624822300473
+  z: 0.624822300473
+  w: 0.330826378682
+[INFO] [WallTime: 1347573145.952039] [9638.878000] grasp pose =
+position: 
+  x: 3.26060889259
+  y: -3.45322188154
+  z: 0.79
+orientation: 
+  x: -0.34059984759
+  y: -0.619548822791
+  z: 0.619548822791
+  w: 0.34059984759
+[INFO] [WallTime: 1347573145.953000] [9638.878000] grasp pose =
+position: 
+  x: 3.25257570557
+  y: -3.45814462487
+  z: 0.79
+orientation: 
+  x: -0.350289278582
+  y: -0.614122480708
+  z: 0.614122480708
+  w: 0.350289278582
+[INFO] [WallTime: 1347573145.953777] [9638.878000] grasp pose =
+position: 
+  x: 3.24439185535
+  y: -3.46281261063
+  z: 0.79
+orientation: 
+  x: -0.359892280936
+  y: -0.608544613092
+  z: 0.608544613092
+  w: 0.359892280936
+[INFO] [WallTime: 1347573145.954662] [9638.878000] grasp pose =
+position: 
+  x: 3.23606541838
+  y: -3.46722123207
+  z: 0.79
+orientation: 
+  x: -0.369406485254
+  y: -0.602816596198
+  z: 0.602816596198
+  w: 0.369406485254
+[INFO] [WallTime: 1347573145.955698] [9638.878000] grasp pose =
+position: 
+  x: 3.22760461187
+  y: -3.47136613841
+  z: 0.79
+orientation: 
+  x: -0.37882954405
+  y: -0.59693984333
+  z: 0.59693984333
+  w: 0.37882954405
+[INFO] [WallTime: 1347573145.956619] [9638.878000] grasp pose =
+position: 
+  x: 3.21901778559
+  y: -3.47524323914
+  z: 0.79
+orientation: 
+  x: -0.388159132325
+  y: -0.590915804487
+  z: 0.590915804487
+  w: 0.388159132325
+[INFO] [WallTime: 1347573145.958086] [9638.878000] grasp pose =
+position: 
+  x: 3.21031341372
+  y: -3.47884870802
+  z: 0.79
+orientation: 
+  x: -0.397392948141
+  y: -0.584745966012
+  z: 0.584745966012
+  w: 0.397392948141
+[INFO] [WallTime: 1347573145.961761] [9638.884000] grasp pose =
+position: 
+  x: 3.20150008642
+  y: -3.48217898689
+  z: 0.79
+orientation: 
+  x: -0.406528713195
+  y: -0.578431850219
+  z: 0.578431850219
+  w: 0.406528713195
+[INFO] [WallTime: 1347573145.963194] [9638.884000] grasp pose =
+position: 
+  x: 3.19258650137
+  y: -3.48523078917
+  z: 0.79
+orientation: 
+  x: -0.415564173371
+  y: -0.571975015023
+  z: 0.571975015023
+  w: 0.415564173371
+[INFO] [WallTime: 1347573145.964504] [9638.884000] grasp pose =
+position: 
+  x: 3.18358145522
+  y: -3.4880011031
+  z: 0.79
+orientation: 
+  x: -0.424497099305
+  y: -0.56537705355
+  z: 0.56537705355
+  w: 0.424497099305
+[INFO] [WallTime: 1347573145.965873] [9638.884000] grasp pose =
+position: 
+  x: 3.17449383485
+  y: -3.4904871947
+  z: 0.79
+orientation: 
+  x: -0.433325286933
+  y: -0.55863959375
+  z: 0.55863959375
+  w: 0.433325286933
+[INFO] [WallTime: 1347573145.966987] [9638.884000] grasp pose =
+position: 
+  x: 3.16533260864
+  y: -3.49268661052
+  z: 0.79
+orientation: 
+  x: -0.442046558029
+  y: -0.551764297988
+  z: 0.551764297988
+  w: 0.442046558029
+[INFO] [WallTime: 1347573145.968125] [9638.884000] grasp pose =
+position: 
+  x: 3.15610681763
+  y: -3.49459717999
+  z: 0.79
+orientation: 
+  x: -0.450658760752
+  y: -0.544752862642
+  z: 0.544752862642
+  w: 0.450658760752
+[INFO] [WallTime: 1347573145.969542] [9638.885000] grasp pose =
+position: 
+  x: 3.14682556655
+  y: -3.49621701761
+  z: 0.79
+orientation: 
+  x: -0.459159770169
+  y: -0.537607017679
+  z: 0.537607017679
+  w: 0.459159770169
+[INFO] [WallTime: 1347573145.970904] [9638.894000] grasp pose =
+position: 
+  x: 3.13749801488
+  y: -3.4975445248
+  z: 0.79
+orientation: 
+  x: -0.467547488784
+  y: -0.530328526229
+  z: 0.530328526229
+  w: 0.467547488784
+[INFO] [WallTime: 1347573145.972342] [9638.894000] grasp pose =
+position: 
+  x: 3.12813336778
+  y: -3.49857839147
+  z: 0.79
+orientation: 
+  x: -0.475819847051
+  y: -0.52291918415
+  z: 0.52291918415
+  w: 0.475819847051
+[INFO] [WallTime: 1347573145.974124] [9638.894000] grasp pose =
+position: 
+  x: 3.11874086704
+  y: -3.49931759731
+  z: 0.79
+orientation: 
+  x: -0.483974803892
+  y: -0.515380819587
+  z: 0.515380819587
+  w: 0.483974803892
+[INFO] [WallTime: 1347573145.975227] [9638.894000] grasp pose =
+position: 
+  x: 3.10932978191
+  y: -3.49976141282
+  z: 0.79
+orientation: 
+  x: -0.492010347191
+  y: -0.507715292519
+  z: 0.507715292519
+  w: 0.492010347191
+[INFO] [WallTime: 1347573145.976427] [9638.894000] grasp pose =
+position: 
+  x: 3.0999094
+  y: -3.4999094
+  z: 0.79
+orientation: 
+  x: -0.499924494299
+  y: -0.499924494299
+  z: 0.499924494299
+  w: 0.499924494299
+[INFO] [WallTime: 1347573145.979142] [9638.894000] grasp pose =
+position: 
+  x: 3.09048901809
+  y: -3.49976141282
+  z: 0.79
+orientation: 
+  x: -0.507715292519
+  y: -0.492010347191
+  z: 0.492010347191
+  w: 0.507715292519
+[INFO] [WallTime: 1347573145.980334] [9638.894000] grasp pose =
+position: 
+  x: 3.08107793296
+  y: -3.49931759731
+  z: 0.79
+orientation: 
+  x: -0.515380819587
+  y: -0.483974803892
+  z: 0.483974803892
+  w: 0.515380819587
+[INFO] [WallTime: 1347573145.982284] [9638.894000] grasp pose =
+position: 
+  x: 3.07168543222
+  y: -3.49857839147
+  z: 0.79
+orientation: 
+  x: -0.52291918415
+  y: -0.475819847051
+  z: 0.475819847051
+  w: 0.52291918415
+[INFO] [WallTime: 1347573145.984020] [9638.894000] grasp pose =
+position: 
+  x: 3.06232078512
+  y: -3.4975445248
+  z: 0.79
+orientation: 
+  x: -0.530328526229
+  y: -0.467547488784
+  z: 0.467547488784
+  w: 0.530328526229
+[INFO] [WallTime: 1347573145.984934] [9638.894000] grasp pose =
+position: 
+  x: 3.05299323345
+  y: -3.49621701761
+  z: 0.79
+orientation: 
+  x: -0.537607017679
+  y: -0.459159770169
+  z: 0.459159770169
+  w: 0.537607017679
+[INFO] [WallTime: 1347573145.986980] [9638.903000] grasp pose =
+position: 
+  x: 3.04371198237
+  y: -3.49459717999
+  z: 0.79
+orientation: 
+  x: -0.544752862642
+  y: -0.450658760752
+  z: 0.450658760752
+  w: 0.544752862642
+[INFO] [WallTime: 1347573145.988213] [9638.903000] grasp pose =
+position: 
+  x: 3.03448619136
+  y: -3.49268661052
+  z: 0.79
+orientation: 
+  x: -0.551764297988
+  y: -0.442046558029
+  z: 0.442046558029
+  w: 0.551764297988
+[INFO] [WallTime: 1347573145.989216] [9638.903000] grasp pose =
+position: 
+  x: 3.02532496515
+  y: -3.4904871947
+  z: 0.79
+orientation: 
+  x: -0.55863959375
+  y: -0.433325286933
+  z: 0.433325286933
+  w: 0.55863959375
+[INFO] [WallTime: 1347573145.989965] [9638.903000] grasp pose =
+position: 
+  x: 3.01623734478
+  y: -3.4880011031
+  z: 0.79
+orientation: 
+  x: -0.56537705355
+  y: -0.424497099305
+  z: 0.424497099305
+  w: 0.56537705355
+[INFO] [WallTime: 1347573145.990866] [9638.903000] grasp pose =
+position: 
+  x: 3.00723229863
+  y: -3.48523078917
+  z: 0.79
+orientation: 
+  x: -0.571975015023
+  y: -0.415564173371
+  z: 0.415564173371
+  w: 0.571975015023
+[INFO] [WallTime: 1347573145.991639] [9638.903000] grasp pose =
+position: 
+  x: 2.99831871358
+  y: -3.48217898689
+  z: 0.79
+orientation: 
+  x: -0.578431850219
+  y: -0.406528713195
+  z: 0.406528713195
+  w: 0.578431850219
+[INFO] [WallTime: 1347573145.992507] [9638.903000] grasp pose =
+position: 
+  x: 2.98950538628
+  y: -3.47884870802
+  z: 0.79
+orientation: 
+  x: -0.584745966012
+  y: -0.397392948141
+  z: 0.397392948141
+  w: 0.584745966012
+[INFO] [WallTime: 1347573145.993233] [9638.903000] grasp pose =
+position: 
+  x: 2.98080101441
+  y: -3.47524323914
+  z: 0.79
+orientation: 
+  x: -0.590915804487
+  y: -0.388159132325
+  z: 0.388159132325
+  w: 0.590915804487
+[INFO] [WallTime: 1347573145.994011] [9638.903000] grasp pose =
+position: 
+  x: 2.97221418813
+  y: -3.47136613841
+  z: 0.79
+orientation: 
+  x: -0.59693984333
+  y: -0.37882954405
+  z: 0.37882954405
+  w: 0.59693984333
+[INFO] [WallTime: 1347573145.994809] [9638.903000] grasp pose =
+position: 
+  x: 2.96375338162
+  y: -3.46722123207
+  z: 0.79
+orientation: 
+  x: -0.602816596198
+  y: -0.369406485254
+  z: 0.369406485254
+  w: 0.602816596198
+[INFO] [WallTime: 1347573145.995725] [9638.903000] grasp pose =
+position: 
+  x: 2.95542694465
+  y: -3.46281261063
+  z: 0.79
+orientation: 
+  x: -0.608544613092
+  y: -0.359892280936
+  z: 0.359892280936
+  w: 0.608544613092
+[INFO] [WallTime: 1347573145.997142] [9638.915000] grasp pose =
+position: 
+  x: 2.94724309443
+  y: -3.45814462487
+  z: 0.79
+orientation: 
+  x: -0.614122480708
+  y: -0.350289278582
+  z: 0.350289278582
+  w: 0.614122480708
+[INFO] [WallTime: 1347573145.998687] [9638.915000] grasp pose =
+position: 
+  x: 2.93920990741
+  y: -3.45322188154
+  z: 0.79
+orientation: 
+  x: -0.619548822791
+  y: -0.34059984759
+  z: 0.34059984759
+  w: 0.619548822791
+[INFO] [WallTime: 1347573145.999651] [9638.915000] grasp pose =
+position: 
+  x: 2.9313353114
+  y: -3.44804923878
+  z: 0.79
+orientation: 
+  x: -0.624822300473
+  y: -0.330826378682
+  z: 0.330826378682
+  w: 0.624822300473
+[INFO] [WallTime: 1347573146.000643] [9638.915000] grasp pose =
+position: 
+  x: 2.92362707766
+  y: -3.44263180137
+  z: 0.79
+orientation: 
+  x: -0.629941612601
+  y: -0.320971283316
+  z: 0.320971283316
+  w: 0.629941612601
+[INFO] [WallTime: 1347573146.001582] [9638.915000] grasp pose =
+position: 
+  x: 2.91609281328
+  y: -3.43697491567
+  z: 0.79
+orientation: 
+  x: -0.634905496063
+  y: -0.311036993088
+  z: 0.311036993088
+  w: 0.634905496063
+[INFO] [WallTime: 1347573146.002969] [9638.915000] grasp pose =
+position: 
+  x: 2.90873995369
+  y: -3.43108416433
+  z: 0.79
+orientation: 
+  x: -0.639712726093
+  y: -0.301025959137
+  z: 0.301025959137
+  w: 0.639712726093
+[INFO] [WallTime: 1347573146.004562] [9638.915000] grasp pose =
+position: 
+  x: 2.90157575526
+  y: -3.42496536083
+  z: 0.79
+orientation: 
+  x: -0.644362116581
+  y: -0.290940651534
+  z: 0.290940651534
+  w: 0.644362116581
+[INFO] [WallTime: 1347573146.006269] [9638.915000] grasp pose =
+position: 
+  x: 2.89460728819
+  y: -3.41862454367
+  z: 0.79
+orientation: 
+  x: -0.648852520359
+  y: -0.280783558679
+  z: 0.280783558679
+  w: 0.648852520359
+[INFO] [WallTime: 1347573146.008686] [9638.915000] grasp pose =
+position: 
+  x: 2.88784142952
+  y: -3.41206797048
+  z: 0.79
+orientation: 
+  x: -0.653182829485
+  y: -0.270557186682
+  z: 0.270557186682
+  w: 0.653182829485
+[INFO] [WallTime: 1347573146.009637] [9638.915000] grasp pose =
+position: 
+  x: 2.88128485633
+  y: -3.40530211181
+  z: 0.79
+orientation: 
+  x: -0.657351975523
+  y: -0.260264058748
+  z: 0.260264058748
+  w: 0.657351975523
+[INFO] [WallTime: 1347573146.010544] [9638.915000] grasp pose =
+position: 
+  x: 2.87494403917
+  y: -3.39833364474
+  z: 0.79
+orientation: 
+  x: -0.661358929797
+  y: -0.249906714552
+  z: 0.249906714552
+  w: 0.661358929797
+[INFO] [WallTime: 1347573146.011617] [9638.916000] grasp pose =
+position: 
+  x: 2.86882523567
+  y: -3.39116944631
+  z: 0.79
+orientation: 
+  x: -0.665202703651
+  y: -0.239487709613
+  z: 0.239487709613
+  w: 0.665202703651
+[INFO] [WallTime: 1347573146.013536] [9638.927000] grasp pose =
+position: 
+  x: 2.86293448433
+  y: -3.38381658672
+  z: 0.79
+orientation: 
+  x: -0.668882348691
+  y: -0.229009614666
+  z: 0.229009614666
+  w: 0.668882348691
+[INFO] [WallTime: 1347573146.014702] [9638.927000] grasp pose =
+position: 
+  x: 2.85727759863
+  y: -3.37628232234
+  z: 0.79
+orientation: 
+  x: -0.672396957021
+  y: -0.218475015023
+  z: 0.218475015023
+  w: 0.672396957021
+[INFO] [WallTime: 1347573146.016625] [9638.927000] grasp pose =
+position: 
+  x: 2.85186016122
+  y: -3.3685740886
+  z: 0.79
+orientation: 
+  x: -0.675745661462
+  y: -0.207886509939
+  z: 0.207886509939
+  w: 0.675745661462
+[INFO] [WallTime: 1347573146.017653] [9638.927000] grasp pose =
+position: 
+  x: 2.84668751846
+  y: -3.36069949259
+  z: 0.79
+orientation: 
+  x: -0.678927635774
+  y: -0.19724671197
+  z: 0.19724671197
+  w: 0.678927635774
+[INFO] [WallTime: 1347573146.018582] [9638.927000] grasp pose =
+position: 
+  x: 2.84176477513
+  y: -3.35266630557
+  z: 0.79
+orientation: 
+  x: -0.68194209485
+  y: -0.186558246326
+  z: 0.186558246326
+  w: 0.68194209485
+[INFO] [WallTime: 1347573146.019818] [9638.927000] grasp pose =
+position: 
+  x: 2.83709678937
+  y: -3.34448245535
+  z: 0.79
+orientation: 
+  x: -0.684788294918
+  y: -0.175823750226
+  z: 0.175823750226
+  w: 0.684788294918
+[INFO] [WallTime: 1347573146.020808] [9638.927000] grasp pose =
+position: 
+  x: 2.83268816793
+  y: -3.33615601838
+  z: 0.79
+orientation: 
+  x: -0.687465533721
+  y: -0.165045872246
+  z: 0.165045872246
+  w: 0.687465533721
+[INFO] [WallTime: 1347573146.021712] [9638.928000] grasp pose =
+position: 
+  x: 2.82854326159
+  y: -3.32769521187
+  z: 0.79
+orientation: 
+  x: -0.689973150691
+  y: -0.154227271667
+  z: 0.154227271667
+  w: 0.689973150691
+[INFO] [WallTime: 1347573146.023301] [9638.939000] grasp pose =
+position: 
+  x: 2.82466616086
+  y: -3.31910838559
+  z: 0.79
+orientation: 
+  x: -0.69231052711
+  y: -0.143370617817
+  z: 0.143370617817
+  w: 0.69231052711
+[INFO] [WallTime: 1347573146.024718] [9638.939000] grasp pose =
+position: 
+  x: 2.82106069198
+  y: -3.31040401372
+  z: 0.79
+orientation: 
+  x: -0.694477086265
+  y: -0.132478589412
+  z: 0.132478589412
+  w: 0.694477086265
+[INFO] [WallTime: 1347573146.026794] [9638.939000] grasp pose =
+position: 
+  x: 2.81773041311
+  y: -3.30159068642
+  z: 0.79
+orientation: 
+  x: -0.696472293591
+  y: -0.121553873898
+  z: 0.121553873898
+  w: 0.696472293591
+[INFO] [WallTime: 1347573146.027799] [9638.939000] grasp pose =
+position: 
+  x: 2.81467861083
+  y: -3.29267710137
+  z: 0.79
+orientation: 
+  x: -0.698295656801
+  y: -0.110599166783
+  z: 0.110599166783
+  w: 0.698295656801
+[INFO] [WallTime: 1347573146.028616] [9638.939000] grasp pose =
+position: 
+  x: 2.8119082969
+  y: -3.28367205522
+  z: 0.79
+orientation: 
+  x: -0.699946726006
+  y: -0.0996171709799
+  z: 0.0996171709799
+  w: 0.699946726006
+[INFO] [WallTime: 1347573146.029667] [9638.939000] grasp pose =
+position: 
+  x: 2.8094222053
+  y: -3.27458443485
+  z: 0.79
+orientation: 
+  x: -0.701425093829
+  y: -0.08861059613
+  z: 0.08861059613
+  w: 0.701425093829
+[INFO] [WallTime: 1347573146.030662] [9638.939000] grasp pose =
+position: 
+  x: 2.80722278948
+  y: -3.26542320864
+  z: 0.79
+orientation: 
+  x: -0.702730395507
+  y: -0.0775821579414
+  z: 0.0775821579414
+  w: 0.702730395507
+[INFO] [WallTime: 1347573146.031832] [9638.939000] grasp pose =
+position: 
+  x: 2.80531222001
+  y: -3.25619741763
+  z: 0.79
+orientation: 
+  x: -0.703862308974
+  y: -0.0665345775162
+  z: 0.0665345775162
+  w: 0.703862308974
+[INFO] [WallTime: 1347573146.032782] [9638.939000] grasp pose =
+position: 
+  x: 2.80369238239
+  y: -3.24691616655
+  z: 0.79
+orientation: 
+  x: -0.704820554949
+  y: -0.0554705806796
+  z: 0.0554705806796
+  w: 0.704820554949
+[INFO] [WallTime: 1347573146.034272] [9638.953000] grasp pose =
+position: 
+  x: 2.8023648752
+  y: -3.23758861488
+  z: 0.79
+orientation: 
+  x: -0.705604896999
+  y: -0.0443928973072
+  z: 0.0443928973072
+  w: 0.705604896999
+[INFO] [WallTime: 1347573146.035349] [9638.953000] grasp pose =
+position: 
+  x: 2.80133100853
+  y: -3.22822396778
+  z: 0.79
+orientation: 
+  x: -0.706215141598
+  y: -0.0333042606517
+  z: 0.0333042606517
+  w: 0.706215141598
+[INFO] [WallTime: 1347573146.036148] [9638.953000] grasp pose =
+position: 
+  x: 2.80059180269
+  y: -3.21883146704
+  z: 0.79
+orientation: 
+  x: -0.706651138179
+  y: -0.0222074066682
+  z: 0.0222074066682
+  w: 0.706651138179
+[INFO] [WallTime: 1347573146.037104] [9638.953000] grasp pose =
+position: 
+  x: 2.80014798718
+  y: -3.20942038191
+  z: 0.79
+orientation: 
+  x: -0.706912779165
+  y: -0.0111050733395
+  z: 0.0111050733395
+  w: 0.706912779165
+[INFO] [WallTime: 1347573146.038260] [9638.953000] WORLD: 3, RESET TIME: 90, DARRT TRIES: 1, FORWARD: 1
+[INFO] [WallTime: 1347573435.051567] [9894.704000] TRIAL 1:
+[INFO] [WallTime: 1347573435.052207] [9894.705000] 	Planning time: 249.893295
+[INFO] [WallTime: 1347573771.724955] [10194.307000] TRIAL 2:
+[INFO] [WallTime: 1347573771.725897] [10194.312000] 	Planning time: 293.295013
+[INFO] [WallTime: 1347573819.839111] [10236.648000] TRIAL 3:
+[INFO] [WallTime: 1347573819.841580] [10236.659000] 	Planning time: 27.727839
+[INFO] [WallTime: 1347574517.098850] [10854.997000] TRIAL 4:
+[INFO] [WallTime: 1347574517.099679] [10854.997000] 	Planning time: 616.887329
+[INFO] [WallTime: 1347574787.931626] [11095.642000] TRIAL 5:
+[INFO] [WallTime: 1347574787.932224] [11095.642000] 	Planning time: 229.391235
+[INFO] [WallTime: 1347574843.688647] [11144.766000] TRIAL 6:
+[INFO] [WallTime: 1347574843.689090] [11144.766000] 	Planning time: 34.819622
+[INFO] [WallTime: 1347574999.880312] [11283.854000] TRIAL 7:
+[INFO] [WallTime: 1347574999.883524] [11283.854000] 	Planning time: 125.461395
+[INFO] [WallTime: 1347575138.039247] [11406.800000] TRIAL 8:
+[INFO] [WallTime: 1347575138.039813] [11406.800000] 	Planning time: 103.840454
+[INFO] [WallTime: 1347575277.994513] [11530.481000] TRIAL 9:
+[INFO] [WallTime: 1347575277.995133] [11530.481000] 	Planning time: 110.530426
+[INFO] [WallTime: 1347575409.706903] [11647.924000] TRIAL 10:
+[INFO] [WallTime: 1347575409.707601] [11647.924000] 	Planning time: 103.713783
+[INFO] [WallTime: 1347575484.076421] [11712.477000] TRIAL 11:
+[INFO] [WallTime: 1347575484.077647] [11712.477000] 	Planning time: 56.023216
+[INFO] [WallTime: 1347575880.371422] [12063.404000] TRIAL 12:
+[INFO] [WallTime: 1347575880.373076] [12063.428000] 	Planning time: 342.727875
+[INFO] [WallTime: 1347576118.123357] [12274.935000] TRIAL 13:
+[INFO] [WallTime: 1347576118.123983] [12274.935000] 	Planning time: 200.344696
+[INFO] [WallTime: 1347576741.039287] [12830.039000] TRIAL 14:
+[INFO] [WallTime: 1347576741.039837] [12830.039000] 	Planning time: 549.797974
+[INFO] [WallTime: 1347576797.071046] [12879.482000] TRIAL 15:
+[INFO] [WallTime: 1347576797.071835] [12879.482000] 	Planning time: 32.650772
+[INFO] [WallTime: 1347576934.926300] [13001.971000] TRIAL 16:
+[INFO] [WallTime: 1347576934.926928] [13001.971000] 	Planning time: 106.684357
+[INFO] [WallTime: 1347577177.123443] [13216.907000] TRIAL 17:
+[INFO] [WallTime: 1347577177.124854] [13216.907000] 	Planning time: 205.284531
+[INFO] [WallTime: 1347577209.531685] [13245.593000] TRIAL 18:
+[INFO] [WallTime: 1347577209.532717] [13245.603000] 	Planning time: 13.920184
+[INFO] [WallTime: 1347577266.283052] [13295.743000] TRIAL 19:
+[INFO] [WallTime: 1347577266.284988] [13295.748000] 	Planning time: 33.711994
+[INFO] [WallTime: 1347577336.225579] [13357.234000] TRIAL 20:
+[INFO] [WallTime: 1347577336.226169] [13357.234000] 	Planning time: 47.907951
+[INFO] [WallTime: 1347577518.939439] [13519.823000] TRIAL 21:
+[INFO] [WallTime: 1347577518.939868] [13519.823000] 	Planning time: 151.041046
+[INFO] [WallTime: 1347577864.307731] [13825.833000] TRIAL 22:
+[INFO] [WallTime: 1347577864.309676] [13825.833000] 	Planning time: 300.340302
+[INFO] [WallTime: 1347577906.676674] [13863.411000] TRIAL 23:
+[INFO] [WallTime: 1347577906.677264] [13863.411000] 	Planning time: 23.714552
+[INFO] [WallTime: 1347577959.410531] [13910.095000] TRIAL 24:
+[INFO] [WallTime: 1347577959.411428] [13910.095000] 	Planning time: 29.979578
+[INFO] [WallTime: 1347578000.553784] [13946.430000] TRIAL 25:
+[INFO] [WallTime: 1347578000.556307] [13946.430000] 	Planning time: 22.757980
+[INFO] [WallTime: 1347578054.373912] [13993.779000] TRIAL 26:
+[INFO] [WallTime: 1347578054.374872] [13993.779000] 	Planning time: 32.839401
+[INFO] [WallTime: 1347578139.663935] [14069.416000] TRIAL 27:
+[INFO] [WallTime: 1347578139.664508] [14069.416000] 	Planning time: 66.574669
+[INFO] [WallTime: 1347578287.865757] [14200.831000] TRIAL 28:
+[INFO] [WallTime: 1347578287.866371] [14200.831000] 	Planning time: 119.151337
+[INFO] [WallTime: 1347578725.185951] [14589.482000] TRIAL 29:
+[INFO] [WallTime: 1347578725.186828] [14589.492000] 	Planning time: 383.560425
+[INFO] [WallTime: 1347578866.532092] [14715.501000] TRIAL 30:
+[INFO] [WallTime: 1347578866.532593] [14715.501000] 	Planning time: 109.697693
+[INFO] [WallTime: 1347579099.917895] [14922.214000] TRIAL 31:
+[INFO] [WallTime: 1347579099.918302] [14922.214000] 	Planning time: 189.968063
+[INFO] [WallTime: 1347579168.144999] [14982.446000] TRIAL 32:
+[INFO] [WallTime: 1347579168.145774] [14982.446000] 	Planning time: 44.682709
+[INFO] [WallTime: 1347579231.425349] [15038.311000] TRIAL 33:
+[INFO] [WallTime: 1347579231.426504] [15038.313000] 	Planning time: 41.860809
+[INFO] [WallTime: 1347579465.861414] [15246.250000] TRIAL 34:
+[INFO] [WallTime: 1347579465.862020] [15246.250000] 	Planning time: 191.846359
+[INFO] [WallTime: 1347579639.922837] [15400.810000] TRIAL 35:
+[INFO] [WallTime: 1347579639.924327] [15400.810000] 	Planning time: 144.127747
+[INFO] [WallTime: 1347579688.411891] [15444.140000] TRIAL 36:
+[INFO] [WallTime: 1347579688.412573] [15444.140000] 	Planning time: 26.909597
+[INFO] [WallTime: 1347579849.860928] [15586.673000] TRIAL 37:
+[INFO] [WallTime: 1347579849.861422] [15586.673000] 	Planning time: 132.933868
+[INFO] [WallTime: 1347579956.212590] [15680.821000] TRIAL 38:
+[INFO] [WallTime: 1347579956.213169] [15680.821000] 	Planning time: 83.398178
+[INFO] [WallTime: 1347579996.892669] [15716.601000] TRIAL 39:
+[INFO] [WallTime: 1347579996.893484] [15716.601000] 	Planning time: 19.122221
+[INFO] [WallTime: 1347580301.220503] [15986.333000] TRIAL 40:
+[INFO] [WallTime: 1347580301.221022] [15986.333000] 	Planning time: 265.117950
+[INFO] [WallTime: 1347580737.193753] [16374.962000] TRIAL 41:
+[INFO] [WallTime: 1347580737.194594] [16374.962000] 	Planning time: 377.317657
+[INFO] [WallTime: 1347580811.178456] [16440.864000] TRIAL 42:
+[INFO] [WallTime: 1347580811.178907] [16440.864000] 	Planning time: 53.312374
+[INFO] [WallTime: 1347580865.005228] [16488.908000] TRIAL 43:
+[INFO] [WallTime: 1347580865.005942] [16488.908000] 	Planning time: 32.026329
+[INFO] [WallTime: 1347580916.797442] [16534.730000] TRIAL 44:
+[INFO] [WallTime: 1347580916.798045] [16534.730000] 	Planning time: 30.237673
+[INFO] [WallTime: 1347580985.109383] [16594.621000] TRIAL 45:
+[INFO] [WallTime: 1347580985.110353] [16594.630000] 	Planning time: 48.990459
+[INFO] [WallTime: 1347581024.771950] [16629.541000] TRIAL 46:
+[INFO] [WallTime: 1347581024.773475] [16629.541000] 	Planning time: 20.776333
+[INFO] [WallTime: 1347581254.832497] [16834.155000] TRIAL 47:
+[INFO] [WallTime: 1347581254.833953] [16834.160000] 	Planning time: 189.714615
+[INFO] [WallTime: 1347581347.309022] [16915.754000] TRIAL 48:
+[INFO] [WallTime: 1347581347.310044] [16915.755000] 	Planning time: 68.492538
+[INFO] [WallTime: 1347581689.339479] [17219.570000] TRIAL 49:
+[INFO] [WallTime: 1347581689.340152] [17219.570000] 	Planning time: 291.365051
+[INFO] [WallTime: 1347581868.583915] [17379.416000] TRIAL 50:
+[INFO] [WallTime: 1347581868.584614] [17379.416000] 	Planning time: 147.848297
+[INFO] [WallTime: 1347581868.585107] [17379.416000] TOTALS: TRIALS: 50, AVERAGE TIME: 142.486395, AVERAGE TOTAL TIME: 0.000000 AVERAGE OBJECT TIME: 0.000000, AVERAGE SUBGOAL TIMES:
+[INFO] [WallTime: 1347581868.585725] [17379.417000] 	TOTAL: 0.000000
+[INFO] [WallTime: 1347581868.590777] [17379.424000] Saving to file hierarchical_results/plateh_17379.417.pck

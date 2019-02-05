@@ -1,0 +1,26 @@
+<package>
+  <description brief="furniture">
+
+     furniture
+
+  </description>
+  <author>Jared Glover</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/furniture</url>
+  <depend package="std_msgs"/>
+  <depend package="geometry_msgs"/>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+  <depend package="actionlib"/>
+  <depend package="visualization_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="pcl"/>
+  <depend package="stereo_msgs"/>
+  <depend package="opencv2"/>
+  <depend package="cv_bridge"/>
+  <depend package="tf" />
+  <depend package="pcl_ros"/>
+</package>
+
+

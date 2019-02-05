@@ -1,0 +1,54 @@
+#Brownies
+
+/*
+Brownies
+    1/2 cup butter
+    1 cup sugar
+    1 teaspoon vanilla
+    2 eggs
+    6 tablespoons cocoa
+    1/2 cup all-purpose flour
+1. Cream first 3 ingredients with a mixer.
+2. Blend in cocoa, flour and eggs.
+3. Bake at 350°F for 25 to 30 minutes.
+4. Frost with your favorite icing or mix icing sugar, butter and cocoa.
+5. Cut into 15-20 small squares (its pretty rich!)
+*/
+
+A = Ingredient('butter', '1/2 cup')
+B = Ingredient('sugar', '1 cup')
+C = Ingredient('vanilla', '1 teaspoon')
+D = Ingredient('eggs', '2')
+E = Ingredient('cocoa', '6 tablespoons')
+F = Ingredient('all-purpose flour', '1/2 cup')
+
+#orderedIngList = [A,B,C,D,E,F]
+
+#Cream first 3 ingredients with a mixer.
+#We can find first ingredients using an ordered list
+#TODO: Do we want this to be read as Pour->Mix or just Mix?
+pour(A, mixing_bowl)
+pour(B, mixing_bowl)
+pour(C, mixing_bowl)
+mix(mixing_bowl)
+#Or Mix(mixing_bowl, [A,B,C]) and take care of the pours inside of mix?
+
+#Blend in cocoa, flour and eggs.
+#Same question as above
+pour(E, mixing_bowl)
+pour(F, mixing_bowl)
+pour(D, mixing_bowl)
+mix(mixing_bowl)
+#OR Mix(mixing_bowl, [E,F,D])?
+
+#Bake at 350°F for 25 to 30 minutes.
+oven.preheat(350)
+oven.bake(pan, 25)
+
+#Frost with your favorite icing or mix icing sugar, butter and cocoa.
+#TODO: I really don't know how to process this line
+#Ignore?
+
+#Cut into 15-20 small squares (its pretty rich!)
+#Cut(x), where x is the number of equally sized pieces to cut it into?
+Cut(15)

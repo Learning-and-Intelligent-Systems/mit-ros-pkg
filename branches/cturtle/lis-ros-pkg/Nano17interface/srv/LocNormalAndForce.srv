@@ -1,0 +1,5 @@
+int32 sensornum
+---
+float64[] loc
+float64[] normal
+float64 forcemag

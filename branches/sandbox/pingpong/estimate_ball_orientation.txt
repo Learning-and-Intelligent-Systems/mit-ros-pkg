@@ -1,0 +1,20 @@
+How to estimate ball orientations:
+
+		1. Resize ball image to 32x32.
+		2. Use imfilter to align ball image with avg. ball image.
+		3. Crop pixels outside ball radius.
+		4. Normalize lighting w.r.t. avg. (aligned) ball image.
+		5. Invert ball image (so logo pixels are white).
+		6. Find weighted centroid of pixels.
+		7. Use mean-shift (local 5x5 grid search) on blurred ball image to find local pixel max.
+8. If local max pixel value < w_thresh, return (no logo found).
+9. Mask out pixels farther than r/2 away from the logo center.
+
+10. Compute 3D pixel locations on ball.
+11. Recompute logo center "mu" as 3D weighted mean.
+12. Project logo points into tangent space at "mu".
+13. Compute principal curvature direction, "pc".
+14. Use "mu" and "pc" to generate a pair of quaternion orientations, q1 and q2.
+15. (Optional) Use the principal curvatures ratio to make bingham distributions on q1 and q2.
+
+

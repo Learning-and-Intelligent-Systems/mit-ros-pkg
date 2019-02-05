@@ -1,0 +1,25 @@
+/**
+\mainpage
+\htmlinclude manifest.html
+
+This is the action interface to the <a href=http://www.ros.org/wiki/opencupboard>opencupboard</a> package. The opencupboard action executes the detection, grasping, and opening. It moniters the detection and will continue to look for the handle until it finds something suitable, or it manually stopped. It then moniters the grasping and aborts if it can not find a collision free plan to the handle. Lastly, it moniters the opening and will return success if it has reached the desired position and failure otherwise. The grasphandle action executes the actual grasp and is called by the opencupboard action.
+
+\section codeapi Code API
+
+Classes:
+- \b GraspHandle : the executer class that talks to the GraspHandleAction server to grasp the handle
+- \b OpenCupboard : the executer class that talks to the OpenCupboardAction server to open the cupboard door
+
+<!--
+Provide links to specific auto-generated API documentation within your
+package that is of particular interest to a reader. Doxygen will
+document pretty much every part of your code, so do your best here to
+point the reader to the actual API.
+
+If your codebase is fairly large or has different sets of APIs, you
+should use the doxygen 'group' tag to keep these APIs together. For
+example, the roscpp documentation has 'libros' group.
+-->
+
+
+*/

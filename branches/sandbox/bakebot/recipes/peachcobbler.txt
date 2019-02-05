@@ -1,0 +1,48 @@
+#Peach Cobbler
+
+/*
+1 (16 oz.) can sliced peaches with syrup
+1 c. sugar
+1 c. self-rising flour
+1 c. milk
+1 stick melted butter (optional)
+
+Preheat oven to 350 degrees. Pour all ingredients into large bowl; mix until well blended. Pour into ungreased 13x9x2 aluminum pan. Bake 30-45 minutes or until golden brown. Top with vanilla ice cream.
+*/
+
+
+#Ingredient Definitions
+A = Ingredient('sliced peaches with syrup', '1 (16oz.) can')
+B = Ingredient('sugar', '1 c.')
+C = Ingredient('self-rising flour', '1 c.')
+D = Ingredient('milk', '1 c.')
+E = Ingredient('melted butter', '1 stick')
+
+#Preheat oven to 350 degrees.
+oven.preheat(350)
+
+#Pour all ingredients into large bowl;
+#Maybe possible with an ordered list of ingredients? This would allow phrases like "first 3 ingredients"
+Pour(A, mixing_bowl)
+Pour(B, mixing_bowl)
+Pour(C, mixing_bowl)
+Pour(D, mixing_bowl)
+Pour(E, mixing_bowl)
+
+#mix until well blended.
+Mix(mixing_bowl)
+
+#Pour into ungreased 13x9x2 aluminum pan.
+#Same as scrape?
+Pour(mixing_bowl, pan)
+
+#Bake 30-45 minutes or until golden brown
+#Always take the lowest minute value for safety? Or maybe have a range?
+oven.bake(pan, 30)
+
+#Top with vanilla ice cream.
+#There is no vanilla ice cream in the ingredients list.
+#Either Ignore or add a new ingredient at this point?
+F = Ingredient("vanilla ice cream", "?")
+#How would we know to pour on the pan?
+Pour(F, pan)

@@ -1,0 +1,19 @@
+<package>
+  <description brief="turntable">
+
+     turntable
+
+  </description>
+  <author>Jared Glover</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/turntable</url>
+  <depend package="rospy"/>
+  <depend package="rosbag"/>
+  <!--depend package="robotis"-->
+  <depend package="sensor_msgs"/>
+  <depend package="dynamic_reconfigure"/>
+
+</package>
+
+

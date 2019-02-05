@@ -1,0 +1,16 @@
+<package>
+  <description brief="opencupboard_launch">
+
+     opencupboard_launch
+
+  </description>
+  <author>Annie Holladay</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/opencupboard_launch</url>
+
+  <depend package="opencupboard_action" />
+
+</package>
+
+

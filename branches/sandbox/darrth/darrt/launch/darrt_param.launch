@@ -1,0 +1,5 @@
+<launch>
+	<rosparam command="load" ns="darrt_planning" file="$(find pr2_arm_navigation_planning)/config/ompl_planning.yaml"/>
+	<rosparam command="load" ns="darrt_planning" file="$(find sbpl_full_body_planning)/config/pr2_body.yaml"/>
+</launch>
+

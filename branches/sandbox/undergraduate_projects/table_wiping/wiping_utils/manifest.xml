@@ -1,0 +1,18 @@
+<package>
+  <description brief="wiping_utils">
+
+     wiping_utils
+
+  </description>
+  <author>Jenny Barry</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/wiping_utils</url>
+  <depend package="geometry_msgs"/>
+  <depend package="planning_environment_msgs"/>
+  <depend package="motion_planning_msgs"/>
+
+
+</package>
+
+

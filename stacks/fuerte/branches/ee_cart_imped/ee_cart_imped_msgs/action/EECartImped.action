@@ -1,0 +1,26 @@
+#goal definition
+Header header
+ee_cart_imped_msgs/StiffPoint[] trajectory
+---
+#result definition
+#whether it was successful
+#the pose and force we ended with
+Header header
+bool success
+ee_cart_imped_msgs/StiffPoint desired
+geometry_msgs/Pose actual_pose
+float64 effort_sq_error
+---
+#feedback
+#current pose and squared error in force 
+#and the running time of this goal so far
+Header header
+ee_cart_imped_msgs/StiffPoint[] goal
+ee_cart_imped_msgs/StiffPoint initial_point
+ee_cart_imped_msgs/StiffPoint desired
+ee_cart_imped_msgs/StiffPoint actual_pose
+float64 effort_sq_error
+float64[] requested_joint_efforts
+float64[] actual_joint_efforts
+duration running_time
+

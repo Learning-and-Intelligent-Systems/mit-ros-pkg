@@ -1,0 +1,14 @@
+<package>
+<description>Nano17interface is a library for accessing Nano17 6-axis force/torque sensors.</description>
+<author>Kaijen Hsiao (kaijenhsiao@gmail.com)</author>
+<license>BSD</license>
+<depend package="roscpp" />
+<depend package="rospy" />
+<depend package="std_msgs" />
+<depend package="std_srvs" />
+<export>
+  <cpp cflags="-I{prefix}/srv/cpp -I${prefix}/include/" lflags="-L${prefix}/lib -lnano17"/>
+  <python path="${prefix}/ROS"/>
+  <python path="${prefix}/src"/>
+</export>
+</package>

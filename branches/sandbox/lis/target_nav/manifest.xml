@@ -1,0 +1,26 @@
+<package>
+  <description brief="target_nav">
+
+     target_nav
+
+  </description>
+  <author></author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/target_nav</url>
+  <depend package="pr2_head_action"/>
+<!-- the checkerboard_pose package has been replaced with datamatrix.  TODO: fix the target_nav package so it uses datamatrix instead. -->
+<!--
+  <depend package="checkerboard_pose"/>
+-->
+  <depend package="geometry_msgs"/>
+  <depend package="tf"/>
+  <depend package="roscpp"/>
+  <depend package="actionlib"/>
+  <export>
+    <cpp cflags="-I${prefix}/include -I${prefix}/srv/cpp" lflags="-L${prefix}/lib -lsensor_msgs -Wl,-rpath,${prefix}/lib"/>
+    <rosbagmigration rule_file="migration_rules/sensor_msgs.bmr"/>
+  </export>
+
+
+</package>

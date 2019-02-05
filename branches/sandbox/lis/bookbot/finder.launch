@@ -1,0 +1,15 @@
+<launch>
+	<remap from="/wide_stereo/left/image_rect" to="image_rect" />
+	<remap from="/wide_stereo/left/camera_info" to="camera_info" />
+	<remap from="/wide_stereo/disparity" to="disparity_image" />
+	<remap from="/wide_stereo/points" to="points" />
+	<remap from="/base_footprint" to="frame" />
+	<remap from="/wide_stereo_optical_frame" to="/output_frame" />
+	
+	<node pkg="bookbot" name="transformer" type="transformer" />
+	<node pkg="bookbot" name="tableFilter" type="tableFilter" />
+	<node pkg="bookbot" name="driver" type="driver" />
+	<node pkg="bookbot" name="bookFinder" type="bookFinder" />
+	<node pkg="bookbot" name="bookGrabber" type="bookGrabber" />
+	<node pkg="bookbot" name="bookPlacer" type="bookPlacer" />
+</launch>

@@ -1,0 +1,5 @@
+geometry_msgs/PointStamped lowerLeft
+geometry_msgs/PointStamped lowerRight
+geometry_msgs/PointStamped upperRight
+geometry_msgs/PointStamped upperLeft
+bool success

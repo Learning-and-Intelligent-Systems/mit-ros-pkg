@@ -1,0 +1,20 @@
+<package>
+  <description brief="open_cupboard_launch">
+
+    The  open_cupboard_launch package contains the launch files for opendoors.
+
+  </description>
+  <author>Ulziibayar Otgonbaatar and Annie Holladay</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/open_cupboard_launch</url>
+  <depend package="opendoors"/>
+  <depend package="tabletop_for_cabinet"/>
+<!--  <depend package="move_arm_service"/> -->
+  <export>
+    <rosdoc config="rosdoc.yaml"/>
+  </export>
+
+</package>
+
+

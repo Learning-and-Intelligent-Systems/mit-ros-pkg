@@ -1,0 +1,23 @@
+<package>
+  <description brief="colorbook">
+
+     colorbook
+
+  </description>
+  <author></author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/colorbook</url>
+  <depend package="roscpp"/>
+  <depend package="rospy" />
+  <depend package="cv_bridge" />
+  <depend package="polled_camera" />
+  <depend package="dynamic_reconfigure" />
+  <depend package="std_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="opencv2"/>
+  <depend package="cv_bridge"/>
+
+</package>
+
+

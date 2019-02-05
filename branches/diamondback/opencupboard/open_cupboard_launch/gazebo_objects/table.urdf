@@ -1,0 +1,27 @@
+<robot name="table_model">
+  <link name="table_body">
+    <inertial>
+      <mass value="10.0" />
+      <!-- center of mass (com) is defined w.r.t. link local coordinate system -->
+      <origin xyz="0.25 -0.5 0" /> 
+      <inertia  ixx="10.0" ixy="0.0"  ixz="0.0"  iyy="10.0"  iyz="0.0"  izz="10.0" />
+    </inertial>
+    <visual>
+      <!-- visual origin is defined w.r.t. link local coordinate system -->
+      <origin xyz="0 0 0" rpy="3.1416 0 0" />
+      <geometry>
+        <mesh filename="package://open_cupboard_launch/gazebo_objects/table.stl" scale="0.02 0.02 0.025"/>
+      </geometry>
+    </visual>
+    <collision>
+      <!-- collision origin is defined w.r.t. link local coordinate system -->
+      <origin xyz="0 0 0" rpy="3.1416 0 0" />
+      <geometry>
+        <mesh filename="package://open_cupboard_launch/gazebo_objects/table.stl" scale="0.02 0.02 0.025"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="table_body">
+    <material>Gazebo/LightWood</material>
+  </gazebo>
+</robot>

@@ -1,0 +1,9 @@
+<Kinbody name = "box">
+ <Body type="dynamic">
+    <Translation>0 0 0</Translation>
+    <Geom type="box">
+      <Extents>.001 .001 .001</Extents>
+      <diffuseColor>1 0 0</diffuseColor>
+    </Geom>
+ </Body>
+</Kinbody>

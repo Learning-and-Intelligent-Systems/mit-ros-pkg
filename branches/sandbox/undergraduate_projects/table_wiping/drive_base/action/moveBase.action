@@ -1,0 +1,10 @@
+#goal definition
+float64 goal_x
+float64 goal_y
+float64 velocity
+---
+#result definition
+bool success
+---
+#feedback
+float64 distance

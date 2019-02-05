@@ -1,0 +1,20 @@
+
+<launch>
+
+  <param name="camera_synchronizer_node/narrow_stereo_trig_mode" 
+	 type="int" value="5"/>
+
+  <node pkg="furniture" name="table_tracker" type="table_tracker" 
+	respawn="true" output="screen">
+
+    <!--remap from="/points" to="tilt_laser_cloud" />
+    <param name="sensor_frame" type="string" value="/laser_tilt_link" /-->
+    <remap from="/points" to="narrow_stereo_textured/points"/>
+    <param name="sensor_frame" type="string" value="/narrow_stereo_optical_frame"/>
+    <!--param name="multiplier" type="double" value="0.0075" /-->
+    <param name="multiplier" type="double" value="0.0075"/>
+    <!--param name="downsample" type="double" value="0.01" /-->
+    <param name="downsample" type="double" value="0.01" />
+  </node> 
+
+</launch>

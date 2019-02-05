@@ -1,0 +1,31 @@
+package name: target_nav
+
+tracks a target with the camera and possibly the head to provide global localization for navigation.
+
+
+packages to use:
+pr2_head_action - to point the head
+checkerboard_detector - to find the target
+
+If head tracking is off:
+
+- Publish the map w.r.t. the odom_combined frame.
+- If the camera loses sight of the target, assume the odom is correct
+
+If head tracking is on:
+
+- The head moves to keep the target in the center of the FOV.
+- If the target is no longer detected by the camera, the old pose is still published, but the head begins moving in a searching pattern to look for the target again.
+
+Otherwise:
+
+tf frames:
+map - (parent of odom_combined), provides the most recent location of the robot
+
+messages:
+target_pose - the target's position/rotation w.r.t. the base_link frame
+
+services:
+stop_head_track - stops the head from moving
+start_head_track - starts the head moving again
+is_detected - boolean whether the object is in the camera's FOV

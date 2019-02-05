@@ -1,0 +1,16 @@
+<package>
+  <description brief="darrt_msgs">
+
+     darrt_msgs
+
+  </description>
+  <author>Jenny Barry</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/darrt_msgs</url>
+  <depend package="arm_navigation_msgs"/>
+  <depend package="object_manipulation_msgs"/>
+
+</package>
+
+

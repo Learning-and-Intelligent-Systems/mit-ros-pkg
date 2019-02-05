@@ -1,0 +1,41 @@
+<package>
+  <description brief="object_survey">
+
+     object_survey
+
+  </description>
+  <author>garratt</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/object_survey</url>
+	
+  	<depend package="pcl"/>
+  <depend package="poisson_surface_reconstruction"/> 
+  <depend package="nnn"/> 
+  <depend package="pcl_tools"/> 
+  <depend package="geometry_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="tf"/>
+  <depend package="roscpp"/>
+  <depend package="laser_geometry"/>
+  <depend package="cv_bridge"/>
+  <depend package="furniture_ops"/>
+  <depend package="simple_controller"/>
+  <depend package="polled_camera"/>
+  <depend package="imagesift"/>
+  <depend package="posedetection_msgs"/>
+  <depend package="siftviewer"/>
+  <depend package="eigen_conversions"/>
+  <depend package="meshlab"/> 
+  <depend package="dynamic_reconfigure"/> 
+  <depend package="rosbag"/>
+  
+  <export>
+    <rosbag migration_rule_file="myrule.bmr"/>
+    <cpp cflags="-I${prefix}/srv/cpp -I${prefix}/msg/cpp -I${prefix}/include -I${prefix}/src "  lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib " />
+  </export>
+	
+
+</package>
+
+

@@ -1,0 +1,9 @@
+<stack>
+  <description brief="kinect_utils">kinect_utils</description>
+  <author>Maintained by Garratt</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/kinect_utils</url>
+  <depend stack="ros" />
+
+</stack>

@@ -1,0 +1,23 @@
+<package>
+  <description brief="drive_base">
+
+     drive_base
+
+  </description>
+  <author>Thomas S Garver</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/drive_base</url>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="geometry_msgs"/>
+  <depend package="tf"/>
+  <depend package="actionlib"/>
+  <depend package="actionlib_msgs"/>
+  <export>
+    <rosdoc config="rosdoc.yaml"/>
+  </export>
+
+</package>
+
+

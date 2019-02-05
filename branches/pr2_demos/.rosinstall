@@ -1,0 +1,2 @@
+- svn: {local-name: mit, uri: 'https://svn.csail.mit.edu/mit-ros-pkg/trunk/ee_cart_imped'}
+- svn: {local-name: mit, uri: 'https://svn.csail.mit.edu/mit-ros-pkg/branches/'}

@@ -1,0 +1,13 @@
+
+- svn:
+  uri: 'https://svn.csail.mit.edu/mit-ros-pkg/branches/pr2_demos/iros_demos/table_wiping_demo'
+  local-name: table_wiping_demo
+
+
+- svn:
+  uri: 'https://svn.csail.mit.edu/mit-ros-pkg/trunk/ee_cart_imped'
+  local-name: ee_cart_imped
+
+- svn:
+  uri: 'https://svn.csail.mit.edu/mit-ros-pkg/branches/sandbox/bakebot'
+  local-name: bakebot

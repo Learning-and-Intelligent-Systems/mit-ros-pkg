@@ -1,0 +1,19 @@
+<launch>
+
+    <!--MARIO UNCOMMENT THIS-->
+    <rosparam file="$(find opendoors_executive)/toaster.yaml" command="load" />
+
+	
+    <!-- grasping the handle after the detection-->
+    <node name="grasp_handle_action" pkg="opencupboard_action" type="grasp_handle.py" output="screen"/>
+
+    <!-- object detection node-->
+    <node name="object_processing_for_cabinet" pkg="opencupboard_action" type="object_processing_server" output="screen"/>
+
+    <!-- object detection node-->
+    <node name="door_processing_for_cabinet" pkg="opencupboard_action" type="door_processing_server" output="screen"/>
+
+    <!-- open_cupboard_action -->
+    <node name="open_cupboard_action" pkg="opencupboard_action" type="open_cupboard.py" output="screen" />
+
+</launch>

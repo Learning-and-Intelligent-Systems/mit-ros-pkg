@@ -1,0 +1,20 @@
+
+WORLD: 12, RESET TIME: 120, DARRT TRIES: 1, FORWARD: False
+TRIAL 1:
+	Planning time: 210.611572266
+TRIAL 2:
+	Planning time: 193.164245605
+TRIAL 3:
+	Planning time: 174.053771973
+TRIAL 4:
+	Planning time: 715.125976562
+TRIAL 5:
+	Planning time: 385.847747803
+TRIAL 6:
+	Planning time: 100.527709961
+TRIAL 7:
+	Planning time: 431.820556641
+TRIAL 8:
+	Planning time: 646.145446777
+TRIAL 9:
+	Planning time: 546.159057617

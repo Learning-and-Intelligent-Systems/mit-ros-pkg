@@ -1,0 +1,5 @@
+sensor_msgs/PointCloud cloud1
+sensor_msgs/PointCloud cloud2
+geometry_msgs/Transform initial_guess
+---
+geometry_msgs/Transform transform

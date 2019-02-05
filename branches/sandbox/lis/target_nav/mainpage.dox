@@ -1,0 +1,38 @@
+/**
+\mainpage
+\htmlinclude manifest.html
+
+\b target_nav tracks a target with the camera and possibly the head to provide global localization for navigation.
+
+
+If head tracking is off:
+
+- Publish the map w.r.t. the odom_combined frame.
+- If the camera loses sight of the target, assume the odom is correct
+
+If head tracking is on:
+
+- The head moves to keep the target in the center of the FOV.
+- If the target is no longer detected by the camera, the old pose is still published, but the head begins moving in a searching pattern to look for the target again.
+
+
+<!-- 
+Provide an overview of your package.
+-->
+
+
+\section codeapi Code API
+
+<!--
+Provide links to specific auto-generated API documentation within your
+package that is of particular interest to a reader. Doxygen will
+document pretty much every part of your code, so do your best here to
+point the reader to the actual API.
+
+If your codebase is fairly large or has different sets of APIs, you
+should use the doxygen 'group' tag to keep these APIs together. For
+example, the roscpp documentation has 'libros' group.
+-->
+
+
+*/

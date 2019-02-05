@@ -1,0 +1,31 @@
+// MOOS file
+
+ServerHost = localhost
+ServerPort = 9000
+
+ProcessConfig = irFlex
+{
+	AppTick   = 4
+	CommsTick = 4
+
+	Port = /dev/ttyUSB.A4001i9M
+	// Port = /dev/ttyS0
+	Speed = 115200
+
+	// B21r values, see carmen/src/rflex/rflex_params.h for others
+	DistConv = 101230.0
+	AngleConv = 35343.888
+
+	// Joystick
+	ReportJoystick = true
+	
+	// Sonar
+	ReportSonar = false
+	
+	// IR sensors (do they even work?) a: nope, they don't (on the B21r, at least)
+	ReportIR = false
+
+	// Digital I/O (bump sensors, mostly)
+	ReportDIO = true
+}
+

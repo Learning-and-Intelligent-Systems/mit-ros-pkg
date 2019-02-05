@@ -1,0 +1,26 @@
+<package>
+  <description brief="move_arm_service">
+
+     Service wrappers around move_arm and
+     interpolated_ik_motion_planner to make
+     them easier to use.
+
+  </description>
+  <author>Jenny Barry</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/move_arm_service</url>
+  <depend package="move_arm_msgs"/>
+  <depend package="geometry_msgs"/>
+  <depend package="motion_planning_msgs"/>
+  <depend package="planning_environment_msgs"/>
+  <depend package="pr2_controllers_msgs"/>
+  <depend package="actionlib"/>
+  <depend package="object_manipulator"/>
+  <export>
+    <rosdoc config="rosdoc.yaml"/>
+  </export>
+
+</package>
+
+

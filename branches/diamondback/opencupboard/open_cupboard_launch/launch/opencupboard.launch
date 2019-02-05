@@ -1,0 +1,16 @@
+<launch>
+
+  <!-- grasping the handle after the detection-->
+ <node name="grasp_handle_action" pkg="opendoors" type="grasp_handle.py" output="screen"/>
+
+ <!-- object detection node-->
+ <node name="object_processing_for_cabinet" pkg="tabletop_for_cabinet" type="object_processing_server" output="screen"/>
+
+ <!-- object detection node-->
+ <node name="door_processing_for_cabinet" pkg="tabletop_for_cabinet" type="door_processing_server" output="screen"/>
+ 
+ <!-- move arm launch file
+ <include file="$(find move_arm_service)/launch/move_arm_service.launch"/>
+-->
+   
+</launch> 

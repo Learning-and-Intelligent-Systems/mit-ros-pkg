@@ -1,0 +1,18 @@
+<package>
+  <description brief="rrt_demos">
+
+     rrt_demos
+
+  </description>
+  <author>Jenny Barry</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/rrt_demos</url>
+  <depend package="pr2_utils"/>
+  <depend package="geometry_msgs"/>
+  <depend package="arm_navigation_msgs"/>
+  <depend package="rospy"/>
+
+</package>
+
+

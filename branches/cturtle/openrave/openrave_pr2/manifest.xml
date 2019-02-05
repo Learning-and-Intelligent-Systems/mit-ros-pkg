@@ -1,0 +1,31 @@
+<package>
+  <description brief="openrave_pr2">
+
+     openrave_pr2
+
+  </description>
+  <author>Huan Liu</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/openrave_pr2</url>
+
+  <depend package="roslib"/>
+  <depend package="tf"/>
+  <depend package="actionlib"/>
+  <depend package="geometry_msgs"/>
+  <depend package="pr2_controllers_msgs"/>
+  <depend package="openrave"/>
+  <depend package="openrave_actionlib"/>
+  <depend package="openrave_calibration"/>
+  <depend package="openrave_database"/>
+  <depend package="openrave_robot_control"/>
+  <depend package="openrave_robot_filter"/>
+  <depend package="openraveros"/>
+  <depend package="openrave_sensors"/>
+  <depend package="orrosplanning"/>
+  <depend package="roscpp_sessions"/>
+  <depend package="session_tutorials"/>
+  <depend package="soqt"/>
+</package>
+
+

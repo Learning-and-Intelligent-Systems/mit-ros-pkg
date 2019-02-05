@@ -1,0 +1,9 @@
+Header header
+time timeout
+geometry_msgs/Polygon[] surface_polygons
+string[] models
+geometry_msgs/Pose[] initial_poses
+---
+Header header
+geometry_msgs/Pose[] aligned_poses
+float32[] fitness_scores

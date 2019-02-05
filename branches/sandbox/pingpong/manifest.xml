@@ -1,0 +1,22 @@
+<package>
+  <description brief="pingpong">
+
+     ping pong robot project
+
+  </description>
+  <author>Jared Glover</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <depend package="roscpp"/>
+  <depend package="sensor_msgs"/>
+  <depend package="image_geometry"/>
+  <depend package="cv_bridge"/>
+  <depend package="tf"/>
+  <depend package="siliconvideo"/>
+  <depend package="fastwam"/>
+  <!-- depend package="pcl"-->
+  <!--depend package="dynamic_reconfigure"-->
+
+</package>
+
+

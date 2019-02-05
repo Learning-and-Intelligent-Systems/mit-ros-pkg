@@ -1,0 +1,14 @@
+<launch>
+  <!-- send urdf to param server -->
+  <param name="coffee_cup" textfile="$(find gazebo_worlds)/objects/coffee_cup.model" />
+
+  <!-- push urdf to factory and spawn robot in gazebo -->
+  <param name="table_description" command="$(find xacro)/xacro.py '$(find gazebo_worlds)/objects/table.urdf.xacro'" />
+  <node name="spawn_table" pkg="gazebo" type="spawn_model" args="-urdf -param table_description -x 0.4 -model table_1" respawn="false" output="screen" />
+  <node name="spawn_coffee_cup1" pkg="gazebo" type="spawn_model" args="-gazebo -param coffee_cup -x 1.1 -y -.1 -z .95  -R 0 -P 0 -Y 90 -model coffee_cup1" respawn="false" output="screen" />
+  <node name="spawn_coffee_cup2" pkg="gazebo" type="spawn_model" args="-gazebo -param coffee_cup -x 1.1 -y .1 -z .95  -R 0 -P 0 -Y 90 -model coffee_cup2" respawn="false" output="screen" />
+  <node name="spawn_coffee_cup3" pkg="gazebo" type="spawn_model" args="-gazebo -param coffee_cup -x 1.1 -y -.3 -z .95  -R 0 -P 0 -Y 90 -model coffee_cup3" respawn="false" output="screen" />
+  <node name="spawn_coffee_cup4" pkg="gazebo" type="spawn_model" args="-gazebo -param coffee_cup -x 1.1 -y .3 -z .95  -R 0 -P 0 -Y 90 -model coffee_cup4" respawn="false" output="screen" />
+
+
+</launch>

@@ -1,0 +1,18 @@
+<package>
+  <description brief="siliconvideo">
+
+     Silicon Video camera drivers
+
+  </description>
+  <author>Jared Glover</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <depend package="roscpp"/>
+  <depend package="sensor_msgs"/>
+  <depend package="tf"/>
+  <!--depend package="dynamic_reconfigure"-->
+  <!--depend package="camera_info_manager"-->
+
+</package>
+
+

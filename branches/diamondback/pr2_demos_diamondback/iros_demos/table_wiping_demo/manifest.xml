@@ -1,0 +1,23 @@
+<package>
+  <description brief="table_wiping_demo">
+
+     table_wiping_demo
+
+  </description>
+  <author>Jenny Barry</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/table_wiping_demo</url>
+  <depend package="geometry_msgs"/>
+  <depend package="rospy"/>
+  <depend package="pr2_pick_and_place_demos"/>
+  <depend package="visualization_msgs"/>
+  <depend package="object_manipulator"/>
+  <depend package="actionlib_msgs"/>
+  <depend package="pr2_utils"/>
+  <depend package="motion_planning_msgs"/>
+  <depend package="demo_tools"/>
+
+</package>
+
+

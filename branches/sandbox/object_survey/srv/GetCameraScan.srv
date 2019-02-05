@@ -1,0 +1,3 @@
+geometry_msgs/PointStamped focus_point
+---
+object_survey/CameraScan scan

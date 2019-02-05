@@ -1,0 +1,33 @@
+<launch>
+    <rosparam file="$(find ee_cart_imped_control)/pr2_arms_cart_imped_controller.yaml" command="load" />
+	<!--start the action server-->
+	<group ns="r_arm_cart_imped_controller">
+	       <node pkg="ee_cart_imped_action" name="r_arm_cart_imped_action_node" type="ee_cart_imped_action"/>
+	</group>
+	<!--start the action server-->
+	<group ns="l_arm_cart_imped_controller">
+	       <node pkg="ee_cart_imped_action" name="l_arm_cart_imped_action_node" type="ee_cart_imped_action"/>
+	</group>
+
+  <node name="bakebot_mixing_service" pkg="bakebot" 
+    type="bakebot_mixing_service" respawn="false" output="screen"/>
+
+  <node name="bakebot_clean_spoon_service" pkg="bakebot" 
+    type="bakebot_clean_spoon_service" respawn="false" output="screen"/>
+
+  <node name="bakebot_attach_object_service" pkg="bakebot" 
+    type="attach_object_service" respawn="false" output="screen"/>
+
+  <include file="$(find opendoors_executive)/launch/open_toaster.launch"/> 
+
+  <node name="bakebot_logging" pkg="bakebot" 
+    type="bakebot_logging.py" respawn="false" output="screen"/>
+
+  <node name="predicate_logging" pkg="smachforward" 
+    type="predicate_logging.py" respawn="false" output="screen"/>
+
+  <node name="sound_play" pkg="sound_play" 
+    type="soundplay_node.py" respawn="false" output="screen"/>
+    
+
+</launch>

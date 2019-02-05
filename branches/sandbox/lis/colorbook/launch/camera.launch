@@ -1,0 +1,16 @@
+<launch>
+
+<!--prosilica camera -->
+   <node name="prosilica_driver" pkg="prosilica_camera" type="prosilica_node" output="screen">
+    <param name="ip_address" type="str" value="10.68.0.20"/>
+    <param name="trigger_mode" type="str" value="polled"/>
+     <rosparam command="load" file="$(find prosilica_camera)/cam_settings.yaml" />
+  </node>
+
+  <!--prosilia camera processor -->
+  <group ns="/prosilica/polled_camera">
+  <node pkg="image_proc" type="image_proc" respawn="false" name="prosilica_image_proc" >
+  </node>
+  </group>
+
+</launch>

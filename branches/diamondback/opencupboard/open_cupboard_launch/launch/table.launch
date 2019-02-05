@@ -1,0 +1,5 @@
+<launch>
+  <!-- load the table-->
+  <param name="table_description" textfile="$(find open_cupboard_launch)/gazebo_objects/table.urdf"/>
+  <node name="table" pkg="gazebo" type="spawn_model" args="-urdf -param table_description -model table -x 1.5 -y 0.5 -z 1" respawn="false"/>
+</launch>

@@ -1,0 +1,30 @@
+string world_frame
+string robot_frame
+geometry_msgs/Pose2D[] trajectory
+
+#optional
+float32 linear_velocity
+float32 angular_velocity
+float32 angular_error
+float32 linear_error
+float32 duration_error
+
+---
+
+int32 SUCCESS=1
+int32 TF_ERROR=-1
+int32 ROBOT_STATE_ERROR=-2
+int32 BASE_NOT_MOVING=-3
+int32 error_code
+
+---
+
+std_msgs/Header header
+int32 waypoint
+duration waypoint_time
+duration expected_waypoint_time
+time waypoint_start_time
+time last_tf_update
+geometry_msgs/Pose2D goal_pose
+geometry_msgs/Pose2D robot_pose
+geometry_msgs/Twist command

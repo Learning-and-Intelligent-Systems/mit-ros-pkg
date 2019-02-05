@@ -1,0 +1,63 @@
+/**
+\mainpage
+\htmlinclude manifest.html
+
+\b nnn is a method of doing radius search by brute force.  It was initially designed to just search all points in the cloud to find which points
+were within a specified distance of the reference point.  While even this function still outperforms ANN and FLANN in some cases, a few optimizations were created to make
+NNN even faster.  Eventually, these optimizations will be rolled into FLANN, to take advantage of the benefits of both methods.
+
+
+@section usage Usage
+The NNN library is fully supported, and ready to use.  However, there are some considerations to make when using NNN:
+@subsection functions What functionality does NNN provide?
+NNN provides three main usages:
+
+ * - \b NNN() The basic call to the function NNN allows you to search the cloud with no overhead.  
+Since it does not use any optimizations, it is useful when you only want to do a small number of searches.
+ * - \b SplitCloud is initialized with the maximum search radius and the point cloud.  
+Once initialized, SplitCloud can perform radius searches at a rate faster than the normal NNN function.
+ * - \b SplitCloud2 is initialized with the maximum search radius and the point cloud.  
+Once initialized SplitCloud2can perform radius searches at a rate faster than SplitCloud, and the normal NNN function.
+
+@subsection whentouse When Should You use NNN?
+The decision of what function to use depends on two factors: the search radius, and the number of searches.
+
+The NNN library has the biggest performance gain as the search radius increases.  
+In these cases, the tree nature of FLANN causes the radius search to incur a significant overhead, slowing the operation.
+NNN, however, exhibits a much smaller increase in computational time.
+\image  html doc/searchtime2.png
+
+Even when performing radius searches over very small radiuses, where libraries such as FLANN
+have a much faster search time, the low overhead of the NNN functions allow it to be faster when performing just a few searches.
+The example below illustrates how the different functions available in NNN should be used, depending on the number of searches being performed.
+in this particular example, the best performance is gained by using the simple NNN call if performing less than 27 searches,
+using SplitCloud if performing between 27 and 330 searches, and using SplitCloud2 if performing between 330 and 1300 searches. 
+\image  html doc/totaltime1cm.png
+Note that this is an example where NNN has the worst performance.  	If the search radius were, for example 50cm, 
+the SplitCloud2 class should be used for all instances where over 300 searches would be performed.
+\image  html doc/totaltime50cm.png
+
+
+
+
+
+<!-- 
+Provide an overview of your package.
+-->
+
+
+\section codeapi Code API
+
+<!--
+Provide links to specific auto-generated API documentation within your
+package that is of particular interest to a reader. Doxygen will
+document pretty much every part of your code, so do your best here to
+point the reader to the actual API.
+
+If your codebase is fairly large or has different sets of APIs, you
+should use the doxygen 'group' tag to keep these APIs together. For
+example, the roscpp documentation has 'libros' group.
+-->
+
+
+*/

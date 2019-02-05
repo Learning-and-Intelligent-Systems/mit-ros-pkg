@@ -1,0 +1,11 @@
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find laptopbot)/config/b21.xacro'" />
+
+
+  <node pkg="laptopbot" type="odometry_publisher" name="my_odometry_publisher" output="screen">
+  </node>
+
+  <node pkg="laptopbot" type="tf_broadcaster" name="my_tf_publisher" output="screen">
+  </node>
+
+</launch>

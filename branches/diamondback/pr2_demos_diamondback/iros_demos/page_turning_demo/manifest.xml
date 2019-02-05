@@ -1,0 +1,21 @@
+<package>
+  <description brief="page_turning_demo">
+
+     page_turning_demo
+
+  </description>
+  <author>Anne E Holladay</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/page_turning_demo</url>
+  <depend package="geometry_msgs"/>
+  <depend package="rospy"/>
+  <depend package="pr2_pick_and_place_demos"/>
+  <depend package="visualization_msgs"/>
+  <depend package="object_manipulator"/>
+  <depend package="actionlib_msgs"/>
+  <depend package="pr2_utils"/>
+
+</package>
+
+

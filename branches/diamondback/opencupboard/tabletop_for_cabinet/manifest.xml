@@ -1,0 +1,25 @@
+
+<package>
+  <description brief="tabletop_for_cabinet">
+The tabletop_for_cabinet package detects and publishes a handle on a cabinet door. The type of handle (vertical or horizontal, top or bot, left or right) can be specified as parameters. The pose of the cluster on the cabinet door that is most likely to be the handle is returned as the handle, but alternatives are also returned, in case the first handle was wrong. 
+  </description>
+  <author>Anne E Holladay</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/tabletop_for_cabinet</url>
+<!--  <depend package="pr2_pick_and_place_demos"/> -->
+  <depend package="roscpp" />
+  <depend package="tabletop_object_detector"/> 
+  <depend package="sensor_msgs" />
+  <depend package="visualization_msgs" />
+  <depend package="pcl" />
+  <depend package="geometry_msgs"  />
+  <depend package="actionlib"/>
+<!--  <depend package="opendoors"/> -->
+  <depend package="object_manipulation_msgs" />
+  <export>
+    <rosdoc config="rosdoc.yaml"/>
+  </export>
+</package>
+
+

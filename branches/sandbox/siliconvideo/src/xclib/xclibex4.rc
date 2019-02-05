@@ -1,0 +1,30 @@
+/*
+ *
+ *	xclibex4.rc	External	12-Oct-2002
+ *
+ *	Copyright (C)  1998-2000  EPIX, Inc.  All rights reserved.
+ *
+ *	Example program for XCOBJ/XCLIB C Library: resource.
+ *
+ *
+ */
+
+#include <windows.h>
+#include <winver.h>
+#include "xclibex2.h"
+
+
+PIXCIDIALOG DIALOG DISCARDABLE	33, 56, 194, 132
+    STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU /* | WS_THICKFRAME*/
+    BEGIN
+	PUSHBUTTON	"Snap",        IDSNAP,		136, 10,50,12,
+	PUSHBUTTON	"Live",        IDLIVE,		136, 24,50,12,
+	PUSHBUTTON	"Stop",        IDSTOP,		136, 38,50,12,
+	PUSHBUTTON	"Seq. Capture",IDSEQCAPTURE,	136, 52,50,12,
+	PUSHBUTTON	"Seq. Display",IDSEQDISPLAY,	136, 66,50,12,
+	PUSHBUTTON	"Seq. Save",   IDSEQSAVE,	136, 80,50,12,
+
+	LTEXT		"Buffer", -1,			136, 94, 50, 8,
+	SCROLLBAR		       IDBUFFERSCROLL,	136, 104,50, 8,
+	LTEXT		"",	IDIMAGE,		1,1,128,128
+    END

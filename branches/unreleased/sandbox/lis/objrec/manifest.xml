@@ -1,0 +1,33 @@
+<package>
+  <description brief="objrec">
+
+     objrec
+
+  </description>
+  <author></author>
+  <license></license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/objrec</url>
+  <export>
+    <rosdoc config="rosdoc.yaml" />
+  </export>
+  <depend package="sensor_msgs"/>
+  <depend package="roscpp"/>
+  <depend package="cv_bridge"/>
+  <depend package="opencv2"/>
+  <depend package="polled_camera"/>
+  <depend package="dynamic_reconfigure"/>
+  <depend package="image_geometry"/>
+  <depend package="visualization_msgs"/>
+   <!--for generate_training_data-->
+  <depend package="gazebo"/>
+  <depend package="gazebo_msgs"/>
+  <depend package="stereo_msgs"/>
+<!--  <depend package="actionlib"/> -->
+<!--  <depend package="pr2_controllers_msgs"/> -->
+  <depend package="nav_msgs"/>
+<!--  <depend package="household_objects_database_msgs"/> -->
+  <depend package="pcl"/>
+</package>
+
+

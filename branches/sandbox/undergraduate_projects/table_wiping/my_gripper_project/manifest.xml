@@ -1,0 +1,20 @@
+<package>
+  <description brief="my_gripper_project">
+
+     my_gripper_project
+
+  </description>
+  <author>Dylan J Hadfield-Menell</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/my_gripper_project</url>
+  <depend package="roscpp"/>
+  <depend package="actionlib"/>
+  <depend package="pr2_gripper_sensor_action"/>
+  <export>
+    <rosdoc config="rosdoc.yaml"/>
+  </export>
+
+</package>
+
+
